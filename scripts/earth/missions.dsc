@@ -58,9 +58,6 @@ missions_events:
 #            - note <[location]> as:<context.inventory.inventory_type>_<[location].simple>_<player>
 #            - wait 5m
 #            - note remove as:<context.inventory.inventory_type>_<[location].simple>_<player>
-        on player breaks block bukkit_priority:MONITOR:
-        - if <context.material.name> == furnace:
-            - note remove as:<context.location.block.note_name>
         on brewing stand brews bukkit_priority:MONITOR:
         - if <context.location.note_name||null> != null:
             - foreach <list[1|2|3]> as:i:
