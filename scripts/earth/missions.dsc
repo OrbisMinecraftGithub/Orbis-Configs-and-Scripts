@@ -216,14 +216,9 @@ missions_events:
         - define context <context.weapon>
         - define amount <context.damage>
         - inject process_mission
-<<<<<<< HEAD
         on player clicks block bukkit_priority:monitor:
         - if <context.cancelled>:
             - stop
-=======
-
-        on player clicks block:
->>>>>>> 361a05bc40c8a37bf6bba2f5d50aafb496f2a984
         - if <context.item.script.name||> != mission_item:
             - stop
         - define req <context.item.flag[requirement]>
