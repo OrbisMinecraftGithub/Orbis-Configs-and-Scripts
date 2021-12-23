@@ -6,3 +6,4 @@ startup_handler:
         on server start bukkit_priority:monitor:
         - foreach <yaml[config].read[startup_commands]>:
             - execute as_server <[value]>
+        - runlater command_removelag delay:60s
