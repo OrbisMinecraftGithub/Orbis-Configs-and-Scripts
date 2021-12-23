@@ -67,9 +67,8 @@ space_laser_flare_events:
     debug: false
     events:
         on player clicks block:
-        - stop
         - if <player.item_in_hand.script.name.equals[space_laser_item]||false>:
             - define location <player.location>
-            #- announce "<player.name> has called in an orbital strike at <[location].block.x>, <[location].block.z>"
+            - announce "<player.name> has called in an orbital strike at <[location].block.x>, <[location].block.z>"
             - take from:<player.inventory> space_laser_item
             - inject space_laser_run
