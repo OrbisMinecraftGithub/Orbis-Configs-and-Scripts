@@ -8,11 +8,11 @@ explosion_handler:
         on block falls:
         - if <context.location.has_flag[no_physics]>:
             - determine cancelled
-        on block explodes ignorecancelled:true bukkit_priority:lowest:
+        on block explodes:
         - define location <context.block>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
-        on entity explodes ignorecancelled:true bukkit_priority:lowest:
+        on entity explodes:
         - define location <context.location>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
@@ -84,10 +84,9 @@ explosion_handler:
                     - define after <[entity].attached_block>
     process_explosion:
     - define new_blocks <[blocks].filter[is_siege_zone].filter[has_flag[big_shulker].not]>
-    # - define new_blocks <[blocks]>
+    - determine passively <list[]>
     - if <[new_blocks].size.equals[0]>:
         - stop
-    - determine passively <list[]>
     - foreach <[new_blocks].parse[block]> as:b:
         - flag <[b]> no_physics expire:1m
         - define dur <util.random.int[460].to[540]>t
