@@ -100,8 +100,10 @@ run_combat_check:
         	- determine cancelled
         - if <[attacker].mcmmo.party||null1> == <[victim].mcmmo.party||null2>:
             - determine cancelled
-        - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
+        - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> && <[attacker].item_on_cursor.material.name.equals[air]>:
         	- determine cancelled
+        - if <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> && <[victim].item_on_cursor.material.name.equals[air]>:
+            - determine cancelled
         - if <[attacker].location.is_siege_zone> && <[victim].location.is_siege_zone>:
         	- determine passively cancelled:false
         - if <[attacker].location.town.pvp||true> && <[victim].location.town.pvp||true>:

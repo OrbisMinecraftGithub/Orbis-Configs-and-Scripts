@@ -12,7 +12,9 @@ missions_events:
         - inject missions_events path:reload
         on server start:
         - inject missions_events path:reload
-        on entity killed:
+        on entity killed bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.damager.is_player||false>:
             - define player <context.damager>
             - ratelimit 2s <context.entity>
@@ -20,21 +22,27 @@ missions_events:
             - define context <context.entity.entity_type>
             - define amount 1
             - inject process_mission
-        on entity breeds:
+        on entity breeds bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.breeder.is_player||false>:
             - define player <context.breeder>
             - define task breed_entity
             - define context  <context.child.entity_type>
             - define amount 1
             - inject process_mission
-        on portal created:
+        on portal created bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.entity.is_player||false>:
             - define player <context.entity>
             - define task create_portal
             - define context null
             - define amount 1
             - inject process_mission
-        on entity tamed:
+        on entity tamed bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.owner.is_player||false>:
             - define player <context.owner>
             - define task tame_entity
@@ -50,10 +58,14 @@ missions_events:
 #            - note <[location]> "as:<context.inventory.inventory_type>_<[location].simple>_<player>"
 #            - wait 5m
 #            - note remove "as:<context.inventory.inventory_type>_<[location].simple>_<player>"
-        on player breaks block:
+        on player breaks block bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.material.name> == furnace:
         	- note remove as:<context.location.block.note_name>
-        on brewing stand brews:
+        on brewing stand brews bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.location.note_name||null> != null:
             - foreach <list[1|2|3]> as:i:
                 - define player <context.location.note_name.split[_].get[3].as_player>
@@ -61,14 +73,18 @@ missions_events:
                 - define context <context.inventory.slot[<[i]>]>
                 - define amount 1
                 - inject process_mission
-        on furnace burns item:
+        on furnace burns item bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.location.note_name||null> != null:
             - define player <context.location.note_name.split[_].get[3].as_player>
             - define task burn_fuel
             - define context <context.item>
             - define amount 1
             - inject process_mission
-        on player crafts item:
+        on player crafts item bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task craft_item
         - define context <context.item.material.name>
@@ -77,19 +93,25 @@ missions_events:
         	- narrate "<&c>You cannot shift right click items out of a crafting grid."
         	- determine cancelled
         - inject process_mission
-        on player breaks block:
+        on player breaks block bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task break_block
         - define context <context.material.name>
         - define amount 1
         - inject process_mission
-        on player places block:
+        on player places block bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task place_block
         - define context <context.material.name>
         - define amount 1
         - inject process_mission
-        on player right clicks sheep:
+        on player right clicks sheep bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - ratelimit <player> 1t
         - define old <context.entity.color>
         - wait 1t
@@ -100,39 +122,51 @@ missions_events:
             - define context <[new]>
             - define amount 1
             - inject process_mission
-        on item enchanted:
+        on item enchanted bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.entity.is_player>:
             - define player <context.entity>
             - define task enchant_item
             - define context <context.item.material.name.replace[golden_].with[gold_]>
             - define amount 1
             - inject process_mission
-        on player breaks held item:
+        on player breaks held item bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task break_item
         - define context <context.item.material.name>
         - define amount 1
         - inject process_mission
-        on player changes xp:
+        on player changes xp bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.amount.is_more_than[0]>:
             - define player <player>
             - define task gain_xp
             - define context null
             - define amount <context.amount>
             - inject process_mission
-        on player consumes item:
+        on player consumes item bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task consume_item
         - define context <context.item.material.name>
         - define amount 1
         - inject process_mission
-        on player fills bucket:
+        on player fills bucket bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task fill_bucket
         - define context <context.item.material.name>
         - define amount 1
         - inject process_mission
-        on player fishes:
+        on player fishes bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task fish_item
         - define context <context.item.material.name||null>
@@ -142,13 +176,17 @@ missions_events:
         - if <[context].equals[null]>:
         	- stop
         - inject process_mission
-        on player shears sheep:
+        on player shears sheep bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task shear_sheep
         - define context <context.entity.color>
         - define amount 1
         - inject process_mission
-        on player clicks cake:
+        on player clicks cake bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define old <context.location.material.level>
         - wait 1t
         - define new <context.location.material.level||-1>
@@ -158,26 +196,33 @@ missions_events:
             - define context cake
             - define amount 1
             - inject process_mission
-        on crackshot player fires projectile:
+        on crackshot player fires projectile bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task fire_weapon
         - define context <context.weapon>
         - define amount 1
         - inject process_mission
-        on crackshot player finishes reloading weapon:
+        on crackshot player finishes reloading weapon bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task reload_weapon
         - define context <context.weapon>
         - define amount 1
         - inject process_mission
-        on crackshot weapon damages entity:
+        on crackshot weapon damages entity bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - define player <player>
         - define task deal_damage_with_gun
         - define context <context.weapon>
         - define amount <context.damage>
         - inject process_mission
-        
-        on player clicks block:
+        on player clicks block bukkit_priority:monitor:
+        - if <context.cancelled>:
+            - stop
         - if <context.item.script.name||> != mission_item:
         	- stop
         - define req <context.item.flag[requirement]>
