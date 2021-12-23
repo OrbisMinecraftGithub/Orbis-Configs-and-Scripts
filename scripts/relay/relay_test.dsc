@@ -8,3 +8,5 @@ relay_test:
         - shell /home.minecraft/pull_github.sh
         - wait 5s
         - bungeerun <bungee.list_servers> bungee_reload_all
+      - else:
+        - announce to_console "HEADERS: <context.headers>"
