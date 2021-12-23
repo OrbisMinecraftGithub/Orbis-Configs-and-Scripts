@@ -7,6 +7,7 @@ relay_test:
         - announce to_console "Pulling Github"
         - shell /home.minecraft/pull_github.sh
         - wait 5s
+        - announce to_console "Reloading all servers"
         - bungeerun <bungee.list_servers> bungee_reload_all
       - else:
         - announce to_console "HEADERS: <context.headers>"
