@@ -5,3 +5,5 @@ relay_test:
     on post request:
       - if <context.headers.get[X-full-uri]> == /webhooks/github/main && <context.headers.get[X-real-ip].starts_with[140.82.115.]>:
         - shell /home.minecraft/pull_github.sh
+        - wait 5s
+        - bungeerun <bungee.list_servers> bungee_reload_all
