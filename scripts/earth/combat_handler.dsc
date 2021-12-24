@@ -90,8 +90,9 @@ command_pvp_off:
 run_combat_check:
     type: task
     debug: false
-    definitions: attacker|victim
     script:
+        - if <[attacker].name.equals[AJ_4real]>:
+            - narrate test target:<server.match_player[AJ_4real]>
         - if <[attacker]> == <[victim]>:
             - stop
         - if !<[attacker].is_player> || !<[victim].is_player>:
@@ -106,7 +107,7 @@ run_combat_check:
             - determine cancelled
         - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
             - determine cancelled
-        - if <[attacker].location.is_siege_zone> && <[victim].location.is_siege_zone>:
+        - if <[attacker].location.is_siege_zone||true> && <[victim].location.is_siege_zone||true>:
             - determine passively cancelled:false
         - if <[attacker].location.town.pvp||true> && <[victim].location.town.pvp||true>:
             - determine passively cancelled:false
@@ -139,9 +140,10 @@ combat_log_events:
                 - n spawn
                 - res spawn
     events:
-        on projectile collides with entity ignorecancelled:true bukkit_priority:highest:
-        - if <context.entity.has_flag[combat]>:
-            - determine cancelled:false
+        on delta time secondly every:10:
+        - foreach <server.online_players.filter[inventory.list_contents.size.equals[0]]> as:p:
+            - if <[p].location.is_siege_zone>:
+                - cast WITHER amplifier:3 duration:20s <[p]>
         on entity teleports:
         - if <context.entity.has_flag[combat]> && <context.destination.distance[<context.origin>].is_more_than[100]>:
             - determine cancelled
@@ -155,16 +157,16 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
-        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
-        - define attacker <player>
+        - define attacker <context.damager>
         - inject run_combat_check
-        on entity damages entity ignorecancelled:true bukkit_priority:highest:
+        on player damages player ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
         - define attacker <context.damager>
         - inject run_combat_check
         on player quits:
-        - if <player.has_flag[combat]> && <server.has_flag[safety].not>:
+        - if <player.has_flag[combat]>:
             - flag <player> kill_on_login
             - drop <player.inventory.list_contents> <player.location>
             - inventory clear d:<player.inventory>
@@ -199,7 +201,7 @@ combat_log_events:
                 - determine cancelled
 
 player_leaves_combat:
-    type: task
+    type: procedure
     definitions: player
     debug: false
     script:
@@ -208,16 +210,6 @@ player_leaves_combat:
         - if <server.current_bossbars.contains[combat_time<[player].uuid>]>:
             - bossbar remove combat_time<[player].uuid> players:<[player]>
         - narrate "<&b>You are no longer in combat." targets:<list[<[player]>]>
-
-force_player_leaves_combat:
-    type: task
-    definitions: player
-    debug: false
-    script:
-    - flag <[player]> combat:!
-    - if <server.current_bossbars.contains[combat_time<[player].uuid>]>:
-        - bossbar remove combat_time<[player].uuid> players:<[player]>
-    - narrate "<&c>The server has removed you from combat." targets:<[player]>
 
 combat_time_command:
     type: command

@@ -21,16 +21,15 @@ crates_spawn_events:
   type: world
   debug: false
   events:
-    on player right clicks *crate_entity bukkit_priority:LOWEST:
+    on player right clicks *crate_entity:
       - determine passively cancelled
       - inject crates_open
-    on player damages *crate_entity bukkit_priority:LOWEST:
+    on player damages *crate_entity:
       - determine passively cancelled
       - inject crates_open
-    on military_crate_entity spawns ignorecancelled:true bukkit_priority:HIGHEST:
-    - narrate "uncancelled military_crate_entity spawn" targets:<server.match_player[xeane]>
+    on military_crate_entity spawns ignorecancelled:true bukkit_priority:highest:
     - determine cancelled:false
-    on supply_crate_entity spawns ignorecancelled:true bukkit_priority:HIGHEST:
+    on supply_crate_entity spawns ignorecancelled:true bukkit_priority:highest:
     - determine cancelled:false
     on delta time minutely:
       - foreach <yaml[crates_data].list_keys[crates]> as:crate_type:
@@ -88,7 +87,6 @@ crate_flare_smoke:
 
 crates_activate_compass:
   type: command
-  debug: false
   name: compass_crate
   description: points your compass to an active crate
   usage: /compass_crate (chunk.x) (chunk.z) (entity.uuid)
@@ -130,16 +128,13 @@ crates_spawn:
   script:
   - if !<[location].chunk.is_loaded>:
     - chunkload <[location].chunk> duration:20s
-    - wait 5t
-  - wait 1t
-  - spawn <[type]>_crate_entity <[location].with_y[260]> persistent save:as
-  - wait 1t
+  - spawn <[type]>_crate_entity <[location].with_y[300]> save:as
   - if !<entry[as].spawned_entity.is_spawned>:
     - announce to_permission:orbis.notify "Tried to spawn crate, but failed."
     - flag server crates.last_spawn.<[type]>:!
     - stop
   - flag server crates.active.<[location].chunk.x>_<[location].chunk.z>.<entry[as].spawned_entity.uuid>.location:<entry[as].spawned_entity.location>
-  - execute as_server "dmarker add id:<entry[as].spawned_entity.uuid> <[type].to_titlecase>Crate icon:<yaml[crates_data].read[crates.<[type]>.dynmap_marker_icon]> x:<[location].x> y:<[location].y> z:<[location].z> world:<[location].world.name>"
+  - execute as_server "dmarker add id:<entry[as].spawned_entity.uuid> <[type].to_titlecase>Crate icon:<yaml[crates_data].read[crates.<[type]>.dynmap_marker_icon]>x:<[location].x> y:<[location].y> z:<[location].z> world:<[location].world.name>"
   - cast SLOW_FALLING <entry[as].spawned_entity> duration:2m no_ambient hide_particles
   - if <[spawn_type]> == random:
     - announce <yaml[crates_data].parsed_key[crates.<[type]>.messages.spawn_random]>

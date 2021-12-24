@@ -8,11 +8,11 @@ explosion_handler:
         on block falls:
         - if <context.location.has_flag[no_physics]>:
             - determine cancelled
-        on block explodes:
+        on block explodes ignorecancelled:true bukkit_priority:lowest:
         - define location <context.block>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
-        on entity explodes:
+        on entity explodes ignorecancelled:true bukkit_priority:lowest:
         - define location <context.location>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
@@ -83,10 +83,11 @@ explosion_handler:
                     - adjust <[entity]> painting:<[painting]>
                     - define after <[entity].attached_block>
     process_explosion:
-    - define new_blocks <[blocks].filter[is_siege_zone].filter[has_flag[big_shulker].not]>
-    - determine passively <list[]>
+    #- define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
+    - define new_blocks <[blocks]>
     - if <[new_blocks].size.equals[0]>:
         - stop
+    - determine passively <list[]>
     - foreach <[new_blocks].parse[block]> as:b:
         - flag <[b]> no_physics expire:1m
         - define dur <util.random.int[460].to[540]>t
@@ -99,7 +100,7 @@ explosion_handler:
             - runlater explosion_handler path:regen_blocks defmap:<map[location=<[location]>;material=<[material]>;inventory=<[inventory]>]> delay:<[dur]>
         - else:
             - runlater explosion_handler path:regen_blocks defmap:<map[location=<[location]>;material=<[material]>]> delay:<[dur]>
-        - modifyblock <[b]> air
+        - modifyblock <[value]> air
     regen_blocks:
     - modifyblock <[location]> <[material]>
     - if <[inventory].exists>:

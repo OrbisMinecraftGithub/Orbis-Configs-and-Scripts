@@ -13,9 +13,15 @@ towny_events:
             - determine cancelled
         on town toggles pvp:
         - ratelimit <context.town> 1t
+        - if <context.pvp.not>:
+            - stop
+        - title targets:<context.town.plots.filter[players.exists].parse[players].combine.filter[has_flag[combat].not]> "title:<&c>PVP has been toggled!" "subtitle:You will lose protection in 10 seconds."
         - foreach <context.town.plots.filter[players.exists].parse[players].combine.filter[has_flag[combat].not]> as:p:
             - flag <[p]> pvp.protection.town.<context.town> expire:10s
         on plot toggles pvp:
         - ratelimit <context.chunk> 1t
+        - if <context.pvp.not>:
+            - stop
+        - title targets:<context.chunk.players.filter[has_flag[combat].not]> "title:<&c>PVP has been toggled!" "subtitle:You will lose protection in 10 seconds."
         - foreach <context.chunk.players.filter[has_flag[combat].not]> as:p:
             - flag <[p]> pvp.protection.chunk.<context.chunk> expire:10s
