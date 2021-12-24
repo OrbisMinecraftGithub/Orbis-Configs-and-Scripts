@@ -102,6 +102,10 @@ run_combat_check:
             - determine cancelled
         - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
             - determine cancelled
+        - if <[victim].has_flag[pvp.protection.chunk.<[victim].location.chunk>]>:
+            - determine cancelled
+        - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
+            - determine cancelled
         - if <[attacker].location.is_siege_zone> && <[victim].location.is_siege_zone>:
             - determine passively cancelled:false
         - if <[attacker].location.town.pvp||true> && <[victim].location.town.pvp||true>:

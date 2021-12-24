@@ -9,5 +9,13 @@ towny_events:
                 - determine cancelled
         on resident teleports to nation:
         - if <context.destination.has_town> && <context.destination.town.is_sieged> && <player.town.equals[<context.destination.town>].not||true>:
-                - narrate "<&c>You cannot teleport to a besieged town."
-                - determine cancelled
+            - narrate "<&c>You cannot teleport to a besieged town."
+            - determine cancelled
+        on town toggles pvp:
+        - ratelimit <context.town> 1t
+        - foreach <context.town.plots.filter[players.exists].parse[players].combine.filter[has_flag[combat].not]> as:p:
+            - flag <[p]> pvp.protection.town.<context.town> expire:10s
+        on plot toggles pvp:
+        - ratelimit <context.chunk> 1t
+        - foreach <context.chunk.players.filter[has_flag[combat].not]> as:p:
+            - flag <[p]> pvp.protection.chunk.<context.chunk> expire:10s
