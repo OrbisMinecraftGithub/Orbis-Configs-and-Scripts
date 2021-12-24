@@ -1,0 +1,55 @@
+Default_Reload:
+    Left_Color: "&f"
+    Right_Color: "&7"
+    Symbol: "░"
+    Symbol_Amount: 7
+    Reload_Message:
+        Action_Bar: "&fReloading... &f#TIME#s"
+    Item:
+        Item_Type: "GRAY_STAINED_GLASS"
+        Item_Name: "&7░░░░&c░░░"
+        Item_Lore:
+        - "&7Click to change weapon reload colors!"
+        - "&7Reload colors &c- &7░░░░&c░░░"
+
+Blue_Reload:
+    Left_Color: "&f"
+    Right_Color: "&7"
+    Symbol: "░"
+    Symbol_Amount: 7
+    Reload_Message:
+        Action_Bar: "&fReloading... &f#TIME#s"
+    Item:
+        Item_Type: "GRAY_STAINED_GLASS"
+        Item_Name: "&7░░░░&c░░░"
+        Item_Lore:
+        - "&7Click to change weapon reload colors!"
+        - "&7Reload colors &c- &7░░░░&c░░░"
+
+Pink_Reload:
+    Left_Color: "&f"
+    Right_Color: "&7"
+    Symbol: "░"
+    Symbol_Amount: 7
+    Reload_Message:
+        Action_Bar: "&fReloading... &f#TIME#s"
+    Item:
+        Item_Type: "GRAY_STAINED_GLASS"
+        Item_Name: "&7░░░░&c░░░"
+        Item_Lore:
+        - "&7Click to change weapon reload colors!"
+        - "&7Reload colors &c- &7░░░░&c░░░"
+
+Red_Reload:
+    Left_Color: "&f"
+    Right_Color: "&7"
+    Symbol: "░"
+    Symbol_Amount: 7
+    Reload_Message:
+        Action_Bar: "&fReloading... &f#TIME#s"
+    Item:
+        Item_Type: "GRAY_STAINED_GLASS"
+        Item_Name: "&7░░░░&c░░░"
+        Item_Lore:
+        - "&7Click to change weapon reload colors!"
+        - "&7Reload colors &c- &7░░░░&c░░░"

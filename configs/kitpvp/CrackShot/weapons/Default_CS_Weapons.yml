@@ -1,0 +1,1177 @@
+AK47:
+    Item_Information:
+        Item_Name: "&eAK-47"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0.9
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 4
+        Bullet_Spread: 1.4
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 5
+    Reload:
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 45
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.6
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+RPG:
+    Item_Information:
+        Item_Name: "&eRPG"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 3
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: true
+        Projectile_Damage: 16
+        Removal_Or_Drag_Delay: 120-true
+        Projectile_Speed: 17
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Reload:
+        Enable: true
+        Reload_Amount: 1
+        Reload_Duration: 100
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6RPG-7 Rocket
+    Explosions:
+        Enable: true
+        Knockback: 10
+        Damage_Multiplier: 50
+        Enable_Owner_Immunity: false
+        Explosion_No_Grief: true
+        Explosion_Radius: 3
+        On_Impact_With_Anything: true
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: false
+    Extras:
+        Disable_Underwater: false
+
+M4A1:
+    Item_Information:
+        Item_Name: "&eM4A1"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 5
+        Bullet_Spread: 0.5
+        Remove_Bullet_Drop: true
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0.0
+    Reload:
+        Enable: true
+        Reload_Amount: 20
+        Reload_Duration: 25
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
+
+SPAS12:
+    Item_Information:
+        Item_Name: "&eSpas-12"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 12
+        Recoil_Amount: 1
+        Projectile_Amount: 4
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 45
+        Projectile_Damage: 5
+        Bullet_Spread: 2
+        Removal_Or_Drag_Delay: 7-true
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Reload:
+        Enable: true
+        Reload_Amount: 5
+        Reload_Bullets_Individually: true
+        Reload_Duration: 10
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
+    Sneak:
+        Enable: false
+        No_Recoil: false
+        Bullet_Spread: 122   
+OLYMPIA:
+    Item_Information:
+        Item_Name: "&eOlympia"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 5
+        Projectile_Amount: 6
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 6
+        Bullet_Spread: 8
+        Remove_Bullet_Drop: true
+        Removal_Or_Drag_Delay: 2-true
+    Damage_Based_On_Flight_Time:
+        Enable: true
+        Bonus_Damage_Per_Tick: -1
+        Maximum_Damage: -3
+    Sneak:
+        Enable: true
+        No_Recoil: false
+        Bullet_Spread: 3
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 2
+        Reload_Bullets_Individually: true
+        Reload_Duration: 15
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 5
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Firearm_Action:
+        Type: break
+        Open_Duration: 10
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+44:
+    Item_Information:
+        Item_Name: "&e.44 Magnum"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0.5
+    Reload:
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: true
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+M16:
+    Item_Information:
+        Item_Name: "&eM16"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Bullet_Spread: 0.4
+    Sneak:
+        Enable: false
+        No_Recoil: true
+        Bullet_Spread: 1
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 3
+        Delay_Between_Shots_In_Burst: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 24
+        Reload_Duration: 40
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+HUNTING_RIFLE:
+    Item_Information:
+        Item_Name: "&eHunting Rifle"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 145
+        Projectile_Damage: 12
+        Bullet_Spread: 3
+    Reload:
+        Enable: true
+        Reload_Amount: 7
+        Reload_Bullets_Individually: true
+        Reload_Duration: 11
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+    Sneak:
+        Enable: true
+        Bullet_Spread: 1.5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 12
+    Backstab:
+        Enable: false
+        Bonus_Damage: 5
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0.0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 3
+    Extras:
+        Disable_Underwater: false
+
+DEAGLE:
+    Item_Information:
+        Item_Name: "&eDesert Eagle"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 7
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 65
+        Projectile_Damage: 7
+        Bullet_Spread: 0.8
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+    Reload:
+        Enable: true
+        Reload_Amount: 7
+        Reload_Duration: 40
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.4
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
+
+FAL:
+    Item_Information:
+        Item_Name: "&eFAL"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 4
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 7
+        Remove_Bullet_Drop: true
+    Sneak:
+        Enable: true
+        No_Recoil: true
+    Reload:
+        Enable: true
+        Reload_Amount: 12
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
+
+AK74U: 
+    Item_Information:
+        Item_Name: "&eAK-74u"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 100
+        Projectile_Damage: 4
+        Bullet_Spread: 1.4
+    Sneak:
+        Enable: true
+        Bullet_Spread: 1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 6
+    Reload:
+        Enable: true
+        Reload_Amount: 30
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.7
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+AWP:
+    Item_Information:
+        Item_Name: "&eAWP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 19
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 170
+        Projectile_Damage: 15
+        Bullet_Spread: 5
+    Reload:
+        Enable: true
+        Reload_Amount: 7
+        Reload_Bullets_Individually: false
+        Reload_Duration: 55
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 12
+        Close_Duration: 12
+    Sneak:
+        Enable: true
+        Bullet_Spread: 1.5
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 50
+    Headshot:
+        Enable: true
+        Bonus_Damage: 13
+    Scope:
+        Enable: true
+        Zoom_Amount: 7
+        Zoom_Bullet_Spread: 0.0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 2
+    Extras:
+        Disable_Underwater: false
+
+SCAR:
+    Item_Information:
+        Item_Name: "&eSCAR-H"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 7
+        Bullet_Spread: 0.9
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Reload:
+        Enable: true
+        Reload_Amount: 18
+        Reload_Duration: 50
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.5
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+UZI: 
+    Item_Information:
+        Item_Name: "&eMini Uzi"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Removal_Or_Drag_Delay: 5-true
+        Bullet_Spread: 0.75
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 5
+    Reload:
+        Enable: true
+        Reload_Amount: 16
+        Reload_Duration: 30
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.80
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Extras:
+        Disable_Underwater: false
+
+PKP:
+    Item_Information:
+        Item_Name: "&ePKP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 4
+        Bullet_Spread: 2
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_spread: 0
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
+    Reload:
+        Enable: true
+        Reload_Amount: 50
+        Reload_Duration: 120
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+UMP: 
+    Item_Information:
+        Item_Name: "&eUMP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 4
+        Removal_Or_Drag_Delay: 8-true
+        Bullet_Spread: 1.1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 4
+    Reload:
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 30
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.6
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Extras:
+        Disable_Underwater: false
+
+L85A2:
+    Item_Information:
+        Item_Name: "&el85A2"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 2
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 5
+        Bullet_Spread: 0.5
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Reload:
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+FLAMETHROWER:
+    Item_Information:
+        Item_Name: "&eFlamethrower"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Projectile_Damage: 5
+        Recoil_Amount: 0
+        Projectile_Amount: 5
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 30
+        Bullet_Spread: 3
+        Remove_Bullet_Drop: true
+        Removal_Or_Drag_Delay: 1-true
+        Projectile_Incendiary:
+            Enable: true
+            Duration: 200
+    Damage_Based_On_Flight_Time:
+        Enable: true
+        Bonus_Damage_Per_Tick: -1
+        Maximum_Damage: -2
+    Reload:
+        Enable: true
+        Reload_Amount: 150
+        Reload_Duration: 75
+        Take_Ammo_On_Reload: true
+    Abilities:
+        Reset_Hit_Cooldown: false
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: true
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 10
+GLOCK:
+    Item_Information:
+        Item_Name: "&eGlock 18"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 3
+        Bullet_Spread: 0.5
+    Reload:
+        Enable: true
+        Reload_Amount: 17
+        Reload_Duration: 25
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+BARRETT:
+    Item_Information:
+        Item_Name: "&eBarrett .50 cal"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 3
+        Delay_Between_Shots: 12
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 210
+        Projectile_Damage: 16
+        Bullet_Spread: 2.5
+    Reload:
+        Enable: true
+        Reload_Amount: 10
+        Reload_Bullets_Individually: false
+        Reload_Duration: 65
+        Reload_Shoot_Delay: 8
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 18
+        Close_Duration: 18
+    Sneak:
+        Enable: true
+        Bullet_Spread: 0.3
+    Headshot:
+        Enable: true
+        Bonus_Damage: 12
+    Scope:
+        Enable: true
+        Zoom_Amount: 9
+        Zoom_Bullet_Spread: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 3
+    Extras:
+        Disable_Underwater: false
+M1014:
+    Item_Information:
+        Item_Name: "&eM1014"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 1
+        Projectile_Amount: 3
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 65
+        Projectile_Damage: 4
+        Bullet_Spread: 3
+        Removal_Or_Drag_Delay: 8-true
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 8
+        Reload_Bullets_Individually: true
+        Reload_Duration: 10
+        Reload_Shoot_Delay: 10
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 2.2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
+M249:
+    Item_Information:
+        Item_Name: "&eM249"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 105
+        Projectile_Damage: 6
+        Bullet_Spread: 0.7
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 6
+    Reload:
+        Enable: true
+        Reload_Amount: 75
+        Reload_Duration: 80
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.6
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+P90: 
+    Item_Information:
+        Item_Name: "&eP90"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 3
+        Bullet_Spread: 1.75
+    Sneak:
+        Enable: false
+        Bullet_Spread: 1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 9
+    Reload:
+        Enable: true
+        Reload_Amount: 40
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 1
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Extras:
+        Disable_Underwater: false
+
+FAMAS:
+    Item_Information:
+        Item_Name: "&eFamas"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 3
+        Bullet_Spread: 0.5
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 3
+        Delay_Between_Shots_In_Burst: 1
+    Reload:
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+       
+44lazer:
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: false
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+44lazerscope:
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight + Scope"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: false
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+
+44lazerscopesup:
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight + Scope + Supressor"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Bullet_Spread: 0
+    Reload:
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false

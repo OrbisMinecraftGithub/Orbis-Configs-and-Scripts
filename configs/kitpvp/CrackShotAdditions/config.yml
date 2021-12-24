@@ -1,0 +1,41 @@
+light-cooldown: 500
+hide-nametags: false
+hide-nametags-world-blacklist:
+- "example-world"
+modifications:
+  AK47:
+    type: WEAPON
+    disguised-projectile:
+      enabled: false
+      object-id: 61
+    light-on-fire:
+      enabled: true
+      light-level: 12
+      offset:
+        x: 0.0
+        y: 1.5
+        z: 0.0
+        multiplier: 1.0
+      remove-delay: 20
+    hostile-mob-attraction:
+      enabled: false
+      range: 30
+      blacklist:
+      - "SPIDER"
+    range-damage-multiplier:
+      1:
+        range: 50
+        multiplier: 0.8
+    strong-zoom:
+      enabled: true
+      type: FIRST
+    custom-sounds-out-of-ammo:
+      1:
+        sound-name: "example.example1"
+        volume: 1.0
+        pitch: 1.0
+    custom-sounds-shoot-with-no-ammo:
+      1:
+        sound-name: "example.example2"
+        volume: 1.0
+        pitch: 1.0

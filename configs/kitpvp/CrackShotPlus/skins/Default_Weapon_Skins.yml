@@ -1,0 +1,111 @@
+AK47_NoSkin:
+    Custom_Model_Data: 1
+    Scope:
+        Custom_Model_Data: 36
+
+RPG_NoSkin:
+    Custom_Model_Data: 3
+    Reload:
+        Custom_Model_Data: 4
+
+M4A1_NoSkin:
+    Custom_Model_Data: 5
+
+DEAGLE_NoSkin:
+    Custom_Model_Data: 7
+    Scope:
+        Custom_Model_Data: 42
+
+SPAS12_NoSkin:
+    Custom_Model_Data: 9
+    Scope:
+        Custom_Model_Data: 43
+
+OLYMPIA_NoSkin:
+    Custom_Model_Data: 10
+    Scope:
+        Custom_Model_Data: 44
+
+44_NoSkin:
+    Custom_Model_Data: 11
+    Scope:
+        Custom_Model_Data: 41
+        
+44lazer_NoSkin:
+    Custom_Model_Data: 47
+    Scope:
+        Custom_Model_Data: 41
+        
+44lazerscope_NoSkin:
+    Custom_Model_Data: 48
+    Scope:
+        Custom_Model_Data: 15
+        
+44lazerscopesup_NoSkin:
+    Custom_Model_Data: 49
+    Scope:
+        Custom_Model_Data: 15
+M16_NoSkin:
+    Custom_Model_Data: 12
+
+HUNTING_RIFLE_NoSkin:
+    Custom_Model_Data: 14
+    Scope:
+        Custom_Model_Data: 15
+        
+FAL_NoSkin:
+    Custom_Model_Data: 17
+    Scope:
+        Custom_Model_Data: 39
+
+AK74U_NoSkin:
+    Custom_Model_Data: 19
+
+AWP_NoSkin:
+    Custom_Model_Data: 21
+    Scope:
+        Custom_Model_Data: 22
+
+SCAR_NoSkin:
+    Custom_Model_Data: 23
+
+UZI_NoSkin:
+    Custom_Model_Data: 24
+    Scope:
+        Custom_Model_Data: 40
+
+PKP_NoSkin:
+    Custom_Model_Data: 25
+
+UMP_NoSkin:
+    Custom_Model_Data: 26
+    Scope:
+        Custom_Model_Data: 46
+
+L85A2_NoSkin:
+    Custom_Model_Data: 27
+
+FLAMETHROWER_NoSkin:
+    Custom_Model_Data: 28
+    
+GLOCK_NoSkin:
+    Custom_Model_Data: 29
+BARRETT_NoSkin:
+    Custom_Model_Data: 31
+    Scope:
+        Custom_Model_Data: 32
+M1014_NoSkin:
+    Custom_Model_Data: 30
+    Scope:
+        Custom_Model_Data: 45
+M249_NoSkin:
+    Custom_Model_Data: 33
+P90_NoSkin:
+    Custom_Model_Data: 34
+    Scope:
+        Custom_Model_Data: 37
+    
+FAMAS_NoSkin:
+    Custom_Model_Data: 35
+    Scope:
+        Custom_Model_Data: 38

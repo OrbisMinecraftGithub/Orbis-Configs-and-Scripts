@@ -1,0 +1,168 @@
+GRENADE:
+    Item_Information:
+        Item_Name: "&eGrenade"
+        Item_Type: SNOWBALL
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 12
+        Projectile_Amount: 1
+        Projectile_Type: grenade
+        Projectile_Subtype: SNOWBALL
+        Projectile_Speed: 4
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Explosion_Radius: 3
+        Explosion_Delay: 62
+    Shrapnel:
+        Enable: true
+        Block_Type: 77
+        Amount: 12
+        Speed: 3
+        Place_Blocks: false
+    Extras:
+        One_Time_Use: true
+    Abilities:
+        Reset_Hit_Cooldown: false
+
+FLASHBANG:
+    Item_Information:
+        Item_Name: "&eFlashbang"
+        Item_Type: SNOWBALL
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 9
+        Projectile_Amount: 1
+        Projectile_Type: grenade
+        Projectile_Subtype: SNOWBALL
+        Projectile_Speed: 11
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Explosion_No_Damage: true
+        Explosion_Potion_Effect: BLINDNESS-120-1,SLOW-120-1
+        Explosion_Radius: 5
+        Explosion_Delay: 20
+    Extras:
+        Disable_Underwater: true
+        One_Time_Use: true
+    Abilities:
+        Reset_Hit_Cooldown: false
+
+MOLOTOV:
+    Item_Information:
+        Item_Name: "&eMolotov Cocktail"
+        Item_Type: SNOWBALL
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 12
+        Projectile_Amount: 1
+        Projectile_Type: grenade
+        Projectile_Subtype: SNOWBALL
+        Projectile_Speed: 8
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Ignite_Victims: 50
+        Explosion_Radius: 3
+        Explosion_Delay: 20
+    Shrapnel:
+        Enable: true
+        Block_Type: 51
+        Amount: 8
+        Speed: 1
+        Place_Blocks: false
+    Extras:
+        One_Time_Use: true
+    Abilities:
+        Reset_Hit_Cooldown: false
+
+SATCHEL:
+    Item_Information:
+        Item_Name: "&7Satchel Charge &c-&7"
+        Item_Type: STONE_SWORD
+        Sounds_Acquired: ENTITY_BAT_TAKEOFF-1-1-0
+        Remove_Unused_Tag: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+    Explosive_Devices:
+        Enable: true
+        Device_Type: itembomb
+        Device_Info: 4,10,STONE_SWORD,STONE_SWORD
+        Sounds_Deploy: ENTITY_SKELETON_SHOOT-1-0-0
+        Sounds_Alert_Placer: UI_BUTTON_CLICK-1-1-0
+        Sounds_Trigger: ENTITY_SHEEP_SHEAR-1-2-0
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Explosion_Radius: 6
+        Explosion_Delay: 42
+        Sounds_Explode: ENTITY_ZOMBIE_ATTACK_DOOR_WOOD-2-0-0
+    Extras:
+        One_Time_Use: true
+        Disable_Underwater: true
+    Abilities:
+        Reset_Hit_Cooldown: true
+
+IED:
+    Item_Information:
+        Item_Name: "&7Illegal IED &c-&7"
+        Item_Type: STONE_SWORD
+        Sounds_Acquired: ENTITY_BAT_TAKEOFF-1-1-0
+        Remove_Unused_Tag: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+    Explosive_Devices:
+        Enable: true
+        Device_Type: itembomb
+        Device_Info: 1,10,STONE_SWORD,STONE_SWORD
+        Sounds_Deploy: ENTITY_SKELETON_SHOOT-1-0-0
+        Sounds_Alert_Placer: UI_BUTTON_CLICK-1-1-0
+        Sounds_Trigger: ENTITY_SHEEP_SHEAR-1-2-0
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Explosion_Radius: 6
+        Explosion_Delay: 7
+        Sounds_Explode: ENTITY_ZOMBIE_ATTACK_DOOR_WOOD-2-0-0
+    Extras:
+        One_Time_Use: true
+        Disable_Underwater: true
+    Abilities:
+        Reset_Hit_Cooldown: true
+
+C4:
+    Item_Information:
+        Item_Name: "&7C4 &c-&7"
+        Item_Type: STONE_SWORD
+        Sounds_Acquired: ENTITY_BAT_TAKEOFF-1-1-0
+        Remove_Unused_Tag: true
+    Shooting:
+        Cancel_Left_Click_Block_Damage: true
+        Cancel_Right_Click_Interactions: true
+    Explosive_Devices:
+        Enable: true
+        Device_Type: itembomb
+        Device_Info: 1,10,STONE_SWORD,STONE_SWORD
+        Sounds_Deploy: ENTITY_SKELETON_SHOOT-1-0-0
+        Sounds_Alert_Placer: UI_BUTTON_CLICK-1-1-0
+        Sounds_Trigger: ENTITY_SHEEP_SHEAR-1-2-0
+    Explosions:
+        Enable: true
+        Explosion_No_Grief: true
+        Explosion_Radius: 10
+        Explosion_Delay: 2
+        Sounds_Explode: ENTITY_ZOMBIE_ATTACK_DOOR_WOOD-2-0-0
+    Extras:
+        One_Time_Use: true
+        Disable_Underwater: true
+    Abilities:
+        Reset_Hit_Cooldown: true

@@ -1,0 +1,85 @@
+GRENADE:
+    Shoot:
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "explosion.explode-3-1"
+    Held:
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+FLASHBANG:
+    Shoot:
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Held:
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "flash.ring-2-1"
+                
+MOLOTOV: 
+    Shoot:
+        Custom_Shoot_Sound: "draw.throw-3-1"
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "explosion.molotov-3-1"
+    Held:
+        Custom_Held_Sound: "draw.molotov-3-1"
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+        
+SATCHEL: 
+    Shoot:
+        Custom_Shoot_Sound: "draw.throw-3-1"
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "eplosion.satchel-3-1"
+    Held:
+        Custom_Held_Sound: "draw.molotov-3-1"
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+        
+IED: 
+    Shoot:
+        Custom_Shoot_Sound: "eplosion.ied-3-1"
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "eplosion.satchel-3-1"
+    Held:
+        Custom_Held_Sound: "draw.molotov-3-1"
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+C4: 
+    Shoot:
+        Custom_Shoot_Sound: "draw.c4throw-3-1"
+        Trails:
+            Default_Trail: "Default_Crit_Explosive"
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "eplosion.satchel-3-1"
+    Held:
+        Custom_Held_Sound: "draw.molotov-3-1"
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"

@@ -1,0 +1,19 @@
+
+FLASHBANG_NoSkin:
+    Custom_Model_Data: 50
+
+GRENADE_NoSkin:
+    Custom_Model_Data: 51
+MOLOTOV_NoSkin:
+    Custom_Model_Data: 52
+    
+SATCHEL_NoSkin:
+    Custom_Model_Data: 10
+
+IED_NoSkin:
+    Custom_Model_Data: 11
+    
+C4_NoSkin:
+    Custom_Model_Data: 12
+    
+    

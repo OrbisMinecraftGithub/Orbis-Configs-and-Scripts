@@ -1,0 +1,1739 @@
+AK47:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.ak-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+            Trail: "ash,critical,cloud,composter,dolphin,dragon_breath,flame,flash,heart,lava,nautilus,note,portal,redstone,sneeze,snowball,slime,spit,spell,squid,totem"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1.8
+                Maxium: 2.1
+            Sideways:
+                Minium: -1.3
+                Maxium: 1.3
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.ak-1-1"
+        Visual_Reload:
+        Default_Visual_Reload: "Default_Reload"
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"
+    Held:
+        Weapon_Weight: -0.005
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"       
+
+RPG:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.rpg-5-1"
+        Trails:
+            Default_Trail: "Pierced_Smoke,Pierced_Crit"
+        Camera_Recoil:
+            Upwards:
+                Minium: 7.0
+                Maxium: 10.0
+            Sideways:
+                Minium: 4.0
+                Maxium: 7.0
+    Explode:
+        Custom_Sounds:
+            Explode_Location:
+                Explode: "explosion.explode-3-1"
+    Reload:
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.04
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+M4A1:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Shoot_Sound: "shoot.m4a1-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 0.5
+                Maxium: 0.5
+            Sideways:
+                Minium: 0.1
+                Maxium: 0.1
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.m4a1-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"       
+    Skin:
+        Default_Skin: "NoSkin"
+
+SPAS12:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.spas-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 2.0
+                Maxium: 3.0
+            Sideways:
+                Minium: .1
+                Maxium: .1
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.spas12-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.015
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"      
+    Skin:
+        Default_Skin: "NoSkin"
+
+OLYMPIA:
+    Shoot:
+        Custom_Pre_Shoot_Sound: "shoot.olympia-5-1"
+        Invisible_Projectiles: true
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 3.5
+                Maxium: 3.5
+            Sideways:
+                Minium: 1.7
+                Maxium: 1.7
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.olympia-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"
+    Skin:
+        Default_Skin: "NoSkin"
+
+44:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 4.0
+                Maxium: 4.5
+            Sideways:
+                Minium: 1
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.44-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"     
+    Skin:
+        Default_Skin: "NoSkin"
+
+M16:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.m16-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1.5
+                Maxium: 1.5
+            Sideways:
+                Minium: .1
+                Maxium: .1
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.m16-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"        
+    Skin:
+        Default_Skin: "NoSkin"
+
+HUNTING_RIFLE:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.hunting-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+    Scope:
+        Pumpkin_On_Zoom: true
+        Custom_Scope_Sound: "scope.start_scope-1-1"
+        Custom_Scope_End_Sound: "scope.end_scope-1-1"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.huntingrifle-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+DEAGLE:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.deserteagle-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,smoke,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 3
+                Maxium: 3
+            Sideways:
+                Minium: 1.5
+                Maxium: 1.5
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Reload:
+        Custom_Reload_Sound: "reload.deagle-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Skin:
+        Default_Skin: "NoSkin"
+
+FAL:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.fal-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1
+                Maxium: 2.4
+            Sideways:
+                Minium: .1
+                Maxium: .1
+    Custom_Bullet_Spread:
+            Maxium_Y_Spread_Lower: 0.3
+            Maxium_Y_Spread_Higher: 0.4
+            Minium_Starting_Y_Spread: 0.001
+            Maxium_Starting_Y_Spread: 0.002
+            Decrease_Spread_Back_to_Normal:
+                Minium_Milliseconds: 1100
+                Maxium_Milliseconds: 1700
+            While_Zooming:
+                ZX_Spread: 0.01
+                Increase_Y_Spread_Per_Shot: 0.003
+            While_Sneaking:
+                ZX_Spread: 0.04
+                Increase_Y_Spread_Per_Shot: 0.005
+            While_Standing_Or_Walking:
+                ZX_Spread: 0.05
+                Increase_Y_Spread_Per_Shot: 0.007
+            While_Sprinting:
+                ZX_Spread: 0.07
+                Increase_Y_Spread_Per_Shot: 0.01
+            While_Not_Touching_Ground:
+                ZX_Spread: 0.1
+                Increase_Y_Spread_Per_Shot: 0.011
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.fal1-1-1"
+        Custom_Reload_Complete_Sound: "reload.fal-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.01
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+AK74U:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.ak74u-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: .5
+                Maxium: .8
+            Sideways:
+                Minium: .1
+                Maxium: .1
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.ak-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+AWP:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.awp-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 6.0
+                Maxium: 6.0
+            Sideways:
+                Minium: 7.5
+                Maxium: 7.5
+    Scope:
+        Pumpkin_On_Zoom: true
+        Custom_Scope_Sound: "scope.start_scope-1-1"
+        Custom_Scope_End_Sound: "scope.end_scope-1-1"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Held:
+        Weapon_Weight: -0.025
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Reload:
+        Custom_Reload_Sound: "reload.awp1-1-1"
+        Custom_Reload_Complete_Sound: "reload.awp2-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Skin:
+        Default_Skin: "NoSkin"
+
+SCAR:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Shoot_Sound: "shoot.scar-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 0.9
+                Maxium: 1.1
+            Sideways:
+                Minium: -2
+                Maxium: 1.8
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.scar-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+UZI:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.uzi-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile"
+        Camera_Recoil:
+            Upwards:
+                Minium: 0.1
+                Maxium: 0.1
+            Sideways:
+                Minium: -3
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.uzi-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+PKP:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.pkp-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1.5
+                Maxium: 3
+            Sideways:
+                Minium: .5
+                Maxium: .5
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.pkp1-1-1"
+        Custom_Reload_Complete_Sound: "reload.pkp2-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.02
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"      
+    Skin:
+        Default_Skin: "NoSkin"
+
+UMP:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.ump-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1
+                Maxium: 1
+            Sideways:
+                Minium: .1
+                Maxium: .1
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.ump-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+L85A2:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.l85a2-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 2.1
+                Maxium: 3
+            Sideways:
+                Minium: 1.1
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.l85a2-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+FLAMETHROWER:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Shoot_Sound: "shoot.flamethrower-5-1"
+        Trails:
+            Default_Trail: "Flame"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.02
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+GLOCK:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.glock-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: .5
+                Maxium: .5
+            Sideways:
+                Minium: -.2
+                Maxium: .2
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Reload:
+        Custom_Reload_Sound: "reload.glock-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Skin:
+        Default_Skin: "NoSkin"
+        
+BARRETT:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Shoot_Sound: "shoot.barrett-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 15.0
+                Maxium: 15.0
+            Sideways:
+                Minium: 6.5
+                Maxium: 6.5
+    Scope:
+        Pumpkin_On_Zoom: true
+        Custom_Scope_Sound: "scope.start_scope-1-1"
+        Custom_Scope_End_Sound: "scope.end_scope-1-1"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Held:
+        Weapon_Weight: -0.04
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Reload:
+        Custom_Reload_Sound: "reload.barrett-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Skin:
+        Default_Skin: "NoSkin"
+
+M1014:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Shoot_Sound: "shoot.m1014-1-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1.0
+                Maxium: 1.5
+            Sideways:
+                Minium: .5
+                Maxium: .5
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.m1014-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+        
+M249:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.m249-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 1
+                Maxium: 1.6
+            Sideways:
+                Minium: 2
+                Maxium: -1.5
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.m249-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: -0.02
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+P90:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.p90-2-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.p90-2-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+
+FAMAS:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.famas-3-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.famas-2-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
+    Skin:
+        Default_Skin: "NoSkin"
+
+#lazer sight secion
+
+44lazer:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 4.0
+                Maxium: 4.5
+            Sideways:
+                Minium: 1
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.44-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+44lazerscope:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 4.0
+                Maxium: 4.5
+            Sideways:
+                Minium: 1
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.44-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
+
+44lazerscopesup:
+    Shoot:
+        Invisible_Projectiles: true
+        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
+        Trails:
+            Default_Trail: "Default_Crit_Projectile,Flame"
+        Camera_Recoil:
+            Upwards:
+                Minium: 4.0
+                Maxium: 4.5
+            Sideways:
+                Minium: 1
+                Maxium: 1.6
+    Damage:
+        No_Knockback:
+            Affect_Players: true
+            Affect_Mobs_And_Animals: true
+        Custom_Sounds:
+            Shooter_Location:
+                Hit: "impact.hitmarker-1-1"
+    Reload:
+        Custom_Reload_Sound: "reload.44-1-1"
+        Visual_Reload:
+            Default_Visual_Reload: "Default_Reload"
+    Held:
+        Weapon_Weight: 0
+        Hide_Attributes: true
+    Skin:
+        Default_Skin: "NoSkin"
