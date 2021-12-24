@@ -1,0 +1,155 @@
+name: §bParty Crate
+permission-required: false
+template: none
+preview: pyramid_blue
+cooldown: 15
+attached-citizens: ''
+open-cost:
+  vault: 0.0
+  exp: 0
+block:
+  locations: []
+  pushback:
+    enabled: true
+  hologram:
+    enabled: false
+    text:
+    - §c§lMYSTERY CRATE
+    - §7Buy a key at §cwww.myserver.com§c
+  effects:
+    type: HELIX
+    particle: FLAME
+rewards:
+  broadcast: false
+  min: 2
+  max: 2
+  list:
+    c3c4e517-7d09-4a59-9f07-508ed4d542ce:
+      name: §eSupply Signal
+      chance: 1.0
+      cmds:
+      - '[CONSOLE] ex give military_crate_flare_item to:<player[%player%].inventory>'
+      preview: a0000g002d5i004jdd5n6aoric5j78ejjdpnneoj1dhm0k003ehgme2g00ti6isrgdhgni2000h762rb502bnm8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2f5imor3fesh2o8jkcls788hq499nas3gdhsi0kr9ctn62r12fleio8jkcls788hq48h7q2800h66usj51000000202l7m8j5f1q74o9279dnm8j2dtm688hqcpgmosr55gh6it31dhkm68hqcpgmosr55gh7arj4clp6oqbecli24ej6c5m76p9c49pn8sj9ddin8q3idtqmeq1279j62r3jckm24rr2cpqn6or1ehim88hqcpgmosr55gh66rrcdtp24eh2ctnmop125gh78pboegh3k8n2g2h20gr1dhm76839dog62832c5pmiop09lkmoqbkc5p7i824e9nn08jtbkm24t35f1q24eh249ug16rr49ingt3ic4h3kmrr49h6ur3448t6cobcediio8j9ehgmoqb348t6cobcediio8jldpi6asjcd5n6ap1279j62r3jckm24srke9kmmpbkd1p6utb7d0h3kpj1dhpmab12dth6ctbjcdgn8pb448t6cobcediio8j3dtm6ush278h6errccgh2o8jkcls788hq48g20gbk41smutbi41m6uor1ehkmurhe49ulqb12ehingt1278h24v801800eh35dpknkpbe1000apjcc5jn600jdlgn0g2rehsn0p9tdlkmoqbkc5p7in8010012h35dpknkpbe95q6arajcdp6is3k00cmqqbcd5q62sjpbthn4obkclfmcr31e9iluqbkclmg600f8dqn6t3fdl6mup35dh262t3100000cg00400agrfeln78080
+    bf4db7dc-85d6-4f99-a2f9-fccece59ccfa:
+      name: Heart Of The Sea
+      chance: 2.0
+      cmds: []
+      item: a0000g002d5i006jdd5n6aoric5j78ej8clgn4t2vdtj5ut38clfn6pb10400agrfeln78080
+      preview: a0000g002d5i006jdd5n6aoric5j78ej8clgn4t2vdtj5ut38clfn6pb10400agrfeln78080
+    0b081860-07a0-4213-833b-1a62f34b40fa:
+      name: Mojang Banner Pattern
+      chance: 2.0
+      cmds: []
+      item: a0000g002d5i007rdd5n6aoric5j78ejddtl62rj7bth62rjeclp5us31ehq6asje0400agrfeln78080
+      preview: a0000g002d5i007rdd5n6aoric5j78ejddtl62rj7bth62rjeclp5us31ehq6asje0400agrfeln78080
+    1749d63b-c3a4-4fa6-9a42-dd534e358fe0:
+      name: Turtle Egg
+      chance: 2.0
+      cmds: []
+      item: 1800020009km800kdlkmspb3e9gmct1qehqn4t3cclfmapr70400agrfeln78080
+      preview: 1800020009km800kdlkmspb3e9gmct1qehqn4t3cclfmapr70400agrfeln78080
+    418a4b8b-4213-4f20-b683-bbf9febefa34:
+      name: Sponge
+      chance: 2.0
+      cmds: []
+      item: a0000g002d5i0043dd5n6aoric5j78ejje1nmspr50400agrfeln78080
+      preview: a0000g002d5i0043dd5n6aoric5j78ejje1nmspr50400agrfeln78080
+    b819d9c1-9371-4f69-a4fd-92e6ceeb67bb:
+      name: Netherite Scrap
+      chance: 3.0
+      cmds: []
+      item: 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavedhn4obg0400agrfeln780g0
+      preview: 1800020009km800pdlkmspb3e9gmct1qdpin8q35e9kn8pavedhn4obg0400agrfeln780g0
+    50be860c-6c74-452b-b687-740fef754c39:
+      name: Ender Pearl
+      chance: 4.0
+      cmds: []
+      item: a0000g002d5i005bdd5n6aoric5j78ej5dpi6asive1im2sjc0400agrfeln780g0
+      preview: a0000g002d5i005bdd5n6aoric5j78ej5dpi6asive1im2sjc0400agrfeln780g0
+    0d8abaca-ede2-4699-bdc0-95f64430b205:
+      name: Blaze Rod
+      chance: 4.0
+      cmds: []
+      item: 5000080016ip002dmmirj5cdp62pjk79h6oobqclfn4rr40400agrfeln78100
+      preview: 5000080016ip002dmmirj5cdp62pjk79h6oobqclfn4rr40400agrfeln78100
+    31412f06-937b-4503-8fa7-7779871cec04:
+      name: Diamond
+      chance: 5.0
+      cmds: []
+      item: 2g0004000j9cg012rb9dpim6sj1cpq3kp39c5mmurj40400agrfeln78400
+      preview: 2g0004000j9cg012rb9dpim6sj1cpq3kp39c5mmurj40400agrfeln78400
+    4a8df7db-0d06-4f26-9e19-1b88fca47341:
+      name: Emerald
+      chance: 5.0
+      cmds: []
+      item: 2g0004000j9cg012rb9dpim6sj1cpq3kpbdclp62r340400agrfeln78400
+      preview: 2g0004000j9cg012rb9dpim6sj1cpq3kpbdclp62r340400agrfeln78400
+    f2401ffb-0063-4d89-bc93-dde5c9c410dc:
+      name: String
+      chance: 6.0
+      cmds: []
+      item: a0000g002d5i0043dd5n6aoric5j78ejjehp6irj70400agrfeln78400
+      preview: a0000g002d5i0043dd5n6aoric5j78ejjehp6irj70400agrfeln78400
+    74822748-a7c5-4f4a-a648-483879b7a6a8:
+      name: Saddle
+      chance: 6.0
+      cmds: []
+      item: a0000g002d5i0043dd5n6aoric5j78ejjc5i68r350400agrfeln78080
+      preview: a0000g002d5i0043dd5n6aoric5j78ejjc5i68r350400agrfeln78080
+    b8a5cb18-3ce5-45fc-8eeb-0e8b49b9e390:
+      name: Leather
+      chance: 6.0
+      cmds: []
+      item: 2g0004000j9cg012rb9dpim6sj1cpq3kr35c5q6gpbi0400agrfeln78400
+      preview: 2g0004000j9cg012rb9dpim6sj1cpq3kr35c5q6gpbi0400agrfeln78400
+    61b0e4a1-abe3-4ec7-8631-af61be46874e:
+      name: Slime Ball
+      chance: 6.0
+      cmds: []
+      item: 1800020009km800kdlkmspb3e9gmct1qedm6irb5bth62r3c0400agrfeln78200
+      preview: 1800020009km800kdlkmspb3e9gmct1qedm6irb5bth62r3c0400agrfeln78200
+    d64ae502-db05-4dbc-80f5-03001e61c162:
+      name: Nautilus Shell
+      chance: 6.0
+      cmds: []
+      item: 5000080016ip0031mmirj5cdp62pjk79n62tbkd5m7asqvedk6ar3c0400agrfeln78080
+      preview: 5000080016ip0031mmirj5cdp62pjk79n62tbkd5m7asqvedk6ar3c0400agrfeln78080
+    b6e383d7-0962-4aa5-8121-fe60543c60d5:
+      name: Prismarine Shard
+      chance: 8.0
+      cmds: []
+      item: a0000g002d5i006jdd5n6aoric5j78ejge9kn6rb1e9kmspavedk62sj40400agrfeln78800
+      preview: a0000g002d5i006jdd5n6aoric5j78ejge9kn6rb1e9kmspavedk62sj40400agrfeln78800
+    82aec098-1c32-41b2-a8b9-ab37693921fb:
+      name: Prismarine Crystals
+      chance: 8.0
+      cmds: []
+      item: 5000080016ip003lmmirj5cdp62pjk79o74qbjdlgn4qbeclfm6sjpedq62r3j0400agrfeln78800
+      preview: 5000080016ip003lmmirj5cdp62pjk79o74qbjdlgn4qbeclfm6sjpedq62r3j0400agrfeln78800
+    335fd996-e0eb-45aa-b292-fe928fea7000:
+      name: Glow Ink Sac
+      chance: 8.0
+      cmds: []
+      item: 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78300
+      preview: 2g0004000j9cg01crb9dpim6sj1cpq3kprcdtrluqbeddfn6ob30400agrfeln78300
+    73cc88dd-d007-4bbf-8252-0c1169308733:
+      name: Gunpowder
+      chance: 8.0
+      cmds: []
+      item: 5000080016ip002dmmirj5cdp62pjk79jnarjgdtrm8pbi0400agrfeln78c00
+      preview: 5000080016ip002dmmirj5cdp62pjk79jnarjgdtrm8pbi0400agrfeln78c00
+    e1035331-01f7-4c91-b0b1-50f4483ae725:
+      name: Bone
+      chance: 8.0
+      cmds: []
+      item: 5000080016ip001pmmirj5cdp62pjk79h6urj50400agrfeln78400
+      preview: 5000080016ip001pmmirj5cdp62pjk79h6urj50400agrfeln78400
+item:
+  material: CHEST
+  amount: 1
+  durability: 0
+  name: '&x&F&D&0&4&0&4&lP&x&F&A&4&7&0&0&la&x&F&3&6&9&0&0&lr&x&E&8&8&5&0&0&lt&x&D&8&9&E&0&0&ly
+    &x&C&6&B&4&0&0&lC&x&A&F&C&9&0&0&lr&x&9&2&D&C&0&0&la&x&6&B&E&E&0&0&lt&x&0&0&F&F&4&E&le'
+  enchanted: false
+  item-flags: []
+  unbreakable: false

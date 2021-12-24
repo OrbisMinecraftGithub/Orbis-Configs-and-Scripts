@@ -1,0 +1,16 @@
+core:
+  command-aliases: goldencrates
+  lang: en
+  prefix: GoldenCrates
+data:
+  auto-save: 20
+  instant-save: false
+  storage:
+    type: sqlite
+    username: username
+    password: password
+    host: localhost
+    database: none
+  purge:
+    enabled: false
+    days: 60

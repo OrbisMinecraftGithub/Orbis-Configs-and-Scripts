@@ -1,0 +1,668 @@
+test:
+  Leader: 2d77f2e6-ccc8-4642-933e-62c83d1b501b|AJ_4real
+  Locked: true
+  Level: 7
+  Xp: 959
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 2d77f2e6-ccc8-4642-933e-62c83d1b501b|AJ_4real
+USA:
+  Leader: 6641b603-22e3-4d55-b4b8-52bf090b231b|AlbinoRat_
+  Locked: true
+  Level: 10
+  Xp: 5196
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 6641b603-22e3-4d55-b4b8-52bf090b231b|AlbinoRat_
+Australia:
+  Leader: e9d565c9-427f-4161-82dd-5e4fe0b66a17|FreeBEANSRGUD
+  Password: best
+  Locked: true
+  Level: 10
+  Xp: 2100
+  Ally: ''
+  ExpShareMode: EQUAL
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - e9d565c9-427f-4161-82dd-5e4fe0b66a17|FreeBEANSRGUD
+  - 2301e60a-f602-41b2-b88e-944dc66b1744|SianC4t
+  - bbffd5df-ffe1-411b-9ab3-e45f14946d08|fakedblood
+  - b0867327-3a0a-474b-9d88-d1f0804663f0|Sn00peh
+  - 115bbd1d-fb5a-4864-ae67-2a329bd5d380|Treblok8909
+  - bc8515d1-1abb-46fd-95f0-55e5198820a2|thedonotknow
+  - 339917a6-0fe7-4636-9087-eca0c549c7d2|Drunken_Scot
+  - aa11f796-c7b4-460e-a3c3-7a693eefdfb5|Dezaris
+  - 124b7cc0-c374-4108-bd8e-28a311fd1946|MintyFreshPvP
+  - 1d0c1b65-a192-4f05-aac2-5b485924f172|aRandomCitizen
+BAFIFN:
+  Leader: 33210653-7058-480a-95ed-131792a074a9|DuckeyChrist
+  Locked: true
+  Level: 10
+  Xp: 4200
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 33210653-7058-480a-95ed-131792a074a9|DuckeyChrist
+gladia:
+  Leader: 76310c65-6056-4799-9552-5f366a20f863|Mcdouble123
+  Password: gaiaroleplay
+  Locked: true
+  Level: 10
+  Xp: 4218
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 76310c65-6056-4799-9552-5f366a20f863|Mcdouble123
+  - 7fabf432-f89e-4b62-98c2-d518a71a9eb6|SilentStormSix
+Vergashiy:
+  Leader: 7255dc39-c7dc-4462-bb54-e9bae334c314|zlupie
+  Locked: true
+  Level: 10
+  Xp: 0
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 7255dc39-c7dc-4462-bb54-e9bae334c314|zlupie
+  - 75e2ef9f-04c8-49e6-a058-5d16b1fc2c68|veupol
+  - b2d9b3c6-37fa-4b9d-901e-dae79f4e5b45|meowdanica
+Panama:
+  Leader: 3a7cc957-6d5d-4959-82ab-d3cb4fccfa36|Cyanide_Leak
+  Locked: true
+  Level: 10
+  Xp: 586
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 3a7cc957-6d5d-4959-82ab-d3cb4fccfa36|Cyanide_Leak
+  - 6e6602a6-c552-4b96-8427-4fefd3db2018|Atomic_Moonlight
+bxsed:
+  Leader: edc95069-9edb-4434-ba02-3f55cce73baa|gebalat
+  Password: itstimeforafrica
+  Locked: true
+  Level: 10
+  Xp: 0
+  Ally: ''
+  ExpShareMode: EQUAL
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - edc95069-9edb-4434-ba02-3f55cce73baa|gebalat
+  - 80604e0f-d239-44c4-bf20-93ea4e4eb713|_WildBear_
+  - 5842cc96-74db-4015-a9f9-646e61dcd636|Schattey
+  - 32e9cc1e-2d92-45e4-b87d-061b0d63f34c|Moinhos
+  - 044790fc-251c-4c6c-b02a-13a6f79389df|FoolishFool_
+  - 5b4d33da-3e1f-4f75-8ed0-cae3b8a585e9|Doilem
+  - 739ee43b-0433-423d-a02f-7eccafb6ae03|BuildingWarrior1
+  - 2bf8f573-f2e8-4d2c-b1e9-072bf052722a|Gris1gr
+  - 2eb678c3-6bc9-4db8-b02e-a9040fd0f869|toast_kost
+Turan:
+  Leader: 45d38a1d-28f7-41be-894f-0c8ce1f052f7|Darktyht
+  Locked: true
+  Level: 10
+  Xp: 6976
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 45d38a1d-28f7-41be-894f-0c8ce1f052f7|Darktyht
+  - 91e46ce2-5d5e-485a-aef5-a34e2d5168b3|VerrucktSpieler
+  - e702f10a-c6c2-416c-ba2f-8f6b58559467|Lilbruh_eren
+  - 9f1c28ed-1450-41a4-a2e3-c130db84afd1|Ravocy
+  - d1c0652e-75a9-4e11-a792-23210760c806|CaptanBatu
+  - eb7828ba-d264-4662-8e15-d134ac062c6b|sdcEmRE
+  - d6e3487b-ce47-46a5-b5d9-e922653fb5ea|Oruc_Reis
+  - 7baeccc0-eb6a-49a6-99b8-cbf77718c49c|Bonbon_Amca
+  - 8990a8d0-1967-4b04-8b2a-0a47a42fc4be|sonoephe
+quebec:
+  Leader: a7e97722-30a1-4ca0-a08f-5ea17c0cfe9c|xolotls
+  Password: forever!!
+  Locked: true
+  Level: 10
+  Xp: 481
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - a7e97722-30a1-4ca0-a08f-5ea17c0cfe9c|xolotls
+Brazil:
+  Leader: 069249d6-4c81-4814-8e80-d2c76f5dc018|salame88
+  Locked: true
+  Level: 10
+  Xp: 8071
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 069249d6-4c81-4814-8e80-d2c76f5dc018|salame88
+  - 6766d4fb-4b3f-4108-9a04-dddf3a63a46d|Snifex_
+  - 3868ffcd-2188-49db-9c25-28eba44cd2b8|Tagoy
+  - be72f593-1e34-49b6-baee-9cee70b7b2a7|Ozyk
+  - 1e9aae6a-50eb-4d78-b442-5d99164f2ba1|Bennah2
+pog:
+  Leader: 2f98682f-c3e1-4345-8733-04e31bc97d96|4ntek
+  Password: pog
+  Locked: true
+  Level: 10
+  Xp: 5832
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 2f98682f-c3e1-4345-8733-04e31bc97d96|4ntek
+Filipinas:
+  Leader: 182dcf7d-b881-49db-95aa-255b0f5e583e|SterlingTub
+  Locked: true
+  Level: 10
+  Xp: 7160
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 182dcf7d-b881-49db-95aa-255b0f5e583e|SterlingTub
+  - 4a540de2-75f3-46a9-91b1-764681ebda52|TDoll_HK416
+ez:
+  Leader: 54fc673a-0c8f-4db1-881f-9bf544e5afd9|Noobi06
+  Locked: true
+  Level: 10
+  Xp: 4509
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 54fc673a-0c8f-4db1-881f-9bf544e5afd9|Noobi06
+Annatown:
+  Leader: a989207b-5d2b-4808-a042-50da6828652a|rodft
+  Password: anna
+  Locked: true
+  Level: 10
+  Xp: 5043
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - a989207b-5d2b-4808-a042-50da6828652a|rodft
+  - 7acdcfa8-26b6-4756-8c2c-fc42e95692d1|Frostflea9
+  - ad8c7266-c923-4494-8203-c1fe80be39e3|NotTolerable
+  - 1eff1f66-c5e8-4708-b86b-428964a942a3|kiwihe
+  - 7a5bdef9-d932-40a6-99c8-6451f9799690|B34nn
+  - 15369d37-c87a-49d4-baeb-c8e4a19fda27|WuPvP
+  - ffb21e7c-e8ee-47ec-87bf-64c6903607f8|Domiiscool12
+  - 0def97e2-4cea-4cd6-ba02-74e6048102d2|Jppo
+Beluga:
+  Leader: f34eff70-6db3-4f5b-9cd7-aff764c875b1|GamingBeluga
+  Locked: true
+  Level: 10
+  Xp: 5133
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - f34eff70-6db3-4f5b-9cd7-aff764c875b1|GamingBeluga
+  - 41b780c3-db7b-48d2-b0d9-23dc621bbce4|Pandatree123
+  - 5532436f-369e-4720-8caf-a1cb6b6c0b47|_milutom_
+jeff:
+  Leader: d360a96a-f3d8-40b4-9e1f-c2eea5013907|Drunken_Jeff
+  Locked: true
+  Level: 10
+  Xp: 7694
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - d360a96a-f3d8-40b4-9e1f-c2eea5013907|Drunken_Jeff
+noniggersallowed:
+  Leader: f5614ec4-d09d-4429-833d-87e83731d480|DerBruder2020
+  Locked: true
+  Level: 10
+  Xp: 497
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - f5614ec4-d09d-4429-833d-87e83731d480|DerBruder2020
+  - ad86d654-13fe-4f7c-af70-027175e07c68|Flarax04
+USAONTOP:
+  Leader: bd081b90-889b-4f42-a187-49926b9e6881|KrabbyMills
+  Locked: true
+  Level: 10
+  Xp: 7830
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - bd081b90-889b-4f42-a187-49926b9e6881|KrabbyMills
+  - 6f8a6d10-3d11-4e84-9019-9edec0243ec1|DaBigLeboBoi
+texass:
+  Leader: d67fb9eb-6df3-4825-83b0-def3e68a8f86|HyperDuccy
+  Locked: true
+  Level: 10
+  Xp: 7632
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - d67fb9eb-6df3-4825-83b0-def3e68a8f86|HyperDuccy
+Orbeez:
+  Leader: b4ee7d58-4931-47d4-b0d7-a41d42949efd|MaxLton
+  Locked: true
+  Level: 10
+  Xp: 1800
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - b4ee7d58-4931-47d4-b0d7-a41d42949efd|MaxLton
+ezxp:
+  Leader: 83020308-2569-4f90-945b-ca727992cade|NoobStudios55
+  Locked: true
+  Level: 10
+  Xp: 7338
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 83020308-2569-4f90-945b-ca727992cade|NoobStudios55
+Allah:
+  Leader: f34dd463-10ad-4439-b4c3-02e7ddcf52b3|Thai__Fighter1
+  Locked: true
+  Level: 10
+  Xp: 3613
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - f34dd463-10ad-4439-b4c3-02e7ddcf52b3|Thai__Fighter1
+  - ca51bcd0-b529-4756-81cf-c87a5416a840|Theblazer13
+  - 79cc012c-a90a-423a-be43-95ea34a39a31|Thai__Fighter2
+PizzaPasta:
+  Leader: 4c812207-c717-4996-8118-15807a89b61a|ZakonJFP
+  Locked: true
+  Level: 10
+  Xp: 545
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 4c812207-c717-4996-8118-15807a89b61a|ZakonJFP
+  - 8123199d-49d6-4e80-b3fd-7ea13e43cb5e|SuperTNT20
+  - 8da150bf-5d46-4da5-8de0-29c1f49bc27e|Boss1403
+  - d9fe6ebf-3a67-40da-8928-2a976668d078|Karlone
+vino:
+  Leader: 0a9c4bf7-5e47-498c-bad9-4fee7cf9a4bc|Nepchune
+  Locked: true
+  Level: 10
+  Xp: 7239
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 0a9c4bf7-5e47-498c-bad9-4fee7cf9a4bc|Nepchune
+  - a077b1c9-54e2-4491-972d-0a328aa862fa|Vinovia
+hotballs:
+  Leader: 09adb591-8ee3-4537-8f0a-87dc27d29b1a|Haz5
+  Locked: true
+  Level: 10
+  Xp: 979
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 09adb591-8ee3-4537-8f0a-87dc27d29b1a|Haz5
+Crete:
+  Leader: 762e7271-297b-497d-8ba7-66761ee72c03|humik58
+  Locked: true
+  Level: 10
+  Xp: 900
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 762e7271-297b-497d-8ba7-66761ee72c03|humik58
+poopdollar:
+  Leader: de80a0df-c0fe-4194-81e7-9eafd6b65d2f|johnsmat_
+  Locked: true
+  Level: 10
+  Xp: 7706
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - de80a0df-c0fe-4194-81e7-9eafd6b65d2f|johnsmat_
+  - f560cb81-a755-4c87-b1d0-d226942565e7|Olivefarmer
+  - 4f15834b-d5f2-41c9-a386-56b17cea15a1|iShockYou
+  - eb4b18ae-d68a-4c27-adb6-46b0496ec655|IceFoxGames
+FISHING:
+  Leader: a538a647-c7f7-429a-bee5-e82df4bde8f8|Biz0n_CZ
+  Locked: true
+  Level: 10
+  Xp: 8093
+  Ally: ''
+  ExpShareMode: EQUAL
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - a538a647-c7f7-429a-bee5-e82df4bde8f8|Biz0n_CZ
+  - f1522ee4-4206-4eea-9940-0da5d565a9cc|DudePot
+kurcina:
+  Leader: 2aa44462-21b6-46e4-9b6d-742bcd32cf11|_Srdjan
+  Locked: true
+  Level: 4
+  Xp: 1450
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 2aa44462-21b6-46e4-9b6d-742bcd32cf11|_Srdjan
+mcd:
+  Leader: cf66633b-42dd-4a2e-8c90-0d04aea614c9|BuilderSam4
+  Locked: true
+  Level: 10
+  Xp: 6496
+  Ally: ''
+  ExpShareMode: EQUAL
+  ItemShareMode: EQUAL
+  ItemShareType:
+    LOOT: true
+    MINING: false
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - cf66633b-42dd-4a2e-8c90-0d04aea614c9|BuilderSam4
+  - c6a5d39f-a2b7-4f35-a68e-4fed1672365d|Rgue
+  - 0915667b-e4f8-4533-9db1-e911d9306f19|3BUD
+  - 59e5e8ec-630c-41d2-83fd-abb0d32666c2|Felixveryyes
+  - 8b9d832f-d2df-4c36-9fd7-649214e35eca|BIJJDOE
+CreteDefense:
+  Leader: 40cf7466-b413-4838-baa2-70627e0dc4e1|BabyBulbasaur
+  Locked: true
+  Level: 10
+  Xp: 7786
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 40cf7466-b413-4838-baa2-70627e0dc4e1|BabyBulbasaur
+  - 9c6a8b6f-0b45-423b-aa24-ab6727aeddee|Alphabuild
+Fossa:
+  Leader: 26317dd1-90fc-48c0-a4bf-9cf59bdbceca|PowderyHD
+  Locked: true
+  Level: 10
+  Xp: 0
+  Ally: ''
+  ExpShareMode: EQUAL
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 26317dd1-90fc-48c0-a4bf-9cf59bdbceca|PowderyHD
+  - e5481cbd-27d0-4413-acf9-41cc88b4aab8|gimabis
+  - 263027ee-e15f-43b2-ac2b-d6624e682644|Soccer_sky
+  - 4dba2ab5-dda6-442c-b7ef-52d2ee519c65|IwillInchiappetU
+  - f19d1cb7-9357-492f-9db8-708bb869ef08|xITAxGege147
+  - ac010ef5-eddf-4bd7-b327-b7a51ff33455|TheTechnos_
+carai:
+  Leader: 63e8b6db-a573-4f7d-bcf6-2b86e219f3e2|Campionedeiboss
+  Locked: true
+  Level: 10
+  Xp: 933
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 63e8b6db-a573-4f7d-bcf6-2b86e219f3e2|Campionedeiboss
+  - 0054dd87-52ef-4240-abb2-a8ed4b3d51a7|Smokey263
+  - 269359e3-1a21-4b0c-a0fc-319ab4ac4921|SillyBilly12345
+  - 1662f848-7cbb-439f-9e01-72756bd39627|Liboe
+uwu:
+  Leader: 66c742d1-9754-43a1-b2a7-8cdd4ddb0d8c|Lastiy
+  Locked: true
+  Level: 10
+  Xp: 3006
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 66c742d1-9754-43a1-b2a7-8cdd4ddb0d8c|Lastiy
+  - 89a914a2-e1d7-4d3d-956c-950fb90abd41|juryblueboy
+shutup:
+  Leader: de7b8266-3ba2-4267-8840-4d2a848b1d61|Em3r0r_0ct0
+  Locked: true
+  Level: 4
+  Xp: 779
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - de7b8266-3ba2-4267-8840-4d2a848b1d61|Em3r0r_0ct0
+name:
+  Leader: 41c1f8e2-f1cc-4eeb-9f0a-be3ee06dc314|NotSteve24
+  Password: password
+  Locked: true
+  Level: 5
+  Xp: 3183
+  Ally: ''
+  ExpShareMode: NONE
+  ItemShareMode: NONE
+  ItemShareType:
+    LOOT: true
+    MINING: true
+    HERBALISM: true
+    WOODCUTTING: true
+    MISC: true
+  Members:
+  - 41c1f8e2-f1cc-4eeb-9f0a-be3ee06dc314|NotSteve24
