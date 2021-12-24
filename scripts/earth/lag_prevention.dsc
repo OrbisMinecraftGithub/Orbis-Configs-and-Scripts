@@ -25,4 +25,8 @@ chunk_lag_prevention:
         - wait 1m
         - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[50000]>:
             - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
+                - define i:+:1
+                - if <[i].is_more_than_or_equal_to[30]>:
+                    - wait 1t
+                    - define i 0
                 - adjust <[c]> force_loaded:false
