@@ -1,0 +1,144 @@
+strings:
+  messages:
+    progress_increased:
+    - '&bYou have contributed %amount% %item%s to the mission.'
+    - '&b%remaining% %item%s remaining.'
+    start:
+    - '&#11C7EB&lA new monthly mission has started!'
+    - '&#8B8C8CReward when completed: &#F23030%overall_reward%'
+    end:
+      completed:
+      - '&bThe current monthly mission has been completed.'
+      - '&bYou have been awarded %money%.'
+      out_of_time:
+      - '&bThe current monthly mission has ended, sadly the server has failed to complete
+        it in time.'
+      - '&bYou have been awarded %money%.'
+  mission:
+    turn_in:
+      carrot: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Ccarrots
+        turned in.'
+      potato: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Cpotatoes
+        turned in.'
+      cobblestone: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Ccobblestones
+        turned in.'
+      pumpkin: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Cpumpkins
+        turned in.'
+      melon: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Cmelons
+        turned in.'
+    break_block:
+      stone: '&#F23030%current% &#8B8C8Cout of &#F23030%requirement% &#8B8C8Cblocks
+        of stone broken.'
+monthly:
+  turn_in:
+    carrot:
+      reward:
+        money: '400000'
+        experience: '10000000'
+      min: '6000000'
+      max: '12000000'
+      max_progress_per_day_per_player: '100000'
+    potato:
+      reward:
+        money: '400000'
+        experience: '10000000'
+      min: '3000000'
+      max: '12000000'
+      max_progress_per_day_per_player: '100000'
+    cobblestone:
+      reward:
+        money: '400000'
+        experience: '10000000'
+      min: '8000000'
+      max: '14000000'
+      max_progress_per_day_per_player: '100000'
+    pumpkin:
+      reward:
+        money: '400000'
+        experience: '10000000'
+      min: '6000000'
+      max: '12000000'
+      max_progress_per_day_per_player: '100000'
+    melon:
+      reward:
+        money: '400000'
+        experience: '10000000'
+      min: '6000000'
+      max: '12000000'
+      max_progress_per_day_per_player: '100000'
+  break_block:
+    stone:
+      reward:
+        money: '300000'
+        experience: '100000000'
+      min: '4000000'
+      max: '8000000'
+      max_progress_per_day_per_player: '100000'
+current:
+  month: '12'
+  type: turn_in
+  item: melon
+  requirement: '10676268'
+player:
+  8467b847-a411-47ef-8dd6-849e6338917a:
+    amount: '287'
+  2d77f2e6-ccc8-4642-933e-62c83d1b501b:
+    amount: '384'
+  a37cef54-938c-4b4d-8e73-525e0ab8a40c:
+    amount: '1228'
+  ffb21e7c-e8ee-47ec-87bf-64c6903607f8:
+    amount: '13635'
+  7ab60b32-d3e0-478b-8dd2-9f5e7d2ee424:
+    amount: '47'
+  40cf7466-b413-4838-baa2-70627e0dc4e1:
+    amount: '3615'
+  762e7271-297b-497d-8ba7-66761ee72c03:
+    amount: '4491'
+  aff397b4-9912-4442-8bf5-1d4d721fa56e:
+    amount: '24554'
+  bbffd5df-ffe1-411b-9ab3-e45f14946d08:
+    amount: '6258'
+  59e5e8ec-630c-41d2-83fd-abb0d32666c2:
+    amount: '267'
+  a077b1c9-54e2-4491-972d-0a328aa862fa:
+    amount: '32724'
+  42d149b7-3a16-422b-bba1-8631ca377a98:
+    amount: '923'
+  c2f07160-d0ad-4cef-9f05-24a27ba99bac:
+    amount: '5152'
+  5fec7bb3-de92-402c-8b34-fc6a60ebef99:
+    amount: '1206'
+  42750448-086e-44d5-9d5d-0bd3f8bb7f39:
+    amount: '173'
+  7a68ffb3-d0dc-4f58-b5d4-f73b51345a0d:
+    amount: '14102'
+  c6a5d39f-a2b7-4f35-a68e-4fed1672365d:
+    amount: '702'
+  c20d0e96-a4a1-4ca5-88f1-4a2fdb64f492:
+    amount: '1935'
+  04901762-1220-42cb-a9b6-9031c638ccbf:
+    amount: '8'
+  0a9c4bf7-5e47-498c-bad9-4fee7cf9a4bc:
+    amount: '100069'
+  1d0c1b65-a192-4f05-aac2-5b485924f172:
+    amount: '1051'
+  f1522ee4-4206-4eea-9940-0da5d565a9cc:
+    amount: '467'
+  29f6e4f8-e073-4ae2-bb41-7ef5752a7ef9:
+    amount: '470'
+  40c311d8-aa1f-40d5-bb7b-6e34e7e44b61:
+    amount: '8706'
+  938efc91-9633-4613-90df-aa2224d3c380:
+    amount: '304'
+  26317dd1-90fc-48c0-a4bf-9cf59bdbceca:
+    amount: '1720'
+  4c812207-c717-4996-8118-15807a89b61a:
+    amount: '9934'
+  26bf60c3-3f34-487d-9e56-2cbad7eb941b:
+    amount: '2902'
+  de80a0df-c0fe-4194-81e7-9eafd6b65d2f:
+    amount: '1710'
+  eb4b18ae-d68a-4c27-adb6-46b0496ec655:
+    amount: '119'
+overall:
+  amount: '239143'

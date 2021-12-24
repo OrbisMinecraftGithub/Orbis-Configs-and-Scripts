@@ -1,0 +1,114 @@
+rewards:
+    party:
+        every:
+            100: # every 100 overall votes.
+                commands:
+                    players_who_voted:
+                    - money give %player_name% 300
+                    - goldencrates give %player_name% party
+                    players_who_didnt_vote: []
+                message:
+                    players_who_voted:
+                    - "&#A1A09FThank you for voting. &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l3&#efcc32&l0&#e9d839&l0 &#A1A09Fbecause of the vote party. You have also recieved some &#f7b42e&litems!"
+                    players_who_didnt_vote:
+                    - "&#A1A09FYou have failed to vote and you have not recieved a reward this time."
+                announcement:
+                - "&a&l100 &#A1A09Fvotes has been reached. A vote party began!"
+    tier:
+        1:
+            every:
+                1:
+                    commands:
+                    - money give %player_name% 50
+                    - ex give <proc[proc_get_mission_item_from_tier].context[1]> to:<player[%player_name%].inventory>
+                    message: 
+                    - '&#A1A09FThank you for voting for &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly! &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l5&#efcc32&l0&#e9d839&l!'
+                7:
+                    commands:
+                    - money give %player_name% 250
+                    - goldencrates give %player_name% common
+                    announcement: 
+                    - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"
+                
+                100:
+                    commands:
+                    - goldencrates give %player_name% legendary 
+        2:  
+            every:
+                1: 
+                   commands:
+                   - money give %player_name% 50
+                   - ex give <proc[proc_get_mission_item_from_tier].context[2]> to:<player[%player_name%].inventory>
+                   message: 
+                    - '&#A1A09FThank you for voting for &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly! &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l5&#efcc32&l0&#e9d839&l!'
+                7:
+                   commands:
+                   - money give %player_name% 250
+                   - goldencrates give %player_name% uncommon
+                   announcement: 
+                    - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"
+                
+                100:
+                    commands:
+                    - goldencrates give %player_name% legendary 
+        3:  
+            every:
+                1: 
+                   commands:
+                   - money give %player_name% 50
+                   - ex give <proc[proc_get_mission_item_from_tier].context[3]> to:<player[%player_name%].inventory>
+                   message: 
+                    - '&#A1A09FThank you for voting for &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly! &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l5&#efcc32&l0&#e9d839&l!'
+                7:
+                   commands:
+                   - money give %player_name% 50
+                   - goldencrates give %player_name% rare
+                   announcement: 
+                    - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"
+                   
+                100:
+                    commands:
+                    - goldencrates give %player_name% legendary 
+                 
+        4:  
+            every:
+                1: 
+                   commands:
+                   - money give %player_name% 50
+                   - ex give <proc[proc_get_mission_item_from_tier].context[4]> to:<player[%player_name%].inventory>
+                   message: 
+                    - '&#A1A09FThank you for voting for &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly! &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l5&#efcc32&l0&#e9d839&l!'
+                7:
+                   commands:
+                   - money give %player_name% 250
+                   - goldencrates give %player_name% epic
+                   announcement: 
+                    - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"
+                   
+                100:
+                    commands:
+                    - goldencrates give %player_name% legendary 
+        5:  
+            every:
+                1: 
+                   commands:
+                   - money give %player_name% 50
+                   - ex give <proc[proc_get_mission_item_from_tier].context[5]> to:<player[%player_name%].inventory>
+                   message: 
+                    - '&#A1A09FThank you for voting for &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly! &#A1A09FYou have received &#f7b42e&l$&#f3c02f&l5&#efcc32&l0&#e9d839&l!'
+                7:
+                   commands:
+                   - money give %player_name% 250
+                   - goldencrates give %player_name% celestial
+                   announcement: 
+                    - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"   
+                
+                100:
+                    commands:
+                    - goldencrates give %player_name% legendary 
+tiers:
+    1: 0
+    2: 30
+    3: 150
+    4: 300
+    5: 550

@@ -1,0 +1,273 @@
+sidebar:
+  lines:
+  - '&#878986&l◙ &#21DC3B&lServer - &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly'
+  - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+  - '  &#64E175&l• &f<server.online_players.size> &#21DC3Bonline'
+  - '  &#64E175&l• &#21DC3BPing: &f<player.ping>&fms '
+  - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+  - '  &#64E175&l• &#21DC3BNation - &f&l<player.nation.name.if_null[NONE]>'
+  - '  &#64E175&l• &#21DC3BTown - &F&l<player.town.name.if_null[NONE]>'
+  - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+  - '  &#64E175&l• &#21DC3BBalance: &f&l<player.formatted_money>'
+  - '  &#64E175&l• &#21DC3BParty: &f<server.flag[votes].mod[100].sub[100].abs> &#21DC3Bvotes
+    left'
+  - '&7'
+  - '         &#03FCB1&l/sb toggle'
+  title: ''
+header:
+- '&#676C6D&l&m               &r&#676C6D&l( &#193df8&lW&#0053ff&le&#0064ff&ll&#0073ff&lc&#0080ff&lo&#008cff&lm&#0097ff&le
+  &#00a2ff&lt&#00acff&lo &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls &f&lTowny
+  &#676C6D&l)&#676C6D&l&m              '
+- ''
+- '%online_players%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
+- '&#09A1CEVote Party: &f%votes_until_party%&#1788E7/&f100'
+- ''
+footer:
+- ''
+- '&f&lWebsite&r&#0087ff ┃ &#00a9ffo&#00b1ffr&#00b9ffb&#00c1ffi&#00c8ffs&#00cffbmc&#00d6f6.&#00dcf2c&#00e3edo&#00e9eam '
+- '&F&lStore&#0087ff ┃ &#008fffs&#0096fft&#009dffo&#00a4ffr&#00abffe&#00b1ff.&#00b8ffo&#00beffr&#00c4ffb&#00cafei&#00cffas&#00d5f7m&#00daf3c&#00e0ef.&#00e5ecc&#00eae9o&#0fefe6m'
+- '&#676C6D&l┃┃ &#193df8&op&#0050ff&ol&#005fff&oa&#006dff&oy&#0079ff&o.&#0084ff&oo&#008eff&or&#0098ff&ob&#00a1ff&oi&#00aaff&os&#00b2ff&om&#00bbff&oc&#00c2ff&o.&#00cafc&oc&#00d1f8&oo&#0dd8f4&om
+  &#676C6D&l┃┃'
+- ''
+- '&#676C6D&l&m                                                           '
+startup_commands:
+- gamerule announceAdvancements false
+- dmarker addicon id:crate file:plugins/dynmap/icons/crate.png
+space_laser:
+  duration: '40'
+  explosive_power: '6'
+  explosion_breaks_blocks: 'true'
+  fire_explosive: 'true'
+  enable_recipe: 'false'
+  enabled: 'true'
+battle_session:
+  message:
+  - '&#839292&m&l+-----------------***-----------------+'
+  - '&#808382Battle Session startimes &#11ed51&l&nW&#4dee5e&l&ne&#6aee6a&l&ne&#80ee77&l&nk&#93ef84&l&nd&#a4ef91&l&na&#b3ef9e&l&ny&#c0efac&l&ns&r
+    &#808382in &#f41010&l&nU&#f33431&l&nT&#f04b4b&l&nC:'
+  - '&7'
+  - '&#EC4040 00:15, 01:25, 02:30, 03:45, 05:15, 10:15, 11:45, 13:30, 14:40, 16:10,
+    17:25, 18:40, 19:55, 21:25, 22:40'
+  - '&7'
+  - '&#808382Battle Session startimes &#f41010&l&nW&#f12d11&l&ne&#ef3d14&l&ne&#ec4a17&l&nk&#ea551c&l&ne&#e75e21&l&nn&#e56726&l&nd&#e26f2d&l&ns&r
+    &#808382in &#f41010&l&nU&#f33431&l&nT&#f04b4b&l&nC:'
+  - '&7'
+  - '&#EC4040 00:15, 01:15, 02:20, 03:45, 05:15, 08:00, 09:30, 11:15, 14:55, 16:10,
+    17:10, 18:25, 19:40, 20:55, 21:55, 22:10'
+  - '&7'
+  - '&#F09109Find out when the next battle session begins by doing &l/sw nextsession'
+  - '&#839292&m&l+-----------------***-----------------+'
+combat_tag:
+  blocked_commands:
+  - player spawn
+  - towny:player spawn
+  - towny:town spawn
+  - towny:t spawn
+  - towny:nation spawn
+  - towny:n spawn
+  - towny:resident spawn
+  - towny:res spawn
+  - town spawn
+  - t spawn
+  - nation spawn
+  - n spawn
+  - resident spawn
+  - res spawn
+  - tfly
+  - townyfly
+  - townyflight
+  - tfly
+  - townyflight:tfly
+  - townyflight:townyfly
+  - townyflight:townyflight
+  - travel
+  - n spawn
+  - home
+  - sethome
+napalm:
+  explosive_power: '3'
+  spawning_duration_in_ticks: '30'
+  explosion_breaks_blocks: 'true'
+  fire_spawned_per_tick: '2'
+  spawn_spread: '0.3'
+  fire_explosive: 'true'
+  enable_recipe: 'false'
+  enabled: 'true'
+turtle_master_cooldown: 5m
+lightning_rod:
+  strike_radius_when_thundering: '4'
+  strike_delay_after_impact: '40'
+  animation_intensity: '3'
+  strike_radius: '2'
+enderpearl:
+  damage_when_teleported: '2'
+  cooldown: 20s
+lagcontrol:
+  entities:
+    maximum_per_chunk: '50'
+  redstone:
+    min_time_between_pulse: 1s
+    number_before_removal: '10'
+  limits:
+    dispenser: '16'
+    slime_block: '16'
+    piston: '16'
+    dropper: '16'
+    redstone_lamp: '16'
+    sticky_piston: '16'
+    hopper: '16'
+potions:
+  healing_multiplier: '1'
+messages:
+  invalid_args: <&c>Invalid arguments.
+  turtle_master_potion_cooldown: <&e>You are on turtle master cooldown. Time Left<&co>
+    <player.flag_expiration[turtle_potion_cooldown].from_now.formatted>
+  too_many_args: <&c>Too many arguments.
+  not_enough_money: <&c>You do not have enough money.
+  cannot_use_item_here: <&c>You cannot use that item here.
+  missing_permission: <&c>Missing permissions.
+  invalid_material: <&c>Invalid material name.
+  done: <&e>Done!
+  not_enough_args: <&c>Not enough arguments.
+enderpearlcooldown: 20s
+block_drop_more_exp:
+  potato: '50'
+  wheat: '50'
+  melon: '50'
+  pumpkin: '50'
+  carrot: '50'
+flak_cannon:
+  damage: '10'
+itemchat:
+  permission: itemchat.use
+announcements:
+  on first join:
+  - '&3Welcome to the server'
+  - '&3Enjoy your stay.'
+  on join:
+  - '&#839292&m&l+-----------------***-----------------+'
+  - '&#3b7ac5&l&nW&#3b89cd&n&le&#4198d4&n&ll&#4ca6d9&n&lc&#5cb4de&n&lo&#6ec2e3&n&lm&#82cfe7&n&le
+    &#97dcec&n&lt&#ade9f2&n&lo &#1cf272&n&lT&#46f485&n&lo&#61f696&n&lw&#77f7a6&n&ln&#8cf8b5&n&ly&#a0f9c3&n&l,
+    &#26E8A7&n&l%player_name%!'
+  - '&f'
+  - '&#C9C5BEJoin the Discord at &#15DFCA&ldiscord.gg/orbis&#15DFCA&l!'
+  - '&7'
+  - '&#C9C5BELearn how to play &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly&#a0f9c3&l
+    with &#cfaa1b&l/&#d4b717&lh&#d8c413&le&#dad111&ll&#dcdf11&lp&#E47E18&l!'
+  - '&#C9C5BESupport the server by buying &#e44c18&lR&#e86522&la&#eb7a30&ln&#ef8e3f&lk&#f2a151&ls,
+    &r&#C9C5BEFind out more by doing &#e44c18&l/&#e8620f&ls&#ea7606&lt&#eb8802&lo&#ec9a07&lr&#ebac15&le&#EFB52A&l!'
+  - '&#C9C5BEGet money easily with &#1879e4&l/&#008ded&lv&#009ef1&lo&#00aff1&lt&#00beee&le&#15cdeb&l!'
+  - '&#839292&m&l+-----------------***-----------------+'
+  messages:
+    '13':
+    - '&3[Tips] <&b>To access your vehicles do /garage.'
+    '14':
+    - '&3[Tips] <&b>To make a nation do /n new (nation name you desire).'
+    '15':
+    - '&3[Tips] <&b>To see all the commands relating to your town do /t.'
+    '16':
+    - '&3[Tips] <&b>To find out when a new day begins you can do /towny time.'
+    '17':
+    - '&3[Tips] <&b>Make alliances by doing /n ally add (nation name).'
+    '18':
+    - '&3[Tips] <&b>Conquer Land by sieging towns you can do this by placing a coloured
+      banner outside of a towns Territory.'
+    '19':
+    - '&3 [Tips] <&b>You can do /map to see yourself on the dynmap.'
+    '1':
+    - '&3[Tips] <&b>To make a town do <&L>/t new (name for the town).'
+    '2':
+    - '&3[Tips] <&b>Join the discord for support and to meet other people who also
+      enjoy the server at discord.gg/orbis.'
+    '3':
+    - '&3[Tips] <&b>Do /vote to recieve money and missions.'
+    '4':
+    - '&3[Tips] <&b>You can do /help to go on the help page.'
+    '5':
+    - '&3[Tips] <&b>Use /t set title to add a cool phrase or word in front of your
+      name.'
+    '6':
+    - '&3[Tips] <&b>Remember to be respectful to everyone even your enemies, to see
+      all the rules do /rules.'
+    '7':
+    - '&3[Tips] <&b>Are you enjoying Orbis? If you are then you can donate to buy
+      ranks by doing /store.'
+    '8':
+    - '&3[Tips] <&b>To invite people into your town use to command /t add (player
+      name).'
+    '9':
+    - '&3[Tips] <&b>We have cannons enabled on this server to find out more do /cannons'
+    '10':
+    - '&3[Tips] <&b>To make a shop you can left click a chest while holding an item
+      and entering the amount you desire to sell that item from.'
+    '11':
+    - '&3[Tips] <&b>You can contribute to the monthly missions by doing /monthlymission
+      or /mm.'
+    '12':
+    - '&3[Tips] <&b>You can disable the scoreboard by doing [/sb toggle].'
+discord:
+  message_format: '<player.name> : <context.message>'
+garage:
+  message: '&eYou are warming up to open the garage.'
+  warmup: '&eYou are warming up to open the garage.'
+  moved: '&eWarmup failed, You have moved.'
+  combat: '&eWarmup failed, You are in combat.'
+new_player:
+  kit:
+    '1': i@stone_sword
+    '2': i@stone_pickaxe
+    '3': i@stone_axe
+    '4': i@stone_shovel
+    '5': i@cooked_beef[quantity=16]
+    '6': i@campfire
+    '37': i@chainmail_boots
+    '38': i@chainmail_leggings
+    '39': i@chainmail_chestplate
+    '40': i@chainmail_helmet
+offhand:
+  disallow:
+  - AK47
+  - SPAS12
+  - M1014
+  - OLYMPIA
+  - FAL
+  - AK74u
+  - BARRET
+  - FAMAS
+  - AWP
+  - HUNTING_RIFLE
+  - L85A2
+  - M16
+  - M249
+  - M4A1
+  - P90
+  - UMP
+  - UZI
+  - SCAR
+  - PKP
+  - RPG
+  - PUMPKIN
+  - MELON_BLOCK
+crates:
+  life: 1d
+  commands:
+    on break:
+    - some command
+trading:
+  enchants:
+    replace:
+      mending:
+        '1':
+          first_item:
+            material: emerald
+            quantity: '64'
+          second_item:
+            material: book
+            quantity: '1'
+          max_uses: '1'
+weapons:
+  cooldown:
+    on fire:
+      RPG: 30s
+    on switch:
+      default: 3s

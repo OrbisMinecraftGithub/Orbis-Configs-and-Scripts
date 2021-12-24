@@ -1,0 +1,140 @@
+crates:
+  military:
+    life_span: 1h
+    spawn_every: 30m
+    dynmap_marker_icon: crate
+    minimum_item_types: '3'
+    messages:
+      spawn_random: '<&4><&l>[ALERT] <&r><&c>A Military crate has been dropped at <&6><[location].x.truncate>, <[location].z.truncate> <&r><&c>containing weapons and ammunition.'
+      spawn_specific: '<&4><&l>[ALERT] <&r><&c><player.name> has called a <[type]> crate at <&6><[location].x.truncate>, <[location].z.truncate>.'
+      collected: '<&4><&l>[ALERT] <&r><&c><player.name> has collected a <[type]> crate at <&6><[location].x.truncate>, <[location].z.truncate>.'
+    maximum_item_types: '5'
+    commands:
+    - goldencrates give <player.name> military
+  supply:
+    life_span: 30m
+    spawn_every: 20m
+    dynmap_marker_icon: crate
+    minimum_item_types: '3'
+    messages:
+      spawn_random: '<&color[#F89533]>A supply crate has been dropped at <&c><[location].x.truncate>, <[location].z.truncate>.'
+      spawn_specific: '<&color[#F89533]><player.name> has called a <[type]> crate at <&6><[location].x.truncate>, <[location].z.truncate>.'
+      collected: '<&color[#F89533]><player.name> has collected a <[type]> crate at <&6><[location].x.truncate>, <[location].z.truncate>.'
+    items:
+      sponge:
+        maximum_quantity: '2'
+        weight: '2'
+        minimum_quantity: '1'
+      netherite_ingot:
+        maximum_quantity: '5'
+        weight: '4'
+        minimum_quantity: '2'
+      ender_pearl:
+        maximum_quantity: '8'
+        weight: '5'
+        minimum_quantity: '4'
+      turtle_spawn_egg:
+        maximum_quantity: '1'
+        weight: '3'
+        minimum_quantity: '1'
+      ghast_tear:
+        maximum_quantity: '10'
+        weight: '4'
+        minimum_quantity: '6'
+      spider_eye:
+        maximum_quantity: '16'
+        weight: '6'
+        minimum_quantity: '8'
+      glow_berries:
+        maximum_quantity: '8'
+        weight: '5'
+        minimum_quantity: '4'
+      bee_spawn_egg:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      skull_banner_pattern:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      dragon_head:
+        maximum_quantity: '1'
+        weight: '1'
+        minimum_quantity: '1'
+      gunpowder:
+        maximum_quantity: '32'
+        weight: '9'
+        minimum_quantity: '16'
+      prismarine_crystals:
+        maximum_quantity: '32'
+        weight: '6'
+        minimum_quantity: '16'
+      music_disc_pigstep:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      zombie_villager_spawn_egg:
+        maximum_quantity: '1'
+        weight: '3'
+        minimum_quantity: '1'
+      glow_squid_spawn_egg:
+        maximum_quantity: '1'
+        weight: '1'
+        minimum_quantity: '1'
+      prismarine_shard:
+        maximum_quantity: '32'
+        weight: '6'
+        minimum_quantity: '8'
+      creeper_banner_pattern:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      nether_star:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      axolotl_spawn_egg:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      diamond:
+        maximum_quantity: '16'
+        weight: '6'
+        minimum_quantity: '8'
+      enchanted_golden_apple:
+        maximum_quantity: '3'
+        weight: '1'
+        minimum_quantity: '1'
+      heart_of_the_sea:
+        maximum_quantity: '1'
+        weight: '3'
+        minimum_quantity: '1'
+      panda_spawn_egg:
+        maximum_quantity: '1'
+        weight: '2'
+        minimum_quantity: '1'
+      glowstone_dust:
+        maximum_quantity: '32'
+        weight: '10'
+        minimum_quantity: '10'
+      end_rod:
+        maximum_quantity: '10'
+        weight: '7'
+        minimum_quantity: '3'
+      quartz:
+        maximum_quantity: '32'
+        weight: '7'
+        minimum_quantity: '16'
+      shulker_shell:
+        maximum_quantity: '16'
+        weight: '6'
+        minimum_quantity: '4'
+      nautilus_shell:
+        maximum_quantity: '3'
+        weight: '5'
+        minimum_quantity: '1'
+      AK47:
+        maximum_quantity: '3'
+        weight: '1'
+        minimum_quantity: '1'
+    maximum_item_types: '3'

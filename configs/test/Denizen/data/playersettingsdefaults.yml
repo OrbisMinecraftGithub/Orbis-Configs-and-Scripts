@@ -1,0 +1,7 @@
+relative_armor_color:
+  enemy: red
+  ally: '#00c8ff'
+  enabled: 'true'
+vehicle:
+  plane:
+    trail: cloud

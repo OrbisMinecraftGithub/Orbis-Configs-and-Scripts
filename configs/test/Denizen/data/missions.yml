@@ -1,0 +1,369 @@
+missions:
+  requirements:
+    kill_entity:
+      chicken:
+        insane:
+          min: '24'
+          max: '32'
+        hard:
+          min: '16'
+          max: '20'
+        medium:
+          min: '10'
+          max: '13'
+        easy:
+          min: '4'
+          max: '7'
+      zombie:
+        insane:
+          min: '25'
+          max: '34'
+        skeleton:
+          insane:
+            min: '25'
+            max: '34'
+        hard:
+          min: '17'
+          max: '23'
+        medium:
+          min: '11'
+          max: '15'
+        easy:
+          min: '6'
+          max: '8'
+      cow:
+        insane:
+          min: '24'
+          max: '32'
+        hard:
+          min: '16'
+          max: '20'
+        medium:
+          min: '10'
+          max: '13'
+        easy:
+          min: '4'
+          max: '7'
+      sheep:
+        insane:
+          min: '24'
+          max: '32'
+        hard:
+          min: '16'
+          max: '20'
+        medium:
+          min: '10'
+          max: '13'
+        easy:
+          min: '4'
+          max: '7'
+      pig:
+        insane:
+          min: '24'
+          max: '32'
+        hard:
+          min: '16'
+          max: '20'
+        medium:
+          min: '10'
+          max: '13'
+        easy:
+          min: '4'
+          max: '7'
+    fish_item:
+      pufferfish:
+        hard:
+          min: '14'
+          max: '20'
+        medium:
+          min: '8'
+          max: '13'
+        easy:
+          min: '3'
+          max: '6'
+      salmon:
+        hard:
+          min: '14'
+          max: '20'
+        medium:
+          min: '8'
+          max: '13'
+        easy:
+          min: '3'
+          max: '6'
+      cod:
+        hard:
+          min: '14'
+          max: '20'
+        medium:
+          min: '8'
+          max: '13'
+        easy:
+          min: '3'
+          max: '6'
+    break_block:
+      stone:
+        insane:
+          min: '450'
+          max: '600'
+        medium:
+          min: '180'
+          max: '250'
+        hard:
+          min: '350'
+          max: '400'
+        easy:
+          min: '80'
+          max: '170'
+    shear_sheep:
+      white_wool:
+        insane:
+          min: '60'
+          max: '70'
+        medium:
+          min: '14'
+          max: '24'
+        hard:
+          min: '32'
+          max: '56'
+        easy:
+          min: '7'
+          max: '10'
+    enchant_item:
+      diamond_pickaxe:
+        insane:
+          min: '10'
+          max: '16'
+        medium:
+          min: '4'
+          max: '6'
+        hard:
+          min: '7'
+          max: '8'
+        easy:
+          min: '1'
+          max: '3'
+      iron_sword:
+        insane:
+          min: '10'
+          max: '18'
+        medium:
+          min: '6'
+          max: '10'
+        hard:
+          min: '12'
+          max: '14'
+        easy:
+          min: '2'
+          max: '5'
+      netherite_sword:
+        hard:
+          min: '5'
+          max: '6'
+        medium:
+          min: '3'
+          max: '4'
+        easy:
+          min: '1'
+          max: '2'
+      iron_pickaxe:
+        insane:
+          min: '9'
+          max: '14'
+        medium:
+          min: '4'
+          max: '6'
+        hard:
+          min: '7'
+          max: '8'
+        easy:
+          min: '1'
+          max: '5'
+      netherite_pickaxe:
+        hard:
+          min: '3'
+          max: '4'
+        medium:
+          min: '2'
+          max: '3'
+        easy:
+          min: '1'
+          max: '1'
+      diamond_sword:
+        insane:
+          min: '11'
+          max: '15'
+        hard:
+          min: '8'
+          max: '10'
+        medium:
+          min: '5'
+          max: '7'
+        easy:
+          min: '2'
+          max: '4'
+    gain_xp:
+      insane:
+        min: '2400'
+        max: '2700'
+      hard:
+        min: '1600'
+        max: '2300'
+      medium:
+        min: '1250'
+        max: '1500'
+      easy:
+        min: '1000'
+        max: '1250'
+    craft_item:
+      birch_planks:
+        insane:
+          min: '1800'
+          max: '2300'
+        hard:
+          min: '1100'
+          max: '1500'
+        medium:
+          min: '700'
+          max: '900'
+        easy:
+          min: '200'
+          max: '640'
+      oak_planks:
+        insane:
+          min: '1800'
+          max: '2300'
+        hard:
+          min: '1100'
+          max: '1500'
+        medium:
+          min: '700'
+          max: '900'
+        easy:
+          min: '200'
+          max: '640'
+      spruce_planks:
+        insane:
+          min: '1800'
+          max: '2300'
+        hard:
+          min: '1100'
+          max: '1500'
+        medium:
+          min: '700'
+          max: '900'
+        easy:
+          min: '200'
+          max: '640'
+      dark_oak_planks:
+        insane:
+          min: '1800'
+          max: '2300'
+        hard:
+          min: '1100'
+          max: '1500'
+        medium:
+          min: '700'
+          max: '900'
+        easy:
+          min: '200'
+          max: '640'
+  strings:
+    tiers:
+      insane: '&1&lInsane Mission'
+      medium: '&6&lMedium Mission'
+      hard: '&c&lHard Mission'
+      easy: '&a&lEasy Mission'
+    types:
+      place_block:
+        titlecase: '&r&fPlace %context% blocks'
+        base: '&r&f - You have placed %current% out of %requirement% blocks.'
+      create_portal:
+        titlecase: '&r&fCreate nether portals'
+        base: '&r&f - You have created %current% out of %requirement% portals.'
+      tame_entity:
+        titlecase: '&r&fTame %context%s'
+        base: '&r&f - You have tamed %current% out of %requirement%.'
+      reload_weapon:
+        titlecase: '&r&fReload %context% weapon'
+        base: '&r&f - You have reloaded %current% out of %requirement% weapons.'
+      burn_fuel:
+        titlecase: '&r&fBurn %context%'
+        base: '&r&f - You have placed %current% out of %requirement% blocks.'
+      kill_entity:
+        titlecase: '&r&fKill %context%s'
+        base: '&r&f - You have killed %current% out of %requirement%.'
+      consume_item:
+        titlecase: '&r&fConsume %context%'
+        base: '&r&f - You have eaten %current% out of %requirement%.'
+      fire_weapon:
+        titlecase: '&r&fFire %context% weapon'
+        base: '&r&f - You have placed %current% out of %requirement% blocks.'
+      fish_item:
+        titlecase: '&r&fCatch %context%'
+        base: '&r&f - You have catched %current% out of %requirement%.'
+      deal_damage_with_gun:
+        titlecase: '&r&fDeal damage with %context% weapon'
+        base: '&r&f - You have placed %current% out of %requirement% blocks.'
+      break_block:
+        titlecase: '&r&fBreak %context% blocks'
+        base: '&r&f - You have broken %current% out of %requirement% blocks.'
+      shear_sheep:
+        titlecase: '&r&fShear %context% sheep'
+        base: '&r&f - You have placed %current% out of %requirement% blocks.'
+      enchant_item:
+        titlecase: '&r&fEnchant %context%s'
+        base: '&r&f - You have enchanted %current% out of %requirement%.'
+      breed_entity:
+        titlecase: '&r&fBreed %context%'
+        base: '&r&f - You have bred %current% out of %requirement%.'
+      gain_xp:
+        titlecase: '&r&fGain Experience'
+        base: '&r&f - You have gained %current% out of %requirement%.'
+      brew_potion:
+        titlecase: '&r&fBrew %context% potions'
+        base: '&r&f - You have brewed %current% out of %requirement% blocks.'
+      craft_item:
+        titlecase: '&fCraft %context%'
+        base: '&f - You have crafted %current% out of %requirement%.'
+      break_item:
+        titlecase: '&fBreak %context%'
+        base: '&f - You have broken %current% out of %requirement%.'
+    destroy_items:
+    - '&cWarning - completing this mission will delete'
+    - '&cthe specified items from your inventory'
+    objective: '&e&lObjective:'
+  weights:
+    tiers:
+      insane: '2'
+      medium: '11'
+      hard: '10'
+      easy: '20'
+    types:
+      place_block: '0'
+      create_portal: '0'
+      tame_entity: '0'
+      reload_weapon: '0'
+      burn_fuel: '0'
+      kill_entity: '20'
+      consume_item: '17'
+      fire_weapon: '0'
+      fish_item: '16'
+      deal_damage_with_gun: '0'
+      break_block: '15'
+      shear_sheep: '0'
+      enchant_item: '14'
+      breed_entity: '0'
+      gain_xp: '15'
+      brew_potion: '0'
+      craft_item: '18'
+      break_item: '14'
+  rewards:
+    insane:
+    - money give %player_name% 1000
+    medium:
+    - money give %player_name% 300
+    hard:
+    - money give %player_name% 500
+    easy:
+    - money give %player_name% 150
