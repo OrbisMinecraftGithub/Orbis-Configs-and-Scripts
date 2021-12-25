@@ -112,12 +112,6 @@ fixes_events:
             - determine cancelled:false
         - if <context.location.town||null> == <context.destination.town||null>:
             - determine cancelled:false
-        on wandering_trader spawns because natural:
-        - determine cancelled
-        on zombie_villager spawns because natural:
-        - determine cancelled
-        on phantom spawns because natural:
-        - determine cancelled
         on entity damaged ignorecancelled:true:
         - if <player.name||null> == SuperTNT20 && <player.world.name.starts_with[arena]||false>:
             - determine cancelled:false
@@ -147,18 +141,6 @@ fixes_events:
                 - determine cancelled:false
             - if <[entity].town> == <[location].town>:
                 - determine cancelled:false
-        on delta time minutely:
-        - stop
-        - define limit <yaml[config].read[lagcontrol.entities.maximum_per_chunk]||50>
-        - define removed 0
-        - foreach <server.worlds> as:w:
-            - foreach <[w].loaded_chunks> as:c:
-                - define a <[c].living_entities.size>
-                - if <[a].is_more_than[<[limit]>]>:
-                    - remove <[c].living_entities.random[<[a].sub[<[limit]>]>]>
-                    - define removed:<[removed].add[<[a].sub[<[limit]>]>]>
-        - if <[removed].is_more_than[0]>:
-            - announce "<&c><[removed]> <&e>entities were removed from crowded chunks."
         on crackshot weapon damages entity:
         - if <player.is_inside_vehicle||false> && !<context.victim.is_inside_vehicle||false>:
             - determine passively cancelled
@@ -231,6 +213,9 @@ fixes_events:
             - determine fulfilled
         - if <[cmd]> == seat:
             - determine fulfilled
+        - if <[cmd]> == tr:
+            - determine passively fulfilled
+            - execute as_player tradechat
         - if <[cmd]> == ?:
             - determine fulfilled
         - if <[cmd].to_lowercase||> == sw || <[cmd].to_lowercase||> == siegewar:

@@ -91,8 +91,6 @@ run_combat_check:
     type: task
     debug: false
     script:
-        - if <[attacker].name.equals[AJ_4real]>:
-            - narrate test target:<server.match_player[AJ_4real]>
         - if <[attacker]> == <[victim]>:
             - stop
         - if !<[attacker].is_player> || !<[victim].is_player>:
