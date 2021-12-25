@@ -25,6 +25,8 @@ trees_events:
             small: 5
     events:
         on structure grows:
+        - if <context.location.is_siege_zone>:
+            - stop
         - determine passively cancelled
         - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
         - define tree <context.location.material.name.replace[_sapling].with[]>
