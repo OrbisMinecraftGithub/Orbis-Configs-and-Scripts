@@ -128,6 +128,8 @@ crates_spawn:
   script:
   - if !<[location].chunk.is_loaded>:
     - chunkload <[location].chunk> duration:20s
+  - chunkload <[location].chunk> duration:10s
+  - wait 10t
   - spawn <[type]>_crate_entity <[location].with_y[300]> save:as
   - if !<entry[as].spawned_entity.is_spawned>:
     - announce to_permission:orbis.notify "Tried to spawn crate, but failed."
