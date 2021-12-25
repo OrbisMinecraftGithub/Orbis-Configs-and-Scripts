@@ -157,7 +157,7 @@ combat_log_events:
         - run player_leaves_combat defmap:<map[player=<player>]>
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
-        - define attacker <context.damager>
+        - define attacker <player>
         - inject run_combat_check
         on player damages player ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
