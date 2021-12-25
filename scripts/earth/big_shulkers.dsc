@@ -4,6 +4,7 @@ big_shulker_item:
     recipes:
         1:
             type: shapeless
+            recipe_id: big_shulker_1
             input: material:*hulker_box|material:*hulker_box|material:*hulker_box|material:*hulker_box
     display name: <&r><&6><&l>Big <&e><&l>Shulker
 
@@ -17,6 +18,15 @@ big_shulker_events:
     type: world
     debug: false
     events:
+        on item recipe formed:
+        - if <context.item.script.name.equals[big_shulker_item].not||true>:
+            - stop
+        - if <context.recipe_id.equals[big_shulker_1]||true>:
+            - stop
+        - define reagent <context.recipe.filter[script.name.equals[big_shulker_item]].get[1]||null>
+        - if <[reagent].equals[null]>:
+            - stop
+        - determine <context.item.with_flag[big_shulker:<[reagent].flag[big_shulker]||<list[]>>].with[script=big_shulker_item]>
         on block explodes:
         - determine <context.blocks.filter[has_flag[big_shulker].not]>
         on entity explodes:
@@ -29,7 +39,7 @@ big_shulker_events:
             - stop
         - define loc <context.location.relative[<context.location.block_facing>]>
         - flag <[loc]> big_shulker:<context.item.flag[big_shulker]>
-        on player breaks shulker_box bukkit_priority:MONITOR:
+        on player breaks *hulker_box bukkit_priority:MONITOR:
         - if <context.location.block.has_flag[big_shulker].not>:
             - stop
         - define location <context.location>
@@ -79,7 +89,7 @@ big_shulker_events:
         - if <[loc].has_flag[big_shulker].not>:
             - stop
         - determine cancelled
-        on player right clicks shulker_box location_flagged:big_shulker bukkit_priority:MONITOR:
+        on player right clicks *hulker_box location_flagged:big_shulker bukkit_priority:MONITOR:
         - if <player.is_sneaking> && <player.item_in_hand.material.name.equals[air].not>:
             - stop
         - if <context.location.block.has_flag[big_shulker].not>:
