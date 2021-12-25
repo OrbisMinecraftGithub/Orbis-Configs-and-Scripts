@@ -18,6 +18,16 @@ big_shulker_events:
     type: world
     debug: false
     events:
+        on player prepares anvil craft item:
+        - define reagent <context.inventory.slot[1]>
+        - if <[reagent].script.name.equals[big_shulker_item].not>:
+            - stop
+        - if <context.item.script.name.equals[big_shulker_item].not>:
+            - stop
+        - define item <context.item>
+        - foreach <[reagent].list_flags> as:f:
+            - define item <[item].with_flag[<[f]>:<[reagent].flag[<[f]>]>]>
+        - determine <[item]>
         on item recipe formed:
         - if <context.item.script.name.equals[big_shulker_item].not||true>:
             - stop
