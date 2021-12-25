@@ -20,7 +20,7 @@ hammer_diamond:
     mechanisms:
         enchantments:
             area_dig: 1
-    display name: Diamond Hammer
+    display name: <&e>Diamond Hammer
     recipes:
         1:
             type: shaped
@@ -37,7 +37,7 @@ hammer_netherite:
     mechanisms:
         enchantments:
             area_dig: 1
-    display name: Netherite Hammer
+    display name: <&e>Netherite Hammer
     recipes:
         1:
             type: shaped
@@ -54,7 +54,7 @@ hammer_iron:
     mechanisms:
         enchantments:
             area_dig: 1
-    display name: Iron Hammer
+    display name: <&e>Iron Hammer
     recipes:
         1:
             type: shaped

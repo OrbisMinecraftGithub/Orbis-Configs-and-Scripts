@@ -30,3 +30,5 @@ patch_lore_hook:
         on player clicks item in grindstone:
         - wait 1t
         - inventory set d:<context.inventory> slot:3 o:<context.inventory.slot[3].proc[patch_lore]>
+        on item recipe formed:
+        - determine <context.item.proc[patch_lore]>
