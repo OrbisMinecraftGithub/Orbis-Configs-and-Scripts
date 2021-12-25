@@ -8,7 +8,7 @@ patch_lore:
     - define map <[map]||<[item].enchantment_map>>
     - define lore <[map].parse_value_tag[<gray><enchantment[<[parse_key]>].full_name[<[parse_value]>]>].values>
     - if !<[item].has_flag[patch_lore]>:
-        - define item <[item].with_flag[patch_lore=<[item].lore.if_null[<empty>]>]>
+        - define item <[item].with_flag[patch_lore:<[item].lore.if_null[<empty>]>]>
     - define lore <[lore].include[<[item].flag[patch_lore]>]>
     - define item <[item].with[lore=<[lore]>]>
     - adjust <[item]> hides:<[item].hides.include[ENCHANTS].deduplicate>
