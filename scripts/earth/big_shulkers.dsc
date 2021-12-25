@@ -47,7 +47,7 @@ big_shulker_events:
             - foreach <server.online_players.filter[open_inventory.note_name.equals[big_shulker_<context.location.block>]]> as:p:
                 - inventory close player:<[p]>
             - flag <context.location.block> big_shulker:<inventory[big_shulker_<context.location.block>].list_contents>
-        - define item <item[big_shulker_item]>
+        - define item <item[big_shulker_item].with[material=<context.location.material.name>]>
         - flag <[item]> big_shulker:<context.location.block.flag[big_shulker]>
         - flag <context.location.block> big_shulker:!
         - note remove as:big_shulker_<context.location.block>
