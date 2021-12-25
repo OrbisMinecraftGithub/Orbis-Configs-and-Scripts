@@ -99,8 +99,8 @@ run_combat_check:
             - determine cancelled
         - if <[attacker].mcmmo.party||null1> == <[victim].mcmmo.party||null2>:
             - determine cancelled
-        - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
-            - determine cancelled
+        # - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
+        #     - determine cancelled
         - if <[victim].has_flag[pvp.protection.chunk.<[victim].location.chunk>]>:
             - determine cancelled
         - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
