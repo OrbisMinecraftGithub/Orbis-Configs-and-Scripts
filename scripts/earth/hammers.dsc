@@ -11,6 +11,7 @@ hammers_events:
                 - define blocks <[location].below.left.to_cuboid[<[location].above.right>].blocks>
             - else:
                 - define blocks <context.location.with_yaw[0].with_pitch[0].forward.left.to_cuboid[<context.location.with_yaw[0].with_pitch[0].backward.right>]>
+            - define blocks <[blocks].filter[material.name.equals[bedrock].not].filter[material.name.equals[obsidian].not]>
             - modifyblock <[blocks]> air naturally:<player.item_in_hand> source:<player>
             - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
 
