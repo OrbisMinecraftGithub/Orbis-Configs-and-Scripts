@@ -10,8 +10,7 @@ patch_lore:
     - if !<[item].has_flag[patch_lore]>:
         - define item <[item].with_flag[patch_lore:<[item].lore.if_null[<empty>]>]>
     - define lore <[lore].include[<[item].flag[patch_lore]>]>
-    - define item <[item].with[lore=<[lore]>]>
-    - adjust <[item]> hides:<[item].hides.include[ENCHANTS].deduplicate>
+    - define item <[item].with[lore=<[lore]>;hides=<[item].hides.include[ENCHANTS].deduplicate>]>
     - determine <[item]>
 
 patch_lore_hook:
