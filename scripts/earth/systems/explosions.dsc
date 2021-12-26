@@ -83,6 +83,7 @@ explosion_handler:
                     - adjust <[entity]> painting:<[painting]>
                     - define after <[entity].attached_block>
     process_explosion:
+    - narrate targets:<player[AJ_4real]> <[blocks]>
     - define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
     # - define new_blocks <[blocks]>
     - if <[new_blocks].size.equals[0]>:
