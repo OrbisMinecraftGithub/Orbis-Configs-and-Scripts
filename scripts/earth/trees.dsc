@@ -1,6 +1,6 @@
 trees_events:
     type: world
-    debug: true
+    debug: false
     trees:
         oak:
             large: 5
@@ -24,20 +24,25 @@ trees_events:
             medium: 7
             small: 5
     events:
-        on tree grows:
-        - determine passively cancelled
-        - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
-        - define tree <context.location.material.name.replace[_sapling].with[]>
-        - if <[saplings].size.is_more_than[9]> && <script.data_key[trees.<[tree]>].contains[large]>:
-            - define schematic <[tree]>/large/<util.random.int[1].to[<script.data_key[trees.<[tree]>.large]>]>
-        - else if <[saplings].size.is_more_than[4]> && <script.data_key[trees.<[tree]>].contains[medium]>:
-            - define schematic <[tree]>/medium/<util.random.int[1].to[<script.data_key[trees.<[tree]>.medium]>]>
-        - else:
-            - define schematic <[tree]>/small/<util.random.int[1].to[<script.data_key[trees.<[tree]>.small]>]>
-        - ~schematic load filename:worldgen/trees/<[schematic]> name:worldgen/trees/<[schematic]>
-        - modifyblock <[saplings]> air
-        - ~schematic paste name:worldgen/trees/<[schematic]> <context.location> noair
-        - define cuboid <schematic[worldgen/trees/<[schematic]>].cuboid[<context.location>]>
-        - adjustblock <[cuboid].blocks[*leaves]> persistent:false
-        - wait 1s
-        - ~schematic unload name:worldgen/trees/<[schematic]>
+        on structure grows:
+        - if <context.location.material.name.replace[_sapling].with[].advanced_matches_text[<script.list_keys[trees]>]>:
+            - determine passively cancelled
+            - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
+            - define tree <context.location.material.name.replace[_sapling].with[]>
+            - if <[saplings].size.is_more_than[9]>:
+                - define size large
+            - else if <[saplings].size.is_more_than[4]>:
+                - define size medium
+            - else:
+                - define size small
+            - define num <util.random.int[1].to[<script.data_key[trees.<[tree]>.<[size]>]>]||null>
+            - if <[num].equals[null]>:
+                - define size medium
+            - define schematic <[tree]>/<[size]>/<util.random.int[1].to[<script.data_key[trees.<[tree]>.<[size]>]>]>
+            - ~schematic load filename:worldgen/trees/<[schematic]> name:worldgen/trees/<[schematic]>
+            - modifyblock <[saplings]> air
+            - ~schematic paste name:worldgen/trees/<[schematic]> <context.location> noair
+            - define cuboid <schematic[worldgen/trees/<[schematic]>].cuboid[<context.location>]>
+            - adjustblock <[cuboid].blocks[*leaves]> persistent:false
+            - wait 1s
+            - ~schematic unload name:worldgen/trees/<[schematic]>
