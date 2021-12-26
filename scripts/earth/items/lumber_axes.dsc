@@ -38,7 +38,11 @@ lumber_axe_events:
                 - modifyblock <[b]> air source:<player>
                 - wait 1t
                 - if <[b].material.name.equals[air]>:
-                    - inventory set d:<player.inventory> slot:<[slot]> o:<player.inventory.slot[<[slot]>].with[durability=<player.inventory.slot[<[slot]>].durability.add[1]>]>
+                    - if <player.inventory.slot[<[slot]>].enchantment_map.contains[unbreaking]>:
+                        - if <proc[calculate_durability_damage].context[<player.inventory.slot[<[slot]>].enchantment_map.get[unbreaking]>].is_more_than[<util.random.decimal[0].to[1]>]>:
+                            - inventory set d:<player.inventory> slot:<[slot]> o:<player.inventory.slot[<[slot]>].with[durability=<player.inventory.slot[<[slot]>].durability.add[1]>]>
+                    - else:
+                        - inventory set d:<player.inventory> slot:<[slot]> o:<player.inventory.slot[<[slot]>].with[durability=<player.inventory.slot[<[slot]>].durability.add[1]>]>
                     - if <player.inventory.slot[<[slot]>].durability.is_more_than[<player.inventory.slot[<[slot]>].max_durability>]>:
                         - inventory set d:<player.inventory> slot:<[slot]> o:<item[air]>
                     - adjustblock <[b].up.left.forward.to_cuboid[<[b].backward.right.down>].blocks[*leaves]> persistent:false
@@ -123,7 +127,6 @@ lumber_axe_netherite:
             - material:netherite_block|material:netherite_block
             - material:stick|material:netherite_block
             - material:stick|air
-
 
 enchantment_tree_feller:
     type: enchantment
