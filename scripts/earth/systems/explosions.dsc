@@ -8,11 +8,11 @@ explosion_handler:
         on block falls:
         - if <context.location.has_flag[no_physics]>:
             - determine cancelled
-        on block explodes ignorecancelled:true bukkit_priority:lowest:
+        on block explodes ignorecancelled:true bukkit_priority:highest:
         - define location <context.block>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
-        on entity explodes ignorecancelled:true bukkit_priority:lowest:
+        on entity explodes ignorecancelled:true bukkit_priority:highest:
         - define location <context.location>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
