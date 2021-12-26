@@ -1,7 +1,7 @@
 
 hammers_events:
     type: world
-    debug: true
+    debug: false
     data:
         allowed_blocks:
         - stone
@@ -13,6 +13,9 @@ hammers_events:
         - *_ore
         - *deepslate
         - tuff
+        - *erracotta
+        - dripstone_block
+        - *basalt
     events:
         on player breaks block bukkit_priority:highest:
         - if <player.item_in_hand.enchantment_types.parse[name].contains[area_dig]>:
@@ -24,7 +27,12 @@ hammers_events:
                 - define cuboid <context.location.with_yaw[0].with_pitch[0].forward.left.to_cuboid[<context.location.with_yaw[0].with_pitch[0].backward.right>]>
             - define blocks <[cuboid].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>
             - ~modifyblock <[blocks]> air naturally:<player.item_in_hand> source:<player>
-            - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
+            - if <player.item_in_hand.enchantment_map.contains[unbreaking]>:
+                - narrate <proc[calculate_durability_damage].context[<player.item_in_hand.enchantment_map.get[unbreaking]>]>
+                - if <proc[calculate_durability_damage].context[<player.item_in_hand.enchantment_map.get[unbreaking]>].is_more_than[<util.random.decimal[0].to[1]>]>:
+                    - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
+            - else:
+                - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
 
 hammer_diamond:
     type: item
