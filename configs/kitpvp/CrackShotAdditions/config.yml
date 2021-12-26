@@ -3,13 +3,13 @@ hide-nametags: false
 hide-nametags-world-blacklist:
 - "example-world"
 modifications:
-  AK47:
+  Example_Id:
     type: WEAPON
     disguised-projectile:
       enabled: false
-      object-id: 61
+      entity-type: SNOWBALL
     light-on-fire:
-      enabled: true
+      enabled: false
       light-level: 12
       offset:
         x: 0.0

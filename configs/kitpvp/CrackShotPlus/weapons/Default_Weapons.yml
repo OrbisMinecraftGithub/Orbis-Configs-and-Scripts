@@ -22,12 +22,54 @@ AK47:
     Reload:
         Custom_Reload_Sound: "reload.ak-1-1"
         Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
+        Default_Visual_Reload: "Default_Reload"
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"
     Held:
         Weapon_Weight: -0.005
         Hide_Attributes: true
     Skin:
-        Default_Skin: "NoSkin"
+        Default_Skin: "NoSkin"       
 
 RPG:
     Shoot:
@@ -82,6 +124,48 @@ M4A1:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"       
     Skin:
         Default_Skin: "NoSkin"
 
@@ -112,6 +196,48 @@ SPAS12:
     Held:
         Weapon_Weight: -0.015
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"      
     Skin:
         Default_Skin: "NoSkin"
 
@@ -142,6 +268,48 @@ OLYMPIA:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"
     Skin:
         Default_Skin: "NoSkin"
 
@@ -172,6 +340,48 @@ OLYMPIA:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"     
     Skin:
         Default_Skin: "NoSkin"
 
@@ -200,8 +410,50 @@ M16:
         Visual_Reload:
             Default_Visual_Reload: "Default_Reload"
     Held:
-        Weapon_Weight: -0.020
+        Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"        
     Skin:
         Default_Skin: "NoSkin"
 
@@ -226,6 +478,48 @@ HUNTING_RIFLE:
         Custom_Reload_Sound: "reload.huntingrifle-1-1"
         Visual_Reload:
             Default_Visual_Reload: "Default_Reload"
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -252,6 +546,48 @@ DEAGLE:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Reload:
         Custom_Reload_Sound: "reload.deagle-1-1"
         Visual_Reload:
@@ -310,6 +646,48 @@ FAL:
     Held:
         Weapon_Weight: -0.01
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -340,6 +718,48 @@ AK74U:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -368,8 +788,50 @@ AWP:
             Shooter_Location:
                 Hit: "impact.hitmarker-1-1"
     Held:
-        Weapon_Weight: -0.02
+        Weapon_Weight: -0.025
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Reload:
         Custom_Reload_Sound: "reload.awp1-1-1"
         Custom_Reload_Complete_Sound: "reload.awp2-1-1"
@@ -405,6 +867,48 @@ SCAR:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -435,6 +939,48 @@ UZI:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -466,6 +1012,48 @@ PKP:
     Held:
         Weapon_Weight: -0.02
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"      
     Skin:
         Default_Skin: "NoSkin"
 
@@ -496,6 +1084,48 @@ UMP:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -526,6 +1156,48 @@ L85A2:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -574,6 +1246,48 @@ GLOCK:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Reload:
         Custom_Reload_Sound: "reload.glock-1-1"
         Visual_Reload:
@@ -608,6 +1322,48 @@ BARRETT:
     Held:
         Weapon_Weight: -0.04
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Reload:
         Custom_Reload_Sound: "reload.barrett-1-1"
         Visual_Reload:
@@ -642,6 +1398,48 @@ M1014:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
         
@@ -672,6 +1470,48 @@ M249:
     Held:
         Weapon_Weight: -0.02
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -695,6 +1535,48 @@ P90:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 
@@ -719,6 +1601,48 @@ FAMAS:
     Held:
         Weapon_Weight: 0
         Hide_Attributes: true
+    Hit_Block:
+      Block_Crack_Animation:
+        Minium_Crack: 3
+        Maxium_Crack: 5
+      Break_Blocks:
+        Blacklist: false
+        Regen_Blocks_After_Milliseconds: 10000
+        Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE" 
     Skin:
         Default_Skin: "NoSkin"
 

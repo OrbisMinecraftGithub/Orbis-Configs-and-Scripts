@@ -26,7 +26,7 @@ AK47:
         Take_Ammo_As_Magazine: true
     Scope:
         Enable: true
-        Zoom_Amount: 2
+        Zoom_Amount: 3
         Zoom_Bullet_Spread: 0.6
     Ammo:
         Enable: true
@@ -150,11 +150,11 @@ SPAS12:
         Remove_Bullet_Drop: false
         Projectile_Speed: 45
         Projectile_Damage: 5
-        Bullet_Spread: 2
+        Bullet_Spread: 1.7
         Removal_Or_Drag_Delay: 7-true
     Headshot:
         Enable: true
-        Bonus_Damage: 3
+        Bonus_Damage: 4
     Reload:
         Enable: true
         Reload_Amount: 5
@@ -523,14 +523,14 @@ AWP:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 170
-        Projectile_Damage: 15
-        Bullet_Spread: 5
+        Projectile_Damage: 14
+        Bullet_Spread: 12
     Reload:
         Enable: true
         Reload_Amount: 7
         Reload_Bullets_Individually: false
         Reload_Duration: 55
-        Reload_Shoot_Delay: 15
+        Reload_Shoot_Delay: 25
         Take_Ammo_On_Reload: true
         Take_Ammo_As_Magazine: true
     Ammo:
@@ -539,17 +539,17 @@ AWP:
         Ammo_Name_Check: §g§6Magazine
     Firearm_Action:
         Type: bolt
-        Open_Duration: 12
-        Close_Duration: 12
+        Open_Duration: 20
+        Close_Duration: 20
     Sneak:
-        Enable: true
+        Enable: false
         Bullet_Spread: 1.5
     Fully_Automatic:
         Enable: false
         Fire_Rate: 50
     Headshot:
         Enable: true
-        Bonus_Damage: 13
+        Bonus_Damage: 6
     Scope:
         Enable: true
         Zoom_Amount: 7
@@ -724,13 +724,13 @@ L85A2:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 2
+        Delay_Between_Shots: 3
         Recoil_Amount: 1
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 95
         Projectile_Damage: 5
-        Bullet_Spread: 0.5
+        Bullet_Spread: 0.6
     Sneak:
         Enable: false
         No_Recoil: false
@@ -747,10 +747,10 @@ L85A2:
     Scope:
         Enable: true
         Zoom_Amount: 2
-        Zoom_Bullet_Spread: 0.2
+        Zoom_Bullet_Spread: 0.3
     Headshot:
         Enable: true
-        Bonus_Damage: 3
+        Bonus_Damage: 2
     Abilities:
         Reset_Hit_Cooldown: true
         No_Vertical_Recoil: true
@@ -842,8 +842,8 @@ BARRETT:
         Delay_Between_Shots: 12
         Projectile_Amount: 1
         Projectile_Type: snowball
-        Projectile_Speed: 210
-        Projectile_Damage: 16
+        Projectile_Speed: 40
+        Projectile_Damage: 20
         Bullet_Spread: 2.5
     Reload:
         Enable: true
@@ -866,10 +866,10 @@ BARRETT:
         Bullet_Spread: 0.3
     Headshot:
         Enable: true
-        Bonus_Damage: 12
+        Bonus_Damage: 6
     Scope:
         Enable: true
-        Zoom_Amount: 9
+        Zoom_Amount: 10
         Zoom_Bullet_Spread: 0
     Abilities:
         Reset_Hit_Cooldown: true
@@ -933,7 +933,7 @@ M249:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 105
-        Projectile_Damage: 6
+        Projectile_Damage: 4
         Bullet_Spread: 0.7
     Fully_Automatic:
         Enable: true

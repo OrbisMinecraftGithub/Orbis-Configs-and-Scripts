@@ -10,16 +10,16 @@ GRENADE:
         Projectile_Amount: 1
         Projectile_Type: grenade
         Projectile_Subtype: SNOWBALL
-        Projectile_Speed: 4
+        Projectile_Speed: 10
     Explosions:
         Enable: true
-        Explosion_No_Grief: true
+        Explosion_No_Grief: false
         Explosion_Radius: 3
         Explosion_Delay: 62
     Shrapnel:
         Enable: true
         Block_Type: 77
-        Amount: 12
+        Amount: 8
         Speed: 3
         Place_Blocks: false
     Extras:
@@ -158,7 +158,7 @@ C4:
     Explosions:
         Enable: true
         Explosion_No_Grief: true
-        Explosion_Radius: 10
+        Explosion_Radius: 7
         Explosion_Delay: 2
         Sounds_Explode: ENTITY_ZOMBIE_ATTACK_DOOR_WOOD-2-0-0
     Extras:

@@ -83,8 +83,8 @@ explosion_handler:
                     - adjust <[entity]> painting:<[painting]>
                     - define after <[entity].attached_block>
     process_explosion:
-    #- define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
-    - define new_blocks <[blocks]>
+    - define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
+    # - define new_blocks <[blocks]>
     - if <[new_blocks].size.equals[0]>:
         - stop
     - determine passively <list[]>
@@ -100,7 +100,7 @@ explosion_handler:
             - runlater explosion_handler path:regen_blocks defmap:<map[location=<[location]>;material=<[material]>;inventory=<[inventory]>]> delay:<[dur]>
         - else:
             - runlater explosion_handler path:regen_blocks defmap:<map[location=<[location]>;material=<[material]>]> delay:<[dur]>
-        - modifyblock <[value]> air
+        - modifyblock <[location]> air
     regen_blocks:
     - modifyblock <[location]> <[material]>
     - if <[inventory].exists>:
