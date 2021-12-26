@@ -25,7 +25,7 @@ excavator_events:
 
 excavator_iron:
     type: item
-    material: iron_axe
+    material: iron_shovel
     mechanisms:
         enchantments:
             excavation: 1
