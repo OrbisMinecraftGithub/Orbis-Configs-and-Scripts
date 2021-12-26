@@ -4,10 +4,10 @@ sidebar_events:
     events:
         on delta time secondly every:4:
         - foreach <server.online_players_flagged[sidebar.visible]> as:target:
-          - if !<[target].is_online>:
-            - foreach next
-          - sidebar set title:<yaml[config].parsed_key[sidebar.title].parse_color> values:<yaml[config].parsed_key[sidebar.lines].parse[parse_color]> player:<[target]>
-          - wait 1t
+            - if !<[target].is_online>:
+                - foreach next
+            - sidebar set title:<yaml[config].parsed_key[sidebar.title].parse_color> values:<yaml[config].parsed_key[sidebar.lines].parse[parse_color]> player:<[target]>
+            - wait 1t
 
 command_sidebar:
     type: command
