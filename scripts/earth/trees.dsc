@@ -24,7 +24,7 @@ trees_events:
             medium: 7
             small: 5
     events:
-        on structure grows:
+        on tree grows:
         - determine passively cancelled
         - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
         - define tree <context.location.material.name.replace[_sapling].with[]>
