@@ -25,8 +25,6 @@ trees_events:
             small: 5
     events:
         on structure grows:
-        - if <context.location.is_siege_zone>:
-            - stop
         - determine passively cancelled
         - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
         - define tree <context.location.material.name.replace[_sapling].with[]>
@@ -39,5 +37,7 @@ trees_events:
         - ~schematic load filename:worldgen/trees/<[schematic]> name:worldgen/trees/<[schematic]>
         - modifyblock <[saplings]> air
         - ~schematic paste name:worldgen/trees/<[schematic]> <context.location> noair
+        - define cuboid <schematic[worldgen/trees/<[schematic]>].cuboid[<context.location>]>
+        - adjustblock <[cuboid].blocks[*leaves]> persistent:false
         - wait 1s
         - ~schematic unload name:worldgen/trees/<[schematic]>
