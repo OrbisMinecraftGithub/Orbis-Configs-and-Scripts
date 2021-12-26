@@ -16,6 +16,10 @@ hammers_events:
         - *erracotta
         - dripstone_block
         - *basalt
+        - netherrack
+        - *quartz*
+        - bone_block
+        - *brick*
     events:
         on player breaks block bukkit_priority:highest:
         - if <player.item_in_hand.enchantment_types.parse[name].contains[area_dig]>:
