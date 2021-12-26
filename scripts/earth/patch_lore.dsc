@@ -5,6 +5,8 @@ patch_lore:
     script:
     - if <[item].exists.not> && <[item].material.name.equals[air]>:
         - determine <item[air]>
+    - if <[item].has_lore.not> && <[item].enchantments.size.equals[0]||true>:
+        - determine <[item]>
     - define map <[map]||<[item].enchantment_map>>
     - define lore <[map].parse_value_tag[<gray><enchantment[<[parse_key]>].full_name[<[parse_value]>]>].values>
     - if !<[item].has_flag[patch_lore]>:
