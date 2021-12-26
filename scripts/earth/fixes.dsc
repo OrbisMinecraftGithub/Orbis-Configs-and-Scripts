@@ -17,9 +17,6 @@ fixes_events:
                 cooldown: 20s
                 damage_when_teleported: 2
             lagcontrol:
-                redstone:
-                    min_time_between_pulse: 1s
-                    number_before_removal: 10
                 entities:
                     maximum_per_chunk: 50
             offhand:
@@ -50,7 +47,7 @@ fixes_events:
         - inventory exclude d:<player.inventory> origin:totem_of_undying
         on delta time secondly:
         - foreach <server.online_players.filter[location.material.name.equals[nether_portal]]>:
-            - define portal <[value].location.flood_fill[6].types[nether_portal]]>
+            - define portal <[value].location.flood_fill[6].types[nether_portal]>
             - foreach <[portal]> as:b:
                 - if <[b].material.direction.equals[Z]||false>:
                     - modifyblock <[b].relative[1,0,0]> air
@@ -96,15 +93,6 @@ fixes_events:
         on player receives message:
         - if <context.message.strip_color.starts_with[<&sp><&sp>Eg:<&sp>/tr<&sp>]>:
             - determine MESSAGE:<context.message.replace[/tr].with[/trs]>
-        on redstone recalculated:
-        - define loc <context.location.center>
-        - ratelimit <[loc]> 2t
-        - flag <[loc]> redstone:<[loc].flag[redstone].add[1]||1> duration:<yaml[config].read[lagcontrol.redstone.min_time_between_pulse].as_duration||<duration[1s]>>
-        - define num <[loc].flag[redstone]>
-        - if <[num].is_more_than[<yaml[config].read[lagcontrol.redstone.number_before_removal]||10>]>:
-            - wait 1t
-            - modifyblock <[loc]> air naturally:diamond_pickaxe
-            - flag <[loc]> redstone:!
         on block ignites ignorecancelled:true bukkit_priority:monitor:
         - if <entity||null> == null:
             - stop
@@ -115,9 +103,6 @@ fixes_events:
                 - determine cancelled:false
             - if <[entity].town> == <[location].town>:
                 - determine cancelled:false
-        on crackshot weapon damages entity:
-        - if <player.is_inside_vehicle||false> && !<context.victim.is_inside_vehicle||false>:
-            - determine passively cancelled
         on ender_pearl spawns:
         - stop
         - define pl <context.location.find_players_within[0.1].get[1]||null>
@@ -138,9 +123,6 @@ fixes_events:
                 - define num2 <player.item_in_offhand.quantity>
             - if <[num1]> != <[num2]||null>:
                 - itemcooldown ender_pearl duration:<yaml[config].read[enderpearl.cooldown]>
-        on crackshot player fires projectile:
-        - if <player.is_sprinting>:
-            - determine BULLET_SPREAD:<context.bullet_spread.mul[2]>
         on entity damages entity:
         - if <context.damager.fallingblock_material.name.contains_text[dripstone]||false>:
             - determine cancelled

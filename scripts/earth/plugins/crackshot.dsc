@@ -10,6 +10,9 @@ crackshot_events:
                     on switch:
                         default: 3s
     events:
+        on crackshot weapon damages entity:
+        - if <player.is_inside_vehicle||false> && !<context.victim.is_inside_vehicle||false>:
+            - determine passively cancelled
         on player clicks in inventory:
         - if <context.slot.equals[41]> && <context.cursor_item.crackshot_weapon.exists>:
             - determine cancelled

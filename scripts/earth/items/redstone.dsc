@@ -4,6 +4,9 @@ limit_redstone_device:
     config:
         defaults:
             lagcontrol:
+                redstone:
+                    min_time_between_pulse: 1s
+                    number_before_removal: 10
                 limits:
                     redstone_lamp: 16
                     dispenser: 16
@@ -22,3 +25,12 @@ limit_redstone_device:
         on player places block:
         - if <yaml[config].list_keys[lagcontrol.limits].contains[<context.material.name>]>:
             - inject limit_redstone_device path:task
+        on redstone recalculated:
+        - define loc <context.location.center>
+        - ratelimit <[loc]> 2t
+        - flag <[loc]> redstone:<[loc].flag[redstone].add[1]||1> duration:<yaml[config].read[lagcontrol.redstone.min_time_between_pulse].as_duration||<duration[1s]>>
+        - define num <[loc].flag[redstone]>
+        - if <[num].is_more_than[<yaml[config].read[lagcontrol.redstone.number_before_removal]||10>]>:
+            - wait 1t
+            - modifyblock <[loc]> air naturally:diamond_pickaxe
+            - flag <[loc]> redstone:!
