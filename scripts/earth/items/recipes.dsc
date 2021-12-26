@@ -9,17 +9,17 @@ custom_item_recipe_gunpowder:
             recipe_id: custom_item_recipe_gunpowder1
             output_quantity: 2
             input:
-            - gravel|raw_copper|gravel
-            - raw_copper|gravel|raw_copper
-            - gravel|raw_copper|gravel
+            - material:gravel|material:raw_copper|material:gravel
+            - material:raw_copper|material:gravel|material:raw_copper
+            - material:gravel|material:raw_copper|material:gravel
         2:
             type: shaped
             recipe_id: custom_item_recipe_gunpowder2
             output_quantity: 2
             input:
-            - gravel|copper_ingot|gravel
-            - copper_ingot|gravel|copper_ingot
-            - gravel|copper_ingot|gravel
+            - material:gravel|material:copper_ingot|material:gravel
+            - material:copper_ingot|material:gravel|material:copper_ingot
+            - material:gravel|material:copper_ingot|material:gravel
 
 ammunition_rocket:
     type: item
@@ -33,9 +33,9 @@ ammunition_rocket:
             recipes_id: custom_item_recipe_rocket2
             output_quantity: 1
             input:
-            - air|copper_block|air
-            - iron_block|fire_charge|iron_block
-            - iron_block|material:firework_rocket|iron_block
+            - air|material:copper_block|air
+            - material:iron_block|material:fire_charge|material:iron_block
+            - material:iron_block|material:firework_rocket|material:iron_block
 
 ammunition_magazine:
     type: item
@@ -48,7 +48,7 @@ ammunition_magazine:
             type: shapeless
             recipes_id: custom_item_recipe_magazine1
             output_quantity: 1
-            input: gunpowder|copper_ingot|copper_ingot
+            input: material:gunpowder|material:copper_ingot|material:copper_ingot
 
 ammunition_shotgun_shell:
     type: item
@@ -61,7 +61,7 @@ ammunition_shotgun_shell:
             type: shapeless
             recipes_id: custom_item_recipe_shotgun_shell1
             output_quantity: 6
-            input: gunpowder|copper_ingot|gold_ingot
+            input: material:gunpowder|material:copper_ingot|material:gold_ingot
 
 ammunition_clip:
     type: item
@@ -74,7 +74,7 @@ ammunition_clip:
             type: shapeless
             recipes_id: custom_item_recipe_clip1
             output_quantity: 1
-            input: gunpowder|copper_ingot
+            input: material:gunpowder|material:copper_ingot
 
 custom_big_dripleaf:
     type: item
