@@ -23,7 +23,6 @@ excavator_events:
             - define blocks <[cuboid].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>
             - ~modifyblock <[blocks]> air naturally:<player.item_in_hand> source:<player>
             - if <player.item_in_hand.enchantment_map.contains[unbreaking]>:
-                - narrate <proc[calculate_durability_damage].context[<player.item_in_hand.enchantment_map.get[unbreaking]>]>
                 - if <proc[calculate_durability_damage].context[<player.item_in_hand.enchantment_map.get[unbreaking]>].is_more_than[<util.random.decimal[0].to[1]>]>:
                     - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
             - else:
