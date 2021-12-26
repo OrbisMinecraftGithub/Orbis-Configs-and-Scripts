@@ -39,6 +39,8 @@ lumber_axe_events:
                 - wait 1t
                 - if <[b].material.name.equals[air]>:
                     - inventory set d:<player.inventory> slot:<[slot]> o:<player.inventory.slot[<[slot]>].with[durability=<player.inventory.slot[<[slot]>].durability.add[1]>]>
+                    - if <player.inventory.slot[<[slot]>].durability.is_more_than[<player.inventory.slot[<[slot]>].max_durability>]>:
+                        - inventory set d:<player.inventory> slot:<[slot]> o:<item[air]>
                     - adjustblock <[b].up.left.forward.to_cuboid[<[b].backward.right.down>].blocks[*leaves]> persistent:false
                     - define new_blocks:|:<[b].up.left.forward.to_cuboid[<[b].backward.right.down>].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>
             - define blocks <[new_blocks].deduplicate>
