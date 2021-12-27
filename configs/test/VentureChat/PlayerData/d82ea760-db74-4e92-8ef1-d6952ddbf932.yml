@@ -1,0 +1,16 @@
+name: PopSof95
+current: MissingDefault
+ignores: ''
+listen: MissingDefault,Donator
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: false
+messagetoggle: true
+bungeetoggle: true
+date: 2021/Dec/25 15:36:47

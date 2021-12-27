@@ -1,0 +1,16 @@
+name: ADVeX
+current: MissingDefault
+ignores: ''
+listen: MissingDefault,Donator
+mutes: {}
+blockedcommands: ''
+host: false
+party: ''
+filter: true
+notifications: true
+spy: false
+commandspy: false
+rangedspy: true
+messagetoggle: true
+bungeetoggle: true
+date: 2021/Dec/19 18:30:00
