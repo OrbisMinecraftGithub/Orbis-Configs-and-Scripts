@@ -105,27 +105,54 @@ run_combat_check:
             - determine cancelled
         - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
             - determine cancelled
-        - if <[attacker].location.is_siege_zone||true> && <[victim].location.is_siege_zone||true>:
+        - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
+            - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
+                - determine passively cancelled:false
+        - if <[attacker].location.town.pvp||false> && <[victim].location.town.pvp||false>:
             - determine passively cancelled:false
-        - if <[attacker].location.town.pvp||true> && <[victim].location.town.pvp||true>:
-            - determine passively cancelled:false
-        - if <[attacker].location.chunk.pvp> && <[victim].location.chunk.pvp>:
+        - if <[attacker].location.chunk.pvp||false> && <[victim].location.chunk.pvp||false>:
             - determine passively cancelled:false
         - if <[victim].has_flag[combat]||false>:
             - determine passively cancelled:false
-        - if !<context.cancelled>:
+        - if <context.cancelled.not>:
             - if !<[attacker].has_flag[combat]>:
                 - narrate "<&b>You are now in combat!" targets:<list[<[attacker]>]>
+                - runlater player_leaves_combat def:<[attacker]> delay:46s
             - if !<[victim].has_flag[combat]>:
                 - narrate "<&b>You are now in combat!" targets:<list[<[victim]>]>
-            - flag <[attacker]> combat duration:45s
-            - flag <[victim]> combat duration:45s
+                - runlater player_leaves_combat def:<[victim]> delay:46s
+            - flag <[attacker]> combat:true expire:45s
+            - flag <[victim]> combat:true expire:45s
             - if <[attacker].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[attacker].uuid>]>:
                     - bossbar combat_time<[attacker].uuid> players:<[attacker]> "title:<&c>You are now in combat." color:RED
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
+            - define health <[victim].health>
+
+calculate_damage:
+    type: procedure
+    definitions: damager|damaged|damage
+    script:
+    - define armor:<[damaged].armor_bonus>
+    - define damage_modifier:1
+    - define defence_modifier:1
+    - if <[damager].type> == player:
+        - define damage_modifier:<yaml[player.<[damager].uuid>].read[stats.damage_modifier.<[type]>]||1>
+    - else if <[damager].type> == entity:
+        - if <[damager].script||null> != null:
+            - define damage_modifier:<[damager].script.yaml_key[custom.damage_modifier.<[type]>]||1>
+    - if <[damaged].type> == player:
+        - define defence_modifier:<yaml[player.<[damaged].uuid>].read[stats.defence_modifier.<[type]>]||1>
+    - else if <[damaged].type> == entity:
+        - if <[damaged].script||null> != null:
+            - define defence_modifier:<[damaged].script.yaml_key[custom.defence_modifier.<[type]>]||1>
+    - define damage:<[damage].mul[<[damage_modifier]>].div[<[defence_modifier]>]>
+    - define final_damage:<[damage].mul[<el@1.sub[<el@20.mul[<[armor].div[5]>].div[25]>]>]>
+    - if <[final_damage]> < 0.5:
+        - define final_damage:0.5
+    - determine <[final_damage]>
 
 combat_log_events:
     type: world
@@ -155,11 +182,18 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        - define victim <context.victim>
+        - define attacker <player>
+        - define damage <context.damage>
+        - flag <context.damager> damage:<proc[calculate_damage].context[<[attacker]>|<[victim]>|<[damage]>]>
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
+        - if <context.damager.has_flag[damage]>:
+            - determine passively <context.damager.flag[damage]>
         - inject run_combat_check
-        on player damages player ignorecancelled:true bukkit_priority:monitor:
+        on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
         - define attacker <context.damager>
         - inject run_combat_check
@@ -188,6 +222,7 @@ combat_log_events:
         - foreach <server.online_players.filter[has_flag[combat]].filter[flag_expiration[combat].from_now.is_less_than[1]]||<list[]>> as:p:
             - run player_leaves_combat defmap:<map[player=<[p]>]>
         on command:
+        - stop
         - if <context.source_type> == PLAYER:
             - if <player.has_flag[combat]||false>:
                 - define cmd:<context.command.to_lowercase><&sp><context.args.space_separated.to_lowercase>
@@ -203,7 +238,6 @@ player_leaves_combat:
     definitions: player
     debug: false
     script:
-    - wait 21t
     - if !<[player].has_flag[combat]>:
         - if <server.current_bossbars.contains[combat_time<[player].uuid>]>:
             - bossbar remove combat_time<[player].uuid> players:<[player]>
