@@ -165,6 +165,14 @@ combat_log_events:
                 - n spawn
                 - res spawn
     events:
+        on player teleports to nation spawn:
+        - if <player.has_flag[combat]>:
+            - narrate "<&c>You cannot teleport while in combat."
+            - determine cancelled
+        on player teleports to town spawn:
+        - if <player.has_flag[combat]>:
+            - narrate "<&c>You cannot teleport while in combat."
+            - determine cancelled
         on delta time secondly every:10:
         - foreach <server.online_players.filter[inventory.list_contents.size.equals[0]]> as:p:
             - if <[p].location.is_siege_zone>:

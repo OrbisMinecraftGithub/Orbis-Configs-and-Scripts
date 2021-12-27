@@ -45,43 +45,43 @@ explosion_handler:
                 - adjust <[as]> arms:<[has_arms]>
         on entity breaks hanging:
         - if <context.cause> == EXPLOSION:
-            # - if <context.hanging.location.is_siege_zone||true>:
-            - define location <context.hanging.location>
-            - define before <context.hanging.attached_block>
-            - define type <context.hanging.entity_type>
-            - define rotation <context.hanging.rotation>
-            - if <[type]> == ITEM_FRAME || <[type]> == GLOW_ITEM_FRAME:
-                - define framed_item <context.hanging.framed_item>
-                - define framed_item_rotation <context.hanging.framed_item_rotation>
-                - define fixed <context.hanging.fixed>
-                - define visible <context.hanging.visible>
-                - remove <context.hanging>
-                - wait <duration[2s]>
-                - spawn <[type]> <[location]> save:e
-                - define entity <entry[e].spawned_entity>
-                - adjust <[entity]> rotation:<[rotation]>
-                - adjust <[entity]> fixed:<[fixed]>
-                - adjust <[entity]> visible:<[visible]>
-                - adjust <[entity]> framed:<[framed_item]>|<[framed_item_rotation]>
-            - else if <[type]> == PAINTING:
-                - define painting <context.hanging.painting>
-                - define height <context.hanging.painting_height>
-                - define width <context.hanging.painting_width>
-                - remove <context.hanging>
-                - wait <duration[27s]>
-                - spawn <[type]> <[location]> save:e
-                - define entity <entry[e].spawned_entity>
-                - adjust <[entity]> rotation:<[rotation]>
-                - adjust <[entity]> painting:<[painting]>
-                - define after <[entity].attached_block>
-                - if <[before]> != <[after]>:
-                    - remove <[entity]>
-                    - define location <[location].add[<[before].sub[<[after]>]>]>
+            - if <context.hanging.location.is_siege_zone||true>:
+                - define location <context.hanging.location>
+                - define before <context.hanging.attached_block>
+                - define type <context.hanging.entity_type>
+                - define rotation <context.hanging.rotation>
+                - if <[type]> == ITEM_FRAME || <[type]> == GLOW_ITEM_FRAME:
+                    - define framed_item <context.hanging.framed_item>
+                    - define framed_item_rotation <context.hanging.framed_item_rotation>
+                    - define fixed <context.hanging.fixed>
+                    - define visible <context.hanging.visible>
+                    - remove <context.hanging>
+                    - wait <duration[27s]>
+                    - spawn <[type]> <[location]> save:e
+                    - define entity <entry[e].spawned_entity>
+                    - adjust <[entity]> rotation:<[rotation]>
+                    - adjust <[entity]> fixed:<[fixed]>
+                    - adjust <[entity]> visible:<[visible]>
+                    - adjust <[entity]> framed:<[framed_item]>|<[framed_item_rotation]>
+                - else if <[type]> == PAINTING:
+                    - define painting <context.hanging.painting>
+                    - define height <context.hanging.painting_height>
+                    - define width <context.hanging.painting_width>
+                    - remove <context.hanging>
+                    - wait <duration[27s]>
                     - spawn <[type]> <[location]> save:e
                     - define entity <entry[e].spawned_entity>
                     - adjust <[entity]> rotation:<[rotation]>
                     - adjust <[entity]> painting:<[painting]>
                     - define after <[entity].attached_block>
+                    - if <[before]> != <[after]>:
+                        - remove <[entity]>
+                        - define location <[location].add[<[before].sub[<[after]>]>]>
+                        - spawn <[type]> <[location]> save:e
+                        - define entity <entry[e].spawned_entity>
+                        - adjust <[entity]> rotation:<[rotation]>
+                        - adjust <[entity]> painting:<[painting]>
+                        - define after <[entity].attached_block>
     process_explosion:
     - define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
     # - define new_blocks <[blocks]>
