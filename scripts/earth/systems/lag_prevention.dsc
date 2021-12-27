@@ -10,7 +10,7 @@ animal_lag_prevention:
     events:
         on delta time minutely every:10:
         - foreach <script.data_key[data.types]> as:animal_type:
-            - remove <world[world].entities[<[animal_type]>].filter[location.has_town.not]>
+            - remove <world[world].entities[<[animal_type]>].filter[location.has_town.not].filter[is_leashed.not]>
             - wait 1s
 
 chunk_lag_prevention:
