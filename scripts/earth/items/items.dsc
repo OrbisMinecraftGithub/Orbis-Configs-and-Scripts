@@ -33,7 +33,12 @@ patch_lore_hook:
         - wait 1t
         - inventory set d:<context.inventory> slot:3 o:<context.inventory.slot[3].proc[patch_lore]>
         on item recipe formed:
-        - determine <context.item.proc[patch_lore]>
+        - define item <context.item>
+        - if <context.recipe_id.equals[minecraft:repair_item]>:
+            - define items <context.recipe.filter[script.name.exists].parse[script.name]>
+            - if <[items].get[1].equals[<[items].get[2]>]>:
+                - define item <item[<[items].get[1]>].with[durability=<context.item.durability>]>
+        - determine <[item].proc[patch_lore]>
 
 calculate_durability_damage:
     type: procedure
