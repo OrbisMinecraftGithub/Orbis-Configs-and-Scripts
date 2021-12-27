@@ -129,10 +129,10 @@ run_combat_check:
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
-            - define health <[victim].health>
 
 calculate_damage:
     type: procedure
+    debug: false
     definitions: damager|damaged|damage
     script:
     - define armor:<[damaged].armor_bonus>

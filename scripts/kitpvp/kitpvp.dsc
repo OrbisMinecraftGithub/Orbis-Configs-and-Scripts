@@ -419,8 +419,8 @@ command_fight:
     - if <yaml[arena_instances].read[player.<player.uuid>]||null> != null:
         - narrate "<&c>You are already in a fight."
         - stop
-    - choose <[args].get[1].to_lowercase||>:
-        - case :
+    - choose <[args].get[1].to_lowercase||null>:
+        - case null:
             - narrate "<&c>Not enough arguments."
             - stop
         - case queue:
@@ -434,8 +434,8 @@ command_fight:
             - define team2 <yaml[parties].read[parties.<[args].get[3]>.members]>
             - run start_fight defmap:<map[team1=<[team1].escaped>;team2=<[team2].escaped>;arena=<element[oasis]>]>
         - case accept:
-            - choose <[args].get[2].to_lowercase||>:
-                - case :
+            - choose <[args].get[2].to_lowercase||null>:
+                - case null:
                     - narrate "<&c>Not enough arguments."
                     - stop
                 - case party:

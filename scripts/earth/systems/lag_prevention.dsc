@@ -18,15 +18,19 @@ chunk_lag_prevention:
     debug: false
     events:
         on delta time minutely every:5:
-        - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[50000]>:
-            - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
-                - adjust <[c]> force_loaded:false
-        on server start:
-        - wait 1m
-        - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[50000]>:
+        - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[<server.online_players.size.mul[200]>]>:
             - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
                 - define i:+:1
-                - if <[i].is_more_than_or_equal_to[30]>:
+                - if <[i].is_more_than_or_equal_to[10]>:
+                    - wait 1t
+                    - define i 0
+                - adjust <[c]> force_loaded:false
+        on server start:
+        - wait 10s
+        - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[<server.online_players.size.mul[200]>]>:
+            - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
+                - define i:+:1
+                - if <[i].is_more_than_or_equal_to[10]>:
                     - wait 1t
                     - define i 0
                 - adjust <[c]> force_loaded:false
@@ -41,7 +45,7 @@ command_removelag:
         - define chunks <server.worlds.parse[loaded_chunks].combine.size>
         - define entities <server.worlds.parse[living_entities.filter[location.has_town.not]].combine.size>
         - remove <server.worlds.parse[living_entities.filter[location.has_town.not]].combine>
-        - define threshold 50
+        - define threshold 10
         - define chunks <server.worlds.parse[loaded_chunks].combine>
         - foreach <[chunks]> as:c:
             - define i:+:1

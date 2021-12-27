@@ -2,7 +2,7 @@ enchantment_skyrider_events:
     type: world
     debug: false
     glide:
-    - if <player.equipment_map.get[chestplate].material.name.equals[elytra].not>:
+    - if <player.equipment_map.get[chestplate].material.name.equals[elytra].not||true>:
         - stop
     - if <player.equipment_map.get[chestplate].enchantments.contains[skyrider].not||true>:
         - stop
