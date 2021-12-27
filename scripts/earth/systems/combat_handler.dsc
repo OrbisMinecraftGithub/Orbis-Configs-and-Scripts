@@ -105,6 +105,10 @@ run_combat_check:
             - determine cancelled
         - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
             - determine cancelled
+        - if <[attacker].town.name||null1> == <[victim].town.name||null2>:
+            - determine cancelled
+        - if <[attacker].nation.name||null1> == <[victim].nation.name||null2>:
+            - determine cancelled
         - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
             - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
                 - determine passively cancelled:false
@@ -149,7 +153,7 @@ calculate_damage:
         - if <[damaged].script||null> != null:
             - define defence_modifier:<[damaged].script.yaml_key[custom.defence_modifier.<[type]>]||1>
     - define damage:<[damage].mul[<[damage_modifier]>].div[<[defence_modifier]>]>
-    - define final_damage:<[damage].mul[<el@1.sub[<el@20.mul[<[armor].div[5]>].div[25]>]>]>
+    - define final_damage:<[damage].mul[<element[1].sub[<element[20].mul[<[armor].div[5]>].div[25]>]>]>
     - if <[final_damage]> < 0.5:
         - define final_damage:0.5
     - determine <[final_damage]>
