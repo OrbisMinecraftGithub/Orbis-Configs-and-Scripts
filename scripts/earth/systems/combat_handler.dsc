@@ -234,7 +234,6 @@ combat_log_events:
         - foreach <server.online_players.filter[has_flag[combat]].filter[flag_expiration[combat].from_now.is_less_than[1]]||<list[]>> as:p:
             - run player_leaves_combat defmap:<map[player=<[p]>]>
         on command:
-        - stop
         - if <context.source_type> == PLAYER:
             - if <player.has_flag[combat]||false>:
                 - define cmd:<context.command.to_lowercase><&sp><context.args.space_separated.to_lowercase>
