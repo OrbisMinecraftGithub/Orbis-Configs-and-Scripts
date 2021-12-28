@@ -258,21 +258,21 @@ channels:
     speak_permissions: None
     channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
     format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
-    Help:
-      color: aqua
-      chatcolor: aqua
-      mutable: true
-      filter: true
-      autojoin: true
-      default: false
-      distance: 0
-      cooldown: 0
-      bungeecord: false
-      alias: h
-      permissions: None
-      speak_permissions: None
-      channel_prefix: '&f[&bHelp&f]'
-      format: '{venturechat_channel_prefix} {vault_prefix}{player_displayname}&b:'
+  Help:
+    color: aqua
+    chatcolor: aqua
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: h
+    permissions: None
+    speak_permissions: None
+    channel_prefix: '&f[&bHelp&f]'
+    format: '{venturechat_channel_prefix} {vault_prefix}{player_displayname}&b:'
   global:
     color: white
     chatcolor: white
