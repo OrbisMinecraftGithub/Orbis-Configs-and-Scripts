@@ -210,9 +210,10 @@ combat_log_events:
         - define victim <context.victim>
         - define attacker <player>
         - inject run_combat_check
-        - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
-        - determine passively 0.0
-        - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
+        - if <context.cancelled.not>:
+            - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
+            - determine passively 0.0
+            - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
         - define attacker <context.damager>
