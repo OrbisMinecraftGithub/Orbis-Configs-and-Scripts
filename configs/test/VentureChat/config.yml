@@ -1,12 +1,12 @@
 #===============================================================
 #                     VentureChat Config                       =
-#                      Author: Aust1n46                        =                  
+#                      Author: Aust1n46                        =
 #===============================================================
 
 # - regex1,regex2
 # Simple regex tips: Use \b to "cut" a section of the word or phrase.  Example: \bass,donuts
-# Example filtered sentence: You are an ass.  Will become: You are an donuts.  
-# Example filtered sentence: You caught a bass.  Will stay: You caught a bass.  
+# Example filtered sentence: You are an ass.  Will become: You are an donuts.
+# Example filtered sentence: You caught a bass.  Will stay: You caught a bass.
 # Example filtered sentence: You are an asshole.  Will become: You are an donutshole.
 # Default filters by Jabelpeeps
 filters:
@@ -40,7 +40,7 @@ blockablecommands:
 - vote
 - me
 
-# blacklisted nicknames 
+# blacklisted nicknames
 nicknames:
 - Notch
 
@@ -51,23 +51,23 @@ nickname-in-tablist: true
 commandspy:
   format: '&6{player}: {command}'
   worldeditcommands: true
-  
+
 antispam:
   enabled: true
-  
+
   # Number of messages to be spam
-  spamnumber: 5
-  
+  spamnumber: 3
+
   # Amount of time in seconds for it to be spam
   spamtime: 10
-  
+
   # Amount of time for the mute to last
   # Acceptable units are: d,h,m,s
   # Units can be combined, for example: 1d8h30m15s
   # Use 0 for untimed mute
   mutetime: 10
- 
-# Logging chat and commands to a mysql database 
+
+# Logging chat and commands to a mysql database
 mysql:
   enabled: false
   user: User
@@ -139,11 +139,11 @@ messageremovertext: ''
 # Possible options for click_name and click_prefix are suggest_command, run_command, and open_url
 jsonformatting:
   Default: # This default format is required!  Do not delete or rename it!
-    
+
 # The icon is the block shown in the GUI
 # The text is the display name of the block icon
-# Include a slash (/) before the command   
-# Permissions are the name of the button and automatically include "venturechat." 
+# Include a slash (/) before the command
+# Permissions are the name of the button and automatically include "venturechat."
 # Example: mute equals venturechat.mute
 venturegui:
   mute:
@@ -180,21 +180,21 @@ broadcast:
   color: red
   permissions: venturechat.adminchannel
   displaytag: '&#F0230B&lBroadcast &7>>'
-  
-# Use $ to include arguments into the message  
+
+# Use $ to include arguments into the message
 # Valid component types are:
 # Command: Sends a message or command in chat
 # Message: Sends a message to the player
 # Broadcast: Sends a broadcast to all players on the server
-# Permissions automatically include "venturechat." 
+# Permissions automatically include "venturechat."
 # Example: permissions: alert equals venturechat.alert
 # Use None for no permissions
 # The number of arguments is the minimum number of required arguments, use 0 for no required arguments
 alias:
-  
+
 # Enables the creation of special Towny channels: Town and Nation
 # To create these channels, simply name two channels below "Town" and "Nation"
-# Bungeecord must be set to false for these channels! 
+# Bungeecord must be set to false for these channels!
 enable_towny_channel: false
 
 # Enables the creation of a special faction only channel using the Factions plugin
@@ -209,7 +209,7 @@ enable_factions_channel: false
 # bungeecord overrides distance
 # channel permissions are configurable
 # channels can be changed, and new channels can be created
-# Permissions automatically include "venturechat." 
+# Permissions automatically include "venturechat."
 # Example: permissions: staff equals venturechat.staff
 # Use None for no permissions
 
@@ -227,8 +227,98 @@ enable_factions_channel: false
 # Important!!!
 # Important!!!
 # If you delete a channel, restart the server! Do not use /chatreload!!!
-channels: 
+channels:
   Donator:
+    color: light_purple
+    chatcolor: light_purple
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: d
+    permissions: orbis.Donator
+    speak_permissions: None
+    channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
+    format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+  staff:
+    color: red
+    chatcolor: orange
+    mutable: false
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: d
+    permissions: orbis.staff
+    speak_permissions: None
+    channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
+    format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+    Help:
+      color: aqua
+      chatcolor: aqua
+      mutable: true
+      filter: true
+      autojoin: true
+      default: false
+      distance: 0
+      cooldown: 0
+      bungeecord: false
+      alias: h
+      permissions: None
+      speak_permissions: None
+      channel_prefix: '&f[&bHelp&f]'
+      format: '{venturechat_channel_prefix} {vault_prefix}{player_displayname}&b:'
+  global:
+    color: white
+    chatcolor: white
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: true
+    alias: d
+    permissions: none
+    speak_permissions: None
+    channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
+    format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+  server:
+    color: white
+    chatcolor: white
+    mutable: true
+    filter: true
+    autojoin: true
+    default: true
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: d
+    permissions: none
+    speak_permissions: None
+    channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
+    format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+  Town:
+    color: green
+    chatcolor: light_blue
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: d
+    permissions: none
+    speak_permissions: None
+    channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
+    format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+  Nation:
     color: light_purple
     chatcolor: light_purple
     mutable: true
@@ -243,3 +333,33 @@ channels:
     speak_permissions: None
     channel_prefix: '&#C809AA[&#F67DE3Donator&#C809AA]'
     format: '{venturechat_channel_prefix} &#F085DF&#F29CE4{player_displayname} &7>>&d'
+  Local:
+    color: yellow
+    chatcolor: yellow
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 230
+    cooldown: 0
+    bungeecord: false
+    alias: l
+    permissions: None
+    speak_permissions: None
+    channel_prefix: '&f[&eLocal&f]'
+    format: '{venturechat_channel_prefix} {vault_prefix}{player_displayname}&e:'
+  Trade:
+    color: dark_aqua
+    chatcolor: dark_aqua
+    mutable: true
+    filter: true
+    autojoin: true
+    default: false
+    distance: 0
+    cooldown: 0
+    bungeecord: false
+    alias: t
+    permissions: None
+    speak_permissions: None
+    channel_prefix: '&f[&3Trade&f]'
+    format: '{venturechat_channel_prefix} {vault_prefix}{player_displayname}&3:'
