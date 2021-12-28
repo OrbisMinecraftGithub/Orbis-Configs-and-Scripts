@@ -111,12 +111,16 @@ run_combat_check:
             - determine cancelled
         - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
             - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
+                - define yes:true
                 - determine passively cancelled:false
         - if <[attacker].location.town.pvp||false> && <[victim].location.town.pvp||false>:
+            - define yes:true
             - determine passively cancelled:false
         - if <[attacker].location.chunk.pvp||false> && <[victim].location.chunk.pvp||false>:
+            - define yes:true
             - determine passively cancelled:false
         - if <[victim].has_flag[combat]||false>:
+            - define yes:true
             - determine passively cancelled:false
         - if <context.cancelled.not>:
             - if !<[attacker].has_flag[combat]>:
@@ -133,6 +137,10 @@ run_combat_check:
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
+            - if <[yes]||false>:
+                - determine passively cancelled
+                - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
+                - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
 
 ttestt_events:
     type: world
@@ -210,10 +218,6 @@ combat_log_events:
         - define victim <context.victim>
         - define attacker <player>
         - inject run_combat_check
-        - if <context.cancelled.not>:
-            - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
-            - determine passively 0.0
-            - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
         - define attacker <context.damager>
