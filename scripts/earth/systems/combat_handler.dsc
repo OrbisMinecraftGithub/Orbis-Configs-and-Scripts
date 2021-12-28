@@ -133,6 +133,8 @@ run_combat_check:
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
+            - if <[damager].name.equals[AJ_4real]>:
+                - narrate <context.damager.has_flag[damage]><context.damager.flag[damage]>
             - if <context.damager.has_flag[damage]||false>:
                 - determine passively <context.damager.flag[damage]>
 
@@ -204,8 +206,6 @@ combat_log_events:
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
-        - if <context.damager.has_flag[damage]>:
-            - determine passively <context.damager.flag[damage]>
         - inject run_combat_check
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
