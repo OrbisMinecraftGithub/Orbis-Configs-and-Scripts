@@ -133,8 +133,6 @@ run_combat_check:
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
-            - if <[damager].name.equals[AJ_4real]>:
-                - narrate <context.damager.has_flag[damage]><context.damager.flag[damage]>
             - if <context.damager.has_flag[damage]||false>:
                 - determine passively <context.damager.flag[damage]>
 
