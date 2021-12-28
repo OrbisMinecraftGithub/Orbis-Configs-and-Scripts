@@ -133,25 +133,30 @@ run_combat_check:
             - if <[victim].has_flag[combat]>:
                 - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                     - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
-            - if <context.damager.has_flag[damage]||false>:
-                - determine passively <context.damager.flag[damage]>
+
+ttestt_events:
+    type: world
+    debug: false
+    events:
+        on reload scripts:
+        - yaml id:guns load:../CrackShot/weapons/Default_CS_Weapons.yml
 
 calculate_damage:
     type: procedure
     debug: false
-    definitions: damager|damaged|damage
+    definitions: damager|damaged|damage|type
     script:
     - define armor:<[damaged].armor_bonus>
     - define damage_modifier:1
     - define defence_modifier:1
-    - if <[damager].type> == player:
+    - if <[damager].object_type> == player:
         - define damage_modifier:<yaml[player.<[damager].uuid>].read[stats.damage_modifier.<[type]>]||1>
-    - else if <[damager].type> == entity:
+    - else if <[damager].object_type> == entity:
         - if <[damager].script||null> != null:
             - define damage_modifier:<[damager].script.yaml_key[custom.damage_modifier.<[type]>]||1>
-    - if <[damaged].type> == player:
+    - if <[damaged].object_type> == player:
         - define defence_modifier:<yaml[player.<[damaged].uuid>].read[stats.defence_modifier.<[type]>]||1>
-    - else if <[damaged].type> == entity:
+    - else if <[damaged].object_type> == entity:
         - if <[damaged].script||null> != null:
             - define defence_modifier:<[damaged].script.yaml_key[custom.defence_modifier.<[type]>]||1>
     - define damage:<[damage].mul[<[damage_modifier]>].div[<[defence_modifier]>]>
@@ -196,15 +201,18 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
-        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
-        - define victim <context.victim>
-        - define attacker <player>
-        - define damage <context.damage>
-        - flag <context.damager> damage:<proc[calculate_damage].context[<[attacker]>|<[victim]>|<[damage]>]>
+        # on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        # - define victim <context.victim>
+        # - define attacker <player>
+        # - define damage <context.damage>
+        # - flag <context.damager> damage:<proc[calculate_damage].context[<[attacker]>|<[victim]>|<[damage]>]>
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
         - inject run_combat_check
+        - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
+        - determine passively 0.0
+        - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
         - define attacker <context.damager>
