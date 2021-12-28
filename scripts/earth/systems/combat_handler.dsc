@@ -164,7 +164,7 @@ calculate_damage:
             - define armor_toughness:+:3
     - define damage1 <[defence_points].div[5]>
     - define damage2 <[weapon_damage].mul[4].div[<[armor_toughness].add[8]>].sub[<[defence_points]>]>
-    - define final <[weapon_damage].mul[<element[2].sub[<element[20].min[<[damage1].max[<[damage2]>]>].div[25]>]>]>
+    - define final <[weapon_damage].mul[<element[1].sub[<element[20].min[<[damage1].max[<[damage2]>]>].div[25]>]>]>
     - determine <[final]>
 
 # calculate_damage:
