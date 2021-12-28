@@ -40,9 +40,17 @@ trees_events:
                 - define size medium
             - define schematic <[tree]>/<[size]>/<util.random.int[1].to[<script.data_key[trees.<[tree]>.<[size]>]>]>
             - ~schematic load filename:worldgen/trees/<[schematic]> name:worldgen/trees/<[schematic]>
+            - define inventories <schematic[worldgen/trees/<[schematic]>].cuboid[<context.location>].blocks.filter[inventory.exists]>
+            - define map <map[]>
+            - foreach <[inventories]> as:b:
+                - define map <[map].with[<[b]>].as[<[b].inventory.list_contents>]>
             - modifyblock <[saplings]> air
             - ~schematic paste name:worldgen/trees/<[schematic]> <context.location> noair
             - define cuboid <schematic[worldgen/trees/<[schematic]>].cuboid[<context.location>]>
             - adjustblock <[cuboid].blocks[*leaves]> persistent:false
+            - wait 1t
+            - foreach <[inventories].keys> as:b:
+                - if <[b].as_location.inventory.exists.not>:
+                    - drop <[inventories].get[<[b]>]> <[b].as_location>
             - wait 1s
             - ~schematic unload name:worldgen/trees/<[schematic]>
