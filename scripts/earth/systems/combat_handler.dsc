@@ -140,7 +140,7 @@ run_combat_check:
             - if <[yes]||false>:
                 - determine passively cancelled
                 - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
-                - hurt <[victim]> <[damage]>
+                - hurt <[victim]> <context.final_damage||<context.damage>>
 
 ttestt_events:
     type: world
@@ -161,12 +161,12 @@ calculate_damage:
         - define damage_modifier:<yaml[player.<[damager].uuid>].read[stats.damage_modifier.<[type]>]||1>
     - else if <[damager].object_type> == entity:
         - if <[damager].script||null> != null:
-            - define damage_modifier:<[damager].script.yaml_key[custom.damage_modifier.<[type]>]||1>
+            - define damage_modifier:<[damager].script.data_key[custom.damage_modifier.<[type]>]||1>
     - if <[damaged].object_type> == player:
         - define defence_modifier:<yaml[player.<[damaged].uuid>].read[stats.defence_modifier.<[type]>]||1>
     - else if <[damaged].object_type> == entity:
         - if <[damaged].script||null> != null:
-            - define defence_modifier:<[damaged].script.yaml_key[custom.defence_modifier.<[type]>]||1>
+            - define defence_modifier:<[damaged].script.data_key[custom.defence_modifier.<[type]>]||1>
     - define damage:<[damage].mul[<[damage_modifier]>].div[<[defence_modifier]>]>
     - define final_damage:<[damage].mul[<element[1].sub[<element[20].mul[<[armor].div[5]>].div[25]>]>]>
     - if <[final_damage]> < 0.5:
