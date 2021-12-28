@@ -46,25 +46,19 @@ nicknames:
 
 nickname-in-tablist: true
 
-# {player} : player sending command
-# {command} : command typed
 commandspy:
-  format: '&6{player}: {command}'
   worldeditcommands: true
 
 antispam:
   enabled: true
 
-  # Number of messages to be spam
-  spamnumber: 3
+  # number of messages to be spam
+  spamnumber: 4
 
-  # Amount of time in seconds for it to be spam
+  # amount of time in seconds for it to be spam
   spamtime: 10
 
-  # Amount of time for the mute to last
-  # Acceptable units are: d,h,m,s
-  # Units can be combined, for example: 1d8h30m15s
-  # Use 0 for untimed mute
+  # amount of time in minutes for the mute to last, use 0 for untimed mute
   mutetime: 10
 
 # Logging chat and commands to a mysql database
@@ -76,6 +70,15 @@ mysql:
   host: localhost
   database: Database
 
+# Login and logout messages
+# Use Default for the vanilla login and logout messages
+login:
+  enabled: true
+  message: Default
+logout:
+  enabled: true
+  message: Default
+
 # Loglevel feature is still in the works for adding of debug messages
 # Valid loglevels:
 # Info: Regular logging
@@ -86,42 +89,40 @@ loglevel: info
 # saveinterval is in minutes
 saveinterval: 30
 
-# If you're running a "cracked" server, player data might not be stored properly, and thus, you are on your own.
-# If you run your server in offline mode, you might have to reset your player data when switching to online mode!
-# If you see this warning by accident and you are using BungeeCord, make sure you have properly setup IP Forwarding.
-# https://www.spigotmc.org/wiki/bungeecord-ip-forwarding/
-# No player data will be saved in offline mode unless you set this acknowledgement to 'true'
-offline_server_acknowledgement: false
-
 # The time in seconds between each check to remove timed mutes
 unmuteinterval: 60
 
-# Enables or disabled BungeeCord messaging
-bungeecordmessaging: false
+# The color of the private messages
+tellcolor: white
 
-# Sound for message notification
-# Enter 'None' to disable the sound
-message_sound: ENTITY_PLAYER_LEVELUP
+# Enables or disabled BungeeCord messaging
+bungeecordmessaging: true
 
 # This will allow vanished players to be exempt from being sent private messages, and will act as if they aren't online
 vanishsupport: true
 
-# Use PlaceholderAPI placeholders
-# Start the placeholder with 'sender_' for the sending players placeholder
-# Start the placeholder with 'receiver_' for the receiving players placeholder
-# The defaults shown below provide an example of each
-tellformatto: '&7You message {receiver_vault_prefix}{receiver_player_displayname}&7:'
-tellformatfrom: '{sender_vault_prefix}{sender_player_displayname} &7messages you:'
-tellformatspy: '{sender_player_name} messages {receiver_player_name}:&7'
-replyformatto: '&7You reply to {receiver_vault_prefix}{receiver_player_displayname}&7:'
-replyformatfrom: '{sender_vault_prefix}{sender_player_displayname} &7replies to you:'
-replyformatspy: '{sender_player_name} replies to {receiver_player_name}:&7'
+# {playerto} : player receivings name
+# {playerfrom} : player sendings name
+# use Default for the basic formatting
+tellformatto: Default
+tellformatfrom: Default
+tellformatspy: Default
+replyformatto: Default
+replyformatfrom: Default
+replyformatspy: Default
+
+# {sender} : player sendings name
+# {player} : player receivings name
+# {time} : time mail was sent
+# use Default for the basic formatting
+mailformat: Default
 
 # {host} : party hosts name
 # {player} : player name
 # use Default for the basic formatting
 partyformat: Default
 
+broadcastafk: false
 formatcleaner: true
 
 # If true, /ignore will block chat from the ignored player as well as PM's
@@ -131,14 +132,41 @@ ignorechat: false
 emptychannelalert: "&6No one is listening to you."
 
 messageremoverpermissions: '&cYou need additional permissions to view this message!'
-messageremovertext: ''
 
 # The name of the group is the permissions node for the format
-# Example: venturechat.json.Owner is the node for the group Owner
+# Example: mineversechat.json.Owner is the node for the group Owner
 # A lower priority overrides a higher priority if a player has more than 1 group
 # Possible options for click_name and click_prefix are suggest_command, run_command, and open_url
 jsonformatting:
   Default: # This default format is required!  Do not delete or rename it!
+    priority: 2147483647 # Integer.MAX_VALUE
+    hover_name:
+    - '&6I have no rank!'
+    click_name: 'suggest_command'
+    click_name_text: '/msg {player_name}'
+    hover_prefix:
+    - '&dI am default!'
+    click_prefix: 'run_command'
+    click_prefix_text: '/help'
+    hover_suffix:
+    - '&dI am default suffix!'
+    click_suffix: 'suggest_command'
+    click_suffix_text: '/msg {player_name}'
+  Owner:
+    priority: 1 # Lowest Priority
+    hover_name:
+    - '&cOwner of the server!'
+    - '&bMessage me for help!'
+    click_name: 'suggest_command'
+    click_name_text: '/msg {player_name}'
+    hover_prefix:
+    - '&dServer Owner'
+    click_prefix: 'run_command'
+    click_prefix_text: '/help'
+    hover_suffix:
+    - '&dI am Owner suffix!'
+    click_suffix: 'suggest_command'
+    click_suffix_text: '/msg {player_name}'
 
 # The icon is the block shown in the GUI
 # The text is the display name of the block icon
@@ -149,23 +177,23 @@ venturegui:
   mute:
     icon: 'REDSTONE_BLOCK'
     durability: 0
-    text: '&cMute {player_name} &410m'
+    text: '&cMute {player_name}'
     permission: 'mute'
-    command: '/mute {channel} {player_name} 10m'
+    command: '/mute {player_name} {channel} 10'
     slot: 1
   unmute:
     icon: 'DIAMOND_BLOCK'
     durability: 0
     text: '&bUnmute {player_name}'
     permission: 'mute'
-    command: '/unmute {channel} {player_name} '
+    command: '/unmute {player_name} {channel}'
     slot: 2
   removemessage:
     icon: 'DIAMOND_AXE'
     durability: 0
     text: '&cRemove Message'
     permission: 'removemessage'
-    command: '/removemessage {hash} {channel}'
+    command: '/removemessage {hash} true'
     slot: 7
 
 guiicon: '&c [✓]'
@@ -179,7 +207,7 @@ underlineurls: true
 broadcast:
   color: red
   permissions: venturechat.adminchannel
-  displaytag: '&#F0230B&lBroadcast &7>>'
+  displaytag: '[Broadcast]'
 
 # Use $ to include arguments into the message
 # Valid component types are:
@@ -191,17 +219,90 @@ broadcast:
 # Use None for no permissions
 # The number of arguments is the minimum number of required arguments, use 0 for no required arguments
 alias:
+  vote:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Message: &6Vote here: www.votelinkhere.com'
+  bane:
+    arguments: 2
+    permissions: bane
+    components:
+    - 'Command: /ban $ appeal at www.site.com'
+    - 'Command: /st banned $'
+  alert:
+    arguments: 1
+    permissions: alert
+    components:
+    - 'Broadcast: &c<Alert> $'
+  donate:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Message: &bDonate here: www.mywebsite.com'
+  website:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Message: &aThis is our website: www.site.net'
+  tell:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Command: /vtell$'
+  whisper:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Command: /vwhisper$'
+  w:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Command: /vwhisper$'
+  msg:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Command: /vmessage$'
+  message:
+    arguments: 0
+    permissions: None
+    components:
+    - 'Command: /vmessage$'
 
-# Enables the creation of special Towny channels: Town and Nation
-# To create these channels, simply name two channels below "Town" and "Nation"
-# Bungeecord must be set to false for these channels!
-enable_towny_channel: true
-
-# Enables the creation of a special faction only channel using the Factions plugin
-# To create this channel, simply name a channel below "Faction"
-# Bungeecord must be set to false for this channel!
-# WARNING: May not work for all versions of Factions!
-enable_factions_channel: false
+# Valid modes are:
+# * Everyone
+# v Voice and up
+# h HalfOp and up
+# q Owner
+# o Op and up
+# Enter components like console commands
+# Arguments are accepted
+irc:
+  enabled: false
+  nick: 'VentureChatBot'
+  login: 'VentureChatbot'
+  server: 'irc.freenode.net'
+  port: 6667
+  channel: '#venturechat'
+  trustallcertificates: true
+  # the delay before the bot logs into the channel in seconds
+  # increase the time if the bot fails to login
+  channeldelay: 60
+  commands:
+    mute:
+      mode: 'v'
+      components:
+      - 'mute'
+    ban:
+      mode: 'o'
+      components:
+      - 'ban'
+    kick:
+      mode: 'v'
+      components:
+      - 'kick'
 
 # color = [channel] color
 # chatcolor = text color
@@ -213,20 +314,26 @@ enable_factions_channel: false
 # Example: permissions: staff equals venturechat.staff
 # Use None for no permissions
 
-# Use PlaceholderAPI placeholders are required!!!
-# Use PlaceholderAPI placeholders are required!!!
-# Use PlaceholderAPI placeholders are required!!!
-# /papi ecloud download [plugin]
-# /papi reload
-# Use '' or "" around format, example: '[&2global&f] {vault_prefix} {player_displayname}&2:'
+# Legacy Placeholders:
+# Use PlaceholderAPI
+# {name} : player name
+# {nickname} : player nickname or name if they have no nickname
+# {prefix} : player prefix and color
+# {suffix} : player suffix and color
+# {servername} : name of the server in server.properties
+# {herolevel} : heroes hero level
+# {heroclass} : heroes hero class
+# {heroxp} : heroes hero xp
+# {herosecondclass} : heroes second class
+# {party} : heroes party
+# {herosecondmaster} : heroes second class master
+# {heromaster} : heroes class master
+# {herosecondlevel} : heroes second class level
+# {herosecondxp} : heroes second class xp
+# Use '' or "" around format, example: '[&2global&f] {prefix}{name}&2:'
 # You must have prefixes and suffixes set in a Vault compatible permissions plugin to avoid errors
 # Use "" as the prefix or suffix to have none
-
-# Set chatcolor to 'None' to have a group based chat color! Don't forget to put a suffix or other placeholder at the end of the format!
-
-# Important!!!
-# Important!!!
-# If you delete a channel, restart the server! Do not use /chatreload!!!
+# use Default for the basic formatting
 channels:
   Donator:
     color: light_purple
