@@ -213,7 +213,6 @@ combat_log_events:
         - if <context.cancelled.not>:
             - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
             - determine passively 0.0
-            - narrate targets:<player[AJ_4real]> <[damage]>
             - hurt <[victim]> <yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
