@@ -156,7 +156,7 @@ calculate_damage:
     script:
     - define defence_points <[damaged].armor_bonus>
     - define weapon_damage <[damage]>
-    - define armor_toughness 0
+    - define armor_toughness 1
     - foreach <[damaged].equipment.filter[material.name.equals[air].not]>:
         - if <[value].material.name.starts_with[diamond]>:
             - define armor_toughness:+:2
