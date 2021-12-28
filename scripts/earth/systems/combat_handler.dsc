@@ -140,7 +140,7 @@ run_combat_check:
             - if <[yes]||false>:
                 - determine passively cancelled
                 - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
-                - hurt <[victim]> <context.final_damage||<context.damage>>
+                - hurt <[victim]> <[damage]>
 
 ttestt_events:
     type: world
