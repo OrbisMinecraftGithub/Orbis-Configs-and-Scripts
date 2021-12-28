@@ -192,10 +192,6 @@ combat_log_events:
         - if <player.has_flag[combat]>:
             - narrate "<&c>You cannot teleport while in combat."
             - determine cancelled
-        on delta time secondly every:10:
-        - foreach <server.online_players.filter[inventory.list_contents.size.equals[0]]> as:p:
-            - if <[p].location.is_siege_zone>:
-                - cast WITHER amplifier:3 duration:20s <[p]>
         on entity teleports:
         - if <context.entity.has_flag[combat]> && <context.destination.distance[<context.origin>].is_more_than[100]>:
             - determine cancelled
