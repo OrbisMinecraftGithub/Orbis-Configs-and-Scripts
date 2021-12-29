@@ -13,7 +13,6 @@ trees_events:
         - if <context.location.material.name.replace[_sapling].with[].advanced_matches_text[<script.data_key[trees]>]>:
             - determine passively cancelled
             - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
-            - announce <[saplings].size>
             - define tree <context.location.material.name.replace[_sapling].with[]>
             - if <[saplings].size.is_more_than_or_equal_to[9]>:
                 - define size large
