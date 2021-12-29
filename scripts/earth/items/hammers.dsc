@@ -24,11 +24,8 @@ hammers_events:
         on player breaks block bukkit_priority:highest:
         - if <player.item_in_hand.enchantment_types.parse[name].contains[area_dig]>:
             - ratelimit <player> 1t
-            - if <player.location.precise_impact_normal[10].y.equals[0]>:
-                - define location <context.location.face[<context.location.add[<player.location.precise_impact_normal[10]>]>]>
-                - define cuboid <[location].below.left.to_cuboid[<[location].above.right>]>
-            - else:
-                - define cuboid <context.location.with_yaw[0].with_pitch[0].forward.left.to_cuboid[<context.location.with_yaw[0].with_pitch[0].backward.right>]>
+            - define loc <context.location.face[<context.location.relative[<player.location.forward.sub[<player.location>].round>]>]>
+            - define cuboid <[loc].up.right.to_cuboid[<[loc].down.left>]>
             - define blocks <[cuboid].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>
             - ~modifyblock <[blocks]> air naturally:<player.item_in_hand> source:<player>
             - if <player.item_in_hand.enchantment_map.contains[unbreaking]>:
