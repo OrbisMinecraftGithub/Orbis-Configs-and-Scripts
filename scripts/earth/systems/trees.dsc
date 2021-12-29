@@ -3,10 +3,11 @@ trees_events:
     debug: false
     trees:
         oak:
-            large: 5
-            medium: 11
-            small: 6
+            large: 7
+            medium: 23
+            small: 11
         birch:
+            large: 4
             medium: 8
             small: 5
         acacia:
@@ -14,11 +15,12 @@ trees_events:
             medium: 6
             small: 6
         dark_oak:
-            large: 10
-            medium: 16
+            large: 11
+            medium: 27
         jungle:
             large: 6
-            medium: 5
+            medium: 15
+            small: 10
         spruce:
             large: 10
             medium: 7
