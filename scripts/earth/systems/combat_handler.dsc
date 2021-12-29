@@ -146,6 +146,8 @@ ttestt_events:
     type: world
     debug: false
     events:
+        on server start:
+        - yaml id:guns load:../CrackShot/weapons/Default_CS_Weapons.yml
         on reload scripts:
         - yaml id:guns load:../CrackShot/weapons/Default_CS_Weapons.yml
 
