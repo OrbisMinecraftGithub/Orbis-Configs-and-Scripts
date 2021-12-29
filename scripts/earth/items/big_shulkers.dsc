@@ -22,7 +22,7 @@ big_shulker_events:
         - define reagent <context.inventory.slot[1]>
         - if <[reagent].script.name.equals[big_shulker_item].not>:
             - stop
-        - if <context.item.script.name.equals[big_shulker_item].not>:
+        - if <context.item.script.name.equals[big_shulker_item].not||true>:
             - stop
         - define item <context.item>
         - foreach <[reagent].list_flags> as:f:
