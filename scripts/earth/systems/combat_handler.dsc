@@ -232,6 +232,7 @@ combat_log_events:
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
+        - define weapon <context.weapon>
         - inject run_combat_check
         on entity damages entity ignorecancelled:true bukkit_priority:monitor:
         - define victim <context.entity>
