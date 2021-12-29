@@ -23,17 +23,12 @@ trees_events:
             - define schematic <proc[list_files_recursively].context[schematics].filter[contains_text[<[tree]>/<[size]>]].random.replace[.schem].with[]||null>
             - ~schematic load filename:<[schematic]> name:<[schematic]>
             - define cuboid <schematic[<[schematic]>].cuboid[<context.location>]>
-            - define inventories <[cuboid].blocks.filter[inventory.exists]>
-            - define map <map[]>
-            - foreach <[inventories].parse[as_location]> as:b:
-                - define map <[map].with[<[b].simple>].as[<[b].inventory.list_contents>]>
             - modifyblock <[saplings]> air
+            - ~schematic create name:<queue.id> <[cuboid]> <context.location>
             - ~schematic paste name:<[schematic]> <context.location> noair
+            - ~schematic paste name:<queue.id> <context.location> noair
             - adjustblock <[cuboid].blocks[*leaves]> persistent:false
             - wait 1t
-            - foreach <[inventories].filter[as_location.inventory.exists.not]> as:b:
-                - modifyblock <[b].as_location> air
-                - drop <[map].get[<[b].simple>]> <[b].as_location.center>
             - wait 1s
             - ~schematic unload name:<[schematic]>
 

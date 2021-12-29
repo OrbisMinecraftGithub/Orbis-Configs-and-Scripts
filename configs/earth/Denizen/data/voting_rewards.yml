@@ -99,13 +99,13 @@ rewards:
                 7:
                    commands:
                    - money give %player_name% 250
-                   - goldencrates give %player_name% celestial
+                   - goldencrates give %player_name% legendary
                    announcement: 
                     - "&bTier &l%player_tier% %player_name% &r&bhas voted 7 times!"   
                 
                 100:
                     commands:
-                    - goldencrates give %player_name% legendary 
+                    - goldencrates give %player_name% celestial 
 tiers:
     1: 0
     2: 30
