@@ -3,7 +3,7 @@ quickshop_events:
     debug: false
     events:
         on player breaks block ignorecancelled:true:
-        - if <context.location.town||null1> != <player.town>:
+        - if <context.location.town||null> != <player.town||null>:
             - stop
         - if <player.town.assistants.include[<player.town.mayor>].deduplicate.filter[as_player.exists].contains[<player>].not>:
             - stop
