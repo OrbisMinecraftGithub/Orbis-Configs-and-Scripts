@@ -20,7 +20,7 @@ big_shulker_events:
     events:
         on player prepares anvil craft item:
         - define reagent <context.inventory.slot[1]>
-        - if <[reagent].script.name.equals[big_shulker_item].not>:
+        - if <[reagent].script.name.equals[big_shulker_item].not||true>:
             - stop
         - if <context.item.script.name.equals[big_shulker_item].not||true>:
             - stop
