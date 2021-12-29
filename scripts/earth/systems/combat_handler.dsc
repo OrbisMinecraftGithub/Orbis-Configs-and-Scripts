@@ -137,10 +137,10 @@ run_combat_check:
         - if <[victim].has_flag[combat]>:
             - if !<server.current_bossbars.contains[combat_time<[victim].uuid>]>:
                 - bossbar combat_time<[victim].uuid> players:<[victim]> "title:<&c>You are now in combat." color:RED
-        - if <[yes]||false> && <context.weapon||null> != null:
-            - determine passively cancelled
-            - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
-            - hurt <[victim]> <[damage]>
+#        - if <[yes]||false> && <context.weapon||null> != null:
+#            - determine passively cancelled
+#            - define damage <proc[calculate_damage].context[<[attacker]>|<[victim]>|<yaml[guns].read[<context.weapon>.Shooting.Projectile_Damage]>]>
+#            - hurt <[victim]> <[damage]>
 
 ttestt_events:
     type: world
