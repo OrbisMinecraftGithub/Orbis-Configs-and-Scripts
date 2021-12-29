@@ -31,7 +31,7 @@ lumber_axe_events:
         - while <[blocks].size.equals[0].not>:
             - define new_blocks <[blocks]>
             - foreach <[blocks]> as:b:
-                - if <player.is_online.not> || <player.is_spawned.not> || <player.inventory.slot[<[slot]>].script.name.starts_with[lumber_axe_].not||true>:
+                - if <player.is_online.not> || <player.is_spawned.not> || <player.inventory.slot[<[slot]>].enchantment_map.contains[tree_feller]||true>:
                     - stop
                 - define new_blocks <[new_blocks].exclude[<[b]>]>
                 - drop <item[<[b].material.name>]> <context.location.center>
