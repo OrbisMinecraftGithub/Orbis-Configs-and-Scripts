@@ -51,7 +51,7 @@ trees_events:
             - ~schematic paste name:worldgen/trees/<[schematic]> <context.location> noair
             - adjustblock <[cuboid].blocks[*leaves]> persistent:false
             - wait 1t
-            - foreach <[inventories].keys.filter[as_location.inventory.exists.not]> as:b:
+            - foreach <[inventories].filter[as_location.inventory.exists.not]> as:b:
                 - drop <[map].get[<[b].simple>]> <[b].as_location.center>
             - wait 1s
             - ~schematic unload name:worldgen/trees/<[schematic]>
