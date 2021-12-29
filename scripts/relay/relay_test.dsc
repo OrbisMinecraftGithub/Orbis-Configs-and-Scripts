@@ -2,6 +2,8 @@ relay_test:
   type: world
   debug: false
   events:
+    on server start:
+      - web start port:25581
     on post request:
       - if <context.headers.get[X-full-uri]> == /webhooks/github/main && <context.headers.get[X-real-ip].starts_with[140.82.115.]>:
         - announce to_console "Pulling Github"
