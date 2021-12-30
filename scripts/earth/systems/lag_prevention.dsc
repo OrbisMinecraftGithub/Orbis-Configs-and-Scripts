@@ -32,7 +32,7 @@ redstone_lag_prevention:
                     slime_block: 16
     task:
     - define material <[material]||<context.material.name>>
-    - if <yaml[config].list_keys[lagcontrol.limits].contains[<[material]>]>:
+    - if <yaml[config].read[lagcontrol.limits.<[material]>].exists>:
         - if <context.location.chunk.cuboid.blocks[<[material]>].size> > <yaml[config].read[lagcontrol.limits.<[material]>]>:
             - narrate "<&c>You cannot place anymore <[material]>s in this chunk."
             - determine cancelled
