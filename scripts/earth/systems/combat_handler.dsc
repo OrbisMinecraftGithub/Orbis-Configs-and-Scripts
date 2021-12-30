@@ -95,7 +95,7 @@ run_combat_check:
         - stop
     - if !<[attacker].is_player> || !<[victim].is_player>:
         - stop
-    - if <[attacher].vehicle.entity_type.equals[ARMOR_STAND]>:
+    - if <[attacker].vehicle.entity_type.equals[ARMOR_STAND]>:
         - determine cancelled
     - if <[attacker].has_flag[no_damage]> || <[attacker].has_flag[no_pvp_damage]>:
         - determine cancelled
