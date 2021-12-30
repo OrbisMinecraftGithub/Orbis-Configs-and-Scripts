@@ -107,7 +107,7 @@ lagcontrol:
     maximum_per_chunk: '50'
   redstone:
     min_time_between_pulse: 1s
-    number_before_removal: '10'
+    number_before_removal: '100'
   limits:
     dispenser: '16'
     slime_block: '16'
