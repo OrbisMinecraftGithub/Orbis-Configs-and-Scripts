@@ -50,6 +50,7 @@ scoreboard-teams:
     - disabledworld
   unlimited-nametag-mode:
     enabled: true
+    always-visible: false
     use-marker-tag-for-1-8-x-clients: false
     disable-on-boats: true
     space-between-lines: 0.30
