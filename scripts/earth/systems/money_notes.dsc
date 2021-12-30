@@ -28,13 +28,13 @@ command_money_note:
     - if !<[number].mul[1].equals[<[number]>]||false>:
         - narrate "<&c>That number is not valid."
         - stop
-    - if <[number].is_less_than_or_equal_to[0]>:
+    - if <[number]> < 0:
         - narrate "<&c>You cannot create a note with a negative value."
         - stop
-    - if <player.money.is_less_than_or_equal_to[<[number]>]>:
+    - if <player.money> < <[number]>:
         - narrate "<&c>You do not have enough money."
         - stop
-    - if <[number].is_more_than[10000]>:
+    - if <[number]> > 10000:
         - narrate "<&c>You have exceeded the amount that you can put into a money note."
         - stop
     - define item <item[money_note_item]>
