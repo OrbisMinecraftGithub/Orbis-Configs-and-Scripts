@@ -80,6 +80,13 @@ qav_events:
         - wait 1t
         - if <context.entity.qav_health||-1> != -1 && <context.entity.passengers.get[1].is_player>:
             - run qav_events path:play_effect def:<context.entity.passengers.get[1]>|<context.entity>
+        on player clicks item in inventory:
+        - if <context.item.material.name> == rabbit_hide && <context.item.all_raw_nbt.keys.contains[Unbreakable]>:
+            - determine passively cancelled
+            - wait 1t
+            - adjust <player> item_on_cursor:<item[air]>
+            - inventory set slot:<context.slot> o:<item[air]>
+            - inventory update
 
 qav_garage_events:
     type: world
