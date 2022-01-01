@@ -339,7 +339,7 @@ HUNTING_RIFLE:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 145
-        Projectile_Damage: 12
+        Projectile_Damage: 6
         Bullet_Spread: 3
     Reload:
         Enable: true
