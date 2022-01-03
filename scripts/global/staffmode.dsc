@@ -111,7 +111,7 @@ spy_events:
             - ratelimit 1t <player>
             - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
             - define args <context.args||<list[]>>
-            - announce to_flagged:commandspy "<&4>[Command] <&r><player.name||<element[Console]>> -<&gt> <[cmd]><&sp><[args].space_separated>"
+            - announce to_flagged:commandspy "<&c>[Command] <&r><player.name||<element[Console]>> -<&gt> <[cmd]><&sp><[args].space_separated>"
 
 command_cmdspy:
     type: command
@@ -121,10 +121,10 @@ command_cmdspy:
     - if <player.has_flag[staffmode]>:
         - if <player.has_flag[commandspy]>:
             - flag <player> commandspy:!
-            - narrate "<&4>You can no longer see hidden commands."
+            - narrate "<&e>You can no longer see hidden commands."
         - else:
             - flag <player> commandspy
-            - narrate "<&4>You can now see hidden commands."
+            - narrate "<&e>You can now see hidden commands."
     - else:
         - narrate "<&c>You do not have permission for this command."
 
@@ -136,10 +136,10 @@ command_msgspy:
     - if <player.has_flag[staffmode]>:
         - if <player.has_flag[messagespy]>:
             - flag <player> messagespy:!
-            - narrate "<&4>You can no longer see hidden messages."
+            - narrate "<&e>You can no longer see hidden messages."
         - else:
             - flag <player> messagespy
-            - narrate "<&4>You can now see hidden messages."
+            - narrate "<&e>You can now see hidden messages."
     - else:
         - narrate "<&c>You do not have permission for this command."
 
