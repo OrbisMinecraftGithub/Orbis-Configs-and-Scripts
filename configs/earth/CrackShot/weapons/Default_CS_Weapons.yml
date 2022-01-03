@@ -341,6 +341,7 @@ HUNTING_RIFLE:
         Projectile_Speed: 145
         Projectile_Damage: 6
         Bullet_Spread: 3
+        Delay_Between_Shots: 40
     Reload:
         Enable: true
         Reload_Amount: 7
