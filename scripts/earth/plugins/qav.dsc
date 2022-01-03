@@ -15,7 +15,7 @@ garage_command:
     - if <player.location.block> != <[location]>:
         - narrate <proc[colorize].context[<yaml[config].read[garage.moved]>]>
         - stop
-    - execute as_player "qav garage rreadyy"
+    - execute as_player "qav garage <player.uuid>"
 
 qav_events:
     type: world
@@ -67,19 +67,24 @@ qav_events:
                         - playeffect at:<[loc].relative[<location[0,1,-7]>]> quantity:1 offset:0.5 <player.flag[playersettings.vehicle.plane.trail]||cloud> velocity:<[vec].mul[-3].relative[<location[<util.random.gauss[<[gauss_val]>].div[<[gauss_div]>]>,<util.random.gauss[<[gauss_val]>].div[<[gauss_div]>]>,0]>]> visibility:512
             - wait 1t
     events:
-        on player spawns qavehicle:
-        - narrate targets:<server.match_player[AJ_4real]> test
         on armor_stand combusts:
         - if <context.entity.qav_type.exists>:
             - remove <context.entity>
         on player enters qavehicle:
         - ratelimit <player> 1t
         - if <context.vehicle.qav_health||-1> != -1:
-            - run qav_events path:play_effect def:<player>|<context.vehicle>
+            - define player <player>
+            - define vehicle <context.vehicle>
+            - inject qav_events path:play_effect
         on armor_stand spawns:
         - wait 1t
-        - if <context.entity.qav_health||-1> != -1 && <context.entity.passengers.get[1].is_player>:
-            - run qav_events path:play_effect def:<context.entity.passengers.get[1]>|<context.entity>
+        - if <context.entity.qav_health||-1> != -1:
+            - if <context.entity.location.world.ends_with[nether]> || <context.entity.location.world.ends_with[the_end]>:
+                - remove <context.entity>
+            - if <context.entity.passengers.get[1].is_player>:
+                - define player <context.entity.passengers.get[1]>
+                - define vehicle <context.entity>
+                - inject qav_events path:play_effect
         on player clicks item in inventory:
         - if <context.item.material.name> == rabbit_hide && <context.item.all_raw_nbt.keys.contains[Unbreakable]>:
             - determine passively cancelled
@@ -94,6 +99,6 @@ qav_garage_events:
     events:
         on command:
         - if <context.command.to_lowercase> == qav || <context.command.to_lowercase> == qualityarmoryvehicles:
-            - if <context.args.get[1]||> == garage && <context.args.get[2]||> != rreadyy:
+            - if <context.args.get[1]||> == garage && <context.args.get[2]||> != <player.uuid>:
                 - execute as_player garage
                 - determine passively cancelled

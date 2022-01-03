@@ -24,23 +24,6 @@ command_staffmode:
         - execute as_server "dynmap hide <player.name>"
         - narrate "<&4>You have entered <&l>StaffMode."
 
-# command_staffmode:
-#     type: command
-#     debug: false
-#     name: staffmode
-#     script:
-#     - if !<player.has_permission[staffmode]>:
-#         - narrate "<&c>You do not have permission for this command."
-#         - stop
-#     - if <player.has_flag[staffmode]>:
-#         - flag <player> staffmode:!
-#         - bossbar remove id:staffmode_indicator players:<player>
-#         - sidebar remove players:<player>
-#         - narrate "<&4>You have left <&l>StaffMode."
-#     - else:
-#         - flag <player> staffmode
-#         - narrate "<&4>You have entered <&l>StaffMode."
-
 command_debugmode:
     type: command
     debug: false
@@ -91,14 +74,74 @@ staffmode_events:
         - sidebar set "title:<&4><&l>Server Status" players:<server.online_players.filter[has_flag[staffmode]]> values:<[tps]>|<[tick_time]>|<[uptime]>|<[player_count]>|<[chunk_count]>|<[entity_count]>|<[living_entity_count]>||<[queue_count]>
         - bossbar update id:staffmode_indicator color:red title:<&l><&4>StaffMode players:<server.online_players.filter[has_flag[staffmode]]>
         - bossbar update id:debugmode_indicator color:blue title:<&l><&9>DebugMode players:<server.online_players.filter[has_flag[debugmode]]>
+
+spy_events:
+    type: world
+    debug: false
+    message_commands:
+        cmi msg:
+            target: 3
+            message: 4
+        whisper:
+            target: 2
+            message: 3
+        tell:
+            target: 2
+            message: 3
+        msg:
+            target: 2
+            message: 3
+    events:
+        on player chats ignorecancelled:true:
+        - if <player.has_permission[spy.bypass]>:
+            - stop
+        - if <context.cancelled>:
+            - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> : <context.message>"
         on command:
+        - if <player.has_permission[spy.bypass]>:
+            - stop
+        - define command <context.command><&sp><context.args.space_separated>
+        - define use <script.list_keys[message_commands].filter_tag[<[command].starts_with[<[filter_value]>]>]>
+        - if !<[use].is_empty>:
+            - define target <[command].split[<&sp>].get[<script.data_key[message_commands.<[use].first>.target]>]>
+            - define message <[command].split[<&sp>].remove[0].to[<script.data_key[message_commands.<[use].first>.message].sub[1]>].space_separated>
+            - announce to_flagged:messagespy "<&c>[Message]<&r> <player.name> -<&gt> <[target]> : <[message]>"
+            - stop
         - if <context.source_type> == PLAYER:
-            - if <player.has_permission[spy.bypass]>:
-                - stop
             - ratelimit 1t <player>
             - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
             - define args <context.args||<list[]>>
-            - narrate "<&4>[Spy] <&c><player.name||<element[Console]>> <&4>-<&gt> <&c><[cmd]><&sp><[args].space_separated>" targets:<server.online_players.filter[has_flag[staffmode]]>
+            - announce to_flagged:commandspy "<&4>[Command] <&r><player.name||<element[Console]>> -<&gt> <[cmd]><&sp><[args].space_separated>"
+
+command_cmdspy:
+    type: command
+    debug: false
+    name: commandspy
+    script:
+    - if <player.has_flag[staffmode]>:
+        - if <player.has_flag[commandspy]>:
+            - flag <player> commandspy:!
+            - narrate "<&4>You can no longer see hidden commands."
+        - else:
+            - flag <player> commandspy
+            - narrate "<&4>You can now see hidden commands."
+    - else:
+        - narrate "<&c>You do not have permission for this command."
+
+command_msgspy:
+    type: command
+    debug: false
+    name: messagespy
+    script:
+    - if <player.has_flag[staffmode]>:
+        - if <player.has_flag[messagespy]>:
+            - flag <player> messagespy:!
+            - narrate "<&4>You can no longer see hidden messages."
+        - else:
+            - flag <player> messagespy
+            - narrate "<&4>You can now see hidden messages."
+    - else:
+        - narrate "<&c>You do not have permission for this command."
 
 error_handler_events:
     type: world
