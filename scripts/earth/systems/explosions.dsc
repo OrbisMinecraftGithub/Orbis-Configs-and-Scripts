@@ -8,11 +8,11 @@ explosion_handler:
         on block falls:
         - if <context.location.has_flag[no_physics]>:
             - determine cancelled
-        on block explodes ignorecancelled:true bukkit_priority:highest:
+        on block explodes ignorecancelled:true bukkit_priority:lowest:
         - define location <context.block>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
-        on entity explodes ignorecancelled:true bukkit_priority:highest:
+        on entity explodes ignorecancelled:true bukkit_priority:lowest:
         - define location <context.location>
         - define blocks <context.blocks>
         - inject explosion_handler path:process_explosion
@@ -83,7 +83,7 @@ explosion_handler:
                         - adjust <[entity]> painting:<[painting]>
                         - define after <[entity].attached_block>
     process_explosion:
-    - define new_blocks <[blocks].filter[is_siege_zone.is[==].to[true]||true].filter[has_flag[big_shulker].not]>
+    - define new_blocks <[blocks].filter[is_siege_zone||true].filter[has_flag[big_shulker].not].include[<[blocks].filter[town.is_sieged||false].filter[has_flag[big_shulker].not]>].deduplicate>
     # - define new_blocks <[blocks]>
     - if <[new_blocks].size.equals[0]>:
         - determine cancelled
