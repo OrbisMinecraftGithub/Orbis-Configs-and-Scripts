@@ -11,15 +11,17 @@ animal_lag_prevention:
         - villager
         - turtle
     events:
-        on delta time minutely every:10:
+        on delta time minutely every:5:
         - foreach <script.data_key[data.types]> as:animal_type:
-            - remove <world[world].entities[<[animal_type]>].filter[location.has_town.not].filter[is_leashed.not]>
+            - define remove <world[world].entities[<[animal_type]>].filter[location.has_town.not].filter[is_leashed.not]>
+            - define removed:+:<[remove].size>
+            - remove <[remove]>
             - wait 1s
             - foreach <server.worlds.parse[loaded_chunks].combine.filter[entities[<[animal_type]>].size.is_more_than[16]]> as:c:
-                - wait 2t
                 - define entities <[c].entities[<[animal_type]>]>
                 - remove <[entities].random[<[entities].size.sub[16]>]>
                 - define removed:+:<[entities].size.sub[16]>
+        - announce "<&c>Removed <&4><&l><[removed]><&r><&c> entities from crowded chunks."
 
 redstone_lag_prevention:
     type: world
