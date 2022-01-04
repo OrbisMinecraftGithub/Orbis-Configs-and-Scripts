@@ -1,0 +1,13 @@
+itemName: '&aDog Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - LUCK;3
+  - NIGHT_VISION;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MjUwNjc5MTA5NzEsInByb2ZpbGVJZCI6IjZjOWIzNjJhODc5ODRkZmE4YzFjMGNmYjkwMmIxODM2IiwicHJvZmlsZU5hbWUiOiJkaW1hZG9nZ3kiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY2NmRlNmY3ZjY3OWYyNDc3NzFiZjQ1ZmQ5OTFhM2ZmZGQyYmQ3MjRlMWU5NmY0ZDJjOTU5MTk5MTc0MzAifX19

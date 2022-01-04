@@ -1,0 +1,15 @@
+itemName: '&5Thanos Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - RESISTANCE;2
+  - INCREASE_DAMAGE;3
+  - JUMP;2
+  - HEALTH_BOOST;2
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MjgyOTgxNzY4MzcsInByb2ZpbGVJZCI6IjNkOWNmOTZiN2MyNzRiZWVhZDFiOWQ0NTM3NTRjYjc2IiwicHJvZmlsZU5hbWUiOiJOaWtha2EiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzUwMDI2MjVjN2UwNmRhNjNkNDNlMTlkMTA3YmRjYzA2MjhmZDFkYjI0ODg0NTE1NTZjNmIxZTYzMGY3MjI3MjEifX19

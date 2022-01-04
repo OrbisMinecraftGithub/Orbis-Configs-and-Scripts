@@ -1,0 +1,14 @@
+itemName: '&2Halo Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - RESISTANCE;3
+  - INCREASE_DAMAGE;1
+  - HEALTH_BOOST;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE0NzI3Njc4MDY4MTcsInByb2ZpbGVJZCI6IjQzYTgzNzNkNjQyOTQ1MTBhOWFhYjMwZjViM2NlYmIzIiwicHJvZmlsZU5hbWUiOiJTa3VsbENsaWVudFNraW42Iiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lNTEyN2MxN2M4YzEzMDE3NDk3ZThiZTQ0MzNkOTY3NWZkYzFmZDk0M2ExZGJiOWFkMTdhMjE3MzI3NWYifX19

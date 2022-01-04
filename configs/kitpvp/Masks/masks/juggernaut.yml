@@ -1,0 +1,14 @@
+itemName: '&4Juggernaut Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - RESISTANCE;4
+  - SLOW;2
+  - SLOW_DIGGING;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NTU0NTMxNTk4ODcsInByb2ZpbGVJZCI6ImU3NTMyNjk3ZTgwZjQ1NmU5ZjNhZjZiODIzNWU5YTgxIiwicHJvZmlsZU5hbWUiOiJNaW5lQWx0c19NU2tpbl8xIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82ZDc1ZmE1NTI3YWExM2RiMmQ1Mjg3ZDI5NjYzMDViOWRlNGVmY2I1ZGQ5ZTAyNTU0ZTcwMzE4NTQ4MWQ2ZTA3In19fQ==

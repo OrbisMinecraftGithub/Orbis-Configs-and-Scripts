@@ -1,0 +1,15 @@
+itemName: '&6Firefighter Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - FIRE_RESISTANCE;2
+  - WATER_BREATHING;2
+  - NIGHT_VISION;2
+  - RESISTANCE;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NTU0NDA5NzI3ODMsInByb2ZpbGVJZCI6IjVkMjRiYTBiMjg4YzQyOTM4YmExMGVjOTkwNjRkMjU5IiwicHJvZmlsZU5hbWUiOiIxbnYzbnQxdjN0NGwzbnQiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2ZmZGI4NjZiZWM3OTA4NmVhZTE2OGFkOWY4ZDljZWMzYjg5MzEyNzhlZGJhMzI5MTc4OTg1YmNmMzZlMWU5ZjUifX19

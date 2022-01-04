@@ -1,0 +1,15 @@
+itemName: '&5Harry Potter Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - INVISIBILITY;2
+  - SPEED;2
+  - INCREASE_DAMAGE;1
+  - HEALTH_BOOST;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NDEyOTAwNzYzMDgsInByb2ZpbGVJZCI6IjgyMTBiNmRlNmEyMDQ5ODliNmE5MzIyODY3NjY2YzYxIiwicHJvZmlsZU5hbWUiOiJTcGVlZHlIb25vciIsInNpZ25hdHVyZVJlcXVpcmVkIjp0cnVlLCJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTRkMTk5NjA2MjAwMWY5YzZhZGJkZTM4MzU3ODA3MGU3N2Q5NjhlOTU0NTkyZDU5MTNiNWQyZjA1NTA0MDhkZCJ9fX0=

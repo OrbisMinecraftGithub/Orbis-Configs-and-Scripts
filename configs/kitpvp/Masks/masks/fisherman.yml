@@ -1,0 +1,13 @@
+itemName: '&bFisherman Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+- SPEED;4
+- JUMP;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NTA0Mjg1MjM1MjEsInByb2ZpbGVJZCI6IjFjZjQ0OTMwODY1MTQ4NGE5ZmZjODI5YjlmNDg3NGE2IiwicHJvZmlsZU5hbWUiOiJJbmdBbmciLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2EwZDU2ZGI1Y2ZlYTYzN2RmMzQ2MTM4ZDdhNmUyNWY2NTQ1Y2ZlYzE0ZWE0ODk4NmFjNmY0Yjc0MzU1MzY3YjcifX19

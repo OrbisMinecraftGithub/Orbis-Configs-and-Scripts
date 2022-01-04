@@ -1,0 +1,13 @@
+itemName: '&9Paladin Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+- REGENERATION;2
+- HEALTH_BOOST;2
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NTU0NDgyODU5MjQsInByb2ZpbGVJZCI6IjgyYzYwNmM1YzY1MjRiNzk4YjkxYTEyZDNhNjE2OTc3IiwicHJvZmlsZU5hbWUiOiJOb3ROb3RvcmlvdXNOZW1vIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9mNDExZDNiYmEzMDMyNmFhOTVkMWY3Nzg3YTgxZWI2NGNhOWFlZDA2ODNlMzJjNjNiOTQwMjA5ZTc0YjQzOGM4In19fQ==

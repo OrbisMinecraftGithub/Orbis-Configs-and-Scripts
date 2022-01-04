@@ -1,0 +1,13 @@
+itemName: '&eFlash Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - NIGHT_VISION;2
+  - SPEED;2
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE0Nzk0MDA5NTIwMDksInByb2ZpbGVJZCI6IjQzYTgzNzNkNjQyOTQ1MTBhOWFhYjMwZjViM2NlYmIzIiwicHJvZmlsZU5hbWUiOiJTa3VsbENsaWVudFNraW42Iiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iZGMxOWZkYmFmMjMyZWEzYTI2YzU1MWE0ODkyNzg0ZmYxNjE1YmRhNjFhOGU5MTYwMmJmZWExYmQ3ZGQ5ZSJ9fX0=

@@ -1,0 +1,13 @@
+itemName: '&bMermaid Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - WATER_BREATHING;2
+  - SATURATION;3
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MDkxMjk2OTA5MTAsInByb2ZpbGVJZCI6ImFkMWM2Yjk1YTA5ODRmNTE4MWJhOTgyMzY0OTllM2JkIiwicHJvZmlsZU5hbWUiOiJGdXJrYW5iejAwIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS82OTE1YmFmZmMzZWJmZDZhYTY0YjMyZjIyYmY3ZWRkNzFjMTE2MTZiNzFkNjIxOGE0NGUxOTdmZDliZGYzOSJ9fX0=

@@ -1,0 +1,20 @@
+settings:
+  drop-if-inventory-full: true
+  allow-interaction: false
+  shift-click-wear: true
+  allow-dropping: true
+  disabled-worlds:
+  - example
+  - example2
+  - example3
+  on-ground-effects:
+    show-particle: true
+    show-displayName: true
+    particleType: SPELL_INSTANT
+    xOffset: 0.298
+    yOffset: 0.2
+    zOffset: 0.298
+    amount: 1
+  mask-put-on:
+    enabled: true
+    message: '&7You have put on %mask_displayname%&7.'

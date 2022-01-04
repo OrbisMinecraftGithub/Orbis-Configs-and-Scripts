@@ -1,0 +1,15 @@
+itemName: '&cMario Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - SPEED;1
+  - JUMP;3
+  - FIRE_RESISTANCE;1
+  - SATURATION;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MjUyNzU4MzQzNDIsInByb2ZpbGVJZCI6IjVjN2ZiNzhhMmQxMzQ5NTZhNWE1M2EyNGQ5NWY1YjRmIiwicHJvZmlsZU5hbWUiOiJQZWFyc29uSW5tYW4iLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzE5ZmVjNjc2ZDIyZWM2MmI2ZjRkNzkxM2VhMzRkZmE1Nzc1ZmI2NTM4ZDVkODRiMjllNmQyNWNjYWEzNTEifX19

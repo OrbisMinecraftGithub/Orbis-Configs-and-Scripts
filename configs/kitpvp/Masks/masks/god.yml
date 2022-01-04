@@ -1,0 +1,17 @@
+itemName: '&eGod Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+ - INCREASE_DAMAGE;2
+ - SPEED;3
+ - DAMAGE_RESISTANCE;2
+ - WATER_BREATHING;3
+ - HEAL;2
+
+on-wear-commands:
+- 'give %player% diamond 20'
+- 'eco give %player% 500'
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MTQ5MTkwNDU3MTcsInByb2ZpbGVJZCI6IjIzZDE4YjNhN2E1NjQyM2E4NDZmZGJlNGVjYjJmNzJmIiwicHJvZmlsZU5hbWUiOiJHZW1pbml4UGxheXMiLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNmNGVmNjkwYWExN2EzNjZhOWNiYTczNDZkYTIzMzk2OTFkN2E5NzFmNmVjODk4MTMyZjk0YjlkNWZjYzMifX19

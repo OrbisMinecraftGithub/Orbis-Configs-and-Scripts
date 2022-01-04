@@ -1,0 +1,13 @@
+itemName: '&eChef Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - SATURATION;2
+  - RESISTANCE;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NTU0NDExMTg0NDMsInByb2ZpbGVJZCI6Ijc1MTQ0NDgxOTFlNjQ1NDY4Yzk3MzlhNmUzOTU3YmViIiwicHJvZmlsZU5hbWUiOiJUaGFua3NNb2phbmciLCJzaWduYXR1cmVSZXF1aXJlZCI6dHJ1ZSwidGV4dHVyZXMiOnsiU0tJTiI6eyJ1cmwiOiJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzY3MmUwNTI0NDFkNDBjNzBiMWQyOWJjNWViZTRkNzJiODU4YjdiYTllNTE4NDJiY2EzNTVjNjEwMDUzN2U2MzEifX19

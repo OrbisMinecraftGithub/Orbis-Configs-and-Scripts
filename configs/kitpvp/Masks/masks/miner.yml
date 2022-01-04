@@ -1,0 +1,13 @@
+itemName: '&8Miner Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+- NIGHT_VISION;3
+- FIRE_RESISTANCE;1
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1MDk4NTkxMjk3MTQsInByb2ZpbGVJZCI6ImFkMWM2Yjk1YTA5ODRmNTE4MWJhOTgyMzY0OTllM2JkIiwicHJvZmlsZU5hbWUiOiJGdXJrYW5iejAwIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kZDZhNjNhMjcwYmQxYmM0NzYxNWEyYWZmOTI3YTBlZjI4ODM5YzZhMDFjZGMxZWYzMmQ1MjEwNWJhZjk2NCJ9fX0=

@@ -1,0 +1,21 @@
+messages:
+  no-permission: '&4You do not have permission to do this'
+  usage:
+  - '&c&m----------------------------------------------'
+  - '&4&l&l                       Masks                  '
+  - ' '
+  - '&4&l ▸ &7/masks give <player> <mask> <amount>'
+  - '&4&l ▸ &7/masks menu'
+  - '&4&l ▸ &7/masks reload'
+  - '&c&m----------------------------------------------'
+  invalid-number: '&4Invalid number.'
+  player-not-online: '&4That player is not online.'
+  mask-not-exist: '&4That mask does not exist.'
+  mask-received: '&7You were given &7%amount%&7 of mask %mask_display_name%&7.'
+  mask-given: '&7You gave &c%player% &7%amount%&7 of mask %mask_display_name%&7.'
+  inventory-title: '&lMasks &r(%total_masks%)'
+  gui-received: '&7You were given &7%amount%&7 of mask %mask_display_name%&7.'
+  reloaded: |-
+    &4Reloaded:
+    &c  Configuration: &a&l✔
+    &c  Masks: &a&l✔

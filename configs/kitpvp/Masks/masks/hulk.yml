@@ -1,0 +1,13 @@
+itemName: '&2Hulk Mask'
+lore:
+- '&7A mask!'
+
+potionType:
+  - INCREASE_DAMAGE;3
+  - SLOW;2
+
+on-wear-commands:
+- ''
+
+texture:
+  value: eyJ0aW1lc3RhbXAiOjE1NDE2MzA3NjUyNDYsInByb2ZpbGVJZCI6ImRhNzQ2NWVkMjljYjRkZTA5MzRkOTIwMTc0NDkxMzU1IiwicHJvZmlsZU5hbWUiOiJEYW5jaW5nRG9nZ29fIiwic2lnbmF0dXJlUmVxdWlyZWQiOnRydWUsInRleHR1cmVzIjp7IlNLSU4iOnsidXJsIjoiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9kYWQwMjAzMDM1YTk5YWNiYThkNjgwYWQyN2I0MmI4YTk3MmUzYzUyMzJhZTM4ZDJiM2UxZGY0YWQ2OWZlOTUyIn19fQ==

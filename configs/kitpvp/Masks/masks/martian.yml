@@ -1,0 +1,15 @@
+itemName: '&c&lMartian Head'
+lore:
+- '&f• Fire Resistance'
+
+- '&f• Saturation'
+
+potionType:
+  - SATURATION;2
+  - FIRE_RESISTANCE;2
+
+on-wear-commands:
+- ''
+
+texture:
+  value: ewogICJ0aW1lc3RhbXAiIDogMTU5NDI3MTI5MTQyNywKICAicHJvZmlsZUlkIiA6ICJlZDUzZGQ4MTRmOWQ0YTNjYjRlYjY1MWRjYmE3N2U2NiIsCiAgInByb2ZpbGVOYW1lIiA6ICIwMTAwMDExMDAxMDAwMDExIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzk2Zjc2ZjQ0OTVkMDk3ZGFiMDFiNDA1MzFkNjY3M2I2YjZlMjI3NjAyNmZlZTcyZjExMTdjNjZhNjY1ODRhMDYiCiAgICB9CiAgfQp9
