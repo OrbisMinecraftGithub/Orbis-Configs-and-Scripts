@@ -9,6 +9,7 @@ animal_lag_prevention:
         - pig
         - chicken
         - villager
+        - turtle
     events:
         on delta time minutely every:10:
         - foreach <script.data_key[data.types]> as:animal_type:
