@@ -53,7 +53,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' Ruins'
     mayorPrefix: 'Spirit '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 1
@@ -63,7 +63,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Settlement)'
     mayorPrefix: 'Hermit '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 16
@@ -73,7 +73,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Hamlet)'
     mayorPrefix: 'Chief '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 32
@@ -83,7 +83,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Village)'
     mayorPrefix: 'Baron Von '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 96
@@ -93,7 +93,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Town)'
     mayorPrefix: 'Viscount '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 160
@@ -103,7 +103,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Large Town)'
     mayorPrefix: 'Count Von '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 224
@@ -113,7 +113,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (City)'
     mayorPrefix: 'Earl '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 320
@@ -123,7 +123,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Large City)'
     mayorPrefix: 'Duke '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 384
@@ -133,7 +133,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Metropolis)'
     mayorPrefix: 'Lord '
-    townBlockBuyBonusLimit: 0
+    townBlockBuyBonusLimit: 4000
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 448
@@ -149,7 +149,7 @@ levels:
     numResidents: 0
     nationBonusOutpostLimit: 0
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 10
+    townBlockLimitBonus: 20
     namePrefix: 'Land of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -161,7 +161,7 @@ levels:
     numResidents: 10
     nationBonusOutpostLimit: 1
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 20
+    townBlockLimitBonus: 40
     namePrefix: 'Federation of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -173,7 +173,7 @@ levels:
     numResidents: 20
     nationBonusOutpostLimit: 2
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 40
+    townBlockLimitBonus: 100
     namePrefix: 'Dominion of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -185,7 +185,7 @@ levels:
     numResidents: 30
     nationBonusOutpostLimit: 3
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 60
+    townBlockLimitBonus: 220
     namePrefix: 'Kingdom of '
     nationZonesSize: 2
     nationTownUpkeepModifier: 1.0
@@ -197,7 +197,7 @@ levels:
     numResidents: 40
     nationBonusOutpostLimit: 4
     namePostfix: ' Empire'
-    townBlockLimitBonus: 100
+    townBlockLimitBonus: 400
     namePrefix: 'The '
     nationZonesSize: 2
     nationTownUpkeepModifier: 1.0
@@ -209,7 +209,7 @@ levels:
     numResidents: 60
     nationBonusOutpostLimit: 5
     namePostfix: ' Realm'
-    townBlockLimitBonus: 140
+    townBlockLimitBonus: 750
     namePrefix: 'The '
     nationZonesSize: 3
     nationTownUpkeepModifier: 1.0
@@ -281,7 +281,7 @@ town:
   max_claim_radius_value: '4'
  
   # Maximum number of towns allowed on the server.
-  town_limit: '3000'
+  town_limit: '300000'
  
   # The maximum distance (in townblocks) that 2 town's homeblocks can be to be eligible for merging.
   max_distance_for_merge: '20'
@@ -320,7 +320,7 @@ town:
  
   # The maximum townblocks available to a town is (numResidents * ratio).
   # Setting this value to 0 will instead use the level based jump values determined in the town level config.
-  town_block_ratio: '8'
+  town_block_ratio: '16'
  
   # The maximimum amount of townblocks a town can have, if town_block_ratio is 0 the max size will be decided by the town_levels.
   # Set to 0 to have no size limit.
@@ -383,7 +383,7 @@ new_world_settings:
     # Do new world have friendly fire enabled by default?
     # Does not affect Arena Plots which have FF enabled all the time.
     # When true players on the same town or nation will harm each other.
-    friendly_fire_enabled: 'false'
+    friendly_fire_enabled: 'true'
  
     # Do new worlds have their war_allowed enabled by default?
     war_allowed: 'true'
@@ -793,7 +793,7 @@ global_nation_settings:
   display_board_onlogin: 'true'
  
   # If true the capital city of nation cannot be neutral/peaceful.
-  capitals_cannot_be_neutral: 'false'
+  capitals_cannot_be_neutral: 'true'
  
   # If enabled, only allow the nation spawn to be set in the capital city.
   capital_spawn: 'true'
@@ -1460,7 +1460,7 @@ economy:
     # Warning: do not set this higher than the cost to claim a townblock.
     # It is advised that you do not set this to the same price as claiming either, otherwise towns will get around using outposts to claim far away.
     # Optionally, set this to a negative amount if you want towns to pay money to unclaim their land.
-    price_claim_townblock_refund: '0.0'
+    price_claim_townblock_refund: '100.0'
  
     # How much it costs a player to buy extra blocks.
     price_purchased_bonus_townblock: '250.0'

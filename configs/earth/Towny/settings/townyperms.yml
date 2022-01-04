@@ -256,6 +256,7 @@ nations:
  
   # Kings get these permissions in addition to the default set.
   king:
+  - siegewar.immune.to.war.nausea
   - towny.rank.nation.king
   - towny.command.nation.*
   - towny.command.nation.deposit.other
@@ -265,6 +266,7 @@ nations:
   - siegewar.command.siegewar.nation.*
   ranks:
     coking:
+    - siegewar.immune.to.war.nausea
     - towny.rank.nation.coking
     - towny.command.nation.ally.*
     - towny.command.nation.enemy
@@ -290,18 +292,15 @@ nations:
     - towny.command.nation.set.taxes
     - towny.command.nation.rank.assistant
     - towny.command.nation.toggle.*
-    - siegewar.nation.siege.abandon
-    - siegewar.nation.siege.invade
     - towny.command.nation.set.spawncost
     - towny.command.nation.set.spawn
     - towny.command.nation.withdraw
-    - siegewar.nation.siege.plunder
-    - siegewar.nation.siege.attack
     - siegewar.nation.siege.*
     - towny.command.nation.kick
     - towny.command.nation.rank.soldier
     - towny.command.nation.rank.general
     assistant:
+    - siegewar.immune.to.war.nausea
     - towny.rank.nation.assistant
     - towny.command.nation.rank.helper
     - towny.command.nation.invite.add
