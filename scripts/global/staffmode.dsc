@@ -98,7 +98,7 @@ spy_events:
         - if <context.cancelled>:
             - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> : <context.message>"
         on command:
-        - if <player.has_permission[spy.bypass]>:
+        - if <player.has_permission[spy.bypass]||false>:
             - stop
         - define command <context.command><&sp><context.args.space_separated>
         - define use <script.list_keys[message_commands].filter_tag[<[command].starts_with[<[filter_value]>]>]>
