@@ -356,14 +356,14 @@ HUNTING_RIFLE:
         Ammo_Name_Check: §g§6Magazine
     Firearm_Action:
         Type: bolt
-        Open_Duration: 8
-        Close_Duration: 7
+        Open_Duration: 12
+        Close_Duration: 12
     Sneak:
-        Enable: true
+        Enable: false
         Bullet_Spread: 1.5
     Headshot:
         Enable: true
-        Bonus_Damage: 12
+        Bonus_Damage: 10
     Backstab:
         Enable: false
         Bonus_Damage: 5
