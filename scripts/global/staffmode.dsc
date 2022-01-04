@@ -107,7 +107,7 @@ spy_events:
             - define message <[command].split[<&sp>].remove[0].to[<script.data_key[message_commands.<[use].first>.message].sub[1]>].space_separated>
             - announce to_flagged:messagespy "<&c>[Message]<&r> <player.name> -<&gt> <[target]> : <[message]>"
             - stop
-        - if <context.source_type> == PLAYER:
+        - if <context.source_type||null> == PLAYER:
             - ratelimit 1t <player>
             - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
             - define args <context.args||<list[]>>
