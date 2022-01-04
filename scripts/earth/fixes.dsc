@@ -45,7 +45,7 @@ fixes_events:
         on player opens inventory:
         - inventory exclude d:<context.inventory> origin:totem_of_undying
         - inventory exclude d:<player.inventory> origin:totem_of_undying
-        on delta time secondly:
+        on delta time secondly every:2:
         - foreach <server.online_players.filter[location.material.name.equals[nether_portal]]>:
             - define portal <[value].location.flood_fill[6].types[nether_portal]>
             - foreach <[portal]> as:b:

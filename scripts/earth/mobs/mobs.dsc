@@ -14,3 +14,6 @@ mobs_events:
         - determine <context.drops.filter[material.name.equals[totem_of_undying].not]>
         on armor_stand dies:
         - determine <context.drops.filter[unbreakable.not]>
+        on iron_golem spawns:
+        - if <context.cause> != BUILD_IRONGOLEM:
+            - determine cancelled

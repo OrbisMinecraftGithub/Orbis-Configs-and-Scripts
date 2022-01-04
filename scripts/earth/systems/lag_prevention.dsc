@@ -8,6 +8,7 @@ animal_lag_prevention:
         - cow
         - pig
         - chicken
+        - villager
     events:
         on delta time minutely every:10:
         - foreach <script.data_key[data.types]> as:animal_type:
@@ -18,9 +19,6 @@ animal_lag_prevention:
                 - define entities <[c].entities[<[animal_type]>]>
                 - remove <[entities].random[<[entities].size.sub[16]>]>
                 - define removed:+:<[entities].size.sub[16]>
-        on iron_golem spawns:
-        - if <context.cause> != BUILD_IRONGOLEM:
-            - determine cancelled
 
 redstone_lag_prevention:
     type: world

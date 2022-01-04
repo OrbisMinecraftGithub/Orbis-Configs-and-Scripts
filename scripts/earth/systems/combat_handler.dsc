@@ -255,7 +255,7 @@ combat_log_events:
             - determine passively "<&c><player.name> died from combat logging."
         on player respawns:
         - flag <player> combat:!
-        on delta time secondly:
+        on delta time secondly every:3:
         - foreach <server.online_players.filter[has_flag[combat].is[==].to[false]]||<list[]>> as:p:
             - if <server.current_bossbars.contains[combat_time<[p].uuid>]>:
                 - bossbar remove combat_time<[p].uuid> players:<[p]>
