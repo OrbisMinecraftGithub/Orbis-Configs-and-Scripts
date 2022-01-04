@@ -81,6 +81,7 @@ Desert_Eagle_CSP:
     Reload_Duration: "BAR~0~80"
     Reload_Amount: "BAR~0~40"
     Explosion_Radius: "BAR~0~10"
+
 AK47:
     Shoot:
         Invisible_Projectiles: true
