@@ -148,6 +148,8 @@ error_handler_events:
     debug: false
     events:
         on script generates error:
+        - if !<context.script.exists>:
+            - stop
         - if <context.script> == <script>:
             - stop
         - if "<context.message.starts_with[Several text tags like '&dot' or '&cm' are pointless]>":
