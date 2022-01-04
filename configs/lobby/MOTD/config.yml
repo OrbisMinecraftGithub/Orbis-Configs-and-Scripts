@@ -3,7 +3,7 @@ Server-MOTD:
   Line-1: '          &#626778>> &#360a6d&lO&#2c1e7b&lr&#1a2d89&lb&#003a95&li&#00469f&ls
     &#0052a9&lN&#005db1&le&#0069b9&lt&#0074bf&lw&#007fc4&lo&#008ac8&lr&#0094cb&lk
     &#626778| &8[1.17-1.18]&r &#626778<< '
-  Line-2: '&f&k                     E&r&#86bdd1Towny Released!&f&kE'
+  Line-2: '&f&k                     E&r&#86bdd1Geopolitcal Towny!&f&kE'
 # The motd of the player when they join in.
 JoinGame-MOTD:
   Enabled: false
