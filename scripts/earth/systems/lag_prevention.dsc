@@ -13,9 +13,11 @@ animal_lag_prevention:
         - foreach <script.data_key[data.types]> as:animal_type:
             - remove <world[world].entities[<[animal_type]>].filter[location.has_town.not].filter[is_leashed.not]>
             - wait 1s
-            - foreach <server.worlds.parse[loaded_chunks].combine.filter[living_entities[<[animal_type]>].size.is_more_than[16]]> as:c:
-                - define entities <[c].living_entities[<[animal_type]>]>
+            - foreach <server.worlds.parse[loaded_chunks].combine.filter[entities[<[animal_type]>].size.is_more_than[16]]> as:c:
+                - wait 2t
+                - define entities <[c].entities[<[animal_type]>]>
                 - remove <[entities].random[<[entities].size.sub[16]>]>
+                - define removed:+:<[entities].size.sub[16]>
 
 redstone_lag_prevention:
     type: world
