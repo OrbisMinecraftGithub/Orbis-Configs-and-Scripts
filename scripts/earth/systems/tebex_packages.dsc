@@ -52,7 +52,7 @@ activate_perk:
             - repeat <[amount]>:
                 - run crates_spawn def:supply|<proc[get_random_point]>|random
             - wait 10t
-            - narrate targets:<server.match_player[AJ_4real]> "<&e><&l><[player]> has purchased <[amount]> supply crates from the store."
+            - announce "<&e><&l><[player]> has purchased <[amount]> supply crates from the store."
         - case spawn_military_crates:
             - define amount <[var1]>
             - if <[amount].is_integer.not>:
@@ -60,4 +60,4 @@ activate_perk:
             - repeat <[amount]>:
                 - run crates_spawn def:military|<proc[get_random_point]>|random
             - wait 10t
-            - narrate targets:<server.match_player[AJ_4real]> "<&e><&l><[player]> has purchased <[amount]> military crates from the store."
+            - announce "<&e><&l><[player]> has purchased <[amount]> military crates from the store."
