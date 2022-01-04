@@ -147,10 +147,9 @@ error_handler_events:
     type: world
     debug: false
     events:
-        on entity dies:
-        - if <context.entity.object_type> == player:
-            - announce to_flagged:debugmode "Teleport to death point for <context.entity.name>: <element[<&l><&lb>Death<&sp>Point<&rb>].on_click[/ex -q teleport <context.entity.location>]>"
         on script generates error:
+        - if <context.script> == <script>:
+            - stop
         - if "<context.message.starts_with[Several text tags like '&dot' or '&cm' are pointless]>":
             - determine cancelled
         - if <context.message.ends_with[is<&sp>invalid!]> && <context.message.starts_with[Tag<&sp><&lt>inventory<&lb>]> && !<player.has_flag[debugmode]>:
@@ -158,26 +157,32 @@ error_handler_events:
             - inventory close
         - define "ignore_errors:|:The list_flags tag is meant for testing/debugging only. Do not use it in scripts (ignore this warning if using for testing reasons)."
         - if <context.script||null> != null && <context.line||null> != null && !<[ignore_errors].contains[<context.message>]>:
-            - if <player||null> != null:
+            - if <player.if_null[null]> != null:
                 - define "cause:<player.name.as_element.on_hover[Click to teleport].on_click[/ex -q teleport <player.location||null>]||None>"
             - else:
                 - define cause:None
+            - flag server debug.errors.<context.queue.id>.stacktrace.<context.line>.message:<context.message>
+            - ratelimit <context.queue> 1h
+            - waituntil <context.queue.state> == stopping
+            - foreach <server.flag[debug.errors.<context.queue.id>.stacktrace].keys> as:t:
+                - define message <server.flag[debug.errors.<context.queue.id>.stacktrace.<[t]>.message]>
+                - define "stacktrace:|:<&c><context.script.filename.split[plugins/Denizen/scripts/].get[2]><&co><&l><[t]> <&r><[message]>"
+            - foreach <context.queue.definitions.deduplicate> as:definition:
+                - define data <context.queue.definition[<[definition]>]>
+                - if <[data].parsed.exists>:
+                    - define definitions:|:<proc[get_debug_info].context[<[data].escaped>|<[definition]>]>
             - announce to_console "<&c>|----------------------| <&4>Error<&c> |-----------------------|"
-            - announce to_console "<&c> <context.message>"
-            - announce to_console "<&c> Player: <[cause]>"
-            - announce to_console "<&c> Script: <context.script.name>"
-            - announce to_console "<&c> File: <context.script.filename.split[/plugins/Denizen/scripts/].get[2]>"
-            - announce to_console "<&c> Line: <context.line>"
+            - announce to_console " <&c>Filename: <context.script.filename.split[plugins/Denizen/scripts/].get[2]>"
+            - announce to_console " <&c>Player: <[cause]>"
+            - announce to_console " <[stacktrace].separated_by[<&nl> ]>"
+            - announce to_console " <&c>Definitions: <&l><[definitions].separated_by[<&sp><&2>|<&sp><&c><&l>]||None>"
+
             - announce to_flagged:debugmode "<&c>|----------------------| <&4>Error<&c> |-----------------------|"
-            - announce to_flagged:debugmode "<&c> <context.message>"
-            - announce to_flagged:debugmode "<&c> Player: <[cause]>"
-            - announce to_flagged:debugmode "<&c> Script: <context.script.name>"
-            - announce to_flagged:debugmode "<&c> File: <context.script.filename.split[/plugins/Denizen/scripts/].get[2]>"
-            - announce to_flagged:debugmode "<&c> Line: <context.line>"
-            - foreach <context.queue.definitions.deduplicate||<list[]>> as:definition:
-                - define data:<context.queue.definition[<[definition]>]>
-                - define definitions:|:<proc[get_debug_info].context[<[data].escaped>|<[definition]>]>
-            - announce to_flagged:debugmode "<&c> Definitions: <&l><[definitions].separated_by[<&sp><&2>|<&sp><&c><&l>]||None>"
+            - announce to_flagged:debugmode " <&c>Filename: <context.script.filename.split[plugins/Denizen/scripts/].get[2]>"
+            - announce to_flagged:debugmode " <&c>Player: <[cause]>"
+            - announce to_flagged:debugmode " <[stacktrace].separated_by[<&nl> ]>"
+            - announce to_flagged:debugmode " <&c>Definitions: <&l><[definitions].separated_by[<&sp><&2>|<&sp><&c><&l>]||None>"
+            - flag server debug.errors.<context.queue.id>:!
 
 get_debug_info:
     type: procedure
@@ -196,12 +201,12 @@ get_debug_info:
             - if <[data].has_lore>:
                 - foreach <[data].lore> as:line:
                     - define "info:|:Lore line <[loop_index]>: <[line]>"
-            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex give<&sp><[data]>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
+            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex -q give<&sp><[data]>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
         - case location:
             - define "info:|:Click to teleport."
             - define "info:|:X=<[data].block.x>; Y=<[data].block.y>; Z=<[data].block.z>; World=<[data].world.name>"
             - define "info:|:Note: <[data].note_name||None>"
-            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex teleport<&sp><player><&sp><[data]>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
+            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex -q teleport<&sp><[data]>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
         - case player:
             - define "info:|:Click to teleport."
             - define "info:|:Name: <[data].name>"
@@ -209,7 +214,7 @@ get_debug_info:
             - define "info:|:Health: <[data].health>; Hunger: <[data].food_level>"
             - if <[data].name.contains[<&ss>]>:
                 - define "info:|:<&c>This players name contains hidden characters.<&r>"
-            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex teleport<&sp><[data].location>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
+            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex -q teleport<&sp><[data].location>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
         - case entity:
             - define "info:|:Click to teleport."
             - define "info:|:Entity Type: <[data].entity_type>"
@@ -217,7 +222,7 @@ get_debug_info:
             - define "info:|:Health: <[data].health>"
             - if <[data].name.contains[<&ss>]>:
                 - define "info:|:<&c>This entitys name contains hidden characters.<&r>"
-            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex teleport<&sp><[data].location>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
+            - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex -q teleport<&sp><[data].location>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
         - case list:
             - define "info:|:Click to copy to clipboard."
             - define "info:|:Size: <[data].size>"

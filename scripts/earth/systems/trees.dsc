@@ -11,7 +11,10 @@ trees_events:
     events:
         on structure grows:
         - if <context.location.material.name.replace[_sapling].with[].advanced_matches_text[<script.data_key[trees]>]>:
-            - determine passively cancelled
+            - if <context.location.is_siege_zone>:
+                - determine cancelled
+            - else:
+                - determine passively cancelled
             - define saplings <context.location.flood_fill[6].types[<context.location.material.name>]>
             - define tree <context.location.material.name.replace[_sapling].with[]>
             - if <[saplings].size.is_more_than_or_equal_to[9]>:
