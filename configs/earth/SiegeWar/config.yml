@@ -613,7 +613,7 @@ punish_non_siege_participants_in_siege_zone:
   #   - Effects: Weakness V
   # Full sickness is given to all players that are not allied to either side, do not have a military rank, or is peaceful, and are not in their own town.
   #   - Effects: Nausea V, Poison V, Weakness V, Slowness III, Mining Fatigue III
-  enable_sickness: 'false'
+  enable_sickness: 'true'
  
   # This is how many seconds a player has to leave the siege zone before he gets war sickness
   # If this is set to 0, no warn will be given and non-participants will receive war sickness instantly, if enabled
