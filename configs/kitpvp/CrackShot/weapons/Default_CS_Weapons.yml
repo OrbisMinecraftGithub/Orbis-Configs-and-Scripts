@@ -34,6 +34,7 @@ Desert_Eagle_CSP:
     No_Vertical_Recoil: true
   Extras:
     Disable_Underwater: true
+
 AK47:
     Item_Information:
         Item_Name: "&eAK-47"
