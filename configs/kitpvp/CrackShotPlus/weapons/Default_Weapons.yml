@@ -1,3 +1,87 @@
+Desert_Eagle_CSP:
+  Shoot:
+    Invisible_Projectiles: true
+    Custom_Pre_Shoot_Sound: "shoot.deserteagle-3-1"
+    Trails:
+      Default_Trail: "Default_Crit_Projectile"
+      Trail: "Blue_Projectile,Pink_Projectile,Red_Projectile"
+    Require_Both_Hands: true
+    Require_Both_Hands_Message: "&7You need to have both hands available to shoot!"
+  Hit_Block:
+    Break_Blocks:
+      Blacklist: false
+      Regen_Blocks_After_Milliseconds: 10000
+      Blocks_List:
+        - "GLASS"
+        - "WHITE_STAINED_GLASS"
+        - "ORANGE_STAINED_GLASS"
+        - "MAGENTA_STAINED_GLASS"
+        - "LIGHT_BLUE_STAINED_GLASS"
+        - "YELLOW_STAINED_GLASS"
+        - "LIME_STAINED_GLASS"
+        - "PINK_STAINED_GLASS"
+        - "GRAY_STAINED_GLASS"
+        - "BLUE_STAINED_GLASS"
+        - "LIGHT_GRAY_STAINED_GLASS"
+        - "CYAN_STAINED_GLASS"
+        - "PURPLE_STAINED_GLASS"
+        - "BROWN_STAINED_GLASS"
+        - "GREEN_STAINED_GLASS"
+        - "RED_STAINED_GLASS"
+        - "BLACK_STAINED_GLASS"
+        - "GLASS_PANE"
+        - "WHITE_STAINED_GLASS_PANE"
+        - "ORANGE_STAINED_GLASS_PANE"
+        - "MAGENTA_STAINED_GLASS_PANE"
+        - "LIGHT_BLUE_STAINED_GLASS_PANE"
+        - "YELLOW_STAINED_GLASS_PANE"
+        - "LIME_STAINED_GLASS_PANE"
+        - "PINK_STAINED_GLASS_PANE"
+        - "GRAY_STAINED_GLASS_PANE"
+        - "BLUE_STAINED_GLASS_PANE"
+        - "LIGHT_GRAY_STAINED_GLASS_PANE"
+        - "CYAN_STAINED_GLASS_PANE"
+        - "PURPLE_STAINED_GLASS_PANE"
+        - "BROWN_STAINED_GLASS_PANE"
+        - "GREEN_STAINED_GLASS_PANE"
+        - "RED_STAINED_GLASS_PANE"
+        - "BLACK_STAINED_GLASS_PANE"
+  Held:
+    Copy_Weapon_To_Off_Hand: true
+    Weapon_Weight: -0.005
+    Hide_Attributes: true
+    Update_Lore:
+      #Maxium_Attachments_Per_Line: 2
+      #New_Line_Format: "&7✴   &c➣ &7#ATTACHMENTS#"
+      Lore:
+        - "&7✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴  "
+        #- "&7✴ &c➣ &7Attachments #ATTACHMENTS#"
+        - "&7✴ &c➣ &7Skin &c⟹ &7#SKIN#"
+        #- "&7✴ &c➣ &7StatTrak &c⟹ &7#STATTRAK#"
+        - "&7✴ &c➣ &7#DAMAGE# &c&l⟸&r &7Damage"
+        - "&7✴ &c➣ &7#WEIGHT# &c&l⟸&r &7Weight"
+        - "&7✴ &c➣ &7#SPREAD# &c&l⟸&r &7Spread"
+        - "&7✴ &c➣ &7#PROJECTILE_SPEED# &c&l⟸&r &7Projectile Speed"
+        - "&7✴ &c➣ &7#RELOAD_DURATION# &c&l⟸&r &7Reload Duration"
+        - "&7✴ &c➣ &7#RELOAD_AMOUNT# &c&l⟸&r &7Reload Amount"
+        #- "&7✴ &c➣ &7#EXPLOSION_RADIUS# &c&l⟸&r &7Explosion Radius"
+        - "&7✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴  "
+  Reload:
+    Visual_Reload:
+      Default_Visual_Reload: "Default_Reload"
+      Visual_Reload: "Blue_Reload,Pink_Reload,Red_Reload"
+  Skin:
+    Default_Skin: "NoSkin"
+    Skins: "Blue,Pink,Red"
+  Variables:
+    Weapon_Weight: "BAR~-0.05~0.05"
+    Damage: "BAR~2~17"
+    Spread: "BAR~0.3~2.2"
+    Projectile_Speed: "BAR~5~130"
+    Reload_Duration: "BAR~0~80"
+    Reload_Amount: "BAR~0~40"
+    Explosion_Radius: "BAR~0~10"
+
 AK47:
     Shoot:
         Invisible_Projectiles: true

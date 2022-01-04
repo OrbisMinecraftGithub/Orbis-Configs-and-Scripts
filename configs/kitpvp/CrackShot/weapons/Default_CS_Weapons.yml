@@ -1,1822 +1,1214 @@
 Desert_Eagle_CSP:
-  Shoot:
-    Invisible_Projectiles: true
-    Custom_Pre_Shoot_Sound: "shoot.deserteagle-3-1"
-    Trails:
-      Default_Trail: "Default_Crit_Projectile"
-      Trail: "Blue_Projectile,Pink_Projectile,Red_Projectile"
-    Require_Both_Hands: true
-    Require_Both_Hands_Message: "&7You need to have both hands available to shoot!"
-  Hit_Block:
-    Break_Blocks:
-      Blacklist: false
-      Regen_Blocks_After_Milliseconds: 10000
-      Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"
-  Held:
-    Copy_Weapon_To_Off_Hand: true
-    Weapon_Weight: -0.005
-    Hide_Attributes: true
-    Update_Lore:
-      #Maxium_Attachments_Per_Line: 2
-      #New_Line_Format: "&7✴   &c➣ &7#ATTACHMENTS#"
-      Lore:
-        - "&7✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴  "
-        #- "&7✴ &c➣ &7Attachments #ATTACHMENTS#"
-        - "&7✴ &c➣ &7Skin &c⟹ &7#SKIN#"
-        #- "&7✴ &c➣ &7StatTrak &c⟹ &7#STATTRAK#"
-        - "&7✴ &c➣ &7#DAMAGE# &c&l⟸&r &7Damage"
-        - "&7✴ &c➣ &7#WEIGHT# &c&l⟸&r &7Weight"
-        - "&7✴ &c➣ &7#SPREAD# &c&l⟸&r &7Spread"
-        - "&7✴ &c➣ &7#PROJECTILE_SPEED# &c&l⟸&r &7Projectile Speed"
-        - "&7✴ &c➣ &7#RELOAD_DURATION# &c&l⟸&r &7Reload Duration"
-        - "&7✴ &c➣ &7#RELOAD_AMOUNT# &c&l⟸&r &7Reload Amount"
-        #- "&7✴ &c➣ &7#EXPLOSION_RADIUS# &c&l⟸&r &7Explosion Radius"
-        - "&7✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴ ✴  "
+  Item_Information:
+    Item_Name: "&7Desert Eagle"
+    Item_Type: STONE_HOE
+    Sounds_Acquired: ENTITY_BAT_TAKEOFF-1-1-0
+    Remove_Unused_Tag: true
+  Shooting:
+    Dual_Wield: true
+    Cancel_Left_Click_Block_Damage: true
+    Delay_Between_Shots: 2
+    Projectile_Amount: 1
+    Projectile_Type: arrow
+    Projectile_Speed: 70
+    Projectile_Damage: 4
+    Bullet_Spread: 0.6
   Reload:
-    Visual_Reload:
-      Default_Visual_Reload: "Default_Reload"
-      Visual_Reload: "Blue_Reload,Pink_Reload,Red_Reload"
-  Skin:
-    Default_Skin: "NoSkin"
-    Skins: "Blue,Pink,Red"
-  Variables:
-    Weapon_Weight: "BAR~-0.05~0.05"
-    Damage: "BAR~2~17"
-    Spread: "BAR~0.3~2.2"
-    Projectile_Speed: "BAR~5~130"
-    Reload_Duration: "BAR~0~80"
-    Reload_Amount: "BAR~0~40"
-    Explosion_Radius: "BAR~0~10"
+    Enable: true
+    Reload_Amount: 7
+    Reload_Duration: 40
+    Sounds_Out_Of_Ammo: UI_BUTTON_CLICK-1-1-0
+    Sounds_Reloading: BLOCK_WOODEN_DOOR_OPEN-1-2-4,BLOCK_WOODEN_DOOR_OPEN-1-2-8,BLOCK_WOODEN_DOOR_CLOSE-1-2-23,BLOCK_WOODEN_DOOR_CLOSE-1-2-38
+    Dual_Wield:
+      Single_Reload_Duration: 25
+      Sounds_Single_Reload: BLOCK_WOODEN_DOOR_OPEN-1-2-4,BLOCK_WOODEN_DOOR_CLOSE-1-2-23
+      Sounds_Shoot_With_No_Ammo: UI_BUTTON_CLICK-1-2-0
+  Headshot:
+    Enable: true
+    Bonus_Damage: 6
+  Backstab:
+    Enable: true
+    Bonus_Damage: 3
+  Abilities:
+    Reset_Hit_Cooldown: true
+    No_Vertical_Recoil: true
+  Extras:
+    Disable_Underwater: true
+
 AK47:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.ak-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-            Trail: "ash,critical,cloud,composter,dolphin,dragon_breath,flame,flash,heart,lava,nautilus,note,portal,redstone,sneeze,snowball,slime,spit,spell,squid,totem"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1.8
-                Maxium: 2.1
-            Sideways:
-                Minium: -1.3
-                Maxium: 1.3
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eAK-47"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0.9
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 4
+        Bullet_Spread: 1.4
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 5
     Reload:
-        Custom_Reload_Sound: "reload.ak-1-1"
-        Visual_Reload:
-        Default_Visual_Reload: "Default_Reload"
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"
-    Held:
-        Weapon_Weight: -0.005
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"       
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 45
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 3
+        Zoom_Bullet_Spread: 0.6
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 RPG:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.rpg-5-1"
-        Trails:
-            Default_Trail: "Pierced_Smoke,Pierced_Crit"
-        Camera_Recoil:
-            Upwards:
-                Minium: 7.0
-                Maxium: 10.0
-            Sideways:
-                Minium: 4.0
-                Maxium: 7.0
-    Explode:
-        Custom_Sounds:
-            Explode_Location:
-                Explode: "explosion.explode-3-1"
+    Item_Information:
+        Item_Name: "&eRPG"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 3
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: true
+        Projectile_Damage: 16
+        Removal_Or_Drag_Delay: 120-true
+        Projectile_Speed: 17
+    Sneak:
+        Enable: false
+        No_Recoil: false
     Reload:
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.04
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 1
+        Reload_Duration: 100
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6RPG-7 Rocket
+    Explosions:
+        Enable: true
+        Knockback: 10
+        Damage_Multiplier: 50
+        Enable_Owner_Immunity: false
+        Explosion_No_Grief: true
+        Explosion_Radius: 3
+        On_Impact_With_Anything: true
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: false
+    Extras:
+        Disable_Underwater: false
 
 M4A1:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Shoot_Sound: "shoot.m4a1-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 0.5
-                Maxium: 0.5
-            Sideways:
-                Minium: 0.1
-                Maxium: 0.1
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eM4A1"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 5
+        Bullet_Spread: 0.5
+        Remove_Bullet_Drop: true
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_Spread: 0.0
     Reload:
-        Custom_Reload_Sound: "reload.m4a1-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"       
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 20
+        Reload_Duration: 25
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
 
 SPAS12:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.spas-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 2.0
-                Maxium: 3.0
-            Sideways:
-                Minium: .1
-                Maxium: .1
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eSpas-12"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 12
+        Recoil_Amount: 1
+        Projectile_Amount: 4
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 45
+        Projectile_Damage: 5
+        Bullet_Spread: 1.7
+        Removal_Or_Drag_Delay: 7-true
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4
     Reload:
-        Custom_Reload_Sound: "reload.spas12-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.015
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"      
-    Skin:
-        Default_Skin: "NoSkin"
-
+        Enable: true
+        Reload_Amount: 5
+        Reload_Bullets_Individually: true
+        Reload_Duration: 10
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
+    Sneak:
+        Enable: false
+        No_Recoil: false
+        Bullet_Spread: 122   
 OLYMPIA:
-    Shoot:
-        Custom_Pre_Shoot_Sound: "shoot.olympia-5-1"
-        Invisible_Projectiles: true
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 3.5
-                Maxium: 3.5
-            Sideways:
-                Minium: 1.7
-                Maxium: 1.7
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eOlympia"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 5
+        Projectile_Amount: 6
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 6
+        Bullet_Spread: 8
+        Remove_Bullet_Drop: true
+        Removal_Or_Drag_Delay: 2-true
+    Damage_Based_On_Flight_Time:
+        Enable: true
+        Bonus_Damage_Per_Tick: -1
+        Maximum_Damage: -3
+    Sneak:
+        Enable: true
+        No_Recoil: false
+        Bullet_Spread: 3
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
     Reload:
-        Custom_Reload_Sound: "reload.olympia-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 2
+        Reload_Bullets_Individually: true
+        Reload_Duration: 15
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 5
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Firearm_Action:
+        Type: break
+        Open_Duration: 10
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 44:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 4.0
-                Maxium: 4.5
-            Sideways:
-                Minium: 1
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&e.44 Magnum"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0.5
     Reload:
-        Custom_Reload_Sound: "reload.44-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"     
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: true
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 M16:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.m16-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1.5
-                Maxium: 1.5
-            Sideways:
-                Minium: .1
-                Maxium: .1
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eM16"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Bullet_Spread: 0.4
+    Sneak:
+        Enable: false
+        No_Recoil: true
+        Bullet_Spread: 1
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 3
+        Delay_Between_Shots_In_Burst: 1
     Reload:
-        Custom_Reload_Sound: "reload.m16-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"        
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 24
+        Reload_Duration: 40
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 HUNTING_RIFLE:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.hunting-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-    Scope:
-        Pumpkin_On_Zoom: true
-        Custom_Scope_Sound: "scope.start_scope-1-1"
-        Custom_Scope_End_Sound: "scope.end_scope-1-1"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eHunting Rifle"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 145
+        Projectile_Damage: 12
+        Bullet_Spread: 3
     Reload:
-        Custom_Reload_Sound: "reload.huntingrifle-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 7
+        Reload_Bullets_Individually: true
+        Reload_Duration: 11
+        Reload_Shoot_Delay: 15
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 8
+        Close_Duration: 7
+    Sneak:
+        Enable: true
+        Bullet_Spread: 1.5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 12
+    Backstab:
+        Enable: false
+        Bonus_Damage: 5
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0.0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 3
+    Extras:
+        Disable_Underwater: false
 
 DEAGLE:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.deserteagle-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,smoke,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 3
-                Maxium: 3
-            Sideways:
-                Minium: 1.5
-                Maxium: 1.5
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
+    Item_Information:
+        Item_Name: "&eDesert Eagle"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 7
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 65
+        Projectile_Damage: 7
+        Bullet_Spread: 0.8
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
     Reload:
-        Custom_Reload_Sound: "reload.deagle-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 7
+        Reload_Duration: 40
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.4
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
 
 FAL:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.fal-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1
-                Maxium: 2.4
-            Sideways:
-                Minium: .1
-                Maxium: .1
-    Custom_Bullet_Spread:
-            Maxium_Y_Spread_Lower: 0.3
-            Maxium_Y_Spread_Higher: 0.4
-            Minium_Starting_Y_Spread: 0.001
-            Maxium_Starting_Y_Spread: 0.002
-            Decrease_Spread_Back_to_Normal:
-                Minium_Milliseconds: 1100
-                Maxium_Milliseconds: 1700
-            While_Zooming:
-                ZX_Spread: 0.01
-                Increase_Y_Spread_Per_Shot: 0.003
-            While_Sneaking:
-                ZX_Spread: 0.04
-                Increase_Y_Spread_Per_Shot: 0.005
-            While_Standing_Or_Walking:
-                ZX_Spread: 0.05
-                Increase_Y_Spread_Per_Shot: 0.007
-            While_Sprinting:
-                ZX_Spread: 0.07
-                Increase_Y_Spread_Per_Shot: 0.01
-            While_Not_Touching_Ground:
-                ZX_Spread: 0.1
-                Increase_Y_Spread_Per_Shot: 0.011
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eFAL"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 4
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 7
+        Remove_Bullet_Drop: true
+    Sneak:
+        Enable: true
+        No_Recoil: true
     Reload:
-        Custom_Reload_Sound: "reload.fal1-1-1"
-        Custom_Reload_Complete_Sound: "reload.fal-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.01
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 12
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.1
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 0
 
-AK74U:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.ak74u-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: .5
-                Maxium: .8
-            Sideways:
-                Minium: .1
-                Maxium: .1
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+AK74U: 
+    Item_Information:
+        Item_Name: "&eAK-74u"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 100
+        Projectile_Damage: 4
+        Bullet_Spread: 1.4
+    Sneak:
+        Enable: true
+        Bullet_Spread: 1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 6
     Reload:
-        Custom_Reload_Sound: "reload.ak-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 30
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.7
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 AWP:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.awp-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 6.0
-                Maxium: 6.0
-            Sideways:
-                Minium: 7.5
-                Maxium: 7.5
-    Scope:
-        Pumpkin_On_Zoom: true
-        Custom_Scope_Sound: "scope.start_scope-1-1"
-        Custom_Scope_End_Sound: "scope.end_scope-1-1"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
-    Held:
-        Weapon_Weight: -0.025
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
+    Item_Information:
+        Item_Name: "&eAWP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 19
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 170
+        Projectile_Damage: 14
+        Bullet_Spread: 12
     Reload:
-        Custom_Reload_Sound: "reload.awp1-1-1"
-        Custom_Reload_Complete_Sound: "reload.awp2-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 7
+        Reload_Bullets_Individually: false
+        Reload_Duration: 55
+        Reload_Shoot_Delay: 25
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 20
+        Close_Duration: 20
+    Sneak:
+        Enable: false
+        Bullet_Spread: 1.5
+    Fully_Automatic:
+        Enable: false
+        Fire_Rate: 50
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Scope:
+        Enable: true
+        Zoom_Amount: 7
+        Zoom_Bullet_Spread: 0.0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 2
+    Extras:
+        Disable_Underwater: false
 
 SCAR:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Shoot_Sound: "shoot.scar-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 0.9
-                Maxium: 1.1
-            Sideways:
-                Minium: -2
-                Maxium: 1.8
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eSCAR-H"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 7
+        Bullet_Spread: 0.9
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
     Reload:
-        Custom_Reload_Sound: "reload.scar-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 18
+        Reload_Duration: 50
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.5
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
-UZI:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.uzi-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile"
-        Camera_Recoil:
-            Upwards:
-                Minium: 0.1
-                Maxium: 0.1
-            Sideways:
-                Minium: -3
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+UZI: 
+    Item_Information:
+        Item_Name: "&eMini Uzi"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Removal_Or_Drag_Delay: 5-true
+        Bullet_Spread: 0.75
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 5
     Reload:
-        Custom_Reload_Sound: "reload.uzi-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 16
+        Reload_Duration: 30
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.80
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Extras:
+        Disable_Underwater: false
 
 PKP:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.pkp-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1.5
-                Maxium: 3
-            Sideways:
-                Minium: .5
-                Maxium: .5
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&ePKP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 4
+        Bullet_Spread: 2
+    Sneak:
+        Enable: true
+        No_Recoil: true
+        Bullet_spread: 0
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
     Reload:
-        Custom_Reload_Sound: "reload.pkp1-1-1"
-        Custom_Reload_Complete_Sound: "reload.pkp2-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.02
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE"      
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 50
+        Reload_Duration: 120
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 1
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
-UMP:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.ump-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1
-                Maxium: 1
-            Sideways:
-                Minium: .1
-                Maxium: .1
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+UMP: 
+    Item_Information:
+        Item_Name: "&eUMP"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 80
+        Projectile_Damage: 4
+        Removal_Or_Drag_Delay: 8-true
+        Bullet_Spread: 1.1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 4
     Reload:
-        Custom_Reload_Sound: "reload.ump-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 30
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.6
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Abilities:
+        Reset_Hit_Cooldown: true
+    Extras:
+        Disable_Underwater: false
 
 L85A2:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.l85a2-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 2.1
-                Maxium: 3
-            Sideways:
-                Minium: 1.1
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&el85A2"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 5
+        Bullet_Spread: 0.6
+    Sneak:
+        Enable: false
+        No_Recoil: false
     Reload:
-        Custom_Reload_Sound: "reload.l85a2-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.3
+    Headshot:
+        Enable: true
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 FLAMETHROWER:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Shoot_Sound: "shoot.flamethrower-5-1"
-        Trails:
-            Default_Trail: "Flame"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eFlamethrower"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Projectile_Damage: 5
+        Recoil_Amount: 0
+        Projectile_Amount: 5
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 30
+        Bullet_Spread: 3
+        Remove_Bullet_Drop: true
+        Removal_Or_Drag_Delay: 1-true
+        Projectile_Incendiary:
+            Enable: true
+            Duration: 200
+    Damage_Based_On_Flight_Time:
+        Enable: true
+        Bonus_Damage_Per_Tick: -1
+        Maximum_Damage: -2
     Reload:
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.02
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"
-
+        Enable: true
+        Reload_Amount: 150
+        Reload_Duration: 75
+        Take_Ammo_On_Reload: true
+    Abilities:
+        Reset_Hit_Cooldown: false
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: true
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 10
 GLOCK:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.glock-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: .5
-                Maxium: .5
-            Sideways:
-                Minium: -.2
-                Maxium: .2
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
+    Item_Information:
+        Item_Name: "&eGlock 18"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Right_Click_To_Shoot: true
+        Cancel_Right_Click_Interactions: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 3
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 3
+        Bullet_Spread: 0.5
     Reload:
-        Custom_Reload_Sound: "reload.glock-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Skin:
-        Default_Skin: "NoSkin"
-        
-BARRETT:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Shoot_Sound: "shoot.barrett-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 15.0
-                Maxium: 15.0
-            Sideways:
-                Minium: 6.5
-                Maxium: 6.5
+        Enable: true
+        Reload_Amount: 17
+        Reload_Duration: 25
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
     Scope:
-        Pumpkin_On_Zoom: true
-        Custom_Scope_Sound: "scope.start_scope-1-1"
-        Custom_Scope_End_Sound: "scope.end_scope-1-1"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
-    Held:
-        Weapon_Weight: -0.04
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.3
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+BARRETT:
+    Item_Information:
+        Item_Name: "&eBarrett .50 cal"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 3
+        Delay_Between_Shots: 12
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 40
+        Projectile_Damage: 20
+        Bullet_Spread: 2.5
     Reload:
-        Custom_Reload_Sound: "reload.barrett-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Skin:
-        Default_Skin: "NoSkin"
-
+        Enable: true
+        Reload_Amount: 10
+        Reload_Bullets_Individually: false
+        Reload_Duration: 65
+        Reload_Shoot_Delay: 8
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Firearm_Action:
+        Type: bolt
+        Open_Duration: 18
+        Close_Duration: 18
+    Sneak:
+        Enable: true
+        Bullet_Spread: 0.3
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+        Knockback: 3
+    Extras:
+        Disable_Underwater: false
 M1014:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Shoot_Sound: "shoot.m1014-1-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1.0
-                Maxium: 1.5
-            Sideways:
-                Minium: .5
-                Maxium: .5
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eM1014"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 1
+        Projectile_Amount: 3
+        Projectile_Type: snowball
+        Remove_Bullet_Drop: false
+        Projectile_Speed: 65
+        Projectile_Damage: 4
+        Bullet_Spread: 3
+        Removal_Or_Drag_Delay: 8-true
+    Headshot:
+        Enable: true
+        Bonus_Damage: 1
     Reload:
-        Custom_Reload_Sound: "reload.m1014-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
-        
+        Enable: true
+        Reload_Amount: 8
+        Reload_Bullets_Individually: true
+        Reload_Duration: 10
+        Reload_Shoot_Delay: 10
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 2.2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6ShotGun Shell
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 2
 M249:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.m249-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 1
-                Maxium: 1.6
-            Sideways:
-                Minium: 2
-                Maxium: -1.5
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eM249"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 105
+        Projectile_Damage: 4
+        Bullet_Spread: 0.7
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 6
     Reload:
-        Custom_Reload_Sound: "reload.m249-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: -0.02
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 75
+        Reload_Duration: 80
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.6
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
-P90:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.p90-2-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+P90: 
+    Item_Information:
+        Item_Name: "&eP90"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 1
+        Recoil_Amount: 0
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 90
+        Projectile_Damage: 3
+        Bullet_Spread: 1.75
+    Sneak:
+        Enable: false
+        Bullet_Spread: 1
+    Fully_Automatic:
+        Enable: true
+        Fire_Rate: 9
     Reload:
-        Custom_Reload_Sound: "reload.p90-2-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
-
+        Enable: true
+        Reload_Amount: 40
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 1
+    Backstab:
+        Enable: false
+        Bonus_Damage: 1
+    Extras:
+        Disable_Underwater: false
 
 FAMAS:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.famas-3-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&eFamas"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 5
+        Recoil_Amount: 1
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 95
+        Projectile_Damage: 3
+        Bullet_Spread: 0.5
+    Sneak:
+        Enable: false
+        No_Recoil: false
+    Burstfire:
+        Enable: true
+        Shots_Per_Burst: 3
+        Delay_Between_Shots_In_Burst: 1
     Reload:
-        Custom_Reload_Sound: "reload.famas-2-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Hit_Block:
-      Block_Crack_Animation:
-        Minium_Crack: 3
-        Maxium_Crack: 5
-      Break_Blocks:
-        Blacklist: false
-        Regen_Blocks_After_Milliseconds: 10000
-        Blocks_List:
-        - "GLASS"
-        - "WHITE_STAINED_GLASS"
-        - "ORANGE_STAINED_GLASS"
-        - "MAGENTA_STAINED_GLASS"
-        - "LIGHT_BLUE_STAINED_GLASS"
-        - "YELLOW_STAINED_GLASS"
-        - "LIME_STAINED_GLASS"
-        - "PINK_STAINED_GLASS"
-        - "GRAY_STAINED_GLASS"
-        - "BLUE_STAINED_GLASS"
-        - "LIGHT_GRAY_STAINED_GLASS"
-        - "CYAN_STAINED_GLASS"
-        - "PURPLE_STAINED_GLASS"
-        - "BROWN_STAINED_GLASS"
-        - "GREEN_STAINED_GLASS"
-        - "RED_STAINED_GLASS"
-        - "BLACK_STAINED_GLASS"
-        - "GLASS_PANE"
-        - "WHITE_STAINED_GLASS_PANE"
-        - "ORANGE_STAINED_GLASS_PANE"
-        - "MAGENTA_STAINED_GLASS_PANE"
-        - "LIGHT_BLUE_STAINED_GLASS_PANE"
-        - "YELLOW_STAINED_GLASS_PANE"
-        - "LIME_STAINED_GLASS_PANE"
-        - "PINK_STAINED_GLASS_PANE"
-        - "GRAY_STAINED_GLASS_PANE"
-        - "BLUE_STAINED_GLASS_PANE"
-        - "LIGHT_GRAY_STAINED_GLASS_PANE"
-        - "CYAN_STAINED_GLASS_PANE"
-        - "PURPLE_STAINED_GLASS_PANE"
-        - "BROWN_STAINED_GLASS_PANE"
-        - "GREEN_STAINED_GLASS_PANE"
-        - "RED_STAINED_GLASS_PANE"
-        - "BLACK_STAINED_GLASS_PANE" 
-    Skin:
-        Default_Skin: "NoSkin"
-
-#lazer sight secion
-
+        Enable: true
+        Reload_Amount: 25
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0.2
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Magazine
+    Headshot:
+        Enable: true
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
+       
 44lazer:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 4.0
-                Maxium: 4.5
-            Sideways:
-                Minium: 1
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0
     Reload:
-        Custom_Reload_Sound: "reload.44-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 2
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: false
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 44lazerscope:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 4.0
-                Maxium: 4.5
-            Sideways:
-                Minium: 1
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight + Scope"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 5
+        Bullet_Spread: 0
     Reload:
-        Custom_Reload_Sound: "reload.44-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 6
+    Backstab:
+        Enable: false
+        Bonus_Damage: 3
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
 
 44lazerscopesup:
-    Shoot:
-        Invisible_Projectiles: true
-        Custom_Pre_Shoot_Sound: "shoot.44-5-1"
-        Trails:
-            Default_Trail: "Default_Crit_Projectile,Flame"
-        Camera_Recoil:
-            Upwards:
-                Minium: 4.0
-                Maxium: 4.5
-            Sideways:
-                Minium: 1
-                Maxium: 1.6
-    Damage:
-        No_Knockback:
-            Affect_Players: true
-            Affect_Mobs_And_Animals: true
-        Custom_Sounds:
-            Shooter_Location:
-                Hit: "impact.hitmarker-1-1"
+    Item_Information:
+        Item_Name: "&e.44 Magnum + Lazer sight + Scope + Supressor"
+        Item_Type: CARROT_ON_A_STICK
+    Shooting:
+        Cancel_Right_Click_Interactions: true
+        Right_Click_To_Shoot: true
+        Cancel_Left_Click_Block_Damage: true
+        Delay_Between_Shots: 8
+        Projectile_Amount: 1
+        Projectile_Type: snowball
+        Projectile_Speed: 70
+        Projectile_Damage: 4
+        Bullet_Spread: 0
     Reload:
-        Custom_Reload_Sound: "reload.44-1-1"
-        Visual_Reload:
-            Default_Visual_Reload: "Default_Reload"
-    Held:
-        Weapon_Weight: 0
-        Hide_Attributes: true
-    Skin:
-        Default_Skin: "NoSkin"
+        Enable: true
+        Reload_Amount: 6
+        Reload_Duration: 35
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
+    Ammo:
+        Enable: true
+        Ammo_Item_ID: ghast_tear
+        Ammo_Name_Check: §g§6Clip
+    Scope:
+        Enable: true
+        Zoom_Amount: 10
+        Zoom_Bullet_Spread: 0
+    Firearm_Action:
+        Type: revolver
+        Open_Duration: 5
+        Close_Duration: 5
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4
+    Backstab:
+        Enable: false
+        Bonus_Damage: 2
+    Abilities:
+        Reset_Hit_Cooldown: true
+        No_Vertical_Recoil: true
+    Extras:
+        Disable_Underwater: false
