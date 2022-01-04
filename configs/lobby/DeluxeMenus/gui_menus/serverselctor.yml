@@ -1,0 +1,228 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&3> &#1462e8&lS&#006ded&le&#0078f1&lr&#0082f4&lv&#008bf6&le&#0095f7&lr &#009df7&lS&#00a6f7&le&#00aef6&ll&#24b6f5&le&#42bef4&lc&#59c6f3&lt&#6ecdf2&lo&#81d4f1&lr'
+open_command:
+  - serverselector
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &bOpening Server Selector!'
+size: 45
+# as always, only cool people can open this menu :)
+items:
+  'Glass1':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 0
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass2':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 1
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass3':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 2
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass4':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 3
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass5':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 4
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass6':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 5
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass7':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 6
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass8':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 7
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass9':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 8
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass10':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 36
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass21':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 37
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass31':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 38
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass41':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 39
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass51':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 40
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass61':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 41
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass71':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 42
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass81':
+    material: BLUE_STAINED_GLASS_PANE
+    slot: 43
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'Glass91':
+    material: CYAN_STAINED_GLASS_PANE
+    slot: 44
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&7'
+  'TOWNY': 
+    material: hdb-35517
+    slot: 21
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#1cf272&n&lT&#46f485&n&lo&#61f696&n&lw&#77f7a6&n&ln&#8cf8b5&n&ly&r &#F6FFFD&l➪ 1.17.1'
+    lore:
+      - '&a➪ &7Explore the world, make friends, gain experiences'
+      - '&7'
+      - '&aFeatures:'
+      - '&a➪ &7Create your own &cEmpire'
+      - '&a➪ &7Expand your influence with wars!'
+      - '&a➪ &7A full rendition of the earth'
+      - '&a➪ &7Mcmmo'
+      - '&a➪ &7Make stores'
+      - '&a➪ &7and much much more, Come find out!'
+      - '&7'
+      - '&aLive Map:'
+      - '&a➪ &lmap.orbismc.com'
+      - '&7'
+      - '&a➪ &7Currently &a&l%bungee_earth% &7players online!'
+    left_click_commands:
+      - '[player] queue earth'
+      - '[close]'  
+  'KITPVP': 
+    material: DIAMOND_SWORD
+    slot: 23
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#e7843c&l&nK&#e97a33&l&ni&#eb702b&l&nt&#ed6424&l&n-&#ef571e&l&nP&#f04819&l&nv&#f23516&l&nP&r &#F6FFFD&l➪ 1.17.1'
+    lore:
+      - '&c➪ &7PvP with special Kits'
+      - '&7'
+      - '&cFeatures:'
+      - '&c➪ &7Use weapons'
+      - '&c➪ &7Have up to 5v5 party battles'
+      - '&c➪ &7Updates to guns very often'
+      - '&7'
+      - '&c➪ &7Currently &c&l%bungee_kitpvp% &7players online!'
+    left_click_commands:
+      - '[connect] kitpvp'
+      - '[close]'    
+  'Rules':
+    material: OAK_SIGN
+    slot: 25
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#ff0000&l&nT&#ff4b2d&l&nh&#ff704f&l&ne &#ff8f70&l&nR&#ffac93&l&nu&#ffc8b6&l&nl&#ffcfbf&l&ne&#ffe4da&l&ns&#ffffff&l&n!'
+    lore:
+      - '&7Find the rules here!'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &chttps://orbismc.com/rules.'
+      - '[close]'
+  'Discord': 
+    material: hdb-4320
+    
+    slot: 19
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#17a3eb&l&nD&#58b0ee&l&ni&#7cbcf1&l&ns&#9ac9f4&l&nc&#b5d6f7&l&no&#cfe4fa&l&nr&#e7f1fc&l&nd&#ffffff&l&n!'
+    lore:
+       - '&#C1C0C0Join the &bDiscord&r&7 To recieve information'
+       - '&#C1C0C0About new updates and get support!'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &bdiscord.gg/Orbis'
+      - '[close]'
+  'placeholder':
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 9-17
+      - 27-35
+      - 18
+      - 20
+      - 22
+      - 24
+      - 26
+    display_name: '&#3562c6O&#386acbr&#3b72d1b&#407ad6i&#4582dbs&#4a8adfm&#5192e4c&#579ae8.&#5ea1edc&#66a9f1o&#6eb1f5m
+'
+
+
+
+
+   
+   

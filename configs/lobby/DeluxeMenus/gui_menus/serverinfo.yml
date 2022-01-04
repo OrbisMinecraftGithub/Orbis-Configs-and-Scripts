@@ -1,0 +1,87 @@
+menu_title: '&#9FBFC0&l> &#393aef&lS&#005bff&le&#0073ff&lr&#0087ff&lv&#0099ff&le&#00a9ff&lr &#00b9ff&lI&#00c7fc&ln&#00d4f4&lf&#20e0ed&lo
+'
+open_command:
+  - serverinfo
+size: 26
+# as always, only cool people can open this menu :)
+open_requirement:
+items:
+  'What is orbis?':
+    material: hdb-23222
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&f&lWhat is &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls?'
+    lore:
+      - '&#7FB3B5Orbis &#929D9Eis a Network with gamemodes to be found and'
+      - '&#929D9Eenojed by players. Many of our' 
+      - '&#929D9Egamemodes are modern warfare'
+      - '&#929D9Emeaning that the players are able' 
+      - '&#929D9Eto experience minecraft with &cWeapons.'
+  'Gamemodes':
+    material: COMPASS
+    slot: 12
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#1a95d6&lG&#1aa0dc&la&#20aae1&lm&#29b4e6&le&#35bfeb&lm&#43c9ef&lo&#51d3f3&ld&#5fddf7&le&#6ee7fa&ls'
+    lore:
+      - '&#7FB3B5Orbis &#929D9Ecurrently has &#7FB3B52 &#929D9Egamemodes.'
+      - '&#929D9EThese are the following:'
+      - '&#929D9EKit-PvP and Towny'
+      - '&#929D9EBoth of these gamemodes have Weapons'
+  'Discord': 
+    material: hdb-4320
+    slot: 13
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#17a3eb&l&nD&#58b0ee&l&ni&#7cbcf1&l&ns&#9ac9f4&l&nc&#b5d6f7&l&no&#cfe4fa&l&nr&#e7f1fc&l&nd&#ffffff&l&n!'
+    lore:
+       - '&#C1C0C0Join the &bDiscord&r&7 To recieve information'
+       - '&#C1C0C0About new updates and get support!'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &bdiscord.gg/Orbis'
+      - '[close]'  
+  'Website':
+    material: hdb-6037
+    slot: 14
+    priority: 2
+    update: true
+    hide_attributes: true
+    display_name: '&#f6311d&lW&#f44418&le&#f25415&lb&#f06112&ls&#ed6c12&li&#eb7714&lt&#e88119&le'
+    lore: 
+       - '&#C1C0C0Find help and the rules at'
+       - '&#C1C0C0Our website'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &bhttps://orbismc.com'
+      - '[close]'  
+  'Store':
+    material: GOLD_INGOT
+    slot: 15
+    priority: 2
+    update: true
+    hide_attributes: true
+    display_name: '&#6df268&lS&#62f059&lt&#57ed49&lo&#4beb35&lr&#3de819&le'
+    lore: 
+       - '&#C1C0C0Support the server by buying ranks!'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &bstore.orbismc.com'
+      - '[close]'  
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 10
+      - 16
+      - 17
+      - 18-26
+    display_name: §
