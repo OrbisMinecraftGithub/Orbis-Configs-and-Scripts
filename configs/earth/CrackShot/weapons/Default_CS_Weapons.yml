@@ -561,7 +561,7 @@ AWP:
         Disable_Underwater: false
 
 SCAR:
-   Item_Information:
+    Item_Information:
         Item_Name: "&eSCAR-H"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
