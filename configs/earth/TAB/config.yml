@@ -9,8 +9,8 @@ header-footer:
   &#00a2ff&lt&#00acff&lo &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls &f&lTowny
   &#676C6D&l)&#676C6D&l&m              '
     - ''
-    - '%denizen_<server.online_players.filter_tag[<[filter_value].cmi_vanish.not||true>].size>%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
-    - '&#09A1CEVote Party: &f%denizen_<server.flag[votes].mod[100].mul[-1].add[100]>%&#1788E7/&f100'
+    - '%online_players%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
+    - '&#09A1CEVote Party: &f%votes_until_party%&#1788E7/&f100'
   footer:
     - ''
     - '&f&lWebsite&r&#0087ff ┃ &#00a9ffo&#00b1ffr&#00b9ffb&#00c1ffi&#00c8ffs&#00cffbmc&#00d6f6.&#00dcf2c&#00e3edo&#00e9eam '
@@ -44,13 +44,12 @@ scoreboard-teams:
   invisible-nametags: false
   anti-override: true
   sorting-types:
-    - "PLACEHOLDER_A_TO_Z:%townyadvanced_towny_tag_override%"
+    - "PLACEHOLDER_A_TO_Z:%townyadvanced_nation_tag_town_name%"
   case-sensitive-sorting: true
   disable-in-worlds:
     - disabledworld
   unlimited-nametag-mode:
     enabled: true
-    always-visible: false
     use-marker-tag-for-1-8-x-clients: false
     disable-on-boats: true
     space-between-lines: 0.30
@@ -65,7 +64,7 @@ scoreboard-teams:
       myCustomLine: 0.66
 
 yellow-number-in-tablist:
-  enabled: false
+  enabled: true
   value: "%ping%"
   disable-in-worlds:
     - disabledworld
@@ -111,7 +110,7 @@ per-world-playerlist:
       - bedwars
 
 scoreboard:
-  enabled: false
+  enabled: true
   toggle-command: /sb
   remember-toggle-choice: false
   hidden-by-default: false
@@ -119,42 +118,24 @@ scoreboard:
   static-number: 0
   delay-on-join-milliseconds: 5
   respect-other-plugins: true
-  disable-in-worlds: 
+  disable-in-worlds:
     - disabledworld
   scoreboards:
-    admin:
-      # Only players with tab.scoreboard.admin can see this scoreboard, others will see scoreboard1
-      display-condition: "permission:tab.scoreboard.admin"
-      title: "Admin scoreboard"
-      lines:
-        - "%animation:MyAnimation1%"
-        - '&#676C6D&l&m               &r&#676C6D&l( &#193df8&lW&#0053ff&le&#0064ff&ll&#0073ff&lc&#0080ff&lo&#008cff&lm&#0097ff&le
-  &#00a2ff&lt&#00acff&lo &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls &f&lTowny
-  &#676C6D&l)&#676C6D&l&m'
-        - ''
-        - '%online_players%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
-        - '&#09A1CEVote Party: &f%votes_until_party%&#1788E7/&f100'
-        - ""
-        - '&f&lWebsite&r&#0087ff ┃ &#00a9ffo&#00b1ffr&#00b9ffb&#00c1ffi&#00c8ffs&#00cffbmc&#00d6f6.&#00dcf2c&#00e3edo&#00e9eam '
-        - '&F&lStore&#0087ff ┃ &#008fffs&#0096fft&#009dffo&#00a4ffr&#00abffe&#00b1ff.&#00b8ffo&#00beffr&#00c4ffb&#00cafei&#00cffas&#00d5f7m&#00daf3c&#00e0ef.&#00e5ecc&#00eae9o&#0fefe6m'
-        - '&#676C6D&l┃┃ &#193df8&op&#0050ff&ol&#005fff&oa&#006dff&oy&#0079ff&o.&#0084ff&oo&#008eff&or&#0098ff&ob&#00a1ff&oi&#00aaff&os&#00b2ff&om&#00bbff&oc&#00c2ff&o.&#00cafc&oc&#00d1f8&oo&#0dd8f4&om
-  &#676C6D&l┃┃'
-        - ''
-        - '&#676C6D&l&m'
     scoreboard1:
-      title: "Default"
+      title: "§"
       lines:
-        - "%animation:MyAnimation1%"
-        - "&6My Stats:"
-        - "* &eKills&7: &f%statistic_player_kills%"
-        - "* &eDeaths&7: &f%statistic_deaths%"
-        - "* &eHealth&7: &f%health%"
-        - ""
-        - "&6Personal Info:"
-        - "* &bRank&7: &f%rank%"
-        - "* &bPing&7: &f%ping%&7ms"
-        - "* &bWorld&7: &f%world%"
-        - "%animation:MyAnimation1%"
+      - '             %animation:ServerName%'
+      - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+      - '  &#64E175&l• &f%server_online% &#21DC3Bonline '
+      - '  &#64E175&l• &#21DC3BPing: &f%player_ping%&fms '
+      - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+      - '  &#64E175&l• &#21DC3BNation - &f&l%denizen_<player.nation.name.if_null[NONE]>%'
+      - '  &#64E175&l• &#21DC3BTown - &F&l%denizen_<player.town.name.if_null[NONE]>%'
+      - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
+      - '  &#64E175&l• &#21DC3BBalance: &f&l%denizen_<player.formatted_money>%'
+      - '  &#64E175&l• &#21DC3BParty: &f%denizen_<server.flag[votes].mod[100].sub[100].abs>% &#21DC3Bvotes left'
+      - '&7'
+      - '&#B4B4B4&o Disable with /sb'
 
 ping-spoof:
   enabled: false
