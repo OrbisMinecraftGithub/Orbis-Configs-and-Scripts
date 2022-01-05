@@ -126,7 +126,7 @@ scoreboard:
       lines:
       - '&#878986&l◙ &#21DC3B&lServer - &#1cf272&lT&#46f485&lo&#61f696&lw&#77f7a6&ln&#8cf8b5&ly'
       - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
-      - '  &#64E175&l• &f%bungee_test% &#21DC3Bonline'
+      - '  &#64E175&l• &f%player_online% &#21DC3Bonline'
       - '  &#64E175&l• &#21DC3BPing: &f<player.ping>&fms '
       - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
       - '  &#64E175&l• &#21DC3BNation - &f&l<player.nation.name.if_null[NONE]>'
