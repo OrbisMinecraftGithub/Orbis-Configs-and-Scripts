@@ -5,7 +5,7 @@
 #more rewards can be handed to the mission bearer as a whole.
 
 
-tick: 60s #How frequently the pool ticks, unless testing the plugin this usually shoudln't be changed
+tick: 60s #How frequently the pool ticks, unless testing the plugin this usually shouldn't be changed
 pool:
   1: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
     name: 'test-1'
