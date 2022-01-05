@@ -118,9 +118,7 @@ scoreboard:
   static-number: 0
   delay-on-join-milliseconds: 5
   respect-other-plugins: true
-  disable-in-worlds: 
-    - disabledworld
-    
+  disable-in-worlds:
     scoreboard1:
       title: "Default"
       lines:
