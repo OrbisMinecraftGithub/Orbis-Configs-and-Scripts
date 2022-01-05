@@ -1,5 +1,5 @@
 #Whether to save missions
-use-storage: false
+use-storage: true
 
 #Storage implementation to use
 # - SQLITE
