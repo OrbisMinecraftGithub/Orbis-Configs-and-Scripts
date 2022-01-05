@@ -213,7 +213,7 @@ get_debug_info:
             - define "info:|:Click to teleport."
             - define "info:|:Name: <[data].name>"
             - define "info:|:UUID: <[data].uuid>"
-            - define "info:|:Health: <[data].health>; Hunger: <[data].food_level>"
+            - define "info:|:Health: <[data].health||Null>; Hunger: <[data].food_level||Null>"
             - if <[data].name.contains[<&ss>]>:
                 - define "info:|:<&c>This players name contains hidden characters.<&r>"
             - determine "<&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><&click[/ex -q teleport<&sp><[data].location>].type[RUN_COMMAND]><[definition]><&end_click><&end_hover>"
