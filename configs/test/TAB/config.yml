@@ -120,26 +120,6 @@ scoreboard:
   respect-other-plugins: true
   disable-in-worlds: 
     - disabledworld
-  scoreboards:
-    admin:
-      # Only players with tab.scoreboard.admin can see this scoreboard, others will see scoreboard1
-      display-condition: "permission:tab.scoreboard.admin"
-      title: "Admin scoreboard"
-      lines:
-        - "%animation:MyAnimation1%"
-        - '&#676C6D&l&m               &r&#676C6D&l( &#193df8&lW&#0053ff&le&#0064ff&ll&#0073ff&lc&#0080ff&lo&#008cff&lm&#0097ff&le
-  &#00a2ff&lt&#00acff&lo &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls &f&lTowny
-  &#676C6D&l)&#676C6D&l&m'
-        - ''
-        - '%online_players%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
-        - '&#09A1CEVote Party: &f%votes_until_party%&#1788E7/&f100'
-        - ""
-        - '&f&lWebsite&r&#0087ff ┃ &#00a9ffo&#00b1ffr&#00b9ffb&#00c1ffi&#00c8ffs&#00cffbmc&#00d6f6.&#00dcf2c&#00e3edo&#00e9eam '
-        - '&F&lStore&#0087ff ┃ &#008fffs&#0096fft&#009dffo&#00a4ffr&#00abffe&#00b1ff.&#00b8ffo&#00beffr&#00c4ffb&#00cafei&#00cffas&#00d5f7m&#00daf3c&#00e0ef.&#00e5ecc&#00eae9o&#0fefe6m'
-        - '&#676C6D&l┃┃ &#193df8&op&#0050ff&ol&#005fff&oa&#006dff&oy&#0079ff&o.&#0084ff&oo&#008eff&or&#0098ff&ob&#00a1ff&oi&#00aaff&os&#00b2ff&om&#00bbff&oc&#00c2ff&o.&#00cafc&oc&#00d1f8&oo&#0dd8f4&om
-  &#676C6D&l┃┃'
-        - ''
-        - '&#676C6D&l&m'
     scoreboard1:
       title: "Default"
       lines:
