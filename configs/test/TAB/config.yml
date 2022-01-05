@@ -120,6 +120,7 @@ scoreboard:
   respect-other-plugins: true
   disable-in-worlds: 
     - disabledworld
+    
     scoreboard1:
       title: "Default"
       lines:
