@@ -42,7 +42,7 @@ get_random_point_task:
     debug: false
     definitions: continent
     script:
-    - define l <proc[get_random_point].context[<[continent]>]>
+    - define l <proc[get_random_point].context[<[continent]||<yaml[earth_map].list_keys[earth].random>>]>
     - chunkload <[l].chunk> duration:10s
     - waituntil <[l].chunk.is_loaded>
     - define loc <[l].highest.up[1]>
