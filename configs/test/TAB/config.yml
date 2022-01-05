@@ -110,7 +110,7 @@ per-world-playerlist:
       - bedwars
 
 scoreboard:
-  enabled: false
+  enabled: true
   toggle-command: /sb
   remember-toggle-choice: false
   hidden-by-default: false
