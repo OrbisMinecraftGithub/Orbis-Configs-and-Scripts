@@ -135,7 +135,7 @@ scoreboard:
       - '  &#64E175&l• &#21DC3BBalance: &f&l%denizen_<player.formatted_money>%'
       - '  &#64E175&l• &#21DC3BParty: &f%denizen_<server.flag[votes].mod[100].sub[100].abs>% &#21DC3Bvotes left'
       - '&7'
-      - '                         &#B4B4B41&l/sb'
+      - '&#B4B4B4&o Disable with /sb'
 
 ping-spoof:
   enabled: false
