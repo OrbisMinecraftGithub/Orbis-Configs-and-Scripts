@@ -6,18 +6,18 @@ AK47:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Recoil_Amount: 0.9
+        Recoil_Amount: 1
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 4
-        Bullet_Spread: 1.4
+        Projectile_Damage: 5
+        Bullet_Spread: 1
     Sneak:
         Enable: false
         No_Recoil: false
     Fully_Automatic:
         Enable: true
-        Fire_Rate: 5
+        Fire_Rate: 6
     Reload:
         Enable: true
         Reload_Amount: 25
@@ -56,9 +56,8 @@ RPG:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Remove_Bullet_Drop: true
-        Projectile_Damage: 16
         Removal_Or_Drag_Delay: 120-true
-        Projectile_Speed: 17
+        Projectile_Speed: 9
     Sneak:
         Enable: false
         No_Recoil: false
@@ -74,11 +73,11 @@ RPG:
         Ammo_Name_Check: §g§6RPG-7 Rocket
     Explosions:
         Enable: true
-        Knockback: 10
-        Damage_Multiplier: 50
+        Knockback: 5
+        Damage_Multiplier: 35
         Enable_Owner_Immunity: false
         Explosion_No_Grief: true
-        Explosion_Radius: 3
+        Explosion_Radius: 4
         On_Impact_With_Anything: true
     Abilities:
         Reset_Hit_Cooldown: true
@@ -88,18 +87,18 @@ RPG:
 
 M4A1:
     Item_Information:
-        Item_Name: "&eM4A1"
+        Item_Name: "&em4a1"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 3
+        Delay_Between_Shots: 2
         Recoil_Amount: 1
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 5
+        Projectile_Damage: 4
         Bullet_Spread: 0.5
         Remove_Bullet_Drop: true
     Sneak:
@@ -135,6 +134,7 @@ M4A1:
         Enable: false
         Fire_Rate: 0
 
+
 SPAS12:
     Item_Information:
         Item_Name: "&eSpas-12"
@@ -143,21 +143,21 @@ SPAS12:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 12
+        Delay_Between_Shots: 10
         Recoil_Amount: 1
         Projectile_Amount: 4
         Projectile_Type: snowball
         Remove_Bullet_Drop: false
         Projectile_Speed: 45
-        Projectile_Damage: 5
-        Bullet_Spread: 1.7
+        Projectile_Damage: 6
+        Bullet_Spread: 1
         Removal_Or_Drag_Delay: 7-true
     Headshot:
         Enable: true
-        Bonus_Damage: 4
+        Bonus_Damage: 3
     Reload:
         Enable: true
-        Reload_Amount: 5
+        Reload_Amount: 8
         Reload_Bullets_Individually: true
         Reload_Duration: 10
         Reload_Shoot_Delay: 15
@@ -187,13 +187,13 @@ OLYMPIA:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 5
+        Delay_Between_Shots: 3
         Recoil_Amount: 5
-        Projectile_Amount: 6
+        Projectile_Amount: 8
         Projectile_Type: snowball
         Projectile_Speed: 70
-        Projectile_Damage: 6
-        Bullet_Spread: 8
+        Projectile_Damage: 9
+        Bullet_Spread: 6
         Remove_Bullet_Drop: true
         Removal_Or_Drag_Delay: 2-true
     Damage_Based_On_Flight_Time:
@@ -235,7 +235,6 @@ OLYMPIA:
     Extras:
         Disable_Underwater: false
 
-44:
     Item_Information:
         Item_Name: "&e.44 Magnum"
         Item_Type: CARROT_ON_A_STICK
@@ -287,15 +286,15 @@ M16:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 8
+        Delay_Between_Shots: 11
         Recoil_Amount: 0
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 70
-        Projectile_Damage: 4
+        Projectile_Damage: 5
         Bullet_Spread: 0.4
     Sneak:
-        Enable: false
+        Enable: true
         No_Recoil: true
         Bullet_Spread: 1
     Burstfire:
@@ -339,9 +338,8 @@ HUNTING_RIFLE:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 145
-        Projectile_Damage: 6
+        Projectile_Damage: 12
         Bullet_Spread: 3
-        Delay_Between_Shots: 80
     Reload:
         Enable: true
         Reload_Amount: 7
@@ -429,12 +427,12 @@ FAL:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 4
+        Delay_Between_Shots: 3
         Recoil_Amount: 1
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 7
+        Projectile_Damage: 5
         Remove_Bullet_Drop: true
     Sneak:
         Enable: true
@@ -480,18 +478,18 @@ AK74U:
         Recoil_Amount: 0
         Projectile_Amount: 1
         Projectile_Type: snowball
-        Projectile_Speed: 100
+        Projectile_Speed: 90
         Projectile_Damage: 4
-        Bullet_Spread: 1.4
+        Bullet_Spread: 0.2
     Sneak:
         Enable: true
         Bullet_Spread: 1
     Fully_Automatic:
         Enable: true
-        Fire_Rate: 6
+        Fire_Rate: 7
     Reload:
         Enable: true
-        Reload_Amount: 30
+        Reload_Amount: 25
         Reload_Duration: 35
         Take_Ammo_On_Reload: true
         Take_Ammo_As_Magazine: true
@@ -520,18 +518,18 @@ AWP:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 19
+        Delay_Between_Shots: 12
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 170
-        Projectile_Damage: 14
-        Bullet_Spread: 12
+        Projectile_Damage: 21
+        Bullet_Spread: 2
     Reload:
         Enable: true
         Reload_Amount: 7
         Reload_Bullets_Individually: false
         Reload_Duration: 55
-        Reload_Shoot_Delay: 25
+        Reload_Shoot_Delay: 15
         Take_Ammo_On_Reload: true
         Take_Ammo_As_Magazine: true
     Ammo:
@@ -659,7 +657,7 @@ PKP:
         Bullet_spread: 0
     Fully_Automatic:
         Enable: true
-        Fire_Rate: 2
+        Fire_Rate: 3
     Reload:
         Enable: true
         Reload_Amount: 50
@@ -719,19 +717,19 @@ UMP:
 
 L85A2:
     Item_Information:
-        Item_Name: "&el85A2"
+        Item_Name: "&el85a2"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
         Cancel_Right_Click_Interactions: true
         Right_Click_To_Shoot: true
         Cancel_Left_Click_Block_Damage: true
-        Delay_Between_Shots: 3
+        Delay_Between_Shots: 2
         Recoil_Amount: 1
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 95
         Projectile_Damage: 5
-        Bullet_Spread: 0.6
+        Bullet_Spread: 0.5
     Sneak:
         Enable: false
         No_Recoil: false
@@ -751,7 +749,7 @@ L85A2:
         Zoom_Bullet_Spread: 0.3
     Headshot:
         Enable: true
-        Bonus_Damage: 2
+        Bonus_Damage: 3
     Abilities:
         Reset_Hit_Cooldown: true
         No_Vertical_Recoil: true
@@ -824,13 +822,14 @@ GLOCK:
         Zoom_Amount: 2
         Zoom_Bullet_Spread: 0.3
     Backstab:
-        Enable: false
+        Enable: true
         Bonus_Damage: 2
     Abilities:
         Reset_Hit_Cooldown: true
         No_Vertical_Recoil: true
     Extras:
         Disable_Underwater: false
+
 BARRETT:
     Item_Information:
         Item_Name: "&eBarrett .50 cal"
@@ -843,8 +842,8 @@ BARRETT:
         Delay_Between_Shots: 12
         Projectile_Amount: 1
         Projectile_Type: snowball
-        Projectile_Speed: 40
-        Projectile_Damage: 20
+        Projectile_Speed: 210
+        Projectile_Damage: 27
         Bullet_Spread: 2.5
     Reload:
         Enable: true
@@ -880,7 +879,7 @@ BARRETT:
         Disable_Underwater: false
 M1014:
     Item_Information:
-        Item_Name: "&eM1014"
+        Item_Name: "&em1014"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
         Cancel_Right_Click_Interactions: true
@@ -897,12 +896,12 @@ M1014:
         Removal_Or_Drag_Delay: 8-true
     Headshot:
         Enable: true
-        Bonus_Damage: 1
+        Bonus_Damage: 2
     Reload:
         Enable: true
         Reload_Amount: 8
         Reload_Bullets_Individually: true
-        Reload_Duration: 10
+        Reload_Duration: 8
         Reload_Shoot_Delay: 10
         Take_Ammo_On_Reload: true
         Take_Ammo_As_Magazine: true
@@ -924,7 +923,7 @@ M1014:
         Fire_Rate: 2
 M249:
     Item_Information:
-        Item_Name: "&eM249"
+        Item_Name: "&em249"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
         Cancel_Right_Click_Interactions: true
@@ -934,7 +933,7 @@ M249:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 105
-        Projectile_Damage: 4
+        Projectile_Damage: 6
         Bullet_Spread: 0.7
     Fully_Automatic:
         Enable: true
@@ -975,7 +974,7 @@ P90:
         Projectile_Damage: 3
         Bullet_Spread: 1.75
     Sneak:
-        Enable: false
+        Enable: true
         Bullet_Spread: 1
     Fully_Automatic:
         Enable: true
