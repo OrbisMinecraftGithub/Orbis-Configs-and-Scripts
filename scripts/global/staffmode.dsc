@@ -270,3 +270,59 @@ get_debug_info:
             - define "info:|:Click to copy to clipboard."
             - define "info:|:Value: <[data]>"
             - determine <&click[<[data]>].type[COPY_TO_CLIPBOARD]><&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><[definition]><&end_hover><&end_click>
+command_gamemode_spectator:
+    type: command
+    name: spectator
+    aliases:
+    - gmsp
+    debug: false
+    script:
+    - if <player.has_permission[spectator]> || <player.has_permission[minecraft.command.gamemode]>:
+        - if <player.has_flag[staff.spectator]>:
+            - adjust <player> gamemode:survival
+            - narrate "<&e>You are now in survival."
+            - teleport <player> <player.flag[staff.spectator].as_location>
+            - flag <player> staff.spectator:!
+        - else:
+            - adjust <player> gamemode:spectator
+            - narrate "<&e>You are now in spectator."
+            - flag <player> staff.spectator:<player.location>
+    - else:
+        - narrate "<&c>You do not have permission for that command."
+
+command_gamemode_spectator_events:
+    type: world
+    debug: false
+    events:
+        on player teleports:
+        - if <player.has_flag[staff.spectator]> && <player.gamemode> == SPECTATOR:
+            - adjust <player> gamemode:survival
+            - determine passively destination:<player.flag[staff.spectator]>
+            - flag <player> staff.spectator:!
+            - narrate "<&e>You are now in survival."
+
+command_gamemode_creative:
+    type: command
+    name: creative
+    aliases:
+    - gmc
+    debug: false
+    script:
+    - if <player.has_permission[creative]> || <player.has_permission[minecraft.command.gamemode]>:
+        - adjust <player> gamemode:creative
+        - narrate "<&e>You are now in creative."
+    - else:
+        - narrate "<&c>You do not have permission for that command."
+
+command_gamemode_survival:
+    type: command
+    name: survival
+    aliases:
+    - gms
+    debug: false
+    script:
+    - if <player.has_permission[survival]> || <player.has_permission[minecraft.command.gamemode]>:
+        - adjust <player> gamemode:survival
+        - narrate "<&e>You are now in survival."
+    - else:
+        - narrate "<&c>You do not have permission for that command."
