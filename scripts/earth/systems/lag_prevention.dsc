@@ -49,7 +49,7 @@ redstone_lag_prevention:
     events:
         on player places block:
         - if <yaml[config].list_keys[lagcontrol.limits].contains[<context.material.name>]>:
-            - inject limit_redstone_device path:task
+            - inject redstone_lag_prevention path:task
         on redstone recalculated:
         - define loc <context.location.center>
         - ratelimit <[loc]> 2t
