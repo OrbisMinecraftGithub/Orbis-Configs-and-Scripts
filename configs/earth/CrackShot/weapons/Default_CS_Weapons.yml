@@ -34,7 +34,7 @@ AK47:
         Ammo_Name_Check: §g§6Magazine
     Headshot:
         Enable: true
-        Bonus_Damage: 2
+        Bonus_Damage: 3
     Backstab:
         Enable: false
         Bonus_Damage: 2
