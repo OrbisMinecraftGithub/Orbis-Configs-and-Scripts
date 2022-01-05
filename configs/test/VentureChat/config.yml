@@ -270,6 +270,17 @@ alias:
     permissions: None
     components:
     - 'Command: /vmessage$'
+  
+# Enables the creation of special Towny channels: Town and Nation
+# To create these channels, simply name two channels below "Town" and "Nation"
+# Bungeecord must be set to false for these channels! 
+enable_towny_channel: false
+
+# Enables the creation of a special faction only channel using the Factions plugin
+# To create this channel, simply name a channel below "Faction"
+# Bungeecord must be set to false for this channel!
+# WARNING: May not work for all versions of Factions!
+enable_factions_channel: false
 
 # Valid modes are:
 # * Everyone
