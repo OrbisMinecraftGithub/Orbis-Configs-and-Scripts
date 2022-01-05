@@ -638,7 +638,7 @@ UZI:
         Disable_Underwater: false
 
 PKP:
-   Item_Information:
+    Item_Information:
         Item_Name: "&ePKP"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
@@ -794,7 +794,7 @@ FLAMETHROWER:
         Enable: true
         Fire_Rate: 10
 GLOCK:
-   Item_Information:
+    Item_Information:
         Item_Name: "&eGlock 18"
         Item_Type: CARROT_ON_A_STICK
     Shooting:
