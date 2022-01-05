@@ -64,7 +64,7 @@ scoreboard-teams:
       myCustomLine: 0.66
 
 yellow-number-in-tablist:
-  enabled: true
+  enabled: false
   value: "%ping%"
   disable-in-worlds:
     - disabledworld
