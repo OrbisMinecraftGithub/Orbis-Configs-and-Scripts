@@ -10,6 +10,11 @@ animal_lag_prevention:
         - chicken
         - villager
         - turtle
+    messages:
+    - "<&5><&l>Thanos <&r><&c>snapped away <&4><&l><[removed]><&r><&c> entities from existance."
+    - "<&c>Removed <&4><&l><[removed]><&r><&c> entities from crowded chunks."
+    - "<&c>Rick and Morty purged <&4><&l><[removed]><&r><&c> entities on earth."
+    - "<&4><&l><[removed]><&r><&c> entities suddenly turned to ashes."
     events:
         on delta time minutely every:5:
         - foreach <script.data_key[data.types]> as:animal_type:
@@ -21,7 +26,7 @@ animal_lag_prevention:
                 - define entities <[c].entities[<[animal_type]>]>
                 - remove <[entities].random[<[entities].size.sub[16]>]>
                 - define removed:+:<[entities].size.sub[16]>
-        - announce "<&c>Removed <&4><&l><[removed]><&r><&c> entities from crowded chunks."
+        - announce <script.data_key[messages].random.parsed>
 
 redstone_lag_prevention:
     type: world
