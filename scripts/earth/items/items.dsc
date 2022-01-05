@@ -36,7 +36,7 @@ patch_lore_hook:
         - define item <context.item>
         - if <context.recipe_id.equals[minecraft:repair_item]>:
             - define items <context.recipe.filter[script.name.exists].parse[script.name]>
-            - if <[items].get[1].equals[<[items].get[2]>]>:
+            - if <[items].get[1].equals[<[items].get[2]>]||false>:
                 - define item <item[<[items].get[1]>].with[durability=<context.item.durability>]>
         - determine <[item].proc[patch_lore]>
 
