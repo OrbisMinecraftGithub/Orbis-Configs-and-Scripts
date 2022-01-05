@@ -33,11 +33,11 @@ MyAnimation1:
 ServerName:
   change-interval: 300
   texts:
-  - '#A9ECAE&lE&#1cf272&larth'
-  - '&#1cf272&lE#A9ECAE&la#1cf272&lrth'
-  - '&#1cf272&lEa#A9ECAE&lr&#1cf272&lth'
-  - '&#1cf272&lEar#A9ECAE&lt&#1cf272&lh'  
-  - '&#1cf272&lEart#A9ECAE&lh'
+  - '&#0be1f9&lE&#0083f3&la&#0095f5&lr&#18a5f4&lt&#48b5f2&lh'
+  - '&#146fee&lE&#0be1f9&la&#0095f5&lr&#18a5f4&lt&#48b5f2&lh'
+  - '&#146fee&lE&#0083f3&la&#0be1f9&lr&#18a5f4&lt&#48b5f2&lh'
+  - '&#146fee&lE&#0083f3&la&#0095f5&lr&#0be1f9&lt&#48b5f2&lh'  
+  - '&#146fee&lE&#0083f3&la&#0095f5&lr&#18a5f4&lt&#0be1f9&lh'
 web:
   change-interval: 200
   texts:
