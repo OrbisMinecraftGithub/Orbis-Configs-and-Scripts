@@ -1,0 +1,33 @@
+Owner:
+  tabprefix: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%&f "
+  tagprefix: ""
+  abovename: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%"
+Admin:
+  tabprefix: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%&f "
+  tagprefix: ""
+  abovename: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%"
+Player:
+  tabprefix: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%&f "
+  tagprefix: ""
+  abovename: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%"
+example_group:
+  header:
+    - "This is an example of per-group header/footer"
+  footer:
+    - "applied to a group"
+
+ # default settings for all groups, all groups will take properties from this section unless player's primary group overrides a specific setting
+_DEFAULT_:
+  tabprefix: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%&f "
+  tagprefix: ""
+  abovename: "%rel_townyadvanced_color%%townyadvanced_towny_tag_override%"
+  customtabname: "%essentials_nickname%"
+  customtagname: "%essentials_nickname%" # don't forget to enable unlimited nametag mode to make this one work
+  tabsuffix: "%vault-suffix%%afk%"
+  tagsuffix: "%vault-suffix%%afk%"
+
+per-world:
+  world1:
+    Owner:
+      tabprefix: "&0&l[&a&lOwner&0&l] &a"
+      tagprefix: "&2&lOwner &a"
