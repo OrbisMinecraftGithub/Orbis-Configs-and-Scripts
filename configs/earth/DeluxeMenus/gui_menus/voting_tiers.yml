@@ -1,0 +1,97 @@
+menu_title: '&#6e9cfa&l> &#21d96e&lVoting tiers'
+open_command:
+  - playervote
+size: 26
+# as always, only cool people can open this menu :
+items:
+  'Town Help':
+    material: hdb-10100
+    slot: 4
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lVoting tiers'
+    lore:
+      - '&r'
+      - '&#C6E3E5The higher the tier:'
+      - '&#C6E3E5-The more chance of you recieving'
+      - '&#C6E3E5a medium, hard or insane mission increases'
+      - '&#C6E3E5- You will recieve a better vote crate!'
+  'Tier 1':
+    material: PAPER
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&6&lTier 1'
+    lore:
+     - '&#08F31A- Easy Mission 80%'
+     - '&#08F31A- Medium Mission 20%'
+     - '&r'
+     - '&#08F31A- Common Crate'
+  'Tier 2':
+    material: PAPER
+    slot: 12
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&6&lTier 2'
+    lore:  
+     - '&#08F31A- Easy Mission 65%'
+     - '&#08F31A- Medium Mission 30%'
+     - '&#08F31A- Hard Mission 5%'
+     - '&r'
+     - '&#08F31A- Uncommon Crate'
+  'Tier 3':
+    material: PAPER
+    slot: 13
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&6&lTier 3'
+    lore:
+     - '&#08F31A- Easy Mission 54%'
+     - '&#08F31A- Medium Mission 30%'
+     - '&#08F31A- Hard Mission 15%'
+     - '&#08F31A- Insane Mission 1%'
+     - '&r'
+     - '&#08F31A- Rare Crate'
+  'Tier 4':
+    material: PAPER
+    slot: 14
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&6&lTier 4'
+    lore:
+     - '&#08F31A- Easy Mission 30%'
+     - '&#08F31A- Medium Mission 35%'
+     - '&#08F31A- Hard Mission 15%'
+     - '&#08F31A- Insane Mission 10%'
+     - '&r'
+     - '&#08F31A- Epic Crate'
+  'Tier 5':
+    material: PAPER
+    slot: 15
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&6&lTier 5'
+    lore:
+     - '&#08F31A- Easy Mission 10%'
+     - '&#08F31A- Medium Mission 45%'
+     - '&#08F31A- Hard Mission 30%'
+     - '&#08F31A- Insane Mission 15%'
+     - '&r'  
+     - '&#08F31A- Celestial Crate'
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9-17
+      - 18-26
+      - 27-35
+      - 36-44
+    priority: 2
+    display_name: §
+   

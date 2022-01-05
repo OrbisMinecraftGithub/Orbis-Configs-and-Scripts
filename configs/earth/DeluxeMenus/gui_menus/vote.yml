@@ -1,0 +1,87 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&#6e9cfa&l> &#21d96e&lV&#00d598&lo&#00cebe&lt&#00c6da&li&#00bbec&ln&#00aef0&lg&#39a0e9&l!'
+open_command:
+  - playervote
+size: 44
+# as always, only cool people can open this menu :
+items:
+  'Town Help':
+    material: hdb-10100
+    slot: 20
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#f44c52&l&nH&#fb465f&l&no&#ff406c&l&nw &#ff3a7b&l&nt&#ff378a&l&no &#ff369a&l&nV&#ff38ab&l&no&#ff3ebd&l&nt&#fe45ce&l&ne&#f64ee0&l&n?'
+    lore:
+      - '&r'
+      - '&#C6E3E5To vote simply use click on the link'
+      - '&#C6E3E5we have provided. After doing that,'
+      - '&#C6E3E5you need to enter your &lMinecraft Username'
+      - '&#C6E3E5and if the website requires a captcha do that'
+      - '&#C6E3E5Once you have done these you can press vote'
+      - '&#C6E3E5and you should recieve your rewards!'
+  'Vote for all':
+    material: hdb-24849
+    slot: 22
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#0495f2&lA&#009cf5&ll&#00a3f7&ll &#00aaf8&lV&#00b0f7&lo&#00b6f6&lt&#00bcf4&li&#00c2f1&ln&#00c8ee&lg &#00cdea&lS&#00d2e5&li&#00d7e1&lt&#00dcdc&le&#19e0d7&ls'
+    lore:
+      - '&#7D7C7BThis will take you to the voting site!'
+      - '&r'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &#839292&m&l+-----------------***-----------------+'
+      - '[message] &#D5DCCFThese are the following sites you can vote on:'
+      - '[message] &c'
+      - '[message] &#C9C5BEVote link 1: &#70F316www.minecraft-mp.com/server/295177/vote/'
+      - '[message] &#C9C5BEVote link 2: &#70F316www.minecraft-server-list.com/server/482903/vote/'
+      - '[message] &#C9C5BEVote link 3: &#70F316www.minecraftservers.org/vote/626592'
+      - '[message] &#C9C5BEVote link 4: &#70F316www.planetminecraft.com/server/orbis-5367051/vote/'
+      - '[message] &#C9C5BEVote link 5: &#70F316www.topminecraftservers.org/vote/22552'
+      - '[message] &#C9C5BEVote link 6: &#70F316www.topg.org/minecraft-servers/server-636351'
+      - '[message] &#C9C5BEVote link 7: &#70F316https://minecraft.global/server/112/vote'
+      - '[message] &c'
+      - '[message] &#839292&m&l+-----------------***-----------------+'
+      - '[close]' 
+  'Voting Tier':
+    material: PAPER
+    slot: 4
+    priority: 1
+    display_name: '&#F19425&lYour current vote tier: &#F1C325&l%denizen_<yaml[voting_rewards].list_keys[tiers].filter_tag[<yaml[voting_rewards].read[tiers.<[filter_value]>].is_less_than_or_equal_to[<player.flag[votes.service].keys.parse_tag[<player.flag[votes.service.<[parse_value]>]>].sum||0>]>].highest>%'
+    hide_attributes:  true
+  'Voting Left till next tier':
+    material: hdb-8786
+    slot: 24
+    priority: 1
+    display_name: '&#F19425&lVotes need for new tier: &#F1C325&l%denizen_<element[<yaml[voting_rewards].list_keys[tiers].parse_tag[<yaml[voting_rewards].read[tiers.<[parse_value]>]>].combine.filter[is_more_than[<player.flag[votes.service].keys.parse_tag[<player.flag[votes.service.<[parse_value]>]>].sum||0>]].first>].sub[<player.flag[votes.service].keys.parse_tag[<player.flag[votes.service.<[parse_value]>]>].sum||0>]>%'
+  'What is tiers?':
+    material: BOOK
+    slot: 40
+    priority: 1
+    display_name: '&#E83D3D&lWhat are vote tiers?'
+    lore:
+     - '&r'
+     - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openmenu]voting_tiers_menu'
+      - '[close]'
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9-17
+      - 18-26
+      - 27-35
+      - 36-44
+    priority: 2
+    display_name: §
+
+
+
+
+      
+
+

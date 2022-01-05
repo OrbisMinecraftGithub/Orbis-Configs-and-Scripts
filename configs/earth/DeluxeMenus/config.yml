@@ -1,0 +1,70 @@
+# DeluxeMenus 1.13.4-DEV-119 main configuration file
+# 
+# A full wiki on how to use this plugin can be found at:
+# https://wiki.helpch.at/clips-plugins/deluxemenus
+
+debug: false
+check_updates: true
+gui_menus:
+  basics_menu:
+    file: basics_menu.yml
+  advanced_menu:
+    file: advanced_menu.yml
+  requirements_menu:
+    file: requirements_menu.yml
+  help_menu:
+    file: help.yml
+  towny_menu:
+    file: towny.yml
+  town_menu:
+    file: town.yml
+  nation_menu:
+    file: nation.yml
+  resources_menu:
+    file: resources.yml
+  custom_recepie_menu:
+    file: custom_recipe_menu.yml
+  big_dreaplead_menu:
+    file: big_dreaplead_menu.yml
+  azela_menu:
+    file: azela_menu.yml
+  flowering_azalea_menU:
+    file: flowering_azalea.yml
+  spore_blossom_menu:
+    file: spore_blossom.yml
+  moss_block_menu:
+    file: moss_block.yml
+  small_dripleaf_menu:
+    file: small_dripleaf.yml
+  bell_menu:
+    file: bell.yml
+  gunpowder_menu:
+    file: gunpowder.yml
+  navigator_menu:
+    file: navigator.yml
+  inksac_menu:
+    file: inksac.yml
+  clip_menu:
+    file: clip.yml
+  magazine_menu:
+    file: magazine.yml
+  shotgun_menu:
+    file: shotgun.yml
+  shop_menu:
+    file: shop.yml
+  gun_shop_menu:
+    file: gun_shop.yml
+  vote_menu:
+    file: vote.yml
+  attachments_menu:
+    file: attachments_menu.yml
+  settings_menu:
+    file: settings.yml
+  explosive_shop_menu:
+    file: explosive_shop.yml
+  big_shulker_menu:
+    file: big_shulker.yml
+  rocket_menu:
+    file: rocket.yml
+  voting_tiers_menu:
+    file: voting_tiers.yml

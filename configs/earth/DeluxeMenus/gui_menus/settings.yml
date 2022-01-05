@@ -1,0 +1,36 @@
+menu_title: '&3> &b&lSettings'
+open_command:
+  - settings
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bNavigator!'
+size: 27
+
+items:
+  'Moss Block4':
+    material: LEATHER_CHESTPLATE
+    slot: 13
+    display_name: '&b&lColoured armour'
+    lore: 
+      - '&7To turn off this feature simply'
+      - '&c&lLeft click.'
+      - '&7'
+      - '&7To turn on this feature simply'
+      - '&a&lRight click.'      
+    left_click_commands:
+      - '[console]ex flag <player[%player_name%]> playersettings.relative_armor_color.enabled:false'
+      - '[close]'   
+    right_click_commands:
+      - '[console]ex flag <player[%player_name%]> playersettings.relative_armor_color.enabled:true'
+      - '[close]'      
+  'placeholder':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 17
+      - 10-12
+      - 14-15
+      - 16
+      - 18-26
+    display_name: §      

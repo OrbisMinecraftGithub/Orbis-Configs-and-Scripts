@@ -1,0 +1,96 @@
+#######################################################################################
+#######################################################################################
+#######################################################################################
+#####                                                                             #####
+#####                         ChatFilter+  2.0                                    #####
+#####                       Created By Driftay                                    #####
+#####                                                                             #####
+#######################################################################################
+#######################################################################################
+#######################################################################################
+
+
+#<---------------------->NOTES<---------------------->#
+#All Color Codes Can Be Used!
+#Refer to: https://wiki.ess3.net/mc/
+#<---------------------->NOTES<---------------------->#
+
+ChatFilter:
+  reloaded: '&f[&bChat&cFilter&f] &2Configuration has been successfully reloaded!'
+  no-perms: '&f[&bChat&cFilter&f] &cYou are not permitted to use &c/chatfilter'
+  wrong-argument: '&f[&bChat&cFilter&f] &2Command Not Found! Try &c/chatfilter reload&2!'
+  bypass-permission: 'chatfilter.bypass'
+  Warning-Message: '&b&lOrbis &c» &bWe''ve noticed you''re using &6Profane Language &ca lot. Please keep it to a minimum.'
+
+
+#Example: Hello will be replaced with ****
+Replace-Symbol: '*'
+
+
+# You can continue this list as long as you want just copy my examples above
+# NOTE: I do find these words HIGHLY OFFENSIVE and Recommend you keep them
+Muted-Words:
+- 'nigger'
+- 'beaner'
+- 'n1gger'
+- 'nibba'
+- 'fuck'
+- 'bitch'
+- 'cunt'
+- 'slut'
+- 'whore'
+- 'asshole'
+- 'bitch'
+- 'cum'
+- 'b1tch'
+- 'faggot'
+- 'fag'
+- 'kike'
+- 'anal'
+- 'sex'
+- 'bastard'
+- 'retard'
+- 'cock'
+- 'dick'
+- 'retard'
+- 'pussy'
+- 'wanker'
+- 'vagina'
+- 'nigg'
+- 'fuk'
+- 'nigg3r'
+- 'n1gg3r'
+- 'nigga'
+- 'nazi'
+- 'shit'
+- 'NIGGER'
+- 'NIGGA'
+- 'NIGG'
+- 'Fags'
+- 'Nigga'
+- 'Faggot'
+- 'Fuck'
+- 'Bitch'
+- 'Nigger'
+- 'Twat'
+- 'Cunt'
+- 'Nigg'
+- 'Retard'
+- 'WANKER'
+- 'VAGINA'
+- 'BITCH'
+- 'FUCK'
+- 'FAGGOT'
+- 'FAG'
+
+
+#######################################################################################
+#######################################################################################
+#######################################################################################
+#####                                                                             #####
+#####                         ChatFilter+  2.0                                    #####
+#####                       Created By Driftay                                    #####
+#####                                                                             #####
+#######################################################################################
+#######################################################################################
+#######################################################################################

@@ -1,0 +1,61 @@
+menu_title: '&3> &b&lResources Help'
+open_command:
+  - town command help
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bResources Menu!'
+size: 27
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'How towns produce things':
+    material: CHEST
+    slot: 14
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LHow towns produce things.'
+    lore:
+      - '&7To produce things your town will need to own' 
+      - '&C&l25 plots&r&7.'
+      - '&7After doing this you can do'
+      - '&c&l/trs survey&r&7.'
+      - '&7You will get a random item which'
+      - '&7Your town will produce each day.'
+      - '&7You can collect the produced items by doing.'
+      - '&B&l/trs towncollect'
+  'How nations produce things':
+    material: ENDER_CHEST
+    slot: 12
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LHow nations produce things.'
+    lore:
+      - '&7To produce things your nation will'
+      - '&7need towns which &b&lproduce things.'
+      - '&c&l50% &r&bof what towns produce will go to the nation.'
+      - '&7You can collect the produced items by doing.'
+      - '&B&l/trs nationcollect'
+  'Go back': 
+    material: BARRIER
+    slot: 13
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lExit Back'
+    lore:
+      - '&7This will take you back to the &bHelp Menu.'
+      - '&7'
+      - '&#76aff2&lL&#77b0ef&le&#78b0eb&lf&#79b1e8&lt &#7bb1e4&lc&#7cb1e1&ll&#7fb2dd&li&#81b2da&lc&#84b2d6&lk &#86b2d3&lt&#89b2cf&lo &#8cb2cc&lp&#8fb2c9&lr&#93b2c5&lo&#96b1c2&lc&#99b1bf&le&#9db1bc&le&#a0b0b9&ld&#a4b0b6&l'
+    left_click_commands:
+      - '[openguimenu] Help_menu'
+      - '[close]'
+
+     

@@ -1,0 +1,97 @@
+menu_title: '&3> &b&lNation Help'
+open_command:
+  - nation command help
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bNation Menu!'
+size: 27
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'Createing a nation':
+    material: hdb-37753
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LCreate a Nation'
+    lore:
+      - '&7To create a nation do &b&l/n new (name of nation)&R&7.'
+      - '&7This will cost you &C&l$25000'
+      - '&7This money is taken out of your &C&lTown Bank&R&7.'
+      - '&7To check the balance of your town do &b&l/t&7.'
+  'Inviting a Town to your nation':
+    material: GOLD_INGOT
+    slot: 12
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LInviting a Town into your nation'
+    lore:
+      - '&7To a town into your nation do' 
+      - '&b&l/n add (town name)&R&7.'
+      - '&7This will send the mayor of the' 
+      - '&7town you are inviting a message'
+  'Map Colour':
+    material: hdb-2907
+    slot: 13
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LMap color'
+    lore:
+      - '&7To set a nation map color do' 
+      - '&b&l/n set mapcolor (color)&R&7.'
+      - '&7Only the &c&lKing and Coking &r&7can do this.'
+  'Enemy and ally':
+    material: hdb-41998
+    slot: 14
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LEnemying and Allying Nations'
+    lore:
+      - '&7To ally a nation do'
+      - '&b&l/n ally add (name of nation)&R&7.'
+      - '&7Only the &c&lKing and Coking &r&7can do this.' 
+      - '&7Recieving nation King has to accept.'
+      - '&7To ally a nation do'
+      - '&b&l/n enemy add (name of nation)&R&7.'
+      - '&7Only the &c&lKing and Coking &r&7can do this.'
+  'Ranks': 
+    material: hdb-7855
+    
+    slot: 15
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lGiving ranks to players'
+    lore:
+       - '&7To give players ranks.do'
+       - '&b&L/n rank add (playername) (rank).'
+       - '&c&lOnly Kings and Co-king&r&7 can preform this command.'
+  'Go back': 
+    material: BARRIER
+    slot: 22
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lExit Back'
+    lore:
+      - '&7This will take you back to the &bTowny Menu.'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le'
+    left_click_commands:
+      - '[openguimenu] towny_menu'
+      - '[close]'
+
+
+      
+    
+      

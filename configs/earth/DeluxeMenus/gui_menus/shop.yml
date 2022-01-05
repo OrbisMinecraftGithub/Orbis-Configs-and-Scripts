@@ -1,0 +1,91 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&#6e9cfa&l> &#71a9fb&lS&#79b4fb&lh&#85c0fa&lo&#94caf9&lp &#a5d4f7&lM&#b8def6&le&#cde7f5&ln&#e2eff5&lu'
+open_command:
+  - shop
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bShop Menu!'
+size: 27
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'Town Help':
+    material: CARROT_ON_A_STICK
+    slot: 11
+    nbt_int: 'CustomModelData:1'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#c53b3b&l&nG&#ce533d&l&nu&#d56941&l&nn &#dc7d48&l&nS&#e29152&l&nh&#e7a55e&l&no&#e7a55e&l&np'
+    lore:
+      - '&#C6E3E5This will take you to the &#CCD9DA&lGun shop.'
+      - '&r'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] gun_shop_menu'
+      - '[close]'
+  'Explosives':
+    material: hdb-23964
+    slot: 15
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#8c3e0d&l&nE&#95480e&l&nx&#9f520f&l&np&#a85c10&l&nl&#b06711&l&no&#b97213&l&ns&#c17d14&l&ni&#c88816&l&nv&#d09319&l&ne &#d69f1c&l&nS&#ddab1f&l&nh&#e3b724&l&no&#e8c329&l&np'
+    lore:
+      - '&#C6E3E5This will take you to the &#CCD9DA&lExplosive shop.'
+      - '&r'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] explosive_shop_menu'
+      - '[close]'
+  'Go back': 
+    material: BARRIER
+    slot: 22
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lExit Back'
+    lore:
+      - '&7This will take you back to the &bHelp Menu.'
+      - '&7'
+      - '&#76aff2&lL&#77b0ef&le&#78b0eb&lf&#79b1e8&lt &#7bb1e4&lc&#7cb1e1&ll&#7fb2dd&li&#81b2da&lc&#84b2d6&lk &#86b2d3&lt&#89b2cf&lo &#8cb2cc&lp&#8fb2c9&lr&#93b2c5&lo&#96b1c2&lc&#99b1bf&le&#9db1bc&le&#a0b0b9&ld&#a4b0b6&l!'
+    left_click_commands:
+      - '[openguimenu] Help_menu'
+      - '[close]'
+  'Vehicle': 
+    material: RABBIT_HIDE
+    slot: 13
+    nbt_int: 'CustomModelData:16'
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&#16e758&l&nV&#00e96b&l&ne&#00ea7d&l&nh&#00eb8d&l&ni&#00ec9c&l&nc&#00ecaa&l&nl&#00edb7&l&ne &#00edc2&l&ns&#00edcd&l&nh&#00ecd6&l&no&#15ecde&l&np'
+    lore:
+      - '&#B8B1A6This will take you to the &#CFCBC5&lVehicles Shop'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[player] qav shop'
+      - '[close]'
+  'placeholder':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 17
+      - 10
+      - 12
+      - 14
+      - 16
+      - 18-26
+    display_name: §
+      
+
+

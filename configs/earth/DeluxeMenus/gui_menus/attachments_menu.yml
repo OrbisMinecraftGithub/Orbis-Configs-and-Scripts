@@ -1,0 +1,34 @@
+menu_title: '&8> &6&lD&eM &bAdvanced Example'
+open_command:
+  - attachments
+open_commands:
+  - '[sound] BLOCK_BEACON_ACTIVATE'
+  - '[message] &7Opening Advanced example menu, Plugin created by &bextended_clip&7!'
+size: 27
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+items:
+  'example':
+    material: LIME_DYE
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&bExample Kit'
+    lore:
+      - ''
+      - '&7Cooldown : &f3 Days'
+      - '&7Left Click to Redeem'
+    view_requirement:
+      requirements:
+        kit_requirement:
+          type: string equals
+          input: '%essentials_kit_is_available_example%'
+          output: 'yes'
+        kit_perm:
+          type: has permission
+          permission: essentials.kits.example
+    left_click_commands:
+      - '[player] kit example'
+      - '[close]'

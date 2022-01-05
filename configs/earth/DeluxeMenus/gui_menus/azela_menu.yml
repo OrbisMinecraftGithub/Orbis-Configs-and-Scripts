@@ -1,0 +1,90 @@
+menu_title: '&3> &b&lAzalea'
+open_command:
+  - nation command help
+open_commands:
+  - '[message] &3Opening &bRecepie Menu!'
+size: 45
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'Moss Block4':
+    material: MOSS_BLOCk
+    slot: 10
+    priority: 1
+  'Moss Block3':
+    material: MOSS_BLOCk
+    slot: 11
+    priority: 1
+  'Moss Block2':
+    material: MOSS_BLOCk
+    slot: 19
+    priority: 1
+  'Moss Block1':
+    material: MOSS_BLOCk
+    slot: 21
+    priority: 1
+  'LILLY_PAD':
+    material: MOSS_BLOCK
+    slot: 28
+    priority: 1
+  'BIG DRIPLEAF':
+    material: MOSS_BLOCK
+    slot: 29
+    priority: 1
+  'ARROWBLUE':
+    material: hdb-10411
+    slot: 23
+    priority: 1
+  'BIG DRIPLEAF1':
+    material: MOSS_BLOCK
+    slot: 30
+    priority: 1
+  'Azela':
+    material: AZALEA
+    slot: 25
+    priority: 1
+  'BIG DRIPLEAF2':
+    material: MOSS_BLOCK
+    slot: 12
+    priority: 1
+  'Spruce':
+    material: SPRUCE_SAPLING 
+    slot: 20
+    priority: 1
+  'Go back': 
+    material: BARRIER
+    slot: 44
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&c&lExit Back'
+    lore:
+      - '&7This will take you back to the &bCustom Recepie Menu.'
+      - '&7'
+      - '&#76aff2&lL&#77b0ef&le&#78b0eb&lf&#79b1e8&lt &#7bb1e4&lc&#7cb1e1&ll&#7fb2dd&li&#81b2da&lc&#84b2d6&lk &#86b2d3&lt&#89b2cf&lo &#8cb2cc&lp&#8fb2c9&lr&#93b2c5&lo&#96b1c2&lc&#99b1bf&le&#9db1bc&le&#a0b0b9&ld&#a4b0b6&l!'
+    left_click_commands:
+      - '[openguimenu] custom_recepie_menu'
+      - '[close]'
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 13-17
+      - 18
+      - 22
+      - 24
+      - 26
+      - 27
+      - 31-35
+      - 36-45
+    priority: 2
+    display_name: §        
+      
+

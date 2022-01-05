@@ -1,0 +1,315 @@
+#  A DeluxeMenus advanced configuration guide
+#=========================================================
+menu_title: '&3> &bHelp'
+open_command:
+  - help
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bHelp Menu!'
+size: 54
+items:
+  'Rules':
+    material: OAK_SIGN
+    slot: 4
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LRules'
+    lore:
+      - '&7Find the rules here!'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &chttps://orbismc.com/rules'
+      - '[close]'
+  'Map':
+    material: hdb-33411
+
+    slot: 1
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&LMap'
+    lore:
+      - '&#C1C0C0The &b&lTowny&r&7 server has a &b&l1:500&r&7 rendition'
+      - '&#C1C0C0of the earth that we live on. You can make a town anywhere!'
+      - '&#C1C0C0Find out how to make a town by clicking on &btowny.'
+  'Discord': 
+    material: hdb-4320
+    
+    slot: 7
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lDiscord'
+    lore:
+       - '&#C1C0C0Join the &bDiscord&r&7 To recieve information'
+       - '&#C1C0C0About new updates and get support!'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[message] &bdiscord.gg/Orbis'
+      - '[close]' 
+  'Towny': 
+    material: hdb-6300
+    slot: 22
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lTowny'
+    lore:
+       - '&#C1C0C0Continue to find out more about.'
+       - '&bTowny and how to make a town.'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] towny_menu'
+      - '[close]'
+  'NAVIGATOR': 
+    material: COMPASS
+    slot: 31
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&b&lNavigator'
+    lore:
+       - '&#C1C0C0Continue to find out how to travel.'
+       - '&7'
+       - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] navigator_menu'
+      - '[close]'
+  'Resources':
+    material: hdb-9032
+    slot: 20
+    priority: 2
+    update: true
+    hide_attributes: true
+    display_name: '&b&lTown and Nation Resources'
+    lore:
+      - '&#C1C0C0Continue to find out how'
+      - '&b&lnations and town &r&7can produce things'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] resources_menu'
+      - '[close]'
+  'Sieges':
+    material: hdb-28451
+    slot: 19
+    priority: 2
+    update: true
+    hide_attributes: true
+    display_name: '&b&lSieges'
+    lore:
+      - '&#C1C0C0To attack another town you will need a nation and be the'
+      - '&c&lKing, Co-King or General&R&7 of that nation.'
+      - '&#C1C0C0When you have that rank you can start sieges' 
+      - '&#C1C0C0by placing a colour banner outside of the town border.'
+      - '&7'
+      - '&#C1C0C0Sieges cost &b&l$60 per plot a town owns&r&7.'
+      - '&#C1C0C0To find out the stats of a town ado:'
+      - '&b&l/t (town name).'
+      - '&7'
+      - '&#C1C0C0If a siege has points negativepoints it means'
+      - '&#C1C0C0that the defenders are leading'
+      - '&#C1C0C0If it is positive it means the attackers are in the lead.'
+      - '&7'
+      - '&#C1C0C0You can gain points by &bkilling enemies'
+      - '&r&#C1C0C0 in the siege zone or by capping banner.'
+      - '&#C1C0C0Capping banner is when a player stay at the banner'
+      - '&#C1C0C0for 5 minutes and after that is completed'
+      - '&#C1C0C0They will earn &b3 points every &l20 seconds.'
+      - '&7'
+      - '&#57bcf4&lL&#5bbcf2&le&#5fbcf0&lf&#62bcee&lt &#66bced&lc&#69bdeb&ll&#6cbde9&li&#6fbde7&lc&#73bde5&lk &#76bde3&lt&#79bde2&lo &#7cbde0&lf&#7fbdde&li&#81bddc&ln&#84bddb&ld &#87bdd9&lo&#8abdd7&lu&#8cbdd6&lt &#8fbdd4&lm&#92bdd2&lo&#94bdd1&lr&#97bdcf&le&#9abdce&l!'
+    left_click_commands:
+      - '[player] &chttps://github.com/TownyAdvanced/SiegeWar/wiki/Siege-War-User-Guide'
+      - '[close]'
+  'Wilderness': 
+    material: OAK_LEAVES
+    slot: 29
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lWilderness'
+    lore:
+      - '&#C1C0C0Willderness is &c&ldangerous&r'
+      - '&#C1C0C0this is a place where you could be killed'
+      - '&#C1C0C0In Wilderness:'
+      - '&7'
+      - '&#C1C0C0- &#D36565&lPvp Is enabled'
+      - '&#C1C0C0- &#D36565&lAnyone can build/destroy there'
+      - '&#C1C0C0- &#D36565&lKilling is allowed and'
+      - '&#C1C0C0- &#D36565&lYou can be ambushed any time'
+      - '&7'
+      - '&#C1C0C0Mass griefing is &c&lnot allowed'
+      - '&#C1C0C0to find out more check out the rules.'
+  'Custom Craft': 
+    material: CRAFTING_TABLE
+    slot: 28
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lCustom Crafting Recepies'
+    lore:
+      - '&#C1C0C0Find the Custom Recepies here!'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] custom_recepie_menu'
+      - '[close]'
+  'MONEY': 
+    material: hdb-8210
+    slot: 24
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lMoney'
+    lore:
+      - '&#C1C0C0You can make money by doing many things.'
+      - '&#C1C0C0One of the ways is by &bvoting for the server.'
+      - '&#C1C0C0This not only supports the server but it also'
+      - '&bGives you $50 per vote, a voting crate and a mission'
+      - '&#C1C0C0You can also make money by doing the missions.'
+      - '&7'
+      - '&#C1C0C0Also you can make shops by left clicking a'
+      - '&bchest with the item you would like to sell.'
+      - '&7'
+      - '&#57bcf4&lL&#5bbcf2&le&#5fbcf0&lf&#62bcee&lt &#66bced&lc&#69bdeb&ll&#6cbde9&li&#6fbde7&lc&#73bde5&lk &#76bde3&lt&#79bde2&lo &#7cbde0&lf&#7fbdde&li&#81bddc&ln&#84bddb&ld &#87bdd9&lo&#8abdd7&lu&#8cbdd6&lt &#8fbdd4&lm&#92bdd2&lo&#94bdd1&lr&#97bdcf&le&#9abdce&l!'
+    left_click_commands:
+      - '[message] &7To find out more about money open &bhttps://orbismc.com &7once on the webiste click on &c&lhelp.'
+      - '[close]'
+  'TRADE': 
+    material: GOLD_INGOT
+    slot: 25
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lTrade'
+    lore:
+      - '&#C1C0C0You can sell items to other people'
+      - '&#C1C0C0by trading with them.'
+      - '&#C1C0C0You can do this by doing'
+      - '&c/trade [playername]'
+  'FortBusting': 
+    material: TNT
+    slot: 34
+    priority: true
+    hide_attributes: true
+    display_name: '&c&lFort Busting'
+    lore:
+      - '&#C1C0C0Fort busting is enabled on this server.'
+      - '&#C1C0C0You can use the following to fort bust:'
+      - '&bGrenades, Cannons, Mortars.'
+      - '&#C1C0C0If you want to find out how'
+      - '&cCannons and Mortars work'
+      - '&#C1C0C0Do the following command'
+      - '&c/cannons'
+      - '&7'
+      - '&#C1C0C0If there is a siege on going'
+      - '&#C1C0C0and you would like to participate in it'
+      - '&#C1C0C0you will need &cSoldier rank.'
+      - '&#C1C0C0If you do not have this rank'
+      - '&#C1C0C0you will recieve &awar sickness.'
+      - '&7'
+      - '&#57bcf4&lL&#5bbcf2&le&#5fbcf0&lf&#62bcee&lt &#66bced&lc&#69bdeb&ll&#6cbde9&li&#6fbde7&lc&#73bde5&lk &#76bde3&lt&#79bde2&lo &#7cbde0&lf&#7fbdde&li&#81bddc&ln&#84bddb&ld &#87bdd9&lo&#8abdd7&lu&#8cbdd6&lt &#8fbdd4&lm&#92bdd2&lo&#94bdd1&lr&#97bdcf&le&#9abdce&l!'
+    left_click_commands:
+      - '[message] &7To find out more about cannons watch this video &chttps://youtu.be/g-boSAAQFB0.'
+      - '[close]'
+  'Shop': 
+    material: CARROT_ON_A_STICK
+    slot: 33
+    nbt_int: 'CustomModelData:1'
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lShop'
+    lore:
+      - '&#C1C0C0Here you can buy'
+      - '&cguns, vehicles and explosives.'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le!'
+    left_click_commands:
+      - '[openguimenu] shop_menu'
+      - '[close]'
+  'High SPeed Rails': 
+    material: POWERED_RAIL
+    slot: 38
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lHigh Speed Rails'
+    lore:
+      - '&#C1C0C0There are High speed rails on this server!'
+      - '&#C1C0C0You can use these by placing a &cPowered Rail'
+      - '&#C1C0C0on a &c&lRedstone block.'
+      - '&#C1C0C0This will make the minecraft you are'
+      - '&#C1C0C0riding go 8 times faster then usual.'
+      - '&7'
+  'Scoreboard': 
+    material: DIAMOND_BLOCK
+    slot: 37
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lScoreboard'
+    lore:
+      - '&#C1C0C0The scoreboard gives you many valuabe information'
+      - '&#C1C0C0However you can turn this off by doing'
+      - '&c&l[/sb toggle or /scoreboard toggle].'
+      - '&#C1C0C0This will turn off the scoreboard.' 
+  'Monthly Missions': 
+    material: PAPER
+    slot: 42
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lMonthly Missions'
+    lore:
+      - '&#C1C0C0Every month a &6&lnew &r&#C1C0C0monthly mission starts.'
+      - '&#C1C0C0Anyone on the server can contribute to this mission'
+      - '&#C1C0C0To gain money and many other items.'
+      - '&#C1C0C0There are two types of monthly missions.'
+      - '&#C1C0C0These are &CTurn in &#C1C0C0and &cBreak block.'
+      - '&#C1C0C0In &cturn in &#C1C0C0the player has to give'
+      - '&#C1C0C0the items required for the mission.'
+      - '&#C1C0C0In the &cBreak blocks,&#C1C0C0 players have to'
+      - '&#C1C0C0Break the specific block that is assigned.'
+      - '&c&lTo see the current montly missions do'
+      - '&c&l[/monthlymissions or /mm]'
+      - '&7'
+  'Armour': 
+    material: IRON_CHESTPLATE
+    slot: 43
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lSpecial Kits'
+    lore:
+      - '&#C1C0C0Wearing &#FF0202&lFull iron Armour'
+      - '&#C1C0C0Wearing this will grant you with the following effects:'
+      - '&#87EC42- Haste I'
+      - '&#87EC42- Speed I'
+      - '&#87EC42- Fire resistance'
+      - '&7'
+      - '&#C1C0C0Wearing &#FF0202&lFull Leather'
+      - '&#C1C0C0Wearing this will grant you with the following effect:'
+      - '&#87EC42- Invisibility on dynmap.'
+      - '&7'
+  'Coloured armour': 
+    material: LEATHER_CHESTPLATE
+    slot: 40
+    priority: true
+    hide_attributes: true
+    display_name: '&b&lAlly&7/&c&lEnemies &7&lArmour'
+    lore:
+      - '&#C1C0C0When a nation is enemied or allied'
+      - '&#C1C0C0To your nation their armour will'
+      - '&#C1C0C0change how depending on the relation to your nation.'
+      - '&#C1C0C0If said nation is allied to you'
+      - '&#C1C0C0their armour will appear &9&lBlue.'
+      - '&#C1C0C0However if you are enemied to the nation'
+      - '&#C1C0C0their armour will appear &c&lRed.'
+      - '&#C1C0C0'
+      - '&#C1C0C0To turn this off simply do '
+      - '&c&l[/settings] &#C1C0C0and disable this feature.'
+      - '&7'   
+
+
+
+
+
+
+   
+   

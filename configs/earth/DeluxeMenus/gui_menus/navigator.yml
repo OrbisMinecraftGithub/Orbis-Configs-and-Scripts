@@ -1,0 +1,64 @@
+menu_title: '&3> &b&lNavigator'
+open_command:
+  - nation command help
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
+ &bNavigator!'
+size: 27
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'Moss Block4':
+    material: DIRT
+    slot: 11
+    display_name: '&b&LTown spawns'
+    lore: 
+      - '&7As a &bresident, nation member or an ally'
+      - '&7you can spawn to different towns using the command'
+      - '&c&l/t spawn [town name]'
+  'Moss Block3':
+    material: STONE
+    slot: 12
+    display_name: '&b&LNation spawns'
+    lore: 
+      - '&7Anyone except &cenemied players of the nation'
+      - '&ccannot use n spawn, &7however others can do'
+      - '&c&l/n spawn [town name]'
+  'Moss Block2':
+    material: CAMPFIRE
+    slot: 13
+    display_name: '&b&LTowny Camps'
+    lore: 
+      - '&7Create a camp by placing a &c&lCampfire'
+      - '&7in the desired area you would like it in'
+      - '&cThis camp will last for &l24h'
+  'Earth':
+    material: hdb-38497
+    slot: 14
+    display_name: '&a&LTravel Around the World'
+    lore: 
+      - '&7Anyone can do the simple command'
+      - '&c&l/travel [continent]'
+      - '&7This command will take you to'
+      - '&7the &bcontinent you selected.'
+  'Go back': 
+    material: BARRIER
+    slot: 26
+    priority: 2
+    update: true
+    hide_attributes:  true
+    display_name: '&c&lExit Back'
+    lore:
+      - '&7This will take you back to the &bHelp Menu.'
+      - '&7'
+      - '&#76aff2&lL&#77b0ef&le&#78b0eb&lf&#79b1e8&lt &#7bb1e4&lc&#7cb1e1&ll&#7fb2dd&li&#81b2da&lc&#84b2d6&lk &#86b2d3&lt&#89b2cf&lo &#8cb2cc&lp&#8fb2c9&lr&#93b2c5&lo&#96b1c2&lc&#99b1bf&le&#9db1bc&le&#a0b0b9&ld&#a4b0b6&l!'
+    left_click_commands:
+      - '[openguimenu] help_menu'
+      - '[close]'
+

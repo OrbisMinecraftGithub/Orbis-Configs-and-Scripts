@@ -1,0 +1,183 @@
+menu_title: '&#8c3e0d&l> &#8c3e0d&lE&#95480e&lx&#9f520f&lp&#a85c10&ll&#b06711&lo&#b97213&ls&#c17d14&li&#c88816&lv&#d09319&le &#d69f1c&lS&#ddab1f&lh&#e3b724&lo&#e8c329&lp'
+open_command:
+  - nation command help
+open_commands:
+  - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &f&lOpening
+ &#e7571b&lG&#e9631a&lu&#ea6f1b&ln &#ec791d&lS&#ed8420&lh&#ee8e24&lo&#ee9829&lp &#efa230&lM&#efab37&le&#f0b53f&ln&#f0be47&lu&#f0be47&l!'
+size: 26
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'AK1':
+    material: FIREWORK_ROCKET
+    slot: 11
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LOrbital Strike'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&#ff5555&lP&#f5766f&Lr&#e89189&li&#d7a9a4&lc&#DABABA&le: &r&f20000'
+      - '&r'
+      - '&#ff5555&lL&#fe5b59&le&#fc615d&lf&#fb6762&lt &#f96c66&lc&#f7716a&ll&#f5766f&li&#f37b73&lc&#f17f77&lk &#ef847c&lt&#ed8880&lo &#eb8d85&lc&#e89189&lo&#e6958d&ln&#e39992&lt&#e19d96&li&#dea19b&ln&#dba5a0&lu&#d7a9a4&le&e'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[console]ex give to:<player[%player_name%].inventory> <item[space_laser_item]>'
+      - '[console] money take %player_name% 20000'
+    left_click_requirement:
+      requirements:
+        anything_here:
+          type: has money
+          amount: 20000
+      deny_commands:
+      - '[message] &bShop &7>> &7You need &c$20000 &7to buy &c1 Ortbital Strike.'
+  'AK':
+    material: STONE_SWORD
+    slot: 12
+    nbt_int: 'CustomModelData:10'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LSatchel Charge'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&#ff5555&lP&#f5766f&Lr&#e89189&li&#d7a9a4&lc&#DABABA&le: &r&f1500'
+      - '&r'
+      - '&#ff5555&lL&#fe5b59&le&#fc615d&lf&#fb6762&lt &#f96c66&lc&#f7716a&ll&#f5766f&li&#f37b73&lc&#f17f77&lk &#ef847c&lt&#ed8880&lo &#eb8d85&lc&#e89189&lo&#e6958d&ln&#e39992&lt&#e19d96&li&#dea19b&ln&#dba5a0&lu&#d7a9a4&le&e'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[console] csplus give SATCHEL %player_name%'
+      - '[console] money take %player_name% 1500'
+    left_click_requirement:
+      requirements:
+        anything_here:
+          type: has money
+          amount: 1500
+      deny_commands:
+      - '[message] &bShop &7>> &7You need &c$1500 &7to buy &c1 Satchel Charge.'
+  'AK74U':
+    material: SNOWBALL
+    slot: 13
+    nbt_int: 'CustomModelData:51'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LGrenade'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&#ff5555&lP&#f5766f&Lr&#e89189&li&#d7a9a4&lc&#DABABA&le&l: &r&f$350'
+      - '&r'
+      - '&#ff5555&lL&#fe5b59&le&#fc615d&lf&#fb6762&lt &#f96c66&lc&#f7716a&ll&#f5766f&li&#f37b73&lc&#f17f77&lk &#ef847c&lt&#ed8880&lo &#eb8d85&lc&#e89189&lo&#e6958d&ln&#e39992&lt&#e19d96&li&#dea19b&ln&#dba5a0&lu&#d7a9a4&le&e'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[console] csplus give GRENADE %player_name%'
+      - '[console] money take %player_name% 350'
+    left_click_requirement:
+      requirements:
+        anything_here:
+          type: has money
+          amount: 350
+      deny_commands:
+      - '[message] &bShop &7>> &7You need &c$350 &7to buy &c1 Grenade'
+  'UZI':
+    material: SNOWBALL
+    slot: 15
+    nbt_int: 'CustomModelData:52'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LMolotov'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&#ff5555&lP&#f5766f&Lr&#e89189&li&#d7a9a4&lc&#DABABA&le&l: &r&f$700'
+      - '&r'
+      - '&#ff5555&lL&#fe5b59&le&#fc615d&lf&#fb6762&lt &#f96c66&lc&#f7716a&ll&#f5766f&li&#f37b73&lc&#f17f77&lk &#ef847c&lt&#ed8880&lo &#eb8d85&lc&#e89189&lo&#e6958d&ln&#e39992&lt&#e19d96&li&#dea19b&ln&#dba5a0&lu&#d7a9a4&le&e'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[console] csplus give MOLOTOV %player_name%'
+      - '[console] money take %player_name% 700'
+    left_click_requirement:
+      requirements:
+        anything_here:
+          type: has money
+          amount: 700
+      deny_commands:
+      - '[message] &bShop &7>> &7You need &c$1200 &7to buy &c1 Molotov.'
+  'p90':
+    material: SNOWBALL
+    slot: 14
+    nbt_int: 'CustomModelData:50'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LFlashbang'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&#ff5555&lP&#f5766f&Lr&#e89189&li&#d7a9a4&lc&#DABABA&le&l: &r&f$500'
+      - '&r'
+      - '&#ff5555&lL&#fe5b59&le&#fc615d&lf&#fb6762&lt &#f96c66&lc&#f7716a&ll&#f5766f&li&#f37b73&lc&#f17f77&lk &#ef847c&lt&#ed8880&lo &#eb8d85&lc&#e89189&lo&#e6958d&ln&#e39992&lt&#e19d96&li&#dea19b&ln&#dba5a0&lu&#d7a9a4&le&e'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[console] csplus give FLASHBANG %player_name%'
+      - '[console] money take %player_name% 500'
+    left_click_requirement:
+      requirements:
+        anything_here:
+          type: has money
+          amount: 500
+      deny_commands:
+      - '[message] &bShop &7>> &7You need &c$500 &7to buy &c1 P90 Submachine Gun.'
+  'IED':
+    material: STONE_SWORD
+    slot: 21
+    nbt_int: 'CustomModelData:11'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LIED'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&f&lCan be found in &C&lMilitary &f&lcrates.'
+      - '&r'
+      - '&#9FB0BB&m—————————————————'    
+  'IED2':
+    material: STONE_SWORD
+    slot: 22
+    nbt_int: 'CustomModelData:12'
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#F1624E&LC4'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&f&lCan be found in &C&lMilitary &f&lcrates.'
+      - '&r'
+      - '&#9FB0BB&m—————————————————'          
+  'Go back': 
+    material: BARRIER
+    slot: 23
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&#B90D0D&lExit Back'
+    lore:
+      - '&#9FB0BB&m—————————————————'
+      - '&7This will take you back to the &#86F0F5&lShop Menu.'
+      - '&7'
+      - '&#76aff2&lL&#77b0ef&le&#78b0eb&lf&#79b1e8&lt &#7bb1e4&lc&#7cb1e1&ll&#7fb2dd&li&#81b2da&lc&#84b2d6&lk &#86b2d3&lt&#89b2cf&lo &#8cb2cc&lp&#8fb2c9&lr&#93b2c5&lo&#96b1c2&lc&#99b1bf&le&#9db1bc&le&#a0b0b9&ld&#a4b0b6&l!'
+      - '&#9FB0BB&m—————————————————'
+    left_click_commands:
+      - '[openguimenu] shop_menu'
+      - '[close]'     
+  'placeholder':
+    material: GRAY_STAINED_GLASS_PANE
+    slots: 
+      - 0-26
+    priority: 2
+    display_name: §
