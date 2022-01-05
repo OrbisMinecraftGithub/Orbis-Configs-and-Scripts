@@ -18,6 +18,17 @@ command_gamemode_spectator:
     - else:
         - narrate "<&c>You do not have permission for that command."
 
+command_gamemode_spectator_events:
+    type: world
+    debug: false
+    events:
+        on player teleports:
+        - if <player.has_flag[staff.spectator]> && <player.gamemode> == SPECTATOR:
+            - adjust <player> gamemode:survival
+            - determine passively destination:<player.flag[staff.spectator]>
+            - flag <player> staff.spectator:!
+            - narrate "<&e>You are now in survival."
+
 command_gamemode_creative:
     type: command
     name: creative
