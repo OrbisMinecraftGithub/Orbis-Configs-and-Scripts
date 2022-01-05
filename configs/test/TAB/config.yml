@@ -119,6 +119,7 @@ scoreboard:
   delay-on-join-milliseconds: 5
   respect-other-plugins: true
   disable-in-worlds:
+    - disabledworld
     scoreboard1:
       title: "Default"
       lines:
