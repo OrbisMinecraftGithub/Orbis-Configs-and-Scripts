@@ -9,8 +9,8 @@ header-footer:
   &#00a2ff&lt&#00acff&lo &#00b6ff&lO&#00bfff&lr&#00c8fd&lb&#00d0f8&li&#0dd8f4&ls &f&lTowny
   &#676C6D&l)&#676C6D&l&m              '
     - ''
-    - '%online_players%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
-    - '&#09A1CEVote Party: &f%votes_until_party%&#1788E7/&f100'
+    - '&f%server_online%&#1788E7/&f%server_max_players% &#09A1CEPlayers Connected &#676C6D&l'
+    - '&#09A1CEVote Party: &f%denizen_<server.flag[votes].mod[100].sub[100].abs>%&#1788E7/&f100'
   footer:
     - ''
     - '&f&lWebsite&r&#0087ff ┃ &#00a9ffo&#00b1ffr&#00b9ffb&#00c1ffi&#00c8ffs&#00cffbmc&#00d6f6.&#00dcf2c&#00e3edo&#00e9eam '
