@@ -122,7 +122,7 @@ scoreboard:
     - disabledworld
   scoreboards:
     scoreboard1:
-      title: "§"
+      title: "%animation:ServerName%"
       lines:
       - '             %animation:ServerName%'
       - '  &#58ee0a&l&m-&#51ef21&l&m-&#48ef2f&l&m-&#40f03a&l&m-&#36f043&l&m-&#2af04c&l&m-&#1bf154&l&m-&#00f15c&l&m-&#00f163&l&m-&#00f26a&l&m-&#00f271&l&m-&#00f277&l&m-&#00f27e&l&m-&#00f384&l&m-&#00f38a&l&m-&#00f38f&l&m-&#00f395&l&m-&#00f39b&l&m-&#00f3a0&l&m-&r  '
