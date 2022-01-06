@@ -10,7 +10,7 @@ AK47:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 5
+        Projectile_Damage: 6
         Bullet_Spread: 1
     Sneak:
         Enable: false
@@ -98,7 +98,7 @@ M4A1:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 4
+        Projectile_Damage: 5
         Bullet_Spread: 0.5
         Remove_Bullet_Drop: true
     Sneak:
@@ -149,7 +149,7 @@ SPAS12:
         Projectile_Type: snowball
         Remove_Bullet_Drop: false
         Projectile_Speed: 45
-        Projectile_Damage: 6
+        Projectile_Damage: 7
         Bullet_Spread: 1
         Removal_Or_Drag_Delay: 7-true
     Headshot:
@@ -192,7 +192,7 @@ OLYMPIA:
         Projectile_Amount: 8
         Projectile_Type: snowball
         Projectile_Speed: 70
-        Projectile_Damage: 9
+        Projectile_Damage: 10
         Bullet_Spread: 6
         Remove_Bullet_Drop: true
         Removal_Or_Drag_Delay: 2-true
@@ -292,7 +292,7 @@ M16:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 70
-        Projectile_Damage: 5
+        Projectile_Damage: 6
         Bullet_Spread: 0.4
     Sneak:
         Enable: true
@@ -339,7 +339,7 @@ HUNTING_RIFLE:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 145
-        Projectile_Damage: 12
+        Projectile_Damage: 14
         Bullet_Spread: 3
     Reload:
         Enable: true
@@ -433,7 +433,7 @@ FAL:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 5
+        Projectile_Damage: 6
         Remove_Bullet_Drop: true
     Sneak:
         Enable: true
@@ -480,7 +480,7 @@ AK74U:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 4
+        Projectile_Damage: 5
         Bullet_Spread: 0.2
     Sneak:
         Enable: true
@@ -523,7 +523,7 @@ AWP:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 170
-        Projectile_Damage: 21
+        Projectile_Damage: 23
         Bullet_Spread: 2
     Reload:
         Enable: true
@@ -613,7 +613,7 @@ UZI:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 70
-        Projectile_Damage: 4
+        Projectile_Damage: 5
         Removal_Or_Drag_Delay: 5-true
         Bullet_Spread: 0.75
     Fully_Automatic:
@@ -691,7 +691,7 @@ UMP:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 4
+        Projectile_Damage: 6
         Removal_Or_Drag_Delay: 8-true
         Bullet_Spread: 1.1
     Fully_Automatic:
@@ -729,7 +729,7 @@ L85A2:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 95
-        Projectile_Damage: 5
+        Projectile_Damage: 6
         Bullet_Spread: 0.5
     Sneak:
         Enable: false
@@ -892,7 +892,7 @@ M1014:
         Projectile_Type: snowball
         Remove_Bullet_Drop: false
         Projectile_Speed: 65
-        Projectile_Damage: 4
+        Projectile_Damage: 6
         Bullet_Spread: 3
         Removal_Or_Drag_Delay: 8-true
     Headshot:
@@ -934,7 +934,7 @@ M249:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 105
-        Projectile_Damage: 6
+        Projectile_Damage: 7
         Bullet_Spread: 0.7
     Fully_Automatic:
         Enable: true
@@ -972,7 +972,7 @@ P90:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 3
+        Projectile_Damage: 5
         Bullet_Spread: 1.75
     Sneak:
         Enable: true
@@ -1013,7 +1013,7 @@ FAMAS:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 95
-        Projectile_Damage: 3
+        Projectile_Damage: 5
         Bullet_Spread: 0.5
     Sneak:
         Enable: false
