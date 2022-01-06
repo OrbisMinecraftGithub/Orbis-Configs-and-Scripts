@@ -1,7 +1,7 @@
 command_fix_items_in_my_inventory:
     type: command
     name: fixmyitems
-    debug: false
+    debug: true
     script:
     - foreach <player.inventory.map_slots> as:v key:k:
         - if <[k].all_raw_nbt.get[PublicBukkitValues].get[crackshotplus<&co>wn].exists>:
