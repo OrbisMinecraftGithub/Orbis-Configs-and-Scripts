@@ -202,7 +202,7 @@ pool:
             total: 950
             
   4: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
-    name: 'tmission1'
+    name: 'tmission4'
     #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
     #type.
     type: 'TOWN'
@@ -265,8 +265,8 @@ pool:
             type: MONEY
             total: 1200
             
-  1: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
-    name: 'tmission1'
+  5: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'tmission5'
     #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
     #type.
     type: 'TOWN'
