@@ -353,6 +353,8 @@ HUNTING_RIFLE:
         Enable: true
         Ammo_Item_ID: ghast_tear
         Ammo_Name_Check: §g§6Magazine
+        Take_Ammo_On_Reload: true
+        Take_Ammo_As_Magazine: true
     Firearm_Action:
         Type: bolt
         Open_Duration: 12
