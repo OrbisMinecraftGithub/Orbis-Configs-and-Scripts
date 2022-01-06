@@ -14,7 +14,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '2d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -78,7 +78,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '2d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -143,7 +143,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '2d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -207,7 +207,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '2d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -271,7 +271,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '3d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -335,7 +335,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '3d'
+    duration: '4d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
