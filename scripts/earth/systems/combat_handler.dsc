@@ -132,7 +132,7 @@ run_combat_check:
     - if <[victim].has_flag[combat]||false>:
         - define yes:false
         - determine passively cancelled:false
-    - if !<[yes]> && <context.cancelled.not>:
+    - if <context.cancelled.not>:
         - if !<[attacker].has_flag[combat]>:
             - narrate "<&b>You are now in combat!" targets:<list[<[attacker]>]>
             - runlater player_leaves_combat def:<[attacker]> delay:46s
