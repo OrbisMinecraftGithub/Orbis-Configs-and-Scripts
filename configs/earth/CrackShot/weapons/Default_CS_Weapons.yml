@@ -10,7 +10,7 @@ AK47:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 6
+        Projectile_Damage: 7
         Bullet_Spread: 1
     Sneak:
         Enable: false
@@ -34,10 +34,10 @@ AK47:
         Ammo_Name_Check: §g§6Magazine
     Headshot:
         Enable: true
-        Bonus_Damage: 3
+        Bonus_Damage: 4
     Backstab:
-        Enable: false
-        Bonus_Damage: 2
+        Enable: true
+        Bonus_Damage: 5
     Abilities:
         Reset_Hit_Cooldown: true
         No_Vertical_Recoil: true
@@ -98,7 +98,7 @@ M4A1:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 5
+        Projectile_Damage: 9
         Bullet_Spread: 0.5
         Remove_Bullet_Drop: true
     Sneak:
@@ -121,7 +121,7 @@ M4A1:
         Zoom_Bullet_Spread: 0.2
     Headshot:
         Enable: true
-        Bonus_Damage: 3
+        Bonus_Damage: 9
     Backstab:
         Enable: false
         Bonus_Damage: 0
@@ -149,12 +149,12 @@ SPAS12:
         Projectile_Type: snowball
         Remove_Bullet_Drop: false
         Projectile_Speed: 45
-        Projectile_Damage: 7
+        Projectile_Damage: 15
         Bullet_Spread: 1
         Removal_Or_Drag_Delay: 7-true
     Headshot:
         Enable: true
-        Bonus_Damage: 3
+        Bonus_Damage: 5
     Reload:
         Enable: true
         Reload_Amount: 8
