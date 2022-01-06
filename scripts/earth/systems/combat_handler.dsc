@@ -127,6 +127,8 @@ run_combat_check:
     - if <[victim].name> == AJ_4real:
         - adjust <queue> linked_player:<[victim]>
         - narrate "<context.cause> <[attacker].entity_type>"
+        - if <[weapon]> == RPG:
+            - stop
     - if <context.cancelled.not>:
         - if !<[attacker].has_flag[combat]>:
             - narrate "<&b>You are now in combat!" targets:<list[<[attacker]>]>
