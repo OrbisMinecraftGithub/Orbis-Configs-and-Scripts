@@ -249,7 +249,7 @@ items:
     lore:
       - '&#C1C0C0The scoreboard gives you many valuabe information'
       - '&#C1C0C0However you can turn this off by doing'
-      - '&c&l[/sb toggle or /scoreboard toggle].'
+      - '&c&l[/sb].'
       - '&#C1C0C0This will turn off the scoreboard.' 
   'Monthly Missions': 
     material: PAPER

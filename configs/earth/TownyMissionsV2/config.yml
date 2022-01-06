@@ -6,4 +6,4 @@ use-storage: true
 storage-type: SQLITE
 
 #Whether to or not to run the mission pool at start
-start-pool: false
+start-pool: true
