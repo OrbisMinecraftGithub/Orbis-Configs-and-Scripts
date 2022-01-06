@@ -91,46 +91,34 @@ run_combat_check:
     type: task
     debug: false
     script:
-    - define yes:false
     - if <[attacker]> == <[victim]>:
         - stop
     - if !<[attacker].is_player> || !<[victim].is_player>:
         - stop
     - if <[attacker].vehicle.entity_type.equals[ARMOR_STAND]||false>:
-        - define yes:true
         - determine cancelled
     - if <[attacker].has_flag[no_damage]> || <[attacker].has_flag[no_pvp_damage]>:
-        - define yes:true
         - determine cancelled
     - if <[attacker].mcmmo.party.equals[<[victim].mcmmo.party>]||false>:
-        - define yes:true
         - determine cancelled
     # - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
     #     - determine cancelled
     - if <[victim].has_flag[pvp.protection.chunk.<[victim].location.chunk>]>:
-        - define yes:true
         - determine cancelled
     - if <[victim].has_flag[pvp.protection.town.<[victim].location.town||>]>:
-        - define yes:true
         - determine cancelled
     - if <[attacker].town.name||null1> == <[victim].town.name||null2>:
-        - define yes:true
         - determine cancelled
     - if <[attacker].nation.name||null1> == <[victim].nation.name||null2>:
-        - define yes:true
         - determine cancelled
     - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
         - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
-            - define yes:false
             - determine passively cancelled:false
     - if <[attacker].location.town.pvp||false> && <[victim].location.town.pvp||false>:
-        - define yes:false
         - determine passively cancelled:false
     - if <[attacker].location.chunk.pvp||false> && <[victim].location.chunk.pvp||false>:
-        - define yes:false
         - determine passively cancelled:false
     - if <[victim].has_flag[combat]||false>:
-        - define yes:false
         - determine passively cancelled:false
     - if <context.cancelled.not>:
         - if !<[attacker].has_flag[combat]>:
