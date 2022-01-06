@@ -111,11 +111,11 @@ pool:
         material: 'PUMPKIN'
         rewards:
           1:
-	    type: MONEY
-	    total: 100
-          2: 
+            type: MONEY
+            total: 1000
+          2:
             type: EXP
-	    total: 2000
+            total: 5000
       2:
         definition: 'GATHER'
         goal: 100
