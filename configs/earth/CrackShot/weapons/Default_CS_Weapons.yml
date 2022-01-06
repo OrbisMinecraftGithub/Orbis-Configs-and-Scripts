@@ -1000,8 +1000,8 @@ P90:
         Zoom_Amount: 2
         Zoom_Bullet_Spread: 1
     Backstab:
-        Enable: false
-        Bonus_Damage: 1
+        Enable: true
+        Bonus_Damage: 2
     Extras:
         Disable_Underwater: false
 
