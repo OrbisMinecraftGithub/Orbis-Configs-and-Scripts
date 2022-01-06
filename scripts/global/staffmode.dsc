@@ -270,6 +270,7 @@ get_debug_info:
             - define "info:|:Click to copy to clipboard."
             - define "info:|:Value: <[data]>"
             - determine <&click[<[data]>].type[COPY_TO_CLIPBOARD]><&hover[<[info].separated_by[<&nl><&r>]>].type[SHOW_TEXT]><[definition]><&end_hover><&end_click>
+
 command_gamemode_spectator:
     type: command
     name: spectator
@@ -281,11 +282,13 @@ command_gamemode_spectator:
         - if <player.has_flag[staff.spectator]>:
             - adjust <player> gamemode:survival
             - narrate "<&e>You are now in survival."
+            - execute as_server "dynmap show <player.name>"
             - teleport <player> <player.flag[staff.spectator].as_location>
             - flag <player> staff.spectator:!
         - else:
             - adjust <player> gamemode:spectator
             - narrate "<&e>You are now in spectator."
+            - execute as_server "dynmap hide <player.name>"
             - flag <player> staff.spectator:<player.location>
     - else:
         - narrate "<&c>You do not have permission for that command."
@@ -299,6 +302,7 @@ command_gamemode_spectator_events:
             - adjust <player> gamemode:survival
             - determine passively destination:<player.flag[staff.spectator]>
             - flag <player> staff.spectator:!
+            - execute as_server "dynmap show <player.name>"
             - narrate "<&e>You are now in survival."
 
 command_gamemode_creative:
