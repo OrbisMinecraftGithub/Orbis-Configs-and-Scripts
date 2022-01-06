@@ -240,7 +240,11 @@ command_party:
                 - if <[kicked]> == null:
                     - narrate "<&c>Player not found."
                     - stop
-            - if <yaml[parties].read[players.<[kicked].uuid>]||null> != <[party]> && <yaml[parties].read[parties.<[party]>.members].contains[<[kicked]>]>:
+            - define current <yaml[parties].read[players.<[kicked].uuid>]||>
+            - if <[current]> != <[party]> && <yaml[parties].read[parties.<[party]>.members].contains[<[kicked]>]> &&:
+                - narrate "<&c>That player is not in your party."
+                - stop
+            - if <[current].length> == 0:
                 - narrate "<&c>That player is not in your party."
                 - stop
             - if <yaml[parties].read[parties.<[party]>.leader]> != <player>:
