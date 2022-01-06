@@ -242,12 +242,12 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
-        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        on crackshot weapon damages entity bukkit_priority:lowest:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
         - inject run_combat_check_lowest
-        on entity damages entity ignorecancelled:true bukkit_priority:lowest:
+        on entity damages entity bukkit_priority:lowest:
         - define victim <context.entity>
         - define attacker <context.damager>
         - inject run_combat_check_lowest
