@@ -109,13 +109,13 @@ pool:
         definition: 'GATHER'
         goal: 1000
         material: 'PUMPKIN'
-		    rewards:
-		      1:
-		        type: MONEY
-			      total: 100
-		      2: 
-		        type: EXP
-			      total: 2000
+        rewards:
+          1:
+	    type: MONEY
+	    total: 100
+          2: 
+            type: EXP
+	    total: 2000
       2:
         definition: 'GATHER'
         goal: 100
