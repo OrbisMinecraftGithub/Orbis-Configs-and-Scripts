@@ -87,7 +87,7 @@ command_pvp_off:
     - flag <player> no_damage:!
     - narrate "You do not have PvP protection."
 
-run_combat_check:
+run_combat_check_lowest:
     type: task
     debug: false
     script:
@@ -111,6 +111,15 @@ run_combat_check:
         - determine cancelled
     - if <[attacker].nation.name||null1> == <[victim].nation.name||null2>:
         - determine cancelled
+
+run_combat_check_highest:
+    type: task
+    debug: false
+    script:
+    - if <[attacker]> == <[victim]>:
+        - stop
+    - if !<[attacker].is_player> || !<[victim].is_player>:
+        - stop
     - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
         - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
             - determine passively cancelled:false
@@ -120,6 +129,15 @@ run_combat_check:
         - determine passively cancelled:false
     - if <[victim].has_flag[combat]||false>:
         - determine passively cancelled:false
+
+run_combat_check_monitor:
+    type: task
+    debug: false
+    script:
+    - if <[attacker]> == <[victim]>:
+        - stop
+    - if !<[attacker].is_player> || !<[victim].is_player>:
+        - stop
     - if <context.cancelled.not>:
         - if !<[attacker].has_flag[combat]>:
             - narrate "<&b>You are now in combat!" targets:<list[<[attacker]>]>
@@ -224,20 +242,33 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
-        # on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
-        # - define victim <context.victim>
-        # - define attacker <player>
-        # - define damage <context.damage>
-        # - flag <context.damager> damage:<proc[calculate_damage].context[<[attacker]>|<[victim]>|<[damage]>]>
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        - define victim <context.victim>
+        - define attacker <player>
+        - define weapon <context.weapon>
+        - inject run_combat_check_lowest
+        on entity damages entity ignorecancelled:true bukkit_priority:lowest:
+        - define victim <context.entity>
+        - define attacker <context.damager>
+        - inject run_combat_check_lowest
         on crackshot weapon damages entity ignorecancelled:true bukkit_priority:highest:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
-        - inject run_combat_check
+        - inject run_combat_check_normal
         on entity damages entity ignorecancelled:true bukkit_priority:highest:
         - define victim <context.entity>
         - define attacker <context.damager>
-        - inject run_combat_check
+        - inject run_combat_check_normal
+        on crackshot weapon damages entity bukkit_priority:monitor:
+        - define victim <context.victim>
+        - define attacker <player>
+        - define weapon <context.weapon>
+        - inject run_combat_check_monitor
+        on entity damages entity bukkit_priority:monitor:
+        - define victim <context.entity>
+        - define attacker <context.damager>
+        - inject run_combat_check_monitor
         on player quits:
         - if <player.has_flag[combat]>:
             - flag <player> kill_on_login
