@@ -88,6 +88,9 @@ spy_events:
         tell:
             target: 2
             message: 3
+        pm:
+            target: 2
+            message: 3
         msg:
             target: 2
             message: 3
@@ -103,9 +106,11 @@ spy_events:
         - define command <context.command><&sp><context.args.space_separated>
         - define use <script.list_keys[message_commands].filter_tag[<[command].starts_with[<[filter_value]>]>]>
         - if !<[use].is_empty>:
-            - define target <[command].split[<&sp>].get[<script.data_key[message_commands.<[use].first>.target]>]>
+            - define target <[command].split[<&sp>].get[<script.data_key[message_commands.<[use].first>.target]>]||<player.flag[reply.last]||Unknown>>
             - define message <[command].split[<&sp>].remove[0].to[<script.data_key[message_commands.<[use].first>.message].sub[1]>].space_separated>
-            - announce to_flagged:messagespy "<&c>[Message]<&r> <player.name> -<&gt> <[target]> : <[message]>"
+            - announce to_flagged:messagespy "<&c>[Message] <&r><player.name> -<&gt> <[target]> : <[message]>"
+            - if <server.match_player[<[target]>].exists>:
+                - flag <server.match_player[<[target]>]> reply.last:<player>
             - stop
         - if <context.source_type||null> == PLAYER:
             - ratelimit 1t <player>
