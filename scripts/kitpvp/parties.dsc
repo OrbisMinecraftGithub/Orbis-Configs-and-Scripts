@@ -234,9 +234,9 @@ command_party:
             - if <[party].length> == 0:
                 - narrate "<&c>You are not in a party."
                 - stop
-            - define kicked <server.match_player[<[args].get[2]>]||null>
+            - define kicked <server.match_player[<[args].get[2]>]||<server.match_offline_player[<[args].get[2]>]||null>>
             - if <[kicked]> == null:
-                - define kicked <server.match_player[<[args].get[2]>]||null>
+                - define kicked <server.match_player[<[args].get[2]>]||<server.match_offline_player[<[args].get[2]>]||null>>
                 - if <[kicked]> == null:
                     - narrate "<&c>Player not found."
                     - stop
