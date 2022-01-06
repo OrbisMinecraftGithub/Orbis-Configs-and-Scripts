@@ -335,7 +335,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '2d'
+    duration: '3d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -353,19 +353,19 @@ pool:
     goals:
       1:
         definition: 'GATHER'
-        goal: 750
-        material: 'GOLD INGOT'
+        goal: 1200
+        material: 'IRON_INGOT'
         rewards:
           1:
             type: MONEY
-            total: 3000
+            total: 1200
           2:
             type: EXP
             total: 5000
       2:
         definition: 'GATHER'
-        goal: 1000
-        material: 'IRON INGOT'
+        goal: 500
+        material: 'GOLD_INGOT'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
         #  - MONEY <- Deposits money to the players account
@@ -385,9 +385,9 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 300
+        goal: 400
         material: 'DIAMOND'
         rewards:
           1:
             type: MONEY
-            total: 3500
+            total: 3000
