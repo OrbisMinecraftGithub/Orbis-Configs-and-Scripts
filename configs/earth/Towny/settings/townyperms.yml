@@ -24,9 +24,9 @@ nomad:
 - towny.chat.local
 - towny.command.nation.list
 - shop.access.wilderness
+- townymissions.use
 - towny.command.towny.prices
 - towny.command.towny.tree
-- TownyMissions.Use
 - towny.command.towny.time
 - towny.command.towny.universe
 - towny.command.town.online
