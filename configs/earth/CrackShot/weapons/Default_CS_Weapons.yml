@@ -480,7 +480,7 @@ AK74U:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 5
+        Projectile_Damage: 6
         Bullet_Spread: 0.2
     Sneak:
         Enable: true
