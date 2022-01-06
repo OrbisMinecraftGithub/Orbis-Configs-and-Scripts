@@ -235,6 +235,7 @@ OLYMPIA:
     Extras:
         Disable_Underwater: false
 
+44magnum:
     Item_Information:
         Item_Name: "&e.44 Magnum"
         Item_Type: CARROT_ON_A_STICK
