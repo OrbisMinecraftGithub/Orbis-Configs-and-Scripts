@@ -344,7 +344,7 @@ HUNTING_RIFLE:
     Reload:
         Enable: true
         Reload_Amount: 7
-        Reload_Bullets_Individually: true
+        Reload_Bullets_Individually: false
         Reload_Duration: 11
         Reload_Shoot_Delay: 15
         Take_Ammo_On_Reload: true
@@ -353,7 +353,6 @@ HUNTING_RIFLE:
         Enable: true
         Ammo_Item_ID: ghast_tear
         Ammo_Name_Check: §g§6Magazine
-        Take_Ammo_As_Magazine: true
     Firearm_Action:
         Type: bolt
         Open_Duration: 12
