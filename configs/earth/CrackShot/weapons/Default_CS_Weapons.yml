@@ -528,7 +528,7 @@ AWP:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 170
-        Projectile_Damage: 23
+        Projectile_Damage: 27
         Bullet_Spread: 2
     Reload:
         Enable: true
@@ -554,7 +554,7 @@ AWP:
         Fire_Rate: 50
     Headshot:
         Enable: true
-        Bonus_Damage: 6
+        Bonus_Damage: 12
     Scope:
         Enable: true
         Zoom_Amount: 7
@@ -849,7 +849,7 @@ BARRETT:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 210
-        Projectile_Damage: 27
+        Projectile_Damage: 35
         Bullet_Spread: 2.5
     Reload:
         Enable: true
@@ -872,7 +872,7 @@ BARRETT:
         Bullet_Spread: 0.3
     Headshot:
         Enable: true
-        Bonus_Damage: 6
+        Bonus_Damage: 12
     Scope:
         Enable: true
         Zoom_Amount: 10
