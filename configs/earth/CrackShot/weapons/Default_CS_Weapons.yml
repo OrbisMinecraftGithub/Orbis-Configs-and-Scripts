@@ -482,6 +482,9 @@ AK74U:
         Projectile_Speed: 90
         Projectile_Damage: 6
         Bullet_Spread: 0.2
+    Headshot:
+        Enable: true
+        Bonus_Damage: 4        
     Sneak:
         Enable: true
         Bullet_Spread: 1
