@@ -82,10 +82,17 @@ pool:
           1:
             type: MONEY
             total: 150
-  2:
-    name: 'test'
+  2: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'test-2'
+    #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
+    #type.
     type: 'TOWN'
-    duration: '10m'
+    #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
+    #for a mission with infinite duration
+    duration: '21m'
+    #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
+    #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
+    #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
     rewards:
       1:
         type: GOVERNMENT_BANK
@@ -93,22 +100,26 @@ pool:
       2:
         type: COMMAND
         name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
         total: 1000
+
+    #The definition of the goal is the type of goal it is.
     goals:
       1:
         definition: 'GATHER'
         goal: 1000
         material: 'PUMPKIN'
-        rewards:
-          1:
-            type: MONEY
-            total: 100
-      
+		    rewards:
+		      1:
+		        type: MONEY
+			      total: 100
+		      2: 
+		        type: EXP
+			      total: 2000
       2:
         definition: 'GATHER'
         goal: 100
-        material: 'MELON'
+        material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
         #  - MONEY <- Deposits money to the players account
@@ -129,10 +140,9 @@ pool:
 
       3:
         definition: 'GATHER'
-        goal: 60
-        material: DIAMOND
+        goal: 250
+        material: 'MELON'
         rewards:
           1:
             type: MONEY
             total: 150
-  
