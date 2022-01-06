@@ -10,7 +10,7 @@ AK47:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 80
-        Projectile_Damage: 7
+        Projectile_Damage: 6
         Bullet_Spread: 1
     Sneak:
         Enable: false
@@ -34,10 +34,10 @@ AK47:
         Ammo_Name_Check: §g§6Magazine
     Headshot:
         Enable: true
-        Bonus_Damage: 4
+        Bonus_Damage: 5
     Backstab:
         Enable: true
-        Bonus_Damage: 5
+        Bonus_Damage: 3
     Abilities:
         Reset_Hit_Cooldown: true
         No_Vertical_Recoil: true
