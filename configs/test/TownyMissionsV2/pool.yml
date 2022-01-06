@@ -95,8 +95,6 @@ pool:
         name: 'Extra Announcement'
         command: 'say %s earned $%amount% from their towny mission!
         total: 1000
-
-    #The definition of the goal is the type of goal it is.
     goals:
       1:
         definition: 'GATHER'
@@ -106,6 +104,7 @@ pool:
           1:
             type: MONEY
             total: 100
+      
       2:
         definition: 'GATHER'
         goal: 100
