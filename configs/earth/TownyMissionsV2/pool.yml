@@ -43,7 +43,7 @@ pool:
             total: 5000
       2:
         definition: 'GATHER'
-        goal: 1000
+        goal: 3250
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -64,7 +64,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 2500
+        goal: 5000
         material: 'SAND'
         rewards:
           1:
@@ -96,7 +96,7 @@ pool:
     goals:
       1:
         definition: 'GATHER'
-        goal: 1500
+        goal: 3000
         material: 'PUMPKIN'
         rewards:
           1:
@@ -107,7 +107,7 @@ pool:
             total: 5000
       2:
         definition: 'GATHER'
-        goal: 1250
+        goal: 2500
         material: 'CARROT'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -129,7 +129,7 @@ pool:
 
       3:
         definition: 'GATHER'
-        goal: 2500
+        goal: 5000
         material: 'MELON'
         rewards:
           1:
@@ -172,7 +172,7 @@ pool:
             total: 2000
       2:
         definition: 'GATHER'
-        goal: 1000
+        goal: 2750
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -236,7 +236,7 @@ pool:
             total: 2000
       2:
         definition: 'GATHER'
-        goal: 1000
+        goal: 2500
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -257,7 +257,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 2500
+        goal: 3750
         material: 'NETHERRACK'
         rewards:
           1:
@@ -321,7 +321,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 2500
+        goal: 3500
         material: 'WHEAT'
         rewards:
           1:
