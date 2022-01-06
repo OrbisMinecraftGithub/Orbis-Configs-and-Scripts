@@ -82,6 +82,43 @@ pool:
           1:
             type: MONEY
             total: 150
+  2: 
+  name: 'test'
+	type: 'TOWN'
+	duration: '10m'
+	rewards:
+	  1:
+	    type: GOVERNMENT_BANK
+		total: 1000
+      2:
+	    type: COMMAND
+		name: 'Mission Completed'
+		command: 'say %s earther $%amount%$ from their town mission. 
+		total: 1000
+    
+	goals:
+	  1: 
+	    definition: 'GATHER'
+		goal: 1000
+		material: 'PUMPKIN'
+         rewards:
+	       1:
+	         type: MONEY
+		     total: 1000
+	       2:
+	         type: EXP
+		     total: 2000
+	  2:
+	    definition: 'GATHER'
+		goal: 1000
+		material: 'DIAMOND'
+		 rewards:
+	       1:
+	         type: MONEY
+		     total: 1000
+	       2:
+	         type: EXP
+		     total: 2000
 
 
 
