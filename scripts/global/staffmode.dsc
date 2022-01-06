@@ -298,12 +298,13 @@ command_gamemode_spectator_events:
     debug: false
     events:
         on player teleports:
-        - if <player.has_flag[staff.spectator]> && <player.gamemode> == SPECTATOR:
-            - adjust <player> gamemode:survival
-            - determine passively destination:<player.flag[staff.spectator]>
-            - flag <player> staff.spectator:!
-            - execute as_server "dynmap show <player.name>"
-            - narrate "<&e>You are now in survival."
+        - if !<player.has_permission[spectator.teleport]>:
+            - if <player.has_flag[staff.spectator]> && <player.gamemode> == SPECTATOR:
+                - adjust <player> gamemode:survival
+                - determine passively destination:<player.flag[staff.spectator]>
+                - flag <player> staff.spectator:!
+                - execute as_server "dynmap show <player.name>"
+                - narrate "<&e>You are now in survival."
 
 command_gamemode_creative:
     type: command
