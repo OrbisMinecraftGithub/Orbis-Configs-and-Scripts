@@ -10,7 +10,7 @@ trees_events:
     - spruce
     events:
         on structure grows:
-        - if <context.location.material.name.replace[_sapling].with[].advanced_matches_text[<script.data_key[trees]>]>:
+        - if <script.data_key[trees].contains[<context.location.material.name.replace[_sapling].with[]>]>:
             - if <context.location.is_siege_zone>:
                 - determine cancelled
             - else:
@@ -23,7 +23,7 @@ trees_events:
                 - define size medium
             - else:
                 - define size small
-            - define schematic <proc[list_files_recursively].context[schematics].filter[contains_text[<[tree]>/<[size]>]].random.replace[.schem].with[]||null>
+            - define schematic <proc[list_files_recursively].context[schematics].filter[contains_text[/<[tree]>/<[size]>]].random.replace[.schem].with[]||null>
             - narrate targets:<player[AJ_4real]> "<[schematic]> "
             - ~schematic load filename:<[schematic]> name:<[schematic]>
             - define cuboid <schematic[<[schematic]>].cuboid[<context.location>]>
