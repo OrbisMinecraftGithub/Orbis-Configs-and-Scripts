@@ -10,6 +10,7 @@ animal_lag_prevention:
         - chicken
         - villager
         - turtle
+        - panda
     messages:
     - "<&5><&l>Thanos <&r><&c>snapped away <&4><&l><[removed]><&r><&c> entities from existance."
     - "<&c>Removed <&4><&l><[removed]><&r><&c> entities from crowded chunks."
