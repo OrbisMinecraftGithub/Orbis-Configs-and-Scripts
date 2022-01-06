@@ -255,11 +255,11 @@ combat_log_events:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
-        - inject run_combat_check_normal
+        - inject run_combat_check_highest
         on entity damages entity ignorecancelled:true bukkit_priority:highest:
         - define victim <context.entity>
         - define attacker <context.damager>
-        - inject run_combat_check_normal
+        - inject run_combat_check_highest
         on crackshot weapon damages entity bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
