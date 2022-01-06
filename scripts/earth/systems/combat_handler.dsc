@@ -229,12 +229,12 @@ combat_log_events:
         # - define attacker <player>
         # - define damage <context.damage>
         # - flag <context.damager> damage:<proc[calculate_damage].context[<[attacker]>|<[victim]>|<[damage]>]>
-        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:monitor:
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:highest:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
         - inject run_combat_check
-        on entity damages entity ignorecancelled:true bukkit_priority:monitor:
+        on entity damages entity ignorecancelled:true bukkit_priority:highest:
         - define victim <context.entity>
         - define attacker <context.damager>
         - inject run_combat_check
