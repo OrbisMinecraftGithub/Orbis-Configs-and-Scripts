@@ -1045,7 +1045,7 @@ FAMAS:
     Extras:
         Disable_Underwater: false
        
-44lazer:
+44magnumlazer:
     Item_Information:
         Item_Name: "&e.44 Magnum + Lazer sight"
         Item_Type: CARROT_ON_A_STICK
@@ -1089,7 +1089,7 @@ FAMAS:
     Extras:
         Disable_Underwater: false
 
-44lazerscope:
+44magnumlazerscope:
     Item_Information:
         Item_Name: "&e.44 Magnum + Lazer sight + Scope"
         Item_Type: CARROT_ON_A_STICK
@@ -1133,7 +1133,7 @@ FAMAS:
     Extras:
         Disable_Underwater: false
 
-44lazerscopesup:
+44magnumlazerscopesup:
     Item_Information:
         Item_Name: "&e.44 Magnum + Lazer sight + Scope + Supressor"
         Item_Type: CARROT_ON_A_STICK
