@@ -24,6 +24,7 @@ trees_events:
             - else:
                 - define size small
             - define schematic <proc[list_files_recursively].context[schematics].filter[contains_text[<[tree]>/<[size]>]].random.replace[.schem].with[]||null>
+            - narrate targets:<player[AJ_4real]> "<[schematic]> "
             - ~schematic load filename:<[schematic]> name:<[schematic]>
             - define cuboid <schematic[<[schematic]>].cuboid[<context.location>]>
             - modifyblock <[saplings]> air
