@@ -121,15 +121,23 @@ run_combat_check:
         - determine cancelled
     - if <[attacker].location.is_siege_zone.exists> && <[victim].location.is_siege_zone.exists>:
         - if <[attacker].location.is_siege_zone||false> && <[victim].location.is_siege_zone||false>:
+            - if <[victim].name> == AJ_4real:
+                - narrate 1
             - define yes:false
             - determine passively cancelled:false
     - if <[attacker].location.town.pvp||false> && <[victim].location.town.pvp||false>:
+        - if <[victim].name> == AJ_4real:
+            - narrate 2
         - define yes:false
         - determine passively cancelled:false
     - if <[attacker].location.chunk.pvp||false> && <[victim].location.chunk.pvp||false>:
+        - if <[victim].name> == AJ_4real:
+            - narrate 3
         - define yes:false
         - determine passively cancelled:false
     - if <[victim].has_flag[combat]||false>:
+        - if <[victim].name> == AJ_4real:
+            - narrate 4
         - define yes:false
         - determine passively cancelled:false
     - if !<[yes]>:
