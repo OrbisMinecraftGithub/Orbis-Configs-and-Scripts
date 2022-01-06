@@ -26,6 +26,7 @@ nomad:
 - shop.access.wilderness
 - towny.command.towny.prices
 - towny.command.towny.tree
+- TownyMissions.Use
 - towny.command.towny.time
 - towny.command.towny.universe
 - towny.command.town.online
@@ -86,6 +87,7 @@ towns:
   - towny.command.nation.new
   - towny.outlaw.jailer
   - shop.access.town
+  - TownyMissions.Mayor
   - shop.destroy.town
   - towny.command.nation.join
   - townyresources.command.towncollect
