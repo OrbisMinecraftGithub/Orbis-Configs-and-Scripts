@@ -32,7 +32,7 @@ lightning_rod_events:
             - define p <context.projectile.flag[user].as_player>
             - if <context.projectile.location.has_town>:
                 - if !<context.projectile.location.town.has_pvp>:
-                    - give <[p]> <context.projectile.item>
+                    - give to:<[p].inventory> <context.projectile.item>
                     - remove <context.projectile>
                     - stop
             - remove <context.projectile>
