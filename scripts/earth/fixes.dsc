@@ -1,3 +1,14 @@
+command_fix_items_in_my_inventory:
+    type: command
+    name: fixmyitems
+    debug: false
+    script:
+    - foreach <player.inventory.map_slots> as:v key:k:
+        - if <[k].all_raw_nbt.get[PublicBukkitValues].get[crackshotplus<&co>wn].exists>:
+            - define w <[k].all_raw_nbt.get[PublicBukkitValues].get[crackshotplus<&co>wn].split[<&co>].get[2]>
+            - if <crackshot.weapon[<[w]>].exists>:
+                - inventory set d:<player.inventory> slot:<[v]> o:<crackshot.weapon[<[w]>]>
+
 remove_incendium_items:
     type: world
     debug: false
