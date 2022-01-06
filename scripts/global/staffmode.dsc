@@ -153,6 +153,8 @@ error_handler_events:
     debug: false
     events:
         on script generates error:
+        - if <context.script.filename.ends_with[staffmode.dsc]>:
+            - stop
         - if !<context.script.exists>:
             - stop
         - if <context.script> == <script>:
