@@ -14,7 +14,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '2d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -43,7 +43,7 @@ pool:
             total: 5000
       2:
         definition: 'GATHER'
-        goal: 3250
+        goal: 1000
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -64,7 +64,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 5000
+        goal: 2500
         material: 'SAND'
         rewards:
           1:
@@ -78,7 +78,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '2d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -86,12 +86,17 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 1000
+      2:
+        type: COMMAND
+        name: 'Extra Announcement'
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
+        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
       1:
         definition: 'GATHER'
-        goal: 3000
+        goal: 1500
         material: 'PUMPKIN'
         rewards:
           1:
@@ -102,7 +107,7 @@ pool:
             total: 5000
       2:
         definition: 'GATHER'
-        goal: 2500
+        goal: 1250
         material: 'CARROT'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -124,7 +129,7 @@ pool:
 
       3:
         definition: 'GATHER'
-        goal: 5000
+        goal: 2500
         material: 'MELON'
         rewards:
           1:
@@ -138,7 +143,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '2d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -146,6 +151,11 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
+      2:
+        type: COMMAND
+        name: 'Extra Announcement'
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
+        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -162,7 +172,7 @@ pool:
             total: 2000
       2:
         definition: 'GATHER'
-        goal: 2750
+        goal: 1000
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -197,7 +207,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '2d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -205,7 +215,12 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-        
+      2:
+        type: COMMAND
+        name: 'Extra Announcement'
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
+        total: 1000
+
     #The definition of the goal is the type of goal it is.
     goals:
       1:
@@ -221,7 +236,7 @@ pool:
             total: 2000
       2:
         definition: 'GATHER'
-        goal: 2500
+        goal: 1000
         material: 'PUMPKIN'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
@@ -242,7 +257,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 3750
+        goal: 2500
         material: 'NETHERRACK'
         rewards:
           1:
@@ -256,7 +271,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '3d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -264,6 +279,11 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
+      2:
+        type: COMMAND
+        name: 'Extra Announcement'
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
+        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -301,7 +321,7 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 3500
+        goal: 2500
         material: 'WHEAT'
         rewards:
           1:
@@ -315,7 +335,7 @@ pool:
     type: 'TOWN'
     #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
     #for a mission with infinite duration
-    duration: '4d'
+    duration: '3d'
     #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
     #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
     #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
@@ -323,6 +343,11 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
+      2:
+        type: COMMAND
+        name: 'Extra Announcement'
+        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
+        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -360,12 +385,245 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 500
+        goal: 400
         material: 'DIAMOND'
         rewards:
           1:
             type: MONEY
             total: 3000
+
+  7: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'nation1'
+    #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
+    #type.
+    type: 'NATION'
+    #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
+    #for a mission with infinite duration
+    duration: '7d'
+    #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
+    #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
+    #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
+    rewards:
+      1:
+        type: GOVERNMENT_BANK
+        total: 20000
+
+    #The definition of the goal is the type of goal it is.
+    goals:
+      1:
+        definition: 'GATHER'
+        goal: 30000
+        material: 'STONE'
+        rewards:
+          1:
+            type: MONEY
+            total: 8000
           2:
             type: EXP
-            total: 500  
+            total: 5000
+      2:
+        definition: 'GATHER'
+        goal: 32500
+        material: 'PUMPKIN'
+        #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
+        #of goal rewards.
+        #  - MONEY <- Deposits money to the players account
+        #  - EXP <- Gives the player n experience orbs
+        #  - COMMAND <- Runs a command  , Use the %s to substitute the player and %amount% to substitute the amount given
+        #  - ITEM  <- Gives the player an item. If they are offline its given on join
+        #  - TEST  <- This reward isnt useful it just prints to ur console lol
+
+        #rewards are distributed on goal completion based on contribution. This was not done for the whole mission
+        #because how do you weigh different goals to each other.
+        rewards:
+          1:
+            type: MONEY
+            total: 7500
+          2:
+            type: EXP
+            total: 500
+      3:
+        definition: 'GATHER'
+        goal: 34500
+        material: 'SAND'
+        rewards:
+          1:
+            type: MONEY
+            total: 9000           
+
+  8: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'nation2'
+    #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
+    #type.
+    type: 'NATION'
+    #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
+    #for a mission with infinite duration
+    duration: '7d'
+    #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
+    #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
+    #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
+    rewards:
+      1:
+        type: GOVERNMENT_BANK
+        total: 20000
+
+    #The definition of the goal is the type of goal it is.
+    goals:
+      1:
+        definition: 'GATHER'
+        goal: 28000
+        material: 'COBBLESTONE'
+        rewards:
+          1:
+            type: MONEY
+            total: 7000
+          2:
+            type: EXP
+            total: 5000
+      2:
+        definition: 'GATHER'
+        goal: 35000
+        material: 'CARROT'
+        #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
+        #of goal rewards.
+        #  - MONEY <- Deposits money to the players account
+        #  - EXP <- Gives the player n experience orbs
+        #  - COMMAND <- Runs a command  , Use the %s to substitute the player and %amount% to substitute the amount given
+        #  - ITEM  <- Gives the player an item. If they are offline its given on join
+        #  - TEST  <- This reward isnt useful it just prints to ur console lol
+
+        #rewards are distributed on goal completion based on contribution. This was not done for the whole mission
+        #because how do you weigh different goals to each other.
+        rewards:
+          1:
+            type: MONEY
+            total: 1000
+          2:
+            type: EXP
+            total: 500
+      3:
+        definition: 'GATHER'
+        goal: 20000
+        material: 'DIRT'
+        rewards:
+          1:
+            type: MONEY
+            total: 10000
+
+  9: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'nation3'
+    #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
+    #type.
+    type: 'NATION'
+    #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
+    #for a mission with infinite duration
+    duration: '7d'
+    #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
+    #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
+    #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
+    rewards:
+      1:
+        type: GOVERNMENT_BANK
+        total: 20000
+
+    #The definition of the goal is the type of goal it is.
+    goals:
+      1:
+        definition: 'GATHER'
+        goal: 25000
+        material: 'POTATO'
+        rewards:
+          1:
+            type: MONEY
+            total: 9000
+          2:
+            type: EXP
+            total: 5000
+      2:
+        definition: 'GATHER'
+        goal: 32500
+        material: 'MELON'
+        #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
+        #of goal rewards.
+        #  - MONEY <- Deposits money to the players account
+        #  - EXP <- Gives the player n experience orbs
+        #  - COMMAND <- Runs a command  , Use the %s to substitute the player and %amount% to substitute the amount given
+        #  - ITEM  <- Gives the player an item. If they are offline its given on join
+        #  - TEST  <- This reward isnt useful it just prints to ur console lol
+
+        #rewards are distributed on goal completion based on contribution. This was not done for the whole mission
+        #because how do you weigh different goals to each other.
+        rewards:
+          1:
+            type: MONEY
+            total: 7500
+          2:
+            type: EXP
+            total: 500
+      3:
+        definition: 'GATHER'
+        goal: 34500
+        material: 'CARROT'
+        rewards:
+          1:
+            type: MONEY
+            total: 9000 
+            
+ 10: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+    name: 'nation4'
+    #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
+    #type.
+    type: 'NATION'
+    #how long the mission lasts. The format is similar to core protect or ban commands. Simply omit the duration
+    #for a mission with infinite duration
+    duration: '7d'
+    #mission rewards are different to goal rewards. Mission rewards are given to the bearer of the mission, that being
+    #the town or the nation. Thus the only two working rewards types for mission rewards are GOVERNMENT_BANK and COMMAND
+    #Rewards should usually be given to GOALS rather than MISSIONS because players contribute to goals.
+    rewards:
+      1:
+        type: GOVERNMENT_BANK
+        total: 20000
+
+    #The definition of the goal is the type of goal it is.
+    goals:
+      1:
+        definition: 'GATHER'
+        goal: 5500
+        material: 'IRON'
+        rewards:
+          1:
+            type: MONEY
+            total: 12000
+          2:
+            type: EXP
+            total: 5000
+      2:
+        definition: 'GATHER'
+        goal: 3500
+        material: 'GOLD'
+        #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
+        #of goal rewards.
+        #  - MONEY <- Deposits money to the players account
+        #  - EXP <- Gives the player n experience orbs
+        #  - COMMAND <- Runs a command  , Use the %s to substitute the player and %amount% to substitute the amount given
+        #  - ITEM  <- Gives the player an item. If they are offline its given on join
+        #  - TEST  <- This reward isnt useful it just prints to ur console lol
+
+        #rewards are distributed on goal completion based on contribution. This was not done for the whole mission
+        #because how do you weigh different goals to each other.
+        rewards:
+          1:
+            type: MONEY
+            total: 13000
+          2:
+            type: EXP
+            total: 500
+      3:
+        definition: 'GATHER'
+        goal: 2200
+        material: 'DIAMOND'
+        rewards:
+          1:
+            type: MONEY
+            total: 14000 
