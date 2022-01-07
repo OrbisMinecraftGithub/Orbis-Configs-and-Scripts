@@ -51,9 +51,16 @@ items:
       - '[openguimenu] custom_recepie_menu'
       - '[close]'
   'SIGN':
-    material: OAK_SING
-    slot: 36      
+    material: OAK_SIGN
+    slot: 36    
     priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&e&lFind out more!'
+    lore:
+      - '&6Hammers can be crafted like normal picaxes however'
+      - '&einstead of using ingots it is &lblocks!'
+      - '&4&lFrom Iron to Netherite'
   'placeholder':
     material: BLACK_STAINED_GLASS_PANE
     slots: 
