@@ -51,7 +51,7 @@ items:
       - '[openguimenu] custom_recepie_menu'
       - '[close]'
   'SIGN':
-    material: OAK_SIGN
+    material: BOOK
     slot: 36    
     priority: 1
     update: true
@@ -76,3 +76,10 @@ items:
       - 36-45
     priority: 2
     display_name: § 
+  'DIA':
+    material: DIAMOND_PICKAXE
+    slot: 25
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&e&lDiamond Hammer'
