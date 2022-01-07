@@ -206,20 +206,7 @@ items:
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
       - '[openguimenu] rocket_menu'
-      - '[close]'   
-  'Hammer': 
-    material: DIAMOND_PICAXE
-    slot: 31
-    priority: 1
-    hide_attributes: true
-    display_name: '&c&lHammer'
-    lore:
-      - '&7Find the Custom Recepie here!'
-      - '&7'
-      - '&b&lLeft&7 Click to Continue'
-    left_click_commands:
-      - '[openguimenu] hammer_menu'
-      - '[close]'         
+      - '[close]'            
   'placeholder':
     material: BLACK_STAINED_GLASS_PANE
     slots: 
@@ -230,9 +217,20 @@ items:
       - 22
       - 24
       - 26
-      - 27-31
-      - 31-35
-      - 36-44
+      - 27-30
     priority: 2
-    display_name: §      
+    display_name: §   
+  'Hammer': 
+    material: DIAMOND_PICAXE
+    slot: 31
+    priority: 1
+    hide_attributes: true
+    display_name: '&c&lHammers'
+    lore:
+      - '&7Find the Custom Recepie here!'
+      - '&7'
+      - '&b&lLeft&7 Click to Continue'
+    left_click_commands:
+      - '[openguimenu] hammer_menu'
+      - '[close]'
 
