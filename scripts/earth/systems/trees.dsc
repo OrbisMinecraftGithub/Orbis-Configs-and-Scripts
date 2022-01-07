@@ -30,7 +30,7 @@ trees_events:
             - ~schematic create name:<queue.id> <[cuboid]> <context.location>
             - ~schematic paste name:<[schematic]> <context.location> noair
             - ~schematic paste name:<queue.id> <context.location> noair
-            - adjustblock <[cuboid].blocks[*leaves]> persistent:true
+            # - adjustblock <[cuboid].blocks[*leaves]> persistent:true
             - ~schematic unload name:<queue.id>
             - wait 1t
             - wait 1s
