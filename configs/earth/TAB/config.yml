@@ -44,7 +44,7 @@ scoreboard-teams:
   invisible-nametags: false
   anti-override: true
   sorting-types:
-    - "PLACEHOLDER_A_TO_Z:%townyadvanced_towny_tag_override%"
+    - "PLACEHOLDER_A_TO_Z: %townyadvanced_towny_tag_override%"
   case-sensitive-sorting: true
   disable-in-worlds:
     - disabledworld
