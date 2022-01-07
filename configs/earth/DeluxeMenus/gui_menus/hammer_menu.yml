@@ -15,25 +15,31 @@ items:
   'Moss Block4':
     material: DIAMOND_BLOCK
     slot: 10
+    priority: 1
   'Moss Block3':
     material: DIAMOND_BLOCK
     slot: 11
+    priority: 1
   'Moss Block2':
     material: DIAMOND_BLOCK
     slot: 12
+    priority: 1
   'Moss Block1':
     material: STICK
     slot: 20
+    priority: 1
   'BIG DRIPLEAF':
     material: STICK
     slot: 29
+    priority: 1
   'ARROWBLUE':
     material: hdb-10411
     slot: 23
+    priority: 1
   'Go back': 
     material: BARRIER
     slot: 44
-    priority: 2
+    priority: 1
     update: true
     hide_attributes:  true
     display_name: '&c&lExit Back'
@@ -47,3 +53,19 @@ items:
   'SIGN':
     material: OAK_SING
     slot: 36      
+    priority: 1
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 13-17
+      - 18
+      - 22
+      - 24
+      - 26
+      - 27
+      - 31-35
+      - 36-45
+    priority: 2
+    display_name: § 
