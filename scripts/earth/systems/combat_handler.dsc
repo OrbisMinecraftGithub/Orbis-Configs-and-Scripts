@@ -87,7 +87,7 @@ command_pvp_off:
     - flag <player> no_damage:!
     - narrate "You do not have PvP protection."
 
-run_combat_check_lowest:
+run_combat_check_low:
     type: task
     debug: false
     script:
@@ -112,7 +112,7 @@ run_combat_check_lowest:
     - if <[attacker].nation.name||null1> == <[victim].nation.name||null2>:
         - determine cancelled
 
-run_combat_check_highest:
+run_combat_check_high:
     type: task
     debug: false
     script:
@@ -242,24 +242,27 @@ combat_log_events:
         - flag <player> combat:!
         - determine passively no_message
         - run player_leaves_combat defmap:<map[player=<player>]>
-        on crackshot weapon damages entity ignorecancelled:false bukkit_priority:lowest:
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:lowest:
+        - if <context.damage.is_less_than[0.5]>:
+            - determine 0.5
+        on crackshot weapon damages entity ignorecancelled:false bukkit_priority:low:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
-        - inject run_combat_check_lowest
-        on entity damages entity ignorecancelled:false bukkit_priority:lowest:
+        - inject run_combat_check_low
+        on entity damages entity ignorecancelled:false bukkit_priority:low:
         - define victim <context.entity>
         - define attacker <context.damager>
-        - inject run_combat_check_lowest
-        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:highest:
+        - inject run_combat_check_low
+        on crackshot weapon damages entity ignorecancelled:true bukkit_priority:high:
         - define victim <context.victim>
         - define attacker <player>
         - define weapon <context.weapon>
-        - inject run_combat_check_highest
-        on entity damages entity ignorecancelled:true bukkit_priority:highest:
+        - inject run_combat_check_high
+        on entity damages entity ignorecancelled:true bukkit_priority:high:
         - define victim <context.entity>
         - define attacker <context.damager>
-        - inject run_combat_check_highest
+        - inject run_combat_check_high
         on crackshot weapon damages entity bukkit_priority:monitor:
         - define victim <context.victim>
         - define attacker <player>
