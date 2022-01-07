@@ -52,7 +52,7 @@ items:
       - '[close]'
   'Go back': 
     material: BARRIER
-    slot: 31
+    slot: 40
     priority: 1
     update: true
     hide_attributes:  true
@@ -209,7 +209,7 @@ items:
       - '[close]'   
   'Hammer': 
     material: DIAMOND_PICAXE
-    slot: 39
+    slot: 31
     priority: 1
     hide_attributes: true
     display_name: '&c&lHammer'
