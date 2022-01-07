@@ -207,6 +207,19 @@ items:
     left_click_commands:
       - '[openguimenu] rocket_menu'
       - '[close]'   
+  'Hammer': 
+    material: DIAMOND_PICAXE
+    slot: 39
+    priority: 1
+    hide_attributes: true
+    display_name: '&c&lHammer'
+    lore:
+      - '&7Find the Custom Recepie here!'
+      - '&7'
+      - '&b&lLeft&7 Click to Continue'
+    left_click_commands:
+      - '[openguimenu] hammer_menu'
+      - '[close]'         
   'placeholder':
     material: BLACK_STAINED_GLASS_PANE
     slots: 
