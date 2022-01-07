@@ -86,11 +86,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 1000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -151,11 +146,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -215,12 +205,7 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
-
+        
     #The definition of the goal is the type of goal it is.
     goals:
       1:
@@ -279,11 +264,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -343,11 +323,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
