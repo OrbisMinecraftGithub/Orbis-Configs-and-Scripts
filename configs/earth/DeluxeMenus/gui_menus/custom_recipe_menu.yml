@@ -4,7 +4,7 @@ open_command:
 open_commands:
   - '[message]&#1b83e7&lO&#009bf1&lr&#00b0f4&lb&#00c4f2&li&#1bd7ee&ls &#9F9890&l>> &#1be7cb&lO&#00e9c4&lp&#00eabc&le&#00ebb3&ln&#00eca9&li&#00ed9e&ln&#1bee92&lg
  &bCustom Recepies Menu!'
-size: 35
+size: 44
 # as always, only cool people can open this menu :)
 open_requirement:
   requirements:
@@ -219,6 +219,7 @@ items:
       - 26
       - 27-31
       - 31-35
+      - 36-44
     priority: 2
     display_name: §      
 
