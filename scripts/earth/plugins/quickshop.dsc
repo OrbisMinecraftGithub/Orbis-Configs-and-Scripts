@@ -5,7 +5,7 @@ quickshop_events:
         on player breaks block ignorecancelled:true:
         - if <context.location.town||null> != <player.town||null>:
             - stop
-        - if <player.town.assistants.include[<player.town.mayor>].deduplicate.filter[as_player.exists].contains[<player>].not||true>:
+        - if <player.town.assistants.include[<player.town.mayor||>].deduplicate.filter[as_player.exists].contains[<player>].not||true>:
             - stop
         - if <context.location.material.name.ends_with[chest]> && <player.item_in_hand.material.name.equals[golden_axe]>:
             - adjust <context.location> remove_quickshop
