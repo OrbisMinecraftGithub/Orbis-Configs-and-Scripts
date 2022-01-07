@@ -68,3 +68,5 @@ gui_menus:
     file: rocket.yml
   voting_tiers_menu:
     file: voting_tiers.yml
+  hammer_menu:
+    file: hammer_menu.yml
