@@ -360,9 +360,12 @@ pool:
             total: 500
       3:
         definition: 'GATHER'
-        goal: 400
+        goal: 500
         material: 'DIAMOND'
         rewards:
           1:
             type: MONEY
             total: 3000
+          2:
+            type: EXP
+            total: 500  
