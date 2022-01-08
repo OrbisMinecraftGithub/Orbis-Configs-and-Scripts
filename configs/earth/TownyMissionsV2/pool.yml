@@ -376,7 +376,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -435,7 +435,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -494,7 +494,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -553,7 +553,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
