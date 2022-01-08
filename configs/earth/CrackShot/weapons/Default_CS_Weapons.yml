@@ -150,14 +150,14 @@ SPAS12:
         Remove_Bullet_Drop: false
         Projectile_Speed: 45
         Projectile_Damage: 15
-        Bullet_Spread: 1
+        Bullet_Spread: 2
         Removal_Or_Drag_Delay: 7-true
     Headshot:
         Enable: true
         Bonus_Damage: 5
     Reload:
         Enable: true
-        Reload_Amount: 8
+        Reload_Amount: 7
         Reload_Bullets_Individually: true
         Reload_Duration: 10
         Reload_Shoot_Delay: 15
@@ -176,7 +176,7 @@ SPAS12:
         Enable: false
         Fire_Rate: 0
     Sneak:
-        Enable: false
+        Enable: true
         No_Recoil: false
         Bullet_Spread: 122   
 OLYMPIA:
