@@ -560,7 +560,7 @@ pool:
       1:
         definition: 'GATHER'
         goal: 5500
-        material: 'IRON'
+        material: 'IRON_INGOT'
         rewards:
           1:
             type: MONEY
