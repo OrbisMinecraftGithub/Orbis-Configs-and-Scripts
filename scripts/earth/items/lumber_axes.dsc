@@ -18,13 +18,15 @@ lumber_axe_events:
         - dark_oak_log
     events:
         on player breaks block:
-        - if <player.item_in_hand.enchantment_map.contains[tree_feller].not||true>:
-            - stop
-        - if <player.flag[lumber_axe_queue].state.equals[stopping].not||false>:
-            - stop
         - define item <player.item_in_hand>
         - define slot <player.held_item_slot>
         - define material <context.material.name>
+        - if <[item].enchantment_map.contains[tree_feller].not||true>:
+            - stop
+        - if <player.flag[lumber_axe_queue].state.equals[stopping].not||false>:
+            - stop
+        - if <script.data_key[data.allowed_blocks].contains[<[material]>]>:
+            - stop
         - define start <context.location.up.left.forward.to_cuboid[<context.location.backward.right.down>]>
         - define blocks <[start].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>
         - flag <player> lumber_axe_queue:<queue> expire:1h
