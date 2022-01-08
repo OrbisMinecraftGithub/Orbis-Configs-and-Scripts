@@ -49,7 +49,6 @@ nomad:
 - towny.command.nation.allylist
 - towny.command.nation.enemylist
 - towny.town.resident
-- towny.town.spawn.public
 - towny.chat.general
  
 # This section of permissions covers players who are members of a town.
