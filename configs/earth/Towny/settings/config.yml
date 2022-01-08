@@ -519,7 +519,7 @@ global_town_settings:
   # Valid values are: true, false, war, peace
   # When war or peace is set, it is only possible to teleport to the town,
   # when there is a war or peace.
-  allow_town_spawn: 'false'
+  allow_town_spawn: 'true'
  
   # Allow regular residents to use /town spawn [town] (TP to other towns if they are public).
   # Valid values are: true, false, war, peace
