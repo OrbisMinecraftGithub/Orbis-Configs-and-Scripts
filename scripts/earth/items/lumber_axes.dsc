@@ -25,7 +25,7 @@ lumber_axe_events:
             - stop
         - if <player.flag[lumber_axe_queue].state.equals[stopping].not||false>:
             - stop
-        - if <script.data_key[data.allowed_blocks].contains[<[material]>]>:
+        - if !<script.data_key[data.allowed_blocks].contains[<[material]>]>:
             - stop
         - define start <context.location.up.left.forward.to_cuboid[<context.location.backward.right.down>]>
         - define blocks <[start].blocks[<script.data_key[data.allowed_blocks].separated_by[|]>]>

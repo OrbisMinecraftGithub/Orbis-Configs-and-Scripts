@@ -185,6 +185,7 @@ voting_events:
     debug: false
     events:
         on votifier vote:
+        - define username <context.username>
         - define service <context.service.replace_text[.].with[_]>
         - if <player[<context.username>]||null> == null:
             - stop
