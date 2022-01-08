@@ -22,11 +22,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -85,11 +80,6 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 1000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
         total: 1000
 
     #The definition of the goal is the type of goal it is.
@@ -151,11 +141,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -215,11 +200,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -279,11 +259,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -343,11 +318,6 @@ pool:
       1:
         type: GOVERNMENT_BANK
         total: 2000
-      2:
-        type: COMMAND
-        name: 'Extra Announcement'
-        command: 'say %s earned $%amount% from their towny mission!!! They are big rich'
-        total: 1000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -406,7 +376,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -465,7 +435,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -524,7 +494,7 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
@@ -568,8 +538,8 @@ pool:
           1:
             type: MONEY
             total: 9000 
-            
- 10: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+
+  10: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
     name: 'nation4'
     #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
     #type.
@@ -583,14 +553,14 @@ pool:
     rewards:
       1:
         type: GOVERNMENT_BANK
-        total: 20000
+        total: 10000
 
     #The definition of the goal is the type of goal it is.
     goals:
       1:
         definition: 'GATHER'
         goal: 5500
-        material: 'IRON'
+        material: 'IRON_INGOT'
         rewards:
           1:
             type: MONEY
@@ -601,7 +571,7 @@ pool:
       2:
         definition: 'GATHER'
         goal: 3500
-        material: 'GOLD'
+        material: 'GOLD_INGOT'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
         #  - MONEY <- Deposits money to the players account
