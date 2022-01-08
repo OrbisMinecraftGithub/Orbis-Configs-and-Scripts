@@ -99,7 +99,7 @@ run_combat_check_low:
         - determine cancelled
     - if <[attacker].has_flag[no_damage]> || <[attacker].has_flag[no_pvp_damage]>:
         - determine cancelled
-    - if <[attacker].mcmmo.party.equals[<[victim].mcmmo.party>]||false>:
+    - if <[attacker].mcmmo.party.equals[<[victim].mcmmo.party||>]||false>:
         - determine cancelled
     # - if <[attacker].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]> || <[victim].inventory.list_contents.filter[material.name.equals[air].not].size.equals[0]>:
     #     - determine cancelled
