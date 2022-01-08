@@ -24,6 +24,7 @@ nomad:
 - towny.chat.local
 - towny.command.nation.list
 - shop.access.wilderness
+- townymissions.use
 - towny.command.towny.prices
 - towny.command.towny.tree
 - towny.command.towny.time
@@ -35,6 +36,9 @@ nomad:
 - towny.command.town.new
 - towny.command.town.join
 - towny.command.town.list.*
+- towny.nation.spawn.nation
+- towny.nation.spawn.ally
+- towny.nation.spawn.public
 - towny.command.town.reslist
 - towny.command.plot.group.*
 - towny.command.plot.perm
@@ -45,7 +49,6 @@ nomad:
 - towny.command.nation.allylist
 - towny.command.nation.enemylist
 - towny.town.resident
-- towny.town.spawn.public
 - towny.chat.general
  
 # This section of permissions covers players who are members of a town.
@@ -66,7 +69,6 @@ towns:
   - towny.command.town.leave
   - towny.command.town.deposit
   - towny.command.town.reclaim
-  - towny.town.spawn.town
   - towny.chat.town
  
   # Mayors get these permissions in addition to the default set.
@@ -83,6 +85,7 @@ towns:
   - towny.command.nation.new
   - towny.outlaw.jailer
   - shop.access.town
+  - TownyMissions.Mayor
   - shop.destroy.town
   - towny.command.nation.join
   - townyresources.command.towncollect
@@ -253,6 +256,7 @@ nations:
  
   # Kings get these permissions in addition to the default set.
   king:
+  - siegewar.immune.to.war.nausea
   - towny.rank.nation.king
   - towny.command.nation.*
   - towny.command.nation.deposit.other
@@ -262,9 +266,11 @@ nations:
   - siegewar.command.siegewar.nation.*
   ranks:
     coking:
+    - siegewar.immune.to.war.nausea
     - towny.rank.nation.coking
     - towny.command.nation.ally.*
     - towny.command.nation.enemy
+    - towny.command.nation.add
     - towny.command.nation.rank.*
     - townyresources.command.nationcollect
     - towny.command.nation.invite.add
@@ -279,21 +285,22 @@ nations:
     - towny.command.nation.set.surname
     - towny.command.nation.set.tag
     - towny.command.nation.set.mapcolor
+    - towny.command.nation.say
+    - towny.command.nation.set.board
     - towny.command.nation.set.name
     - towny.command.nation.set.spawn
     - towny.command.nation.set.taxes
     - towny.command.nation.rank.assistant
     - towny.command.nation.toggle.*
-    - siegewar.nation.siege.abandon
-    - siegewar.nation.siege.invade
+    - towny.command.nation.set.spawncost
+    - towny.command.nation.set.spawn
     - towny.command.nation.withdraw
-    - siegewar.nation.siege.plunder
-    - siegewar.nation.siege.attack
     - siegewar.nation.siege.*
     - towny.command.nation.kick
     - towny.command.nation.rank.soldier
     - towny.command.nation.rank.general
     assistant:
+    - siegewar.immune.to.war.nausea
     - towny.rank.nation.assistant
     - towny.command.nation.rank.helper
     - towny.command.nation.invite.add
@@ -307,6 +314,7 @@ nations:
     - towny.command.nation.add
     soldier:
     - towny.rank.nation.soldier
+    - siegewar.immune.to.war.nausea
     - siegewar.nation.siege.battle.points
     - towny.nation.siege.pay.grade.100
     general:

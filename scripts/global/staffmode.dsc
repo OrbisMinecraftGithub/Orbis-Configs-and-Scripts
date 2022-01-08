@@ -154,6 +154,7 @@ error_handler_events:
     events:
         on plugin generates exception:
         - define msg "<context.full_trace.replace[\n].with[<&nl>].strip_color.replace[<&lb>Error Continued<&rb>]>"
+        - ratelimit 1t <[msg]>
         - announce to_flagged:debugmode "<&c>An exception has been thrown... <&l><&click[<[msg]>].type[COPY_TO_CLIPBOARD]><&hover[<[msg]>].type[SHOW_TEXT]><&lb>Click to copy!<&rb><&end_hover><&end_click>"
         on script generates error:
         - if <context.script.filename.ends_with[staffmode.dsc]>:

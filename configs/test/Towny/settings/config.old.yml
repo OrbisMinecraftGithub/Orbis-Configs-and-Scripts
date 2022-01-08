@@ -53,7 +53,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' Ruins'
     mayorPrefix: 'Spirit '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 1
@@ -63,17 +63,17 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Settlement)'
     mayorPrefix: 'Hermit '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 10
     namePrefix: ''
     mayorPostfix: ''
-    townBlockLimit: 16
+    townBlockLimit: 18
     upkeepModifier: 1.0
     townOutpostLimit: 0
   - numResidents: 2
     debtCapModifier: 1.0
     namePostfix: ' (Hamlet)'
     mayorPrefix: 'Chief '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 20
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 32
@@ -83,7 +83,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Village)'
     mayorPrefix: 'Baron Von '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 30
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 96
@@ -93,7 +93,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Town)'
     mayorPrefix: 'Viscount '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 40
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 160
@@ -103,7 +103,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Large Town)'
     mayorPrefix: 'Count Von '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 50
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 224
@@ -113,7 +113,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (City)'
     mayorPrefix: 'Earl '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 60
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 320
@@ -123,7 +123,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Large City)'
     mayorPrefix: 'Duke '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 70
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 384
@@ -133,7 +133,7 @@ levels:
     debtCapModifier: 1.0
     namePostfix: ' (Metropolis)'
     mayorPrefix: 'Lord '
-    townBlockBuyBonusLimit: 4000
+    townBlockBuyBonusLimit: 80
     namePrefix: ''
     mayorPostfix: ''
     townBlockLimit: 448
@@ -149,7 +149,7 @@ levels:
     numResidents: 0
     nationBonusOutpostLimit: 0
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 20
+    townBlockLimitBonus: 10
     namePrefix: 'Land of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -161,7 +161,7 @@ levels:
     numResidents: 10
     nationBonusOutpostLimit: 1
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 40
+    townBlockLimitBonus: 20
     namePrefix: 'Federation of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -173,7 +173,7 @@ levels:
     numResidents: 20
     nationBonusOutpostLimit: 2
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 100
+    townBlockLimitBonus: 40
     namePrefix: 'Dominion of '
     nationZonesSize: 1
     nationTownUpkeepModifier: 1.0
@@ -185,7 +185,7 @@ levels:
     numResidents: 30
     nationBonusOutpostLimit: 3
     namePostfix: ' (Nation)'
-    townBlockLimitBonus: 220
+    townBlockLimitBonus: 60
     namePrefix: 'Kingdom of '
     nationZonesSize: 2
     nationTownUpkeepModifier: 1.0
@@ -197,7 +197,7 @@ levels:
     numResidents: 40
     nationBonusOutpostLimit: 4
     namePostfix: ' Empire'
-    townBlockLimitBonus: 400
+    townBlockLimitBonus: 100
     namePrefix: 'The '
     nationZonesSize: 2
     nationTownUpkeepModifier: 1.0
@@ -209,7 +209,7 @@ levels:
     numResidents: 60
     nationBonusOutpostLimit: 5
     namePostfix: ' Realm'
-    townBlockLimitBonus: 750
+    townBlockLimitBonus: 140
     namePrefix: 'The '
     nationZonesSize: 3
     nationTownUpkeepModifier: 1.0
@@ -281,7 +281,7 @@ town:
   max_claim_radius_value: '4'
  
   # Maximum number of towns allowed on the server.
-  town_limit: '300000'
+  town_limit: '3000'
  
   # The maximum distance (in townblocks) that 2 town's homeblocks can be to be eligible for merging.
   max_distance_for_merge: '20'
@@ -302,7 +302,7 @@ town:
   # Minimum number of plots any towns home plot must be from the next town.
   # Does not affect towns which are in the same nation.
   # This will prevent someone founding a town right on your doorstep
-  min_distance_from_town_homeblock: '8'
+  min_distance_from_town_homeblock: '3'
  
   # Minimum number of plots an outpost must be from any other town's plots.
   # Useful when min_plot_distance_from_town_plot is set to near-zero to allow towns to have claims
@@ -320,7 +320,7 @@ town:
  
   # The maximum townblocks available to a town is (numResidents * ratio).
   # Setting this value to 0 will instead use the level based jump values determined in the town level config.
-  town_block_ratio: '16'
+  town_block_ratio: '18'
  
   # The maximimum amount of townblocks a town can have, if town_block_ratio is 0 the max size will be decided by the town_levels.
   # Set to 0 to have no size limit.
@@ -383,7 +383,7 @@ new_world_settings:
     # Do new world have friendly fire enabled by default?
     # Does not affect Arena Plots which have FF enabled all the time.
     # When true players on the same town or nation will harm each other.
-    friendly_fire_enabled: 'true'
+    friendly_fire_enabled: 'false'
  
     # Do new worlds have their war_allowed enabled by default?
     war_allowed: 'true'
@@ -405,7 +405,7 @@ new_world_settings:
  
     # Do new worlds have force_explosions_on enabled by default.
     # This setting overrides a towns' setting, preventing them from turning explosions off in their town.
-    force_explosions_on: 'false'
+    force_explosions_on: 'true'
  
   fire:
     # Do new worlds allow fire to be lit and spread by default?
@@ -456,7 +456,7 @@ new_world_settings:
       #
       # If you allow players to break/build in the wild the snapshot will
       # include any changes made before the plot was claimed.
-      enabled: 'true'
+      enabled: 'false'
       speed: 1s
  
       # These block types will NOT be regenerated by the revert-on-unclaim
@@ -540,7 +540,7 @@ global_town_settings:
   allow_town_spawn_travel_ally: 'true'
  
   # When set to true both nation and ally spawn travel will also require the target town to have their status set to public.
-  is_nation_ally_spawning_requiring_public_status: 'true'
+  is_nation_ally_spawning_requiring_public_status: 'false'
  
   # If non zero it delays any spawn request by x seconds.
   teleport_warmup_time: '0'
@@ -575,7 +575,7 @@ global_town_settings:
  
   # Prevent players from using /town spawn while within unclaimed areas and/or enemy/neutral towns.
   # Allowed options: unclaimed,enemy,neutral,outlaw
-  prevent_town_spawn_in: enemy,outlaw,outlaw
+  prevent_town_spawn_in: outlaw,outlaw
  
   # When this is true, players will respawn to respawn anchors on death rather than their own town. 1.16+ only.
   respawn_anchor_higher_precendence: 'true'
@@ -963,13 +963,13 @@ filters_colour_chat:
   papi_chat_formatting:
  
     # When using PlaceholderAPI, and a tag would show both nation and town, this will determine how they are formatted.
-    both: '[%n] [%t]'
+    both: '&f[&6%n&f|&b%t&f] '
  
     # When using PlaceholderAPI, and a tag would showing a town, this will determine how it is formatted.
-    town: '[%s]'
+    town: '&f[&b%s&f] '
  
     # When using PlaceholderAPI, and a tag would show a nation, this will determine how it is formatted.
-    nation: '[%s]'
+    nation: '&f[&6%s&f] '
     # Colour code applied to player names using the %townyadvanced_towny_colour% placeholder.
     ranks:
       nomad: '&f'
@@ -980,19 +980,19 @@ filters_colour_chat:
   # Colour codes used in the RELATIONAL placeholder %rel_townyadvanced_color% to display the relation between two players.
   papi_relational_formatting:
     # Used when two players have no special relationship.
-    none: '&#1eb040'
+    none: '&f'
  
     # Used when two players are in the same town.
-    same_town: '&#fcd442'
+    same_town: '&2'
  
     # Used when two players are in the same nation.
-    same_nation: '&#fcd442'
+    same_nation: '&2'
  
     # Used when two players' nations are allied.
-    ally: '&#0378df'
+    ally: '&b'
  
     # Used when two players are enemies.
-    enemy: '&#f03005'
+    enemy: '&c'
  
  
 ############################################################
@@ -1008,7 +1008,7 @@ protection:
   # A list of items, that are held in the hand, which can be protected against.
   # Group names you can use in this list: BOATS, MINECARTS
   # A full list of proper names can be found here https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html 
-  item_use_ids: MINECARTS,BOATS,ENDER_PEARL,FIREBALL,CHORUS_FRUIT,LEAD,EGG
+  item_use_ids: MINECARTS,BOATS,FIREBALL,CHORUS_FRUIT,LEAD,EGG
  
   # Blocks that are protected via town/plot flags.
   # These are blocks in the world that will be protected by a town/resident/plot's switch setting.
@@ -1172,16 +1172,16 @@ notification:
   titles:
  
     # Entering Town Upper Title Line
-    town_title: ''
+    town_title: ' '
  
     # Entering Town Lower Subtitle line.
     town_subtitle: '&b{townname}'
  
     # Entering Wilderness Upper Title Line
-    wilderness_title: ''
+    wilderness_title: ' '
  
     # Entering Wilderness Lower Subtitle line.
-    wilderness_subtitle: '&2{wilderness}'
+    wilderness_subtitle: '&2{wilderness} &4(PVP)'
  
   # If the notification.owner option should show name or {title} name.
   # Titles are the ones granted by nation kings.
@@ -1394,7 +1394,7 @@ economy:
   nation_prefix: nation-
  
   # The cost of renaming a town.
-  town_rename_cost: '2000'
+  town_rename_cost: '500'
  
   # The cost of renaming a nation.
   nation_rename_cost: '2000'
@@ -1460,7 +1460,7 @@ economy:
     # Warning: do not set this higher than the cost to claim a townblock.
     # It is advised that you do not set this to the same price as claiming either, otherwise towns will get around using outposts to claim far away.
     # Optionally, set this to a negative amount if you want towns to pay money to unclaim their land.
-    price_claim_townblock_refund: '0'
+    price_claim_townblock_refund: '0.0'
  
     # How much it costs a player to buy extra blocks.
     price_purchased_bonus_townblock: '250.0'
