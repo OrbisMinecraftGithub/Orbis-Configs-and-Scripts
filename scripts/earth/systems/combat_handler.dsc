@@ -264,14 +264,16 @@ combat_log_events:
         - define attacker <context.damager>
         - inject run_combat_check_high
         on crackshot weapon damages entity bukkit_priority:monitor:
-        - define victim <context.victim>
-        - define attacker <player>
-        - define weapon <context.weapon>
-        - inject run_combat_check_monitor
+        - if <context.cause> == ENTITY_ATTACK:
+            - define victim <context.victim>
+            - define attacker <player>
+            - define weapon <context.weapon>
+            - inject run_combat_check_monitor
         on entity damages entity bukkit_priority:monitor:
-        - define victim <context.entity>
-        - define attacker <context.damager>
-        - inject run_combat_check_monitor
+        - if <context.cause> == ENTITY_ATTACK:
+            - define victim <context.entity>
+            - define attacker <context.damager>
+            - inject run_combat_check_monitor
         on player quits:
         - if <player.has_flag[combat]>:
             - flag <player> kill_on_login
