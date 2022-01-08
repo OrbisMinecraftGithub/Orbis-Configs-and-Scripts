@@ -31,7 +31,6 @@ nomad:
 - towny.command.towny.universe
 - towny.command.town.online
 - towny.command.town.here
-- towny.town.spawn.public
 - towny.command.town.ranklist
 - towny.command.nation.ranklist
 - towny.command.town.new
