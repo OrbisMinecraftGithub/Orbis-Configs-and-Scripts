@@ -538,8 +538,8 @@ pool:
           1:
             type: MONEY
             total: 9000 
-            
- 10: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
+
+  10: #Each key can be uniquely named whatever you please, it is probably better name it something meaningful
     name: 'nation4'
     #What type of mission bearer the mission is designed for. Omit this if it can be given to any mission bearer
     #type.
