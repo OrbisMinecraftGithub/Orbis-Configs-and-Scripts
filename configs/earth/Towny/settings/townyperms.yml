@@ -70,7 +70,6 @@ towns:
   - towny.command.town.leave
   - towny.command.town.deposit
   - towny.command.town.reclaim
-  - towny.town.spawn.town
   - towny.chat.town
  
   # Mayors get these permissions in addition to the default set.
