@@ -307,6 +307,7 @@ combat_log_events:
                 - narrate "<&c>This player is in combat."
                 - determine cancelled
 
+
 player_leaves_combat:
     type: procedure
     definitions: player
