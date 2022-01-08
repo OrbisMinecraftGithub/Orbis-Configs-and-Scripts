@@ -6,6 +6,9 @@ command_fixes_events:
         on command:
         - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
         - define args <context.args||<list[]>>
+        - if !<[args].space_separated.matches_character_set[1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSRSTUVWXYZ<&lb><&rb>!@#$<&pc>^&*()_-=+.,;/<&sp>]> && <context.source_type> != SERVER:
+            - narrate "<&c>You cannot include illegal characters in this command."
+            - determine fulfilled
         - if <[cmd].to_lowercase.equals[cmi]> && <[args].get[1].equals[vanish]>:
             - wait 1t
             - if <player.cmi_vanish>:
