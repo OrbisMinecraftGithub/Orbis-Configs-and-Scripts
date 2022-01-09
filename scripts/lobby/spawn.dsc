@@ -1,14 +1,14 @@
 spawn_in_spawn:
-	type: world
+    type: world
     debug: false
     events:
-    	on player join:
-        - teleport <player> <world[lobby].spawn_location.add[<location[0.5,0,0.5]>].center>
+        on player join:
         - wait 1t
+        - teleport <player> <world[world].spawn_location.center.below[0.5]>
         - adjust <player> gamemode:adventure
-        
+
 command_website:
-	type: command
+    type: command
     name: web
     description: Visit the server website.
     usage: /web
@@ -18,7 +18,7 @@ command_website:
     - narrate "<&e>Visit our website at <&click[https://orbismc.com/].type[OPEN_URL]><&l><&n>OrbisMC.com/<&end_click>"
 
 command_store:
-	type: command
+    type: command
     name: store
     description: Visit the server store.
     usage: /store
@@ -26,7 +26,7 @@ command_store:
     - narrate "<&e>Visit our server store at <&click[https://store.orbismc.com/].type[OPEN_URL]><&l><&n>Store.OrbisMC.com/<&end_click>"
 
 command_rules:
-	type: command
+    type: command
     name: rules
     description: See the server rules.
     usage: /rules
@@ -34,7 +34,7 @@ command_rules:
     - narrate "<&e>See our rules at <&click[https://orbismc.com/rules].type[OPEN_URL]><&l><&n>OrbisMC.com/rules<&end_click>"
     
 blocked_commands:
-	type: command
+    type: command
     name: pl
     aliases:
     - plugins
@@ -42,4 +42,3 @@ blocked_commands:
     - bukkit:plugins
     script:
     - narrate "<&c>You do not have permission for this command."
-    
