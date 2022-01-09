@@ -72,3 +72,5 @@ gui_menus:
     file: hammer_menu.yml
   lumber_axe_menu:
     file: lumber_axe.yml
+  excavator_menu:
+    file: excavator.yml
