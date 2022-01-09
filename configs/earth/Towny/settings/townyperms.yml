@@ -40,6 +40,7 @@ nomad:
 - towny.nation.spawn.ally
 - towny.nation.spawn.public
 - towny.command.town.reslist
+- towny.town.spawn.town
 - towny.command.plot.group.*
 - towny.command.plot.perm
 - towny.command.plot.perm.hud
@@ -222,7 +223,7 @@ towns:
     recruiter:
     - towny.rank.town.recruiter
     - towny.command.town.invite.*
- 
+    - towny.town.spawn.town
     # Sheriff rank is able to jail other town members.
     sheriff:
     - towny.rank.town.sheriff
