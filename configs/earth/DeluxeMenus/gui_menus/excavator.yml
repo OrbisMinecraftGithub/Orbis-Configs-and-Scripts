@@ -16,7 +16,7 @@ items:
     material: DIAMOND_BLOCK
     slot: 11 
     priority: 1
-  'Stick'
+  'Stick':
     material: STICK
     slot: 20
     priority: 1
