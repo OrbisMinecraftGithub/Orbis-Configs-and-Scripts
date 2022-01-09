@@ -43,7 +43,7 @@ redstone_lag_prevention:
                     dispenser: 16
                     dropper: 16
                     piston: 16
-                    hopper: 16
+                    hopper: 32
                     sticky_piston: 16
                     slime_block: 16
     task:
