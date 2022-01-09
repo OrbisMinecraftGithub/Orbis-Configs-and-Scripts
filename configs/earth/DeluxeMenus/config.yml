@@ -70,3 +70,7 @@ gui_menus:
     file: voting_tiers.yml
   hammer_menu:
     file: hammer_menu.yml
+  lumber_axe_menu:
+    file: lumber_axe.yml
+  excavator_menu:
+    file: excavator.yml
