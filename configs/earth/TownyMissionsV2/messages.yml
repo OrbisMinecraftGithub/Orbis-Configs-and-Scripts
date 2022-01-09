@@ -52,7 +52,7 @@ mission:
     completion: '&6Received &e%s &6%s'
 
   government:
-    completion: '&e%s &6and the residents of &e%s &6have completed successfully completed their &e&l%s Mission &6earning big rewards!'
+    completion: '&e%s &6and the residents of &e%s &6have successfully completed their &e&l%s Mission &6earning big rewards!'
 
 
 
