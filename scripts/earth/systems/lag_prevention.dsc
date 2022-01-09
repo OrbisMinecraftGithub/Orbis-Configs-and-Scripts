@@ -63,7 +63,7 @@ redstone_lag_prevention:
         - define num <[loc].flag[redstone]>
         - if <[num].is_more_than[<yaml[config].read[lagcontrol.redstone.number_before_removal]||10>]>:
             - wait 1t
-            - modifyblock <[loc]> air naturally:diamond_pickaxe
+            - modifyblock <[loc]> air naturally:<item[diamond_pickaxe]>
             - flag <[loc]> redstone:!
 
 chunk_lag_prevention:
