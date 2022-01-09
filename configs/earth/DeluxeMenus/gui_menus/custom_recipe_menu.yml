@@ -236,7 +236,7 @@ items:
       - '[openguimenu] hammer_menu'
       - '[close]'  
   'LUMBER AXE': 
-    material: DIAMOND_PICKAXE
+    material: DIAMOND_AXE
     slot: 30
     priority: 1
     hide_attributes: true
@@ -248,3 +248,16 @@ items:
     left_click_commands:
       - '[openguimenu] lumber_axe_menu'
       - '[close]'  
+  'EXCAVATOR': 
+    material: DIAMOND_SHOVEL
+    slot: 30
+    priority: 1
+    hide_attributes: true
+    display_name: '&b&lLumber Axe'
+    lore:
+      - '&7Find the Custom Recepie here!'
+      - '&7'
+      - '&b&lLeft&7 Click to Continue'
+    left_click_commands:
+      - '[openguimenu] excavator_menu'
+      - '[close]'        
