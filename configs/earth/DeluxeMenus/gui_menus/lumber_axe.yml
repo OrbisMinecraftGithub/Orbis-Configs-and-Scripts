@@ -78,7 +78,7 @@ items:
     display_name: § 
   'DIA':
     material: DIAMOND_AXE
-    slot: 25
+    slot: 24
     priority: 1
     update: true
     hide_attributes:  true
