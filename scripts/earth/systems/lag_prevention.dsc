@@ -71,23 +71,12 @@ chunk_lag_prevention:
     debug: false
     events:
         on delta time minutely every:5:
-        - wait 10s
         - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[<server.online_players.size.mul[200]>]>:
-            - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
-                - define i:+:1
-                - if <[i].is_more_than_or_equal_to[10]>:
-                    - wait 1t
-                    - define i 0
-                - adjust <[c]> force_loaded:false
+            - adjust <server.worlds.parse[loaded_chunks].combine> force_loaded:false
         on server start:
         - wait 10s
         - if <server.worlds.parse[loaded_chunks].combine.size.is_more_than[<server.online_players.size.mul[200]>]>:
-            - foreach <server.worlds.parse[loaded_chunks].combine> as:c:
-                - define i:+:1
-                - if <[i].is_more_than_or_equal_to[10]>:
-                    - wait 1t
-                    - define i 0
-                - adjust <[c]> force_loaded:false
+            - adjust <server.worlds.parse[loaded_chunks].combine> force_loaded:false
 
 command_removelag:
     type: command
