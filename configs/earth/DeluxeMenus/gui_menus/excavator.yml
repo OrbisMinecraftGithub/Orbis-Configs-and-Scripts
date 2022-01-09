@@ -1,0 +1,76 @@
+menu_title: '&3> &b&lExcavator'
+open_command:
+  - nation command help
+open_commands:
+size: 45
+# as always, only cool people can open this menu :)
+open_requirement:
+  requirements:
+    permission:
+      type: has permission
+      permission: everyone
+      deny_commands:
+        - "[message] &8[&bDeluxe&eMenus&8] &cYou don't have perms for this!"
+items:
+  'Moss Block3':
+    material: DIAMOND_BLOCK
+    slot: 11
+    priority: 1
+    material: STICK
+    slot: 20
+    priority: 1
+  'BIG DRIPLEAF':
+    material: STICK
+    slot: 29
+    priority: 1
+  'ARROWBLUE':
+    material: hdb-10411
+    slot: 23
+    priority: 1
+  'Go back': 
+    material: BARRIER
+    slot: 44
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&c&lExit Back'
+    lore:
+      - '&7This will take you back to the &bCustom Recepie Menu.'
+      - '&7'
+      - '&#55ffff&lL&#61fcfb&le&#6cf8f8&lf&#75f5f4&lt &#7df1f1&lc&#84eeed&ll&#8beaea&li&#91e7e6&lc&#97e3e3&lk &#9ce0df&lt&#a1dcdc&lo &#a6d9d8&lc&#aad5d5&lo&#aed2d1&ln&#b2cece&lt&#b6cbca&li&#bac7c7&ln&#bdc4c3&lu&#c0c0c0&le'
+    left_click_commands:
+      - '[openguimenu] custom_recepie_menu'
+      - '[close]'
+  'SIGN':
+    material: BOOK
+    slot: 36    
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&e&lFind out more!'
+    lore:
+      - '&6Excavators can be crafted like normal shovels however'
+      - '&einstead of using ingots it is &lblocks!'
+      - '&4&lFrom Iron to Netherite'
+  'placeholder':
+    material: BLACK_STAINED_GLASS_PANE
+    slots: 
+      - 0-8
+      - 9
+      - 13-17
+      - 18
+      - 22
+      - 24
+      - 26
+      - 27
+      - 31-35
+      - 36-45
+    priority: 2
+    display_name: § 
+  'DIA':
+    material: DIAMOND_SHOVEL
+    slot: 25
+    priority: 1
+    update: true
+    hide_attributes:  true
+    display_name: '&e&lExcavator'
