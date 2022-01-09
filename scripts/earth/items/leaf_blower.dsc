@@ -6,15 +6,14 @@ leaf_blower_bow_events:
         on projectile hits block:
         - if <context.projectile.has_flag[item]> && <context.projectile.has_flag[shooter]> && <context.projectile.flag[item].enchantment_map.contains[leaf_blower]>:
             - if <context.location.material.name.advanced_matches_text[*leaves]>:
-                - modifyblock <context.location.flood_fill[3].types[*leaves]> air source:<context.projectile.flag[shooter]>
-                - if <context.location.material.name> != air:
-                    - remove <context.projectile>
-                    - stop
                 - define vel <context.projectile.velocity>
                 - define location <context.projectile.location>
                 - define item <context.projectile.flag[item]>
                 - define shooter <context.projectile.flag[shooter]>
+                - modifyblock <context.location.flood_fill[3].types[*leaves]> air source:<[shooter]> naturally:<[item]>
                 - remove <context.projectile>
+                - if <context.location.material.name> != air:
+                    - stop
                 - spawn arrow <[location]> save:arrow
                 - define arrow <entry[arrow].spawned_entity>
                 - adjust <[arrow]> velocity:<[vel]>
