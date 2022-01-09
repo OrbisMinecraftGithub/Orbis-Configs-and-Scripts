@@ -250,7 +250,7 @@ items:
       - '[close]'  
   'EXCAVATOR': 
     material: DIAMOND_SHOVEL
-    slot: 30
+    slot: 29
     priority: 1
     hide_attributes: true
     display_name: '&b&lExcavator'
