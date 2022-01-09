@@ -9,8 +9,6 @@ command_fixes_events:
         - if !<[args].space_separated.matches_character_set[1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSRSTUVWXYZ?{}<&sq><&dq><&gt><&lt><&lb><&rb>!@#$<&pc>^&*()_-=+.<&co>,;/<&bs><&sp>]> && <context.source_type> != SERVER:
             - narrate "<&c>You cannot include illegal characters in this command."
             - determine fulfilled
-        - if <[cmd]> == lore:
-            - determine fulfilled
         - if <[cmd].to_lowercase.equals[cmi]> && <[args].get[1].equals[vanish]>:
             - wait 1t
             - if <player.cmi_vanish>:
