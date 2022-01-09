@@ -132,7 +132,7 @@ scoreboard:
       - '  &#59bace&l• &#009df3Town - &F&l%denizen_<player.town.name.if_null[NONE]>%'
       - '&7'
       - '  &#59bace&l• &#009df3Balance: &f&l%denizen_<player.formatted_money>%'
-      - '  &#59bace&l• &#009df3VoteParty:&#C1B9B9『&#0898FB%denizen_<server.flag[votes].mod[100].sub[100].abs>%/100&#C1B9B9』'
+      - '  &#59bace&l• &#009df3VoteParty:&#C1B9B9『&fdenizen_<server.flag[votes].mod[100].sub[100].abs>%/100&#C1B9B9』'
       - '&7'
       - '  &#0084ff&l&m &#0088ff&l&m &#008cff&l&m &#008fff&l&m &#0093fe&l&m &#0096fa&l&m &#0099f7&l&m &#009df3&l&m &#00a0ef&l&m &#00a3eb&l&m &#00a6e7&l&m &#00a9e4&l&m &#00abe0&l&m &#00aedd&l&m &#00b1d9&l&m &#00b3d6&l&m &#2db5d3&l&m &#47b8d0&l&m &#59bace&l&m     &r     '    
       - '&7'
