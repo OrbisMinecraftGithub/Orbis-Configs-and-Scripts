@@ -253,7 +253,7 @@ items:
     slot: 30
     priority: 1
     hide_attributes: true
-    display_name: '&b&lLumber Axe'
+    display_name: '&b&lExcavator'
     lore:
       - '&7Find the Custom Recepie here!'
       - '&7'
