@@ -328,7 +328,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 1200
+            total: 1000
           2:
             type: EXP
             total: 5000
@@ -564,7 +564,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 12000
+            total: 9000
           2:
             type: EXP
             total: 5000
@@ -585,7 +585,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 13000
+            total: 10000
           2:
             type: EXP
             total: 500
@@ -596,4 +596,4 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 14000 
+            total: 11000 
