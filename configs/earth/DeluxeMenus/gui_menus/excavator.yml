@@ -14,8 +14,9 @@ open_requirement:
 items:
   'Moss Block3':
     material: DIAMOND_BLOCK
-    slot: 11
+    slot: 11 
     priority: 1
+  'Stick'
     material: STICK
     slot: 20
     priority: 1
