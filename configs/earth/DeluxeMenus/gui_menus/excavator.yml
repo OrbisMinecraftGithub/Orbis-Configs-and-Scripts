@@ -16,14 +16,14 @@ items:
     material: DIAMOND_BLOCK
     slot: 11 
     priority: 1
-  'Stick':
-    material: STICK
-    slot: 20
-    priority: 1
   'BIG DRIPLEAF':
     material: STICK
     slot: 29
     priority: 1
+  'BIG DRIPLEAF1':
+    material: STICK
+    slot: 20
+    priority: 1    
   'ARROWBLUE':
     material: hdb-10411
     slot: 23
