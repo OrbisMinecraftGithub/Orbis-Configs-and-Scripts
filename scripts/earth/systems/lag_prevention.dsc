@@ -61,11 +61,9 @@ redstone_lag_prevention:
         - ratelimit <[loc]> 2t
         - flag <[loc]> redstone:<[loc].flag[redstone].add[1]||1> duration:<yaml[config].read[lagcontrol.redstone.min_time_between_pulse].as_duration||<duration[1s]>>
         - define num <[loc].flag[redstone]>
-        - if <[num].is_more_than[<yaml[config].read[lagcontrol.redstone.number_before_removal]||10>]>:
+        - if <[num].is_more_than[<yaml[config].read[lagcontrol.redstone.number_before_removal]||100>]>:
             - wait 1t
-            - define mat <[loc].material.name>
-            - drop <item[<[mat]>]> <[loc].center> quantity:1
-            - modifyblock <[loc]> air
+            - modifyblock <[loc]> air naturally:<item[diamond_pickaxe]>
             - flag <[loc]> redstone:!
 
 chunk_lag_prevention:
