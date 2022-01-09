@@ -260,4 +260,17 @@ items:
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
       - '[openguimenu] excavator_menu'
+      - '[close]'       
+  'Leaf blower': 
+    material: BOW
+    slot: 32
+    priority: 1
+    hide_attributes: true
+    display_name: '&b&lLeaf Blower'
+    lore:
+      - '&7Find the Custom Recepie here!'
+      - '&7'
+      - '&b&lLeft&7 Click to Continue'
+    left_click_commands:
+      - '[openguimenu] leaf_blower_menu'
       - '[close]'        
