@@ -34,7 +34,7 @@ items:
     priority: 1
   'BIG DRIPLEAF1':
     material: COBWEB
-    slot: 33
+    slot: 30
     priority: 1    
   'SHEAR':
     material: SHEARS

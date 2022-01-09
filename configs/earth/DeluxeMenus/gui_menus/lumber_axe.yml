@@ -61,6 +61,9 @@ items:
       - '&6Lumber axes can be crafted like normal axes however'
       - '&einstead of using ingots it is &lblocks!'
       - '&4&lFrom Iron to Netherite'
+      - '&7'
+      - '&6The lumber axe cuts down big part of a tree'
+      - '&eusing treefeller'
   'placeholder':
     material: BLACK_STAINED_GLASS_PANE
     slots: 

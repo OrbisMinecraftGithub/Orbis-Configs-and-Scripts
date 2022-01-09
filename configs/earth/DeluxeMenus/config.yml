@@ -74,3 +74,5 @@ gui_menus:
     file: lumber_axe.yml
   excavator_menu:
     file: excavator.yml
+  leaf_blower_menu:
+    file: leaf_blower.yml
