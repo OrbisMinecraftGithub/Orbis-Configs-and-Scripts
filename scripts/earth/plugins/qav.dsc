@@ -2,18 +2,15 @@ garage_command:
     type: command
     name: garage
     debug: false
-    config:
-        defaults:
-            garage:
-                warmup: '&eYou are warming up to open the garage.'
-                combat: '&eWarmup failed, You are in combat.'
-                moved: '&eWarmup failed, You have moved.'
     script:
     - define location <player.location.block>
-    - narrate <proc[colorize].context[<yaml[config].read[garage.warmup]>]>
+    - if !<[location].world.has_flag[vehicles_allowed]>:
+        - narrate "<&c>Vehicles cannot be used in this world."
+        - stop
+    - narrate "<&e>You are warming up to open the garage."
     - wait 3s
     - if <player.location.block> != <[location]>:
-        - narrate <proc[colorize].context[<yaml[config].read[garage.moved]>]>
+        - narrate "<&c>Warmup failed, you have moved."
         - stop
     - execute as_player "qav garage <player.uuid>"
 
