@@ -30,7 +30,7 @@ kit_gui_handler:
 kit_gui:
     type: inventory
     title: <&6>◆ <&a><&n><&l>Kits<&r> <&6>◆
-    size: 36
+    size: 54
     gui: true
     inventory: chest
     debug: false
@@ -44,6 +44,8 @@ kit_gui:
         w_filler: <item[black_stained_glass_pane].with[display=<&sp>]>
     slots:
     - [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler]
+    - [w_filler] [] [] [] [] [] [] [] [w_filler]
+    - [w_filler] [] [] [] [] [] [] [] [w_filler]
     - [w_filler] [] [] [] [] [] [] [] [w_filler]
     - [w_filler] [] [] [] [] [] [] [] [w_filler]
     - [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler] [w_filler]
