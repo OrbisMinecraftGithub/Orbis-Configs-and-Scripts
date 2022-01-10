@@ -4,8 +4,9 @@ mobs_events:
     events:
         on wandering_trader spawns because natural:
         - determine cancelled
-        on zombie_villager spawns because natural:
-        - determine cancelled
+        on zombie_villager spawns:
+        - if <context.reason> != SPAWNER_EGG:
+            - determine cancelled
         on phantom spawns because natural:
         - determine cancelled
         on ender_crystal spawns:
