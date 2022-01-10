@@ -39,7 +39,7 @@ Desert_Eagle_CSP:
   Ammo:
     Enable: true
     Ammo_Item_ID: ghast_tear
-    Ammo_Name_Check: §g§6Clip    
+    Ammo_Name_Check: §g§6Clip   
 
 AK47:
     Item_Information:
