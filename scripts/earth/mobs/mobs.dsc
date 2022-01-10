@@ -16,5 +16,5 @@ mobs_events:
         on armor_stand dies:
         - determine <context.drops.filter[unbreakable.not]>
         on iron_golem spawns:
-        - if <context.cause> != BUILD_IRONGOLEM:
+        - if <context.reason> != BUILD_IRONGOLEM:
             - determine cancelled
