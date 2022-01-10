@@ -11,9 +11,11 @@ Desert_Eagle_CSP:
     Projectile_Amount: 1
     Projectile_Type: arrow
     Projectile_Speed: 70
-    Projectile_Damage: 4
+    Projectile_Damage: 7
     Bullet_Spread: 0.6
   Reload:
+    Take_Ammo_On_Reload: true
+    Take_Ammo_As_Magazine: true
     Enable: true
     Reload_Amount: 7
     Reload_Duration: 40
@@ -25,15 +27,19 @@ Desert_Eagle_CSP:
       Sounds_Shoot_With_No_Ammo: UI_BUTTON_CLICK-1-2-0
   Headshot:
     Enable: true
-    Bonus_Damage: 6
+    Bonus_Damage: 7
   Backstab:
     Enable: true
-    Bonus_Damage: 3
+    Bonus_Damage: 4
   Abilities:
     Reset_Hit_Cooldown: true
     No_Vertical_Recoil: true
   Extras:
     Disable_Underwater: true
+  Ammo:
+    Enable: true
+    Ammo_Item_ID: ghast_tear
+    Ammo_Name_Check: §g§6Clip   
 
 AK47:
     Item_Information:
