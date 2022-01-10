@@ -79,9 +79,9 @@ qav_events:
         on armor_stand spawns:
         - wait 1t
         - if <context.entity.qav_health||-1> != -1:
-            - if <context.entity.location.world.ends_with[nether]> || <context.entity.location.world.ends_with[the_end]>:
+            - if !<context.entity.location.world.has_flag[vehicles_allowed]>:
                 - remove <context.entity>
-            - if <context.entity.passengers.get[1].is_player>:
+            - if <context.entity.passengers.get[1].is_player||false>:
                 - define player <context.entity.passengers.get[1]>
                 - define vehicle <context.entity>
                 - inject qav_events path:play_effect
