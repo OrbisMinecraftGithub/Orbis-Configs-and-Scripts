@@ -141,7 +141,7 @@ M4A1:
         Projectile_Amount: 1
         Projectile_Type: snowball
         Projectile_Speed: 90
-        Projectile_Damage: 9
+        Projectile_Damage: 12
         Bullet_Spread: 0.5
         Remove_Bullet_Drop: true
     Sneak:
@@ -164,7 +164,7 @@ M4A1:
         Zoom_Bullet_Spread: 0.2
     Headshot:
         Enable: true
-        Bonus_Damage: 9
+        Bonus_Damage: 10
     Backstab:
         Enable: false
         Bonus_Damage: 0
