@@ -29,13 +29,11 @@ travel_command:
         - narrate "<&c>You cannot use this command for <player.flag_expiration[no_travel_command].from_now.formatted>."
         - stop
     - define continent <context.args.get[1]||>
-    - inject get_random_point_task
-    - teleport <[loc]>
+    - define loc <proc[get_random_point].context[<[continent]>]>
+    - chunkload <[loc].chunk> duration:10s
+    - waituntil <[loc].chunk.is_loaded>
+    - teleport <[loc].highest.up[1]>
     - flag <player> no_travel_command duration:5m
-    - flag <player> no_fall duration:1m
-    - waituntil <player.location.below[0.01].material.is_solid||false>
-    - wait 1s
-    - flag <player> no_fall:!
 
 get_random_point_task:
     type: procedure
@@ -83,15 +81,13 @@ travel_events:
         - define location <player.location>
         - wait 1t
         - adjust <player> respawn
-        - inject get_random_point_task
-        - teleport <player> <[loc]>
+        - define loc <proc[get_random_point]>
+        - chunkload <[loc].chunk> duration:10s
+        - waituntil <[loc].chunk.is_loaded>
+        - teleport <[loc].highest.up[1]>
         - inventory clear d:<player.inventory>
         - adjust <player> health:20
         - adjust <player> food_level:20
-        - flag <player> no_fall duration:1m
-        - waituntil <player.location.below[0.01].material.is_solid||false>
-        - wait 1s
-        - flag <player> no_fall:!
         on server start:
         - inject travel_events path:load
         on reload scripts:
