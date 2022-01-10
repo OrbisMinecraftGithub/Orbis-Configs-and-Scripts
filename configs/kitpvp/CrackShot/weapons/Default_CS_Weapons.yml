@@ -14,6 +14,8 @@ Desert_Eagle_CSP:
     Projectile_Damage: 7
     Bullet_Spread: 0.6
   Reload:
+    Take_Ammo_On_Reload: true
+    Take_Ammo_As_Magazine: true
     Enable: true
     Reload_Amount: 7
     Reload_Duration: 40
@@ -34,6 +36,10 @@ Desert_Eagle_CSP:
     No_Vertical_Recoil: true
   Extras:
     Disable_Underwater: true
+  Ammo:
+    Enable: true
+    Ammo_Item_ID: ghast_tear
+    Ammo_Name_Check: §g§6Clip    
 
 AK47:
     Item_Information:
