@@ -11,7 +11,7 @@ Desert_Eagle_CSP:
     Projectile_Amount: 1
     Projectile_Type: arrow
     Projectile_Speed: 70
-    Projectile_Damage: 7
+    Projectile_Damage: 8
     Bullet_Spread: 0.6
   Reload:
     Take_Ammo_On_Reload: true
@@ -27,14 +27,14 @@ Desert_Eagle_CSP:
       Sounds_Shoot_With_No_Ammo: UI_BUTTON_CLICK-1-2-0
   Headshot:
     Enable: true
-    Bonus_Damage: 7
+    Bonus_Damage: 8
   Backstab:
     Enable: true
-    Bonus_Damage: 4
+    Bonus_Damage: 5
   Abilities:
     Reset_Hit_Cooldown: true
     No_Vertical_Recoil: true
-    Knockback: 0.1
+    Knockback: 0
   Extras:
     Disable_Underwater: true
   Ammo:
