@@ -1,4 +1,8 @@
 Desert_Eagle_CSP:
+  Damage:
+      No_Knockback:
+          Affect_Players: true
+          Affect_Mobs_And_Animals: true
   Shoot:
     Invisible_Projectiles: true
     Custom_Pre_Shoot_Sound: "shoot.deserteagle-3-1"
