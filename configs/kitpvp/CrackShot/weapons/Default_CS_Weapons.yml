@@ -11,7 +11,7 @@ Desert_Eagle_CSP:
     Projectile_Amount: 1
     Projectile_Type: arrow
     Projectile_Speed: 70
-    Projectile_Damage: 8
+    Projectile_Damage: 9
     Bullet_Spread: 0.6
   Reload:
     Take_Ammo_On_Reload: true
