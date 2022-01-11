@@ -33,6 +33,8 @@ hammers_events:
                     - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
             - else:
                 - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<player.item_in_hand.with[durability=<player.item_in_hand.durability.add[1]>]>
+            - if <player.item_in_hand.durability> > <player.item_in_hand.max_durability>:
+                - inventory set d:<player.inventory> slot:<player.held_item_slot> o:<item[air]>
 
 hammer_diamond:
     type: item
