@@ -119,7 +119,7 @@ items:
     hide_attributes: true
     display_name: '&b&lGunpowder'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -132,7 +132,7 @@ items:
     hide_attributes: true
     display_name: '&b&lInk Sac'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -146,7 +146,7 @@ items:
     hide_attributes: true
     display_name: '&b&lMagazine'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -160,7 +160,7 @@ items:
     hide_attributes: true
     display_name: '&b&lClip'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -174,7 +174,7 @@ items:
     hide_attributes: true
     display_name: '&b&lShotgun Shell'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -187,7 +187,7 @@ items:
     hide_attributes: true
     display_name: '&b&lBig Shulker'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -201,7 +201,7 @@ items:
     hide_attributes: true
     display_name: '&b&lRocket'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -229,7 +229,7 @@ items:
     hide_attributes: true
     display_name: '&b&lHammer'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -242,7 +242,7 @@ items:
     hide_attributes: true
     display_name: '&b&lLumber Axe'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -255,7 +255,7 @@ items:
     hide_attributes: true
     display_name: '&b&lExcavator'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -268,7 +268,7 @@ items:
     hide_attributes: true
     display_name: '&b&lLeaf Blower'
     lore:
-      - '&7Find the Custom Recepie here!'
+      - '&7Find the Custom Recipe here!'
       - '&7'
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
