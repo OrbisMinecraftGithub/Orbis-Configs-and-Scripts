@@ -32,7 +32,7 @@ items:
     priority: 1
     update: true
     hide_attributes: true
-    display_name: '&fAzela'
+    display_name: '&fAzalea'
     lore:
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
@@ -44,7 +44,7 @@ items:
     priority: 1
     update: true
     hide_attributes: true
-    display_name: '&fFlowering_Azela'
+    display_name: '&fFlowering Azalea'
     lore:
       - '&b&lLeft&7 Click to Continue'
     left_click_commands:
