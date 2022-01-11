@@ -34,7 +34,6 @@ Desert_Eagle_CSP:
   Abilities:
     Reset_Hit_Cooldown: true
     No_Vertical_Recoil: true
-    Knockback: 0
   Extras:
     Disable_Underwater: true
   Ammo:
