@@ -27,7 +27,7 @@ Desert_Eagle_CSP:
       Sounds_Shoot_With_No_Ammo: UI_BUTTON_CLICK-1-2-0
   Headshot:
     Enable: true
-    Bonus_Damage: 8
+    Bonus_Damage: 9
   Backstab:
     Enable: true
     Bonus_Damage: 5
