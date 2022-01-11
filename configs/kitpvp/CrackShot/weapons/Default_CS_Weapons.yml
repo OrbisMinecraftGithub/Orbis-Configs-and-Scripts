@@ -30,7 +30,7 @@ Desert_Eagle_CSP:
     Bonus_Damage: 9
   Backstab:
     Enable: true
-    Bonus_Damage: 5
+    Bonus_Damage: 3
   Abilities:
     Reset_Hit_Cooldown: true
     No_Vertical_Recoil: true
