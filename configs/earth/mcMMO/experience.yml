@@ -130,10 +130,10 @@ Experience_Formula:
     # If invalid values are entered mcMMO will not start and print an error in the console
     Linear_Values:
         base: 2000
-        multiplier: 1
+        multiplier: 1.15
     Exponential_Values:
         multiplier: 0.15
-        exponent: 2
+        exponent: 1.8
         base: 2000
 
     # Cumulative experience curves will use a players power level instead of their skill level,
