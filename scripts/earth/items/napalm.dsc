@@ -71,7 +71,7 @@ napalm_handler:
         - if <context.entity.has_flag[napalm]>:
             - define map <map[]>
             - determine passively cancelled
-            - foreach <context.location.find_entities.within[5]> as:e:
+            - foreach <context.location.find_entities.within[5]||<list[]>> as:e:
                 - define map <[map].with[<[e]>].as[<[e].velocity>]>
             - if <yaml[config].parsed_key[napalm.fire_explosive]||true>:
                 - if <yaml[config].parsed_key[napalm.explosion_breaks_blocks]||false>:
@@ -83,7 +83,7 @@ napalm_handler:
                     - explode <context.location> power:<yaml[config].parsed_key[napalm.explosive_power]||1> breakblocks
                 - else:
                     - explode <context.location> power:<yaml[config].parsed_key[napalm.explosive_power]||1>
-            - foreach <[map].keys> as:e:
+            - foreach <[map].keys||<list[]>> as:e:
                 - adjust <[e]> velocity:<[map].get[<[e]>]>
 
 napalm_flare_item:
