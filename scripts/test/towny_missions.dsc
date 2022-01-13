@@ -275,9 +275,9 @@ towny_missions_command:
     - define args <context.args||<list[]>>
     - define length <context.raw_args.split[].count[<&sp>].add[1]>
     - if <[length]> == 1:
-        - determine <list[contribute|contrib].filter[to_lowercase.starts_with[<[args].get[1].to_lowercase||>]]>
+        - determine <list[contribute|contrib|autocontrib|autocontribute|auto].filter[to_lowercase.starts_with[<[args].get[1].to_lowercase||>]]>
     - else:
-        - if <[args].get[1].to_lowercase.advanced_matches_text[contribute|contrib]> && <[length]> == 2:
+        - if <[args].get[1].to_lowercase.advanced_matches_text[contribute|contrib|autocontrib|autocontribute|auto]> && <[length]> == 2:
             - determine <list[town|nation].filter[to_lowercase.starts_with[<[args].get[2].to_lowercase||>]]>
     script:
     - define cmd <context.alias.to_lowercase.split[<&co>].get[2]||<context.alias.to_lowercase>>
@@ -288,34 +288,55 @@ towny_missions_command:
     - if !<[args].get[1].exists>:
         - inventory open d:towny_missions_mission_inventory_gui
         - stop
-    - if <[args].get[1].to_lowercase.advanced_matches_text[contrib|contribute]>:
-        - choose <[args].get[2].to_lowercase>:
-            - case "nation":
-                - if !<player.has_nation>:
-                    - narrate "<&c>You are not in a nation."
-                    - stop
-                - if !<player.nation.has_flag[towny_missions.mission.type]>:
-                    - narrate "<&c>Your nation does not have a mission."
-                    - stop
-                - run towny_missions_player_contributes def:<player.nation>|<player>
-            - case "town":
-                - if !<player.has_town>:
-                    - narrate "<&c>You are not in a town."
-                    - stop
-                - if !<player.town.has_flag[towny_missions.mission.type]>:
-                    - narrate "<&c>Your town does not have a mission."
-                    - stop
-                - run towny_missions_player_contributes def:<player.town>|<player>
+    - choose <[args].get[1].to_lowercase>:
+        - case "":
+            - narrate "<&c>Not enough arguments."
+        - case "contrib" "contribute":
+            - choose <[args].get[2].to_lowercase||>:
+                - case "":
+                    - narrate "<&c>Not enough arguments."
+                - case "nation":
+                    - if !<player.has_nation>:
+                        - narrate "<&c>You are not in a nation."
+                        - stop
+                    - if !<player.nation.has_flag[towny_missions.mission.type]>:
+                        - narrate "<&c>Your nation does not have a mission."
+                        - stop
+                    - run towny_missions_player_contributes def:<player.nation>|<player>
+                - case "town":
+                    - if !<player.has_town>:
+                        - narrate "<&c>You are not in a town."
+                        - stop
+                    - if !<player.town.has_flag[towny_missions.mission.type]>:
+                        - narrate "<&c>Your town does not have a mission."
+                        - stop
+                    - run towny_missions_player_contributes def:<player.town>|<player>
+                - default:
+                    - narrate "<&c>That is not a valid argument."
+        - case "autocontrib" "autocontribute" "auto":
+            - choose <[args].get[2].to_lowercase||>:
+                - case "":
+                    - narrate "<&c>Not enough arguments."
+                - case "nation":
+                    - flag <player> towny_missions.auto_contribute.nation:<player.flag[towny_missions.auto_contribute.nation].not||true>
+                    - narrate "<&e>You have toggled auto contribute for nation missions: <player.flag[towny_missions.auto_contribute.nation]||false>"
+                - case "town":
+                    - flag <player> towny_missions.auto_contribute.town:<player.flag[towny_missions.auto_contribute.town].not||true>
+                    - narrate "<&e>You have toggled auto contribute for nation missions: <player.flag[towny_missions.auto_contribute.town]||false>"
+                - default:
+                    - narrate "<&c>That is not a valid argument."
+        - default:
+            - narrate "<&c>That is not a valid argument."
 
 towny_missions_gui_item_no_town_mission:
     type: item
     material: stone
-    display name: <script.name>
+    display name: <&l><&2>Town Mission<&co> <&a><&l>Not Available
 
 towny_missions_gui_item_no_town:
     type: item
     material: stone
-    display name: <script.name>
+    display name: <&l><&2>Town Mission<&co> <&a><&l>No Town
 
 towny_missions_gui_item_town_mission:
     type: item
@@ -332,12 +353,12 @@ towny_missions_gui_item_town_mission:
 towny_missions_gui_item_no_nation_mission:
     type: item
     material: stone
-    display name: <script.name>
+    display name: <&l><&2>Town Mission<&co> <&a><&l>Not Available
 
 towny_missions_gui_item_no_nation:
     type: item
     material: stone
-    display name: <script.name>
+    display name: <&l><&2>Town Mission<&co> <&a><&l>No Nation
 
 towny_missions_gui_item_nation_mission:
     type: item
