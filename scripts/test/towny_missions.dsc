@@ -322,7 +322,7 @@ towny_missions_command:
                     - narrate "<&e>You have toggled auto contribute for nation missions: <player.flag[towny_missions.auto_contribute.nation]||false>"
                 - case "town":
                     - flag <player> towny_missions.auto_contribute.town:<player.flag[towny_missions.auto_contribute.town].not||true>
-                    - narrate "<&e>You have toggled auto contribute for nation missions: <player.flag[towny_missions.auto_contribute.town]||false>"
+                    - narrate "<&e>You have toggled auto contribute for town missions: <player.flag[towny_missions.auto_contribute.town]||false>"
                 - default:
                     - narrate "<&c>That is not a valid argument."
         - default:
