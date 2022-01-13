@@ -128,14 +128,14 @@ napalm_flare_events:
             - define num <context.projectile.flag[bounce_number]||0>
             - define velocity <context.projectile.velocity>
             - define location <context.projectile.location>
-            - inject napalm_flare_events spawn
+            - inject napalm_flare_events path:spawn
         on snowball hits block:
         - if <context.projectile.has_flag[napalm_flare]>:
             - define num <context.projectile.flag[bounce_number]||0>
             - define velocity <context.projectile.velocity>
             - define location <context.projectile.location.add[<context.hit_face.mul[0.1]>]>
             - if <location[0,0,0,world].distance[<[velocity]>]> < 0.15:
-                - inject napalm_flare_events spawn
+                - inject napalm_flare_events path:spawn
             - else:
                 - determine passively cancelled
                 - if <context.hit_face.x> != 0:
