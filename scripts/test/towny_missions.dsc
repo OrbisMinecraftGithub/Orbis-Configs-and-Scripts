@@ -369,7 +369,7 @@ towny_missions_gui_item_nation_mission:
 
 towny_missions_gui_item_no_coalition:
     type: item
-    material: book
+    material: bookshelf
     display name: <&l><&2>Coalition Mission<&co>
     lore:
     - <&c><&l>COMING SOON!
