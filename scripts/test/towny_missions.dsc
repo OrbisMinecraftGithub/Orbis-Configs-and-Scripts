@@ -120,7 +120,7 @@ towny_missions_player_contributes:
                     - foreach next
                 - define has <[player].inventory.list_contents.filter[advanced_matches[<[item]>]].parse[quantity].sum>
                 - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
-                - define remaining <[requirement].sub[<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>]>
+                - define remaining <[requirement].sub[<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>]>
                 - if <[remaining]> >= <[has]>:
                     - define take <[has]>
                 - else:
@@ -255,11 +255,11 @@ towny_missions_mission_inventory_gui:
         - define items:|:<item[towny_missions_gui_item_nation_mission].with[lore=<[lore2]>]>
     - determine <[items]>
     definitions:
-        ui: <item[light_gray_stained_glass_pane].with[display=<&sp>]>
+        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
     slots:
         - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
         - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
-        - [ui] [] [ui] [] [ui] [] [ui] [] [ui]
+        - [ui] [] [ui] [] [ui] [towny_missions_gui_item_no_coalition] [ui] [] [ui]
         - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
         - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
 
@@ -325,17 +325,17 @@ towny_missions_command:
 
 towny_missions_gui_item_no_town_mission:
     type: item
-    material: stone
+    material: paper
     display name: <&l><&2>Town Mission<&co> <&a><&l>Not Available
 
 towny_missions_gui_item_no_town:
     type: item
-    material: stone
+    material: paper
     display name: <&l><&2>Town Mission<&co> <&a><&l>No Town
 
 towny_missions_gui_item_town_mission:
     type: item
-    material: stone
+    material: paper
     display name: <&l><&2>Town Mission<&co> <&a><&l>In Progress
     data:
         task:
@@ -347,17 +347,17 @@ towny_missions_gui_item_town_mission:
 
 towny_missions_gui_item_no_nation_mission:
     type: item
-    material: stone
+    material: book
     display name: <&l><&2>Town Mission<&co> <&a><&l>Not Available
 
 towny_missions_gui_item_no_nation:
     type: item
-    material: stone
+    material: book
     display name: <&l><&2>Town Mission<&co> <&a><&l>No Nation
 
 towny_missions_gui_item_nation_mission:
     type: item
-    material: stone
+    material: book
     display name: <&l><&2>Nation Mission<&co> <&a><&l>In Progress
     data:
         task:
@@ -366,3 +366,10 @@ towny_missions_gui_item_nation_mission:
                 government: <player.nation>
                 player: <player>
             click: RIGHT|SHIFT_RIGHT
+
+towny_missions_gui_item_no_coalition:
+    type: item
+    material: book
+    display name: <&l><&2>Coalition Mission<&co>
+    lore:
+    - <&c><&l>COMING SOON!
