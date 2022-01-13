@@ -19,12 +19,26 @@ towny_rebuild_status_screen:
                     - define "lines:|:<&2> <&gt> <&m>Gather <&a><&m><[requirement]> <&2><&m><[material]><&co> <&a><&m><[completed]>"
                 - else:
                     - define "lines:|:<&2> <&gt> Gather <&a><[requirement]> <&2><[material]><&co> <&a><[completed]>"
-            - define time <player.town.flag_expiration[towny_missions.mission.type].from_now.in_seconds>
+            - define time <[government].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
             - define time <[time].sub[<[time].mod[60]>].as_duration>
             - define "lines:|:<&2> <&gt> Time Left: <&a><[time].formatted_words>"
         - else:
             - define "lines:|:<&a>Completed"
     - townymeta <[government]> key:denizen label:Mission "value:<[lines].separated_by[<&nl>]>"
+
+item_helper:
+    type: world
+    debug: false
+    events:
+        on player clicks item in inventory:
+        - if <context.item.script.exists> && <context.item.script.data_key[data.task].exists>:
+            - define script <context.item.script>
+            - if <[script].data_key[data.task.click].exists>:
+                - if !<context.click.advanced_matches_text[<[script].data_key[data.task.click]>]>:
+                    - stop
+            - define task <[script].data_key[data.task.script]>
+            - define definitions <[script].data_key[data.task.definitions].parsed>
+            - run <[task]> defmap:<[definitions]>
 
 towny_missions_events:
     type: world
@@ -32,6 +46,25 @@ towny_missions_events:
     events:
         on server start:
         - yaml id:towny_missions load:data/missions_pool.yml
+        on delta time minutely:
+        - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.type]].filter[flag_expiration[towny_missions.mission.type].from_now.is_less_than[60m]]> as:t:
+            - run towny_rebuild_status_screen def:<[t]>
+        on delta time minutely every:10:
+        - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.type]].filter[flag_expiration[towny_missions.mission.type].from_now.is_more_than[60m]]> as:t:
+            - run towny_rebuild_status_screen def:<[t]>
+        on delta time hourly:
+        - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
+            - run towny_missions_give_mission def:<[t]>
+        on player picks up item:
+        - if <player.has_town> && <player.has_flag[towny_missions.auto_contribute.town]> && <player.town.has_flag[towny_missions.mission.type]>:
+            - if <context.item.advanced_matches[<player.town.flag[towny_missions.mission.easy.matcher]>]>:
+                - wait 1t
+                - run towny_missions_player_contributes def:<player.town>|<player>|true
+        - if <player.has_nation> && <player.has_flag[towny_missions.auto_contribute.nation]> && <player.nation.has_flag[towny_missions.mission.type]>:
+            - if <context.item.advanced_matches[<player.nation.flag[towny_missions.mission.easy.matcher]>]>:
+                - wait 1t
+                - run towny_missions_player_contributes def:<player.nation>|<player>|true
+
 
 towny_missions_give_mission:
     type: task
@@ -56,24 +89,26 @@ towny_missions_give_mission:
         - define quantity <yaml[towny_missions].read[pool.<[mission]>.goals.<[n]>.goal]>
         - flag <[government]> towny_missions.mission.goal.<[n]>.material:<[material]>
         - flag <[government]> towny_missions.mission.goal.<[n]>.quantity.requirement:<[quantity]>
-        - flag <[government]> towny_missions.mission.goal.<[n]>.quantity.completed:<list[]>
+        - flag <[government]> towny_missions.mission.goal.<[n]>.quantity.completed.server:0
+        - flag <[government]> towny_missions.mission.easy.matcher:|:<[material]>
         - narrate targets:<[online]> "<&2> <&gt> Gather <&a><[quantity]> <&2><[material].to_titlecase>"
     - narrate targets:<[online]> "<&2>You have <&a><[duration].formatted_words> <&2>to complete this mission."
+    - flag <[government]> towny_missions.mission.cooldown expire:<[duration]>
     - run towny_rebuild_status_screen def:<[government]>
 
 towny_missions_player_contributes:
     type: task
     debug: false
-    definitions: government|player
+    definitions: government|player|auto
     script:
-    - if !<[government].is_truthy>:
+    - define auto <[auto]||false>
+    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
         - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
         - stop
     - if !<[player].is_truthy> || <[player].object_type> != Player:
         - stop
-    - if !<[government].flag[towny_missions.mission.type].exists>:
-        - stop
+    - ratelimit 1s <[player]>
     - adjust <queue> linked_player:<[player]>
     - if <[government].has_flag[towny_missions.mission.goal]>:
         - if <[player].inventory.contains_item[<[government].flag[towny_missions.mission.goal].values.parse[get[material]]>]>:
@@ -95,21 +130,19 @@ towny_missions_player_contributes:
                 - if <[remaining]> <= <[has]>:
                     - run towny_missions_complete_mission_objective def:<[government]>|<[n]>
                 - else:
-                    - narrate "<&2>Turned in <[take]> <[item]>, <[remaining].sub[<[take]>]> items are remaining."
+                    - if !<[auto]>:
+                        - narrate "<&2>Turned in <&a><[take]> <&2><[item]>, <&a><[remaining].sub[<[take]>]> <&2>items are remaining."
                     - run towny_rebuild_status_screen def:<[government]>
+                    - run towny_missions_mission_inventory_gui_update def:<[government]>
 
 towny_missions_complete_mission_objective:
     type: task
     debug: false
     definitions: government|n
     script:
-    - if !<[government].is_truthy>:
+    - if !<[government].is_truthy> || !<[n].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
         - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
-        - stop
-    - if !<[n].is_truthy>:
-        - stop
-    - if !<[government].flag[towny_missions.mission.type].exists>:
         - stop
     - define online <[government].residents.filter[is_online]>
     - flag <[government]> towny_missions.mission.goal.<[n]>.completed
@@ -141,6 +174,7 @@ towny_missions_complete_mission_objective:
         - narrate targets:<[online]> "<&2> <&gt> <&m>Gather <&a><&m><[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&m><[government].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&nl>"
         - narrate targets:<[online]> "<&2>You still have <&a><[incomplete].size> <&2>more mission<tern[<[incomplete].size.equals[1]>].pass[].fail[s]> to complete."
         - run towny_rebuild_status_screen def:<[government]>
+        - run towny_missions_mission_inventory_gui_update def:<[government]>
     - else:
         - run towny_missions_completes_mission def:<[government]>
 
@@ -149,18 +183,170 @@ towny_missions_completes_mission:
     debug: false
     definitions: government
     script:
-    - if !<[government].is_truthy>:
+    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
         - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
         - stop
-    - if !<[government].flag[towny_missions.mission.type].exists>:
-        - stop
     - define mission <[government].flag[towny_missions.mission.type]>
+    - define money 0
     - foreach <yaml[towny_missions].read[pool.<[mission]>.rewards]> as:n key:m:
         - if <[n].get[type]> == GOVERNMENT_BANK:
             - execute as_server "ta <[government].object_type> <[government].name> deposit <[n].get[total]>"
+            - define money:+:<[n].get[total]>
     - define online <[government].residents.filter[is_online]>
-    - narrate targets:<[online]> "<&2>Your <[government].object_type> completed its mission objectives and has been rewarded."
+    - narrate targets:<[online]> "<&2>Your <[government].object_type> completed its mission objectives and has been rewarded $<[money]>."
+    - narrate targets:<server.online_players.exclude[<[online]>]> "The <[government].object_type> <[government].name> has completed its mission and has been rewarded $<[money]>."
     - flag <[government]> towny_missions.mission:!
     - flag <[government]> towny_missions.mission.completed
     - run towny_rebuild_status_screen def:<[government]>
+    - run towny_missions_mission_inventory_gui_update def:<[government]>
+
+towny_missions_mission_inventory_gui_update:
+    type: task
+    debug: false
+    definitions: government
+    script:
+    - define players <[government].residents.filter[open_inventory.script.name.equals[towny_missions_mission_inventory_gui]]>
+    - if !<[players].is_empty>:
+        - adjust <queue> linked_player:<[players].first>
+        - define inventory <inventory[towny_missions_mission_inventory_gui]>
+        - foreach <[players]> as:p:
+            - inventory swap d:<player[AJ_4real].open_inventory> o:<inventory[towny_missions_mission_inventory_gui]>
+
+towny_missions_mission_inventory_gui:
+    type: inventory
+    inventory: chest
+    size: 45
+    gui: true
+    debug: false
+    title: <element[Towny Missions - Overview].color_gradient[from=#2121dc;to=#1898dc]>
+    procedural items:
+    - if !<player.has_town>:
+        - define items:|:<item[towny_missions_gui_item_no_town]>
+    - else if !<player.town.has_flag[towny_missions.mission.type]>:
+        - define items:|:<item[towny_missions_gui_item_no_town_mission]>
+    - else:
+        - define town <player.town>
+        - define lore:<list[]>
+        - foreach <[town].flag[towny_missions.mission.goal].keys> as:n:
+            - if <[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum.exists> && <[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> == <[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>:
+                - define "lore:|:<&2> <&gt> <&m>Gather <&a><&m><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><&m><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><&m><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>"
+            - else:
+                - define "lore:|:<&2> <&gt> Gather <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>"
+        - define ttime <[town].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
+        - define ttime <[ttime].sub[<[ttime].mod[60]>].as_duration>
+        - define "lore:|:<&2>Time Left: <&a><[ttime].formatted_words>"
+        - define lore:|:<&sp>
+        - define "lore:|:<&2><&l>Left Click to Contribute."
+        - define items:|:<item[towny_missions_gui_item_town_mission].with[lore=<[lore]>]>
+    - if !<player.has_nation>:
+        - define items:|:<item[towny_missions_gui_item_no_nation]>
+    - else if !<player.nation.has_flag[towny_missions.mission.type]>:
+        - define items:|:<item[towny_missions_gui_item_no_nation_mission]>
+    - else:
+        - define nation <player.nation>
+        - foreach <[nation].flag[towny_missions.mission.goal].keys> as:n2:
+            - if <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum.exists> && <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> == <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>:
+                - define "lore2:|:<&2> <&gt> <&m>Gather <&a><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
+            - else:
+                - define "lore2:|:<&2> <&gt> Gather <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
+        - define ntime <[nation].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
+        - define ntime <[ntime].sub[<[ntime].mod[60]>].as_duration>
+        - define "lore2:|:<&2>Time Left: <&a><[ntime].formatted_words>"
+        - define lore2:|:<&sp>
+        - define "lore2:|:<&2><&l>Left Click to Contribute."
+        - define items:|:<item[towny_missions_gui_item_nation_mission].with[lore=<[lore2]>]>
+    - determine <[items]>
+    definitions:
+        ui: <item[light_gray_stained_glass_pane].with[display=<&sp>]>
+    slots:
+        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
+        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
+        - [ui] [] [ui] [] [ui] [] [ui] [] [ui]
+        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
+        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
+
+towny_missions_command:
+    type: command
+    debug: false
+    name: missions
+    tab complete:
+    - define cmd <context.alias.to_lowercase.split[<&co>].get[2]||<context.alias.to_lowercase>>
+    - define args <context.args||<list[]>>
+    - define length <context.raw_args.split[].count[<&sp>].add[1]>
+    - if <[length]> == 1:
+        - determine <list[contribute|contrib].filter[to_lowercase.starts_with[<[args].get[1].to_lowercase||>]]>
+    - else:
+        - if <[args].get[1].to_lowercase.advanced_matches_text[contribute|contrib]> && <[length]> == 2:
+            - determine <list[town|nation].filter[to_lowercase.starts_with[<[args].get[2].to_lowercase||>]]>
+    script:
+    - define cmd <context.alias.to_lowercase.split[<&co>].get[2]||<context.alias.to_lowercase>>
+    - define args <context.args||<list[]>>
+    - if <context.source_type> != PLAYER:
+        - narrate "<&c>This command can only be executed as a player."
+        - stop
+    - if !<[args].get[1].exists>:
+        - inventory open d:towny_missions_mission_inventory_gui
+        - stop
+    - if <[args].get[1].to_lowercase.advanced_matches_text[contrib|contribute]>:
+        - choose <[args].get[2].to_lowercase>:
+            - case "nation":
+                - if !<player.has_nation>:
+                    - narrate "<&c>You are not in a nation."
+                    - stop
+                - if !<player.nation.has_flag[towny_missions.mission.type]>:
+                    - narrate "<&c>Your nation does not have a mission."
+                    - stop
+                - run towny_missions_player_contributes def:<player.nation>|<player>
+            - case "town":
+                - if !<player.has_town>:
+                    - narrate "<&c>You are not in a town."
+                    - stop
+                - if !<player.town.has_flag[towny_missions.mission.type]>:
+                    - narrate "<&c>Your town does not have a mission."
+                    - stop
+                - run towny_missions_player_contributes def:<player.town>|<player>
+
+towny_missions_gui_item_no_town_mission:
+    type: item
+    material: stone
+    display name: <script.name>
+
+towny_missions_gui_item_no_town:
+    type: item
+    material: stone
+    display name: <script.name>
+
+towny_missions_gui_item_town_mission:
+    type: item
+    material: stone
+    display name: <&l><&2>Town Mission<&co> <&a><&l>In Progress
+    data:
+        task:
+            script: towny_missions_player_contributes
+            definitions:
+                government: <player.town>
+                player: <player>
+            click: RIGHT|SHIFT_RIGHT
+
+towny_missions_gui_item_no_nation_mission:
+    type: item
+    material: stone
+    display name: <script.name>
+
+towny_missions_gui_item_no_nation:
+    type: item
+    material: stone
+    display name: <script.name>
+
+towny_missions_gui_item_nation_mission:
+    type: item
+    material: stone
+    display name: <&l><&2>Nation Mission<&co> <&a><&l>In Progress
+    data:
+        task:
+            script: towny_missions_player_contributes
+            definitions:
+                government: <player.nation>
+                player: <player>
+            click: RIGHT|SHIFT_RIGHT
