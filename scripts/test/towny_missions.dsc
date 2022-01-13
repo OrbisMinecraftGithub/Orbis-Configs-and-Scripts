@@ -161,7 +161,7 @@ towny_missions_complete_mission_objective:
             - else if <[type]> == exp:
                 - give xp to:<[player]> quantity:<[total].mul[<[percent]>]>
         - if <[type]> == government_bank:
-            - execute as_server "ta town <[government].name> deposit <[total].mul[<[percent]>]>"
+            - execute as_server "ta <[government].object_type> <[government].name> deposit <[total]>"
     - define complete:<list[<[n]>]>
     - define incomplete:<list[]>
     - foreach <[government].flag[towny_missions.mission.goal].keys> as:n2:
@@ -189,10 +189,9 @@ towny_missions_completes_mission:
         - stop
     - define mission <[government].flag[towny_missions.mission.type]>
     - define money 0
-    - foreach <yaml[towny_missions].read[pool.<[mission]>.rewards]> as:n key:m:
-        - if <[n].get[type]> == GOVERNMENT_BANK:
-            - execute as_server "ta <[government].object_type> <[government].name> deposit <[n].get[total]>"
-            - define money:+:<[n].get[total]>
+    - foreach <yaml[towny_missions].read[pool.<[mission]>.rewards].filter_tag[<[filter_value].get[type].equals[GOVERNMENT_BANK]>]> as:n key:m:
+        - execute as_server "ta <[government].object_type> <[government].name> deposit <[n].get[total]>"
+        - define money:+:<[n].get[total]>
     - define online <[government].residents.filter[is_online]>
     - narrate targets:<[online]> "<&2>Your <[government].object_type> completed its mission objectives and has been rewarded $<[money]>."
     - narrate targets:<server.online_players.exclude[<[online]>]> "The <[government].object_type> <[government].name> has completed its mission and has been rewarded $<[money]>."
@@ -234,8 +233,7 @@ towny_missions_mission_inventory_gui:
             - else:
                 - define "lore:|:<&2> <&gt> Gather <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>"
         - define ttime <[town].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
-        - define ttime <[ttime].sub[<[ttime].mod[60]>].as_duration>
-        - define "lore:|:<&2>Time Left: <&a><[ttime].formatted_words>"
+        - define "lore:|:<&2>Time Left: <&a><[ttime].sub[<[ttime].mod[60]>].as_duration.formatted_words>"
         - define lore:|:<&sp>
         - define "lore:|:<&2><&l>Left Click to Contribute."
         - define items:|:<item[towny_missions_gui_item_town_mission].with[lore=<[lore]>]>
@@ -251,8 +249,7 @@ towny_missions_mission_inventory_gui:
             - else:
                 - define "lore2:|:<&2> <&gt> Gather <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
         - define ntime <[nation].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
-        - define ntime <[ntime].sub[<[ntime].mod[60]>].as_duration>
-        - define "lore2:|:<&2>Time Left: <&a><[ntime].formatted_words>"
+        - define "lore2:|:<&2>Time Left: <&a><[ntime].sub[<[ntime].mod[60]>].as_duration.formatted_words>"
         - define lore2:|:<&sp>
         - define "lore2:|:<&2><&l>Left Click to Contribute."
         - define items:|:<item[towny_missions_gui_item_nation_mission].with[lore=<[lore2]>]>
@@ -285,12 +282,10 @@ towny_missions_command:
     - if <context.source_type> != PLAYER:
         - narrate "<&c>This command can only be executed as a player."
         - stop
-    - if !<[args].get[1].exists>:
-        - inventory open d:towny_missions_mission_inventory_gui
-        - stop
-    - choose <[args].get[1].to_lowercase>:
+    - choose <[args].get[1].to_lowercase||>:
         - case "":
-            - narrate "<&c>Not enough arguments."
+            - inventory open d:towny_missions_mission_inventory_gui
+            - stop
         - case "contrib" "contribute":
             - choose <[args].get[2].to_lowercase||>:
                 - case "":
@@ -319,10 +314,10 @@ towny_missions_command:
                     - narrate "<&c>Not enough arguments."
                 - case "nation":
                     - flag <player> towny_missions.auto_contribute.nation:<player.flag[towny_missions.auto_contribute.nation].not||true>
-                    - narrate "<&e>You have toggled auto contribute for nation missions: <player.flag[towny_missions.auto_contribute.nation]||false>"
+                    - narrate "<&e>You have toggled auto contribute for nation missions: <tern[<player.flag[towny_missions.auto_contribute.nation]>].pass[<&2>].fail[<&4>]><player.flag[towny_missions.auto_contribute.nation]>"
                 - case "town":
                     - flag <player> towny_missions.auto_contribute.town:<player.flag[towny_missions.auto_contribute.town].not||true>
-                    - narrate "<&e>You have toggled auto contribute for town missions: <player.flag[towny_missions.auto_contribute.town]||false>"
+                    - narrate "<&e>You have toggled auto contribute for town missions: <tern[<player.flag[towny_missions.auto_contribute.town]>].pass[<&2>].fail[<&4>]><player.flag[towny_missions.auto_contribute.town]>"
                 - default:
                     - narrate "<&c>That is not a valid argument."
         - default:
