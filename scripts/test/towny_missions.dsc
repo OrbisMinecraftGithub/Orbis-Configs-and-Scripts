@@ -231,7 +231,7 @@ towny_missions_mission_inventory_gui:
             - if <[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum.exists> && <[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> == <[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>:
                 - define "lore:|:<&2> <&gt> <&m>Gather <&a><&m><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><&m><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><&m><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>"
             - else:
-                - define "lore:|:<&2> <&gt> Gather <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum>"
+                - define "lore:|:<&2> <&gt> Gather <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]> <&2><[town].flag[towny_missions.mission.goal.<[n]>.material].to_titlecase><&co> <&a><[town].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>"
         - define ttime <[town].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
         - define "lore:|:<&2>Time Left: <&a><[ttime].sub[<[ttime].mod[60]>].as_duration.formatted_words>"
         - define lore:|:<&sp>
@@ -247,7 +247,7 @@ towny_missions_mission_inventory_gui:
             - if <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum.exists> && <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> == <[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>:
                 - define "lore2:|:<&2> <&gt> <&m>Gather <&a><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><&m><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
             - else:
-                - define "lore2:|:<&2> <&gt> Gather <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
+                - define "lore2:|:<&2> <&gt> Gather <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><[nation].flag[towny_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><[nation].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum||0>"
         - define ntime <[nation].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
         - define "lore2:|:<&2>Time Left: <&a><[ntime].sub[<[ntime].mod[60]>].as_duration.formatted_words>"
         - define lore2:|:<&sp>
