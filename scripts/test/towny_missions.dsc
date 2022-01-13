@@ -113,6 +113,7 @@ towny_missions_player_contributes:
     - if <[government].has_flag[towny_missions.mission.goal]>:
         - if <[player].inventory.contains_item[<[government].flag[towny_missions.mission.goal].values.parse[get[material]]>]>:
             - foreach <[government].flag[towny_missions.mission.goal].keys> as:n:
+                - define n <[n]>
                 - if <[government].flag[towny_missions.mission.goal.<[n]>.completed]>:
                     - foreach next
                 - define item <[government].flag[towny_missions.mission.goal.<[n]>.material]>
