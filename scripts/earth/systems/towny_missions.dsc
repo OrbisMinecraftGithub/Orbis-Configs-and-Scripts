@@ -55,10 +55,10 @@ towny_missions_events:
         - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.type]].filter[flag_expiration[towny_missions.mission.type].from_now.is_more_than[60m]]> as:t:
             - run towny_rebuild_status_screen def:<[t]>
         on delta time hourly:
-        - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
+        - foreach <towny.list_towns.filter[has_flag[towny_missions.cooldown].not]> as:t:
             - run towny_missions_give_mission def:<[t]>
-        - foreach <towny.list_towns.filter[has_nation].parse[nation].deduplicate.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
-        # - foreach <towny.list_nations.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
+        - foreach <towny.list_towns.filter[has_nation].parse[nation].deduplicate.filter[has_flag[towny_missions.cooldown].not]> as:t:
+        # - foreach <towny.list_nations.filter[has_flag[towny_missions.cooldown].not]> as:t:
             - run towny_missions_give_mission def:<[t]>
         on player picks up item:
         - if <player.has_town> && <player.has_flag[towny_missions.auto_contribute.town]> && <player.town.has_flag[towny_missions.mission.type]>:
@@ -98,7 +98,7 @@ towny_missions_give_mission:
         - flag <[government]> towny_missions.mission.easy.matcher:|:<[material]>
         - narrate targets:<[online]> "<&2> <&gt> Gather <&a><[quantity]> <&2><[material].to_titlecase>"
     - narrate targets:<[online]> "<&2>You have <&a><[duration].formatted_words> <&2>to complete this mission."
-    - flag <[government]> towny_missions.mission.cooldown expire:<[duration]>
+    - flag <[government]> towny_missions.cooldown expire:<[duration]>
     - run towny_rebuild_status_screen def:<[government]>
 
 towny_missions_player_contributes:
@@ -228,7 +228,10 @@ towny_missions_mission_inventory_gui:
     - if !<player.has_town>:
         - define items:|:<item[towny_missions_gui_item_no_town]>
     - else if !<player.town.has_flag[towny_missions.mission.type]>:
-        - define items:|:<item[towny_missions_gui_item_no_town_mission]>
+        - define item:<item[towny_missions_gui_item_no_town_mission]>
+        - if <player.town.has_flag[towny_missions.cooldown]>:
+            - define "item:<[item].with[lore=<&2>Cooldown:<&sp><&a><player.town.flag_expiration[towny_missions.cooldown].from_now.formatted_words>]>"
+        - define items:|:<[item]>
     - else:
         - define town <player.town>
         - define lore:<list[]>
@@ -245,7 +248,10 @@ towny_missions_mission_inventory_gui:
     - if !<player.has_nation>:
         - define items:|:<item[towny_missions_gui_item_no_nation]>
     - else if !<player.nation.has_flag[towny_missions.mission.type]>:
-        - define items:|:<item[towny_missions_gui_item_no_nation_mission]>
+        - define item:<item[towny_missions_gui_item_no_nation_mission]>
+        - if <player.nation.has_flag[towny_missions.cooldown]>:
+            - define item:<[item].with[lore=<&2>Cooldown:<&sp><&a><player.nation.flag_expiration[towny_missions.cooldown].from_now.formatted_words>]>
+        - define items:|:<[item]>
     - else:
         - define nation <player.nation>
         - foreach <[nation].flag[towny_missions.mission.goal].keys> as:n2:
