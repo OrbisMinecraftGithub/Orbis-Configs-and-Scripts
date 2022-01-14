@@ -64,7 +64,7 @@ money_note_events:
             - else:
                 - narrate "<&c>This money note has already been claimed by someone else, this can only be caused by the money note being duplicated illegally."
                 - narrate "<&c>The server administrators has been notified of this."
-                - announce to_flagged:staffmode "<&c><player.name> attempted to redeem a duplicated money note worth $<[number]>, that was originally created by <context.item.flag[creator].as_player.name>."
+                - announce to_flagged:staffmode "<&c><player.name> attempted to redeem a duplicated money note worth $<[number]>, that was originally created by <context.item.flag[creator].as_player.name||Unknown>."
             - take <context.item> quantity:1 from:<player.inventory>
 
 money_note_item:
