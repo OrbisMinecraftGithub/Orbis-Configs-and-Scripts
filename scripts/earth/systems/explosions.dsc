@@ -84,7 +84,7 @@ explosion_handler:
                         - define after <[entity].attached_block>
     process_explosion:
     - define new_blocks1 <[blocks].filter[is_siege_zone||true].filter[has_flag[big_shulker].not]>
-    - define new_blocks2 <[blocks].filter[town.is_sieged||false].filter[has_flag[big_shulker].not]>
+    - define new_blocks2 <[blocks].filter[has_town].filter[town.is_sieged].filter[has_flag[big_shulker].not]>
     - define new_blocks <[new_blocks1].include[<[new_blocks2]>].deduplicate>
     # - define new_blocks <[blocks]>
     - if <[new_blocks].size.equals[0]>:
