@@ -46,6 +46,8 @@ towny_missions_events:
     events:
         on server start:
         - yaml id:towny_missions load:data/missions_pool.yml
+        on reload scripts:
+        - yaml id:towny_missions load:data/missions_pool.yml
         on delta time minutely:
         - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.type]].filter[flag_expiration[towny_missions.mission.type].from_now.is_less_than[60m]]> as:t:
             - run towny_rebuild_status_screen def:<[t]>
@@ -54,6 +56,9 @@ towny_missions_events:
             - run towny_rebuild_status_screen def:<[t]>
         on delta time hourly:
         - foreach <towny.list_towns.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
+            - run towny_missions_give_mission def:<[t]>
+        - foreach <towny.list_towns.filter[has_nation].parse[nation].deduplicate.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
+        # - foreach <towny.list_nations.filter[has_flag[towny_missions.mission.cooldown].not]> as:t:
             - run towny_missions_give_mission def:<[t]>
         on player picks up item:
         - if <player.has_town> && <player.has_flag[towny_missions.auto_contribute.town]> && <player.town.has_flag[towny_missions.mission.type]>:
