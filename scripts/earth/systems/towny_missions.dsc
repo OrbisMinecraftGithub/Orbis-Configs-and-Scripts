@@ -414,7 +414,6 @@ towny_missions_mission_inventory_gui_town:
         - define lore:<list[]>
         - repeat 6 as:n:
             - if <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].exists>:
-                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values]>
                 - define reward <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]>
                 - foreach <[reward]> key:k as:v:
                     - if <[v].get[type]> == MONEY:
@@ -423,18 +422,22 @@ towny_missions_mission_inventory_gui_town:
                 - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
-                - repeat 8:
-                    - if <[players].get[<[value]>].as_player.skull_item.exists>:
-                        - define p <[players].get[<[value]>]>
-                        - define player <[p].as_player>
-                        - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
-                        - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
-                        - define "lore:<&2>Contribution<&co> <&a><[amount]>"
-                        - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
-                        - define item <[item].with[lore=<[lore]>]>
-                    - else:
-                        - define item <[ui].parsed>
-                    - define items:|:<[item]>
+                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
+                - if <[players]> != null:
+                    - repeat 8:
+                        - if <[players].get[<[value]>].as_player.skull_item.exists>:
+                            - define p <[players].get[<[value]>]>
+                            - define player <[p].as_player>
+                            - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
+                            - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
+                            - define "lore:<&2>Contribution<&co> <&a><[amount]>"
+                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
+                            - define item <[item].with[lore=<[lore]>]>
+                        - else:
+                            - define item <[ui].parsed>
+                        - define items:|:<[item]>
+                - else:
+                    - define items:|:<[ui].parsed.repeat_as_list[8]>
             - else:
                 - define items:|:<[ui].parsed.repeat_as_list[9]>
         - determine <[items]>
@@ -467,7 +470,6 @@ towny_missions_mission_inventory_gui_nation:
         - define lore:<list[]>
         - repeat 6 as:n:
             - if <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].exists>:
-                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values]>
                 - define reward <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]>
                 - foreach <[reward]> key:k as:v:
                     - if <[v].get[type]> == MONEY:
@@ -476,18 +478,22 @@ towny_missions_mission_inventory_gui_nation:
                 - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
-                - repeat 8:
-                    - if <[players].get[<[value]>].as_player.skull_item.exists>:
-                        - define p <[players].get[<[value]>]>
-                        - define player <[p].as_player>
-                        - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
-                        - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
-                        - define "lore:<&2>Contribution<&co> <&a><[amount]>"
-                        - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
-                        - define item <[item].with[lore=<[lore]>]>
-                    - else:
-                        - define item <[ui].parsed>
-                    - define items:|:<[item]>
+                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
+                - if <[players]> != null:
+                    - repeat 8:
+                        - if <[players].get[<[value]>].as_player.skull_item.exists>:
+                            - define p <[players].get[<[value]>]>
+                            - define player <[p].as_player>
+                            - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
+                            - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
+                            - define "lore:<&2>Contribution<&co> <&a><[amount]>"
+                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
+                            - define item <[item].with[lore=<[lore]>]>
+                        - else:
+                            - define item <[ui].parsed>
+                        - define items:|:<[item]>
+                - else:
+                    - define items:|:<[ui].parsed.repeat_as_list[8]>
             - else:
                 - define items:|:<[ui].parsed.repeat_as_list[9]>
         - determine <[items]>
