@@ -42,6 +42,7 @@ command_money_note:
     - flag <[item]> value:<[number]>
     - define uuid <util.random.uuid>
     - flag <[item]> uuid:<[uuid]>
+    - flag <[item]> creator:<player>
     - yaml id:moneynotes set notes:->:<[uuid]>
     - inject money_note_startup path:save
     - if !<player.inventory.can_fit[<[item]>]>:
@@ -56,10 +57,14 @@ money_note_events:
     events:
         on player right clicks block:
         - if <context.item.script.name||> == money_note_item:
+            - define number <context.item.flag[value]>
             - if <yaml[moneynotes].read[notes].contains[<context.item.flag[uuid]>]||true>:
                 - yaml id:moneynotes set notes:<-:<context.item.flag[uuid]>
-                - define number <context.item.flag[value]>
                 - money give players:<player> quantity:<[number]>
+            - else:
+                - narrate "<&c>This money note has already been claimed by someone else, this can only be caused by the money note being duplicated illegally."
+                - narrate "<&c>The server administrators has been notified of this."
+                - announce to_flagged:staffmode "<&c><player.name> attempted to redeem a duplicated money note worth $<[number]>, that was originally created by <context.item.flag[creator].as_player.name>."
             - take <context.item> quantity:1 from:<player.inventory>
 
 money_note_item:
