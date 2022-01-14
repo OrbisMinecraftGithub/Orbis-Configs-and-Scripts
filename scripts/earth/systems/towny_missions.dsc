@@ -405,11 +405,9 @@ towny_missions_mission_inventory_gui_town:
     procedural items:
     - define government <player.town>
     - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
-        - wait 1t
-        - inventory close
+        - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
-        - wait 1t
-        - inventory close
+        - stop
     - else:
         - define lore:<list[]>
         - repeat 6 as:n:
@@ -461,11 +459,9 @@ towny_missions_mission_inventory_gui_nation:
     procedural items:
     - define government <player.nation>
     - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
-        - wait 1t
-        - inventory close
+        - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
-        - wait 1t
-        - inventory close
+        - stop
     - else:
         - define lore:<list[]>
         - repeat 6 as:n:
