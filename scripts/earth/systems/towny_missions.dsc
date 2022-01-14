@@ -11,6 +11,7 @@ towny_rebuild_status_screen:
     - if <[government].has_flag[towny_missions.mission]>:
         - if !<[government].has_flag[towny_missions.mission.completed]>:
             - define "lines:|:<&a>In Progress"
+            - define "lines:|:<&2> <&gt> Type <&l>/missions<&r><&2> for help."
             - foreach <[government].flag[towny_missions.mission.goal].keys> as:n:
                 - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
                 - define completed <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>
