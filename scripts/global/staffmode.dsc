@@ -130,7 +130,7 @@ spy_events:
             - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
             - define args <context.args||<list[]>>
             - if <[cmd].advanced_matches_text[<script.data_key[chat_commands].keys.separated_by[|]>]> && <[args].space_separated.trim.length> != 0:
-                - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> <&gt> <script.data_key[chat_commands.<[cmd]>]> : <[args].space_separated>"
+                - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> -<&gt> <script.data_key[chat_commands.<[cmd]>]> : <[args].space_separated>"
             - else:
                 - announce to_flagged:commandspy "<&c>[Command] <&r><player.name||<element[Console]>> -<&gt> <[cmd]><&sp><[args].space_separated>"
 
