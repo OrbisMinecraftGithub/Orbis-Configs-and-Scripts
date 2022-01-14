@@ -168,7 +168,7 @@ towny_missions_complete_mission_objective:
                 - give xp to:<[player]> quantity:<[total].mul[<[percent]>]>
         - if <[type]> == government_bank:
             - execute as_server "ta <[government].object_type> <[government].name> deposit <[total]>"
-    - define complete:<list[<[n]>]>
+    - define complete:<list[]>
     - define incomplete:<list[]>
     - foreach <[government].flag[towny_missions.mission.goal].keys> as:n2:
         - if <[government].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum.exists> && <[government].flag[towny_missions.mission.goal.<[n2]>.quantity.requirement]> == <[government].flag[towny_missions.mission.goal.<[n2]>.quantity.completed].values.sum>:
@@ -200,7 +200,7 @@ towny_missions_completes_mission:
         - define money:+:<[n].get[total]>
     - define online <[government].residents.filter[is_online]>
     - narrate targets:<[online]> "<&2>Your <[government].object_type> completed its mission objectives and has been rewarded $<[money]>."
-    - narrate targets:<server.online_players.exclude[<[online]>]> "The <[government].object_type> <[government].name> has completed its mission and has been rewarded $<[money]>."
+    - narrate targets:<server.online_players.exclude[<[online]>]> "<&2>The <[government].object_type> <&a><[government].name> <&2>has completed its mission and has been rewarded $<[money]>."
     - flag <[government]> towny_missions.mission:!
     - flag <[government]> towny_missions.mission.completed
     - run towny_rebuild_status_screen def:<[government]>
