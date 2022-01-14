@@ -32,14 +32,17 @@ item_helper:
     debug: false
     events:
         on player clicks item in inventory:
-        - if <context.item.script.exists> && <context.item.script.data_key[data.task].exists>:
+        - if <context.item.script.exists> && <context.item.script.data_key[data.tasks].exists>:
             - define script <context.item.script>
-            - if <[script].data_key[data.task.click].exists>:
-                - if !<context.click.advanced_matches_text[<[script].data_key[data.task.click]>]>:
-                    - stop
-            - define task <[script].data_key[data.task.script]>
-            - define definitions <[script].data_key[data.task.definitions].parsed>
-            - run <[task]> defmap:<[definitions]>
+            - define clicks:<[script].list_keys[data.tasks].filter_tag[<context.click.advanced_matches_text[<[filter_value]>]>].unescaped.as_list.separated_by[|]>
+            - if <[script].data_key[data.tasks.<[clicks]>].exists>:
+                - if <[script].data_key[data.tasks.<[clicks]>.script].exists>:
+                    - define task <[script].data_key[data.tasks.<[clicks]>.script]>
+                    - define definitions:<[script].data_key[data.tasks.<[clicks]>.definitions].parsed>
+                    - run <[task]> defmap:<[definitions]>
+                - if <[script].data_key[data.tasks.<[clicks]>.inventory].exists>:
+                    - if <[script].data_key[data.tasks.<[clicks]>.inventory].as_inventory.exists>:
+                        - inventory open d:<[script].data_key[data.tasks.<[clicks]>.inventory]>
 
 towny_missions_events:
     type: world
@@ -244,7 +247,8 @@ towny_missions_mission_inventory_gui:
         - define ttime <[town].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
         - define "lore:|:<&2>Time Left: <&a><[ttime].sub[<[ttime].mod[60]>].as_duration.formatted_words>"
         - define lore:|:<&sp>
-        - define "lore:|:<&2><&l>Left Click to Contribute."
+        - define "lore:|:<&2><&l>Right Click to Contribute."
+        - define "lore:|:<&2><&l>Left Click to See Contributors."
         - define items:|:<item[towny_missions_gui_item_town_mission].with[lore=<[lore]>]>
     - if !<player.has_nation>:
         - define items:|:<item[towny_missions_gui_item_no_nation]>
@@ -263,7 +267,8 @@ towny_missions_mission_inventory_gui:
         - define ntime <[nation].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
         - define "lore2:|:<&2>Time Left: <&a><[ntime].sub[<[ntime].mod[60]>].as_duration.formatted_words>"
         - define lore2:|:<&sp>
-        - define "lore2:|:<&2><&l>Left Click to Contribute."
+        - define "lore:|:<&2><&l>Right Click to Contribute."
+        - define "lore:|:<&2><&l>Left Click to See Contributors."
         - define items:|:<item[towny_missions_gui_item_nation_mission].with[lore=<[lore2]>]>
     - determine <[items]>
     definitions:
@@ -350,12 +355,14 @@ towny_missions_gui_item_town_mission:
     material: paper
     display name: <&l><&2>Town Mission<&co> <&a><&l>In Progress
     data:
-        task:
-            script: towny_missions_player_contributes
-            definitions:
-                government: <player.town>
-                player: <player>
-            click: RIGHT|SHIFT_RIGHT
+        tasks:
+            RIGHT|SHIFT_RIGHT:
+                script: towny_missions_player_contributes
+                definitions:
+                    government: <player.town>
+                    player: <player>
+            LEFT|SHIFT_LEFT:
+                inventory: towny_missions_mission_inventory_gui_town
 
 towny_missions_gui_item_no_nation_mission:
     type: item
@@ -372,14 +379,122 @@ towny_missions_gui_item_nation_mission:
     material: book
     display name: <&l><&2>Nation Mission<&co> <&a><&l>In Progress
     data:
-        task:
-            script: towny_missions_player_contributes
-            definitions:
-                government: <player.nation>
-                player: <player>
-            click: RIGHT|SHIFT_RIGHT
+        tasks:
+            RIGHT|SHIFT_RIGHT:
+                script: towny_missions_player_contributes
+                definitions:
+                    government: <player.nation>
+                    player: <player>
+            LEFT|SHIFT_LEFT:
+                inventory: towny_missions_mission_inventory_gui_nation
 
 towny_missions_gui_item_no_coalition:
     type: item
     material: bookshelf
     display name: <&l><&2>Coalition Mission<&co> <&c><&l>COMING SOON!
+
+towny_missions_mission_inventory_gui_town:
+    type: inventory
+    inventory: chest
+    size: 54
+    gui: true
+    debug: false
+    title: <element[Towny Missions - Town].color_gradient[from=#2121dc;to=#1898dc]>
+    definitions:
+        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
+    procedural items:
+    - define government <player.town>
+    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
+        - wait 1t
+        - inventory close
+    - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
+        - wait 1t
+        - inventory close
+    - else:
+        - define lore:<list[]>
+        - repeat 6 as:n:
+            - if <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].exists>:
+                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values]>
+                - define reward <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]>
+                - foreach <[reward]> key:k as:v:
+                    - if <[v].get[type]> == MONEY:
+                        - define money:<[v].get[TOTAL]>
+                - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
+                - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
+                - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
+                - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
+                - repeat 8:
+                    - define p <[players].get[<[value]>]>
+                    - define player <[p].as_player>
+                    - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
+                    - if <[player].skull_item.exists>:
+                        - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
+                        - define "lore:<&2>Contribution<&co> <&a><[amount]>"
+                        - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
+                        - define item <[item].with[lore=<[lore]>]>
+                    - else:
+                        - define item <[ui].parsed>
+                    - define items:|:<[item]>
+            - else:
+                - define items:|:<[ui].parsed.repeat_as_list[9]>
+        - determine <[items]>
+    slots:
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+
+towny_missions_mission_inventory_gui_nation:
+    type: inventory
+    inventory: chest
+    size: 54
+    gui: true
+    debug: false
+    title: <element[Towny Missions - Nation].color_gradient[from=#2121dc;to=#1898dc]>
+    definitions:
+        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
+    procedural items:
+    - define government <player.nation>
+    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
+        - wait 1t
+        - inventory close
+    - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
+        - wait 1t
+        - inventory close
+    - else:
+        - define lore:<list[]>
+        - repeat 6 as:n:
+            - if <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].exists>:
+                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values]>
+                - define reward <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]>
+                - foreach <[reward]> key:k as:v:
+                    - if <[v].get[type]> == MONEY:
+                        - define money:<[v].get[TOTAL]>
+                - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
+                - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
+                - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
+                - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
+                - repeat 8:
+                    - define p <[players].get[<[value]>]>
+                    - define player <[p].as_player>
+                    - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
+                    - if <[player].skull_item.exists>:
+                        - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
+                        - define "lore:<&2>Contribution<&co> <&a><[amount]>"
+                        - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
+                        - define item <[item].with[lore=<[lore]>]>
+                    - else:
+                        - define item <[ui].parsed>
+                    - define items:|:<[item]>
+            - else:
+                - define items:|:<[ui].parsed.repeat_as_list[9]>
+        - determine <[items]>
+    slots:
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
