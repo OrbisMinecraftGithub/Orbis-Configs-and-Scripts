@@ -424,10 +424,10 @@ towny_missions_mission_inventory_gui_town:
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
                 - repeat 8:
-                    - define p <[players].get[<[value]>]>
-                    - define player <[p].as_player>
-                    - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
-                    - if <[player].skull_item.exists>:
+                    - if <[players].get[<[value]>].as_player.skull_item.exists>:
+                        - define p <[players].get[<[value]>]>
+                        - define player <[p].as_player>
+                        - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
                         - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
                         - define "lore:<&2>Contribution<&co> <&a><[amount]>"
                         - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
@@ -477,10 +477,10 @@ towny_missions_mission_inventory_gui_nation:
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
                 - repeat 8:
-                    - define p <[players].get[<[value]>]>
-                    - define player <[p].as_player>
-                    - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
-                    - if <[player].skull_item.exists>:
+                    - if <[players].get[<[value]>].as_player.skull_item.exists>:
+                        - define p <[players].get[<[value]>]>
+                        - define player <[p].as_player>
+                        - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
                         - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
                         - define "lore:<&2>Contribution<&co> <&a><[amount]>"
                         - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
