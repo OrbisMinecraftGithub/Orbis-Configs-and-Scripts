@@ -418,6 +418,7 @@ towny_missions_mission_inventory_gui_town:
                         - define money:<[v].get[TOTAL]>
                 - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
                 - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
+                - define "lore:|:<&2>Current<&co> <&a><[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>"
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
                 - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
@@ -472,6 +473,7 @@ towny_missions_mission_inventory_gui_nation:
                         - define money:<[v].get[TOTAL]>
                 - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
                 - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
+                - define "lore:|:<&2>Current<&co> <&a><[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>"
                 - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
                 - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
                 - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
