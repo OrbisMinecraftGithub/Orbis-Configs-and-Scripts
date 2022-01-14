@@ -306,7 +306,7 @@ towny_missions_command:
         - case "contrib" "contribute":
             - choose <[args].get[2].to_lowercase||>:
                 - case "":
-                    - narrate "<&c>Not enough arguments."
+                    - narrate "<&c>Not enough arguments, Please enter either town or nation."
                 - case "nation":
                     - if !<player.has_nation>:
                         - narrate "<&c>You are not in a nation."
@@ -328,7 +328,7 @@ towny_missions_command:
         - case "autocontrib" "autocontribute" "auto":
             - choose <[args].get[2].to_lowercase||>:
                 - case "":
-                    - narrate "<&c>Not enough arguments."
+                    - narrate "<&c>Not enough arguments, Please enter either town or nation."
                 - case "nation":
                     - flag <player> towny_missions.auto_contribute.nation:<player.flag[towny_missions.auto_contribute.nation].not||true>
                     - narrate "<&e>You have toggled auto contribute for nation missions: <tern[<player.flag[towny_missions.auto_contribute.nation]>].pass[<&2>].fail[<&4>]><player.flag[towny_missions.auto_contribute.nation]>"
