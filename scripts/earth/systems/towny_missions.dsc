@@ -369,12 +369,12 @@ towny_missions_gui_item_town_mission:
 towny_missions_gui_item_no_nation_mission:
     type: item
     material: book
-    display name: <&l><&2>Town Mission<&co> <&a><&l>Not Available
+    display name: <&l><&2>Nation Mission<&co> <&a><&l>Not Available
 
 towny_missions_gui_item_no_nation:
     type: item
     material: book
-    display name: <&l><&2>Town Mission<&co> <&a><&l>No Nation
+    display name: <&l><&2>Nation Mission<&co> <&a><&l>No Nation
 
 towny_missions_gui_item_nation_mission:
     type: item
