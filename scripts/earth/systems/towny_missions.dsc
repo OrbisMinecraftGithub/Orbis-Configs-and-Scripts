@@ -138,6 +138,7 @@ towny_missions_player_contributes:
                 - flag <[government]> towny_missions.mission.goal.<[n]>.quantity.completed.<[player].uuid>:+:<[take]>
                 - if <[remaining]> <= <[has]>:
                     - run towny_missions_complete_mission_objective def:<[government]>|<[n]>
+                    - stop
                 - else:
                     - if !<[auto]>:
                         - narrate "<&2>Turned in <&a><[take]> <&2><[item]>, <&a><[remaining].sub[<[take]>]> <&2>items are remaining."
