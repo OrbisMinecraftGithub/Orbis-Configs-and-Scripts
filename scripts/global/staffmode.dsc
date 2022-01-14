@@ -95,18 +95,18 @@ spy_events:
             target: 2
             message: 3
     chat_commands:
-    - lc
-    - localhost
-    - tc
-    - townchat
-    - g
-    - globalchat
-    - tr
-    - tradechat
-    - nc
-    - nationchat
-    - ac
-    - alliancechat
+        g: Global
+        globalchat: Global
+        lc: Local
+        localchat: Local
+        tc: Town
+        townchat: Town
+        tr: Trade
+        tradechat: Trade
+        nc: Nation
+        nationchat: Nation
+        ac: Alliance
+        alliancechat: Alliance
     events:
         on player chats ignorecancelled:true:
         - if <player.has_permission[spy.bypass]>:
@@ -129,8 +129,8 @@ spy_events:
             - ratelimit 1t <player>
             - define cmd <context.command.to_lowercase.split[<&co>].get[2]||<context.command.to_lowercase>>
             - define args <context.args||<list[]>>
-            - if <[cmd].advanced_matches_text[<script.data_key[chat_commands].separated_by[|]>]> && <[args].space_separated.trim.length> != 0:
-                - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> : <[args].space_separated>"
+            - if <[cmd].advanced_matches_text[<script.data_key[chat_commands].keys.separated_by[|]>]> && <[args].space_separated.trim.length> != 0:
+                - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> <&gt> <script.data_key[chat_commands.<[cmd]>]> : <[args].space_separated>"
             - else:
                 - announce to_flagged:commandspy "<&c>[Command] <&r><player.name||<element[Console]>> -<&gt> <[cmd]><&sp><[args].space_separated>"
 
