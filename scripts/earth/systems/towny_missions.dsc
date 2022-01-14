@@ -220,7 +220,8 @@ towny_missions_mission_inventory_gui_update:
         - adjust <queue> linked_player:<[players].first>
         - define inventory <inventory[towny_missions_mission_inventory_gui]>
         - foreach <[players]> as:p:
-            - inventory swap d:<player[AJ_4real].open_inventory> o:<inventory[towny_missions_mission_inventory_gui]>
+            - if <[p].open_inventory.exists>:
+                - inventory swap d:<[p].open_inventory> o:<inventory[towny_missions_mission_inventory_gui]>
 
 towny_missions_mission_inventory_gui:
     type: inventory
