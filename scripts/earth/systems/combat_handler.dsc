@@ -130,7 +130,7 @@ run_combat_check_high:
     - if <[victim].has_flag[combat]||false>:
         - determine passively cancelled:false
     - if <[victim].has_flag[combat]||false> && !<[attacker].has_flag[combat]>:
-        - if <[victim].location.town.pvp||false> && <[attacker].location.town.pvp||false>:
+        - if !<[victim].location.town.pvp||false> && !<[attacker].location.town.pvp||false>:
             - determine passively cancelled
 
 run_combat_check_monitor:
