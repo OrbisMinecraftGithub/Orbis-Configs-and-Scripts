@@ -100,10 +100,8 @@ fixes_events:
         on player joins:
         - determine passively NONE
         - wait 1t
-        - adjust <player> invulnerable:true
+        - flag <player> no_fall expire:1s
         - teleport <player.location.block.to_cuboid[<player.location.block.with_y[0]>].blocks.filter[material.is_solid].sort_by_number[y].last.center.up[0.5]||<player.location.highest>>
-        - wait 2t
-        - adjust <player> invulnerable:false
         on player quits:
         - determine NONE
         on player receives message:
