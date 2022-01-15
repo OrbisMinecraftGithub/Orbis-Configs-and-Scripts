@@ -100,7 +100,7 @@ fixes_events:
         on player joins:
         - determine passively NONE
         - wait 1t
-        - flag <player> no_fall expire:1s
+        - flag <player> no_fall expire:10s
         - teleport <player.location.block.to_cuboid[<player.location.block.with_y[0]>].blocks.filter[material.is_solid].sort_by_number[y].last.center.up[0.5]||<player.location.highest>>
         on player quits:
         - determine NONE
