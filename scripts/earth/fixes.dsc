@@ -98,7 +98,9 @@ fixes_events:
         - if <player.name||null> == SuperTNT20 && <player.world.name.starts_with[arena]||false>:
             - determine cancelled:false
         on player joins:
-        - determine NONE
+        - determine passively NONE
+        - wait 1t
+        - teleport <player.location.highest>
         on player quits:
         - determine NONE
         on player receives message:
