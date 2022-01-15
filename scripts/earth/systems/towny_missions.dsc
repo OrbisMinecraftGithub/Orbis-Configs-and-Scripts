@@ -103,6 +103,7 @@ towny_missions_give_mission:
         - narrate targets:<[online]> "<&2> <&gt> Gather <&a><[quantity]> <&2><[material].to_titlecase>"
     - narrate targets:<[online]> "<&2>You have <&a><[duration].formatted_words> <&2>to complete this mission."
     - flag <[government]> towny_missions.cooldown expire:<[duration]>
+    - flag <[government]> towny_missions.statistics.received:+:1
     - run towny_rebuild_status_screen def:<[government]>
 
 towny_missions_player_contributes:
@@ -157,6 +158,7 @@ towny_missions_complete_mission_objective:
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
         - stop
     - define online <[government].residents.filter[is_online]>
+    - flag <[government]> towny_missions.statistics.objectives_completed:+:1
     - flag <[government]> towny_missions.mission.goal.<[n]>.completed
     - flag <[government]> towny_missions.mission.goal.<[n]>.quantity.completed.server:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].sub[<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].values.sum||0>]>
     - define contributers <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].keys||<list[]>>
@@ -209,6 +211,7 @@ towny_missions_completes_mission:
     - narrate targets:<server.online_players.exclude[<[online]>]> "<&2>The <[government].object_type> <&a><[government].name> <&2>has completed its mission and has been rewarded $<[money]>."
     - flag <[government]> towny_missions.mission:!
     - flag <[government]> towny_missions.mission.completed
+    - flag <[government]> towny_missions.statistics.completed:+:1
     - run towny_rebuild_status_screen def:<[government]>
     - run towny_missions_mission_inventory_gui_update def:<[government]>
 
@@ -397,17 +400,10 @@ towny_missions_gui_item_no_coalition:
     material: bookshelf
     display name: <&l><&2>Coalition Mission<&co> <&c><&l>COMING SOON!
 
-towny_missions_mission_inventory_gui_town:
-    type: inventory
-    inventory: chest
-    size: 54
-    gui: true
+towny_missions_mission_inventory_gui_builder:
+    type: task
     debug: false
-    title: <element[Towny Missions - Town].color_gradient[from=#2121dc;to=#1898dc]>
-    definitions:
-        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
-    procedural items:
-    - define government <player.town>
+    script:
     - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
         - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
@@ -444,6 +440,19 @@ towny_missions_mission_inventory_gui_town:
             - else:
                 - define items:|:<[ui].parsed.repeat_as_list[9]>
         - determine <[items]>
+
+towny_missions_mission_inventory_gui_town:
+    type: inventory
+    inventory: chest
+    size: 54
+    gui: true
+    debug: false
+    title: <element[Towny Missions - Town].color_gradient[from=#2121dc;to=#1898dc]>
+    definitions:
+        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
+    procedural items:
+    - define government <player.town>
+    - inject towny_missions_mission_inventory_gui_builder
     slots:
     - [] [] [] [] [] [] [] [] []
     - [] [] [] [] [] [] [] [] []
@@ -463,42 +472,7 @@ towny_missions_mission_inventory_gui_nation:
         ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
     procedural items:
     - define government <player.nation>
-    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
-        - stop
-    - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
-        - stop
-    - else:
-        - define lore:<list[]>
-        - repeat 6 as:n:
-            - if <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement].exists>:
-                - define reward <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]>
-                - foreach <[reward]> key:k as:v:
-                    - if <[v].get[type]> == MONEY:
-                        - define money:<[v].get[TOTAL]>
-                - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
-                - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
-                - define "lore:|:<&2>Current<&co> <&a><[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>"
-                - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
-                - define items:|:<[government].flag[towny_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
-                - define players:<[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
-                - if <[players]> != null:
-                    - repeat 8:
-                        - if <[players].get[<[value]>].as_player.skull_item.exists>:
-                            - define p <[players].get[<[value]>]>
-                            - define player <[p].as_player>
-                            - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
-                            - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
-                            - define "lore:<&2>Contribution<&co> <&a><[amount]>"
-                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
-                            - define item <[item].with[lore=<[lore]>]>
-                        - else:
-                            - define item <[ui].parsed>
-                        - define items:|:<[item]>
-                - else:
-                    - define items:|:<[ui].parsed.repeat_as_list[8]>
-            - else:
-                - define items:|:<[ui].parsed.repeat_as_list[9]>
-        - determine <[items]>
+    - inject towny_missions_mission_inventory_gui_builder
     slots:
     - [] [] [] [] [] [] [] [] []
     - [] [] [] [] [] [] [] [] []
