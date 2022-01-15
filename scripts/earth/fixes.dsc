@@ -100,6 +100,7 @@ fixes_events:
         on player joins:
         - determine passively NONE
         - wait 1t
+        - flag <player> no_damage expire:2t
         - adjust <player> velocity:<location[0,0,0]>
         - teleport <player.location.block.to_cuboid[<player.location.block.with_y[0]>].blocks.filter[material.is_solid].sort_by_number[y].last.center.up[0.5]||<player.location.highest>>
         on player quits:
