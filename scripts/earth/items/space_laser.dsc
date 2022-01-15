@@ -68,6 +68,8 @@ space_laser_flare_events:
     events:
         on player clicks block:
         - if <player.item_in_hand.script.name.equals[space_laser_item]||false>:
+            - narrate "<&c>This item is temporarily disabled."
+            - stop
             - ratelimit 1m <element[t]>
             - define location <player.location>
             - announce "<player.name> has called in an orbital strike at <[location].block.x>, <[location].block.z>"
