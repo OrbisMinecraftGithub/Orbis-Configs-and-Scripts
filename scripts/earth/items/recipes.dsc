@@ -163,9 +163,9 @@ custom_bell:
             recipe_id: bell1
             output_quantity: 1
             input:
-            - stone|stick|stone
-            - stone|golden_block|stone
-            - stone|air|stone
+            - material:stone|material:stick|material:stone
+            - material:stone|material:golden_block|material:stone
+            - material:stone|air|material:stone
 
 custom_ink_sac:
     type: item
