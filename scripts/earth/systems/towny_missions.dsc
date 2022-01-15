@@ -142,6 +142,8 @@ towny_missions_player_contributes:
                 - else:
                     - if !<[auto]>:
                         - narrate "<&2>Turned in <&a><[take]> <&2><[item]>, <&a><[remaining].sub[<[take]>]> <&2>items are remaining."
+                    - else:
+                        - playsound sound:ENTITY_EXPERIENCE_ORB_PICKUP <[player]>
                     - run towny_rebuild_status_screen def:<[government]>
                     - run towny_missions_mission_inventory_gui_update def:<[government]>
 
