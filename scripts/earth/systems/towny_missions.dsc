@@ -25,6 +25,11 @@ towny_rebuild_status_screen:
             - define "lines:|:<&2> <&gt> Time Left: <&a><[time].formatted_words>"
         - else:
             - define "lines:|:<&a>Completed"
+    - if <[government].has_flag[towny_missions.statistics]>:
+        - define "lines:|:<&2>Mission Statistics:"
+        - define "lines:|:<&2> <&gt> Missions Received: <&a><[government].flag[towny_missions.statistics.received]||0>"
+        - define "lines:|:<&2> <&gt> Objectives Completed: <&a><[government].flag[towny_missions.statistics.objectives_completed]||0>"
+        - define "lines:|:<&2> <&gt> Missions Completed: <&a><[government].flag[towny_missions.statistics.completed]||0>"
     - townymeta <[government]> key:denizen label:Mission "value:<[lines].separated_by[<&nl>]>"
 
 item_helper:
@@ -84,7 +89,8 @@ towny_missions_give_mission:
         - stop
     - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
         - stop
-    - flag <[government]> towny_missions.mission:!
+    - if <[government].has_flag[towny_missions.mission]>:
+        - run towny_missions_mission_ends def:<[government]>
     - if <[government].object_type> == Town:
         - define mission <[mission].if_null[<yaml[towny_missions].list_keys[pool].filter_tag[<yaml[towny_missions].read[pool.<[filter_value]>.type].equals[TOWN]>].random>]>
     - else if <[government].object_type> == Nation:
@@ -227,6 +233,35 @@ towny_missions_mission_inventory_gui_update:
         - foreach <[players]> as:p:
             - if <[p].open_inventory.exists>:
                 - inventory swap d:<[p].open_inventory> o:<inventory[towny_missions_mission_inventory_gui]>
+
+towny_missions_mission_ends:
+    type: task
+    debug: false
+    definitions: government
+    script:
+    - if !<[government].is_truthy> || !<[government].flag[towny_missions.mission.type].exists>:
+        - stop
+    - if !<[government].object_type> != Town && !<[government].object_type> != Nation:
+        - stop
+    - define online <[government].residents.filter[is_online]>
+    - narrate targets:<[online]> "<&2>Your town mission has ended; Because you did not complete all objectives, you will not receive all rewards."
+    - foreach <[government].flag[towny_missions.mission.goal].keys> as:n:
+        - define contributers <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed].keys||<list[]>>
+        - define requirement <[government].flag[towny_missions.mission.goal.<[n]>.quantity.requirement]>
+        - foreach <yaml[towny_missions].list_keys[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards]||<list[]>> as:r:
+            - define type <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.type].to_lowercase>
+            - define total <yaml[towny_missions].read[pool.<[government].flag[towny_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.total]>
+            - foreach <[contributers].exclude[server]||<list[]>> as:c:
+                - define player <[c].as_player>
+                - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[c]>]>
+                - define percent <[amount].div[<[requirement]>]>
+                - if <[type]> == money:
+                    - money give players:<[player]> quantity:<[total].mul[<[percent]>].round_to[2]>
+                    - narrate targets:<[player]> "<&2>You have been rewarded $<[total].mul[<[percent]>].round_to[2]> for your objectives."
+                - else if <[type]> == exp:
+                    - give xp to:<[player]> quantity:<[total].mul[<[percent]>]>
+    - flag <[government]> towny_missions.mission:!
+    - run towny_rebuild_status_screen def:<[government]>
 
 towny_missions_mission_inventory_gui:
     type: inventory
