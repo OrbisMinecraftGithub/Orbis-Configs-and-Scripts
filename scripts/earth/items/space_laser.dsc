@@ -2,10 +2,6 @@ space_laser_item:
     type: item
     material: firework_rocket
     display name: <&r><&c>Orbital Strike
-    recipes:
-        1:
-            type: shapeless
-            input: blaze_powder|blaze_powder|gunpowder|fire_charge|fire_charge|lava_bucket
 
 space_laser_handler:
     type: world
