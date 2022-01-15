@@ -100,7 +100,7 @@ fixes_events:
         on player joins:
         - determine passively NONE
         - wait 1t
-        - teleport <player.location.highest>
+        - teleport <player.location.highest.up[1]>
         on player quits:
         - determine NONE
         on player receives message:
