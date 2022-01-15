@@ -54,3 +54,10 @@ command_launch_earth:
     - repeat 600:
     	- firework at:<[cuboid].blocks.random> primary:<color[<util.random.int[0].to[255]>,<util.random.int[0].to[255]>,<util.random.int[0].to[255]>]> fade:<color[<util.random.int[0].to[255]>,<util.random.int[0].to[255]>,<util.random.int[0].to[255]>]> trail <[shapes].random>
         - wait 1t
+
+lobby_events:
+    type: world
+    debug: false
+    events:
+        on player damages player:
+        - determine cancelled
