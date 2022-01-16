@@ -621,7 +621,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 50000
+            total: 70000
           2:
             type: EXP
             total: 50000
@@ -642,7 +642,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 55000
+            total: 80000
           2:
             type: EXP
             total: 55000
@@ -653,7 +653,7 @@ pool:
         rewards:
           1:
             type: MONEY
-            total: 45000
+            total: 70000
           2:
             type: EXP
             total: 50000
