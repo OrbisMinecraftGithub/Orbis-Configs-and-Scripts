@@ -95,8 +95,8 @@ spy_events:
             target: 2
             message: 3
     chat_commands:
-        g: Global
-        globalchat: Global
+        g: General
+        globalchat: General
         lc: Local
         localchat: Local
         tc: Town
@@ -109,10 +109,10 @@ spy_events:
         alliancechat: Alliance
     events:
         on player chats ignorecancelled:true:
-        - if <player.has_permission[spy.bypass]>:
+        - if <player.has_permission[spy.bypass]||false>:
             - stop
         - if <context.cancelled>:
-            - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> : <context.message>"
+            - announce to_flagged:messagespy "<&c>[Chat]<&r> <player.name> -<&gt> <player.active_channel.to_titlecase> : <context.message>"
         on command:
         - if <player.has_permission[spy.bypass]||false>:
             - stop
