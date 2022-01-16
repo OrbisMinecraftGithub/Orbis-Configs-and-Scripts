@@ -300,6 +300,7 @@ nations:
     - towny.command.nation.kick
     - towny.command.nation.rank.soldier
     - towny.command.nation.rank.general
+    - siegewar.siegezone.cannot.get.banner.control
     assistant:
     - siegewar.immune.to.war.nausea
     - towny.rank.nation.assistant
@@ -310,6 +311,7 @@ nations:
     - towny.command.nation.deposit.other
     - siegewar.nation.siege.*
     - siegewar.command.siegewar.nation.*
+    - siegewar.siegezone.cannot.get.banner.control
     helper:
     - towny.rank.nation.helper
     - towny.command.nation.add
@@ -318,8 +320,10 @@ nations:
     - siegewar.immune.to.war.nausea
     - siegewar.nation.siege.battle.points
     - towny.nation.siege.pay.grade.100
+    - siegewar.siegezone.cannot.get.banner.control
     general:
     - towny.rank.nation.general
     - siegewar.nation.siege.*
     - towny.command.nation.rank.soldier
     - towny.nation.siege.pay.grade.500
+    - siegewar.siegezone.cannot.get.banner.control
