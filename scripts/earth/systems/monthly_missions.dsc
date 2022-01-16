@@ -1,120 +1,209 @@
-monthly_missions_startup:
-    type: world
-    debug: false
-    load:
-    - if !<server.list_files[data].contains[monthly_missions.yml]>:
-        - yaml create id:monthly_missions
-    - else:
-        - yaml id:monthly_missions load:data/monthly_missions.yml
-    - yaml id:monthly_missions savefile:data/monthly_missions.yml
-    save:
-    - yaml id:monthly_missions savefile:data/monthly_missions.yml
-    events:
-        on reload scripts:
-        - inject monthly_missions_startup path:load
-        on server start:
-        - inject monthly_missions_startup path:load
-        on shutdown:
-        - inject monthly_missions_startup path:save
-        on player breaks block:
-        - if <yaml[monthly_missions].read[current.item]||null> == <context.material.name>:
-            - run contribute_monthly_mission defmap:<map[player=<player>;type=break_block]>
 
-monthly_mission_event_inventory:
+monthly_missions_give_mission:
+    type: task
+    debug: false
+    definitions: mission
+    script:
+    - if <server.has_flag[monthly_missions.mission]>:
+        - run monthly_missions_mission_ends
+    - define mission <[mission].if_null[<yaml[towny_missions].list_keys[pool].filter_tag[<yaml[towny_missions].read[pool.<[filter_value]>.type].equals[MONTHLY]>].random>]>
+    - define duration <yaml[towny_missions].read[pool.<[mission]>.duration].as_duration>
+    - define online <server.online_players>
+    - flag server monthly_missions.mission.type:<[mission]> expire:<[duration]>
+    - narrate targets:<[online]> "<&2>Monthly Missions: <&a>A new monthly mission has started..."
+    - foreach <yaml[towny_missions].list_keys[pool.<[mission]>.goals]> as:n:
+        - define material <yaml[towny_missions].read[pool.<[mission]>.goals.<[n]>.material]>
+        - define quantity <yaml[towny_missions].read[pool.<[mission]>.goals.<[n]>.goal]>
+        - flag server monthly_missions.mission.goal.<[n]>.material:<[material]>
+        - flag server monthly_missions.mission.goal.<[n]>.quantity.requirement:<[quantity]>
+        - flag server monthly_missions.mission.goal.<[n]>.quantity.completed.server:0
+        - flag server monthly_missions.mission.easy.matcher:|:<[material]>
+        - narrate targets:<[online]> "<&2> <&gt> Gather <&a><[quantity]> <&2><[material].to_titlecase>"
+    - narrate targets:<[online]> "<&2>You have <&a><[duration].formatted_words> <&2>to complete this mission."
+    - flag server monthly_missions.cooldown expire:<[duration]>
+
+monthly_missions_player_contributes:
+    type: task
+    debug: false
+    definitions: player|auto
+    script:
+    - define auto <[auto]||false>
+    - if !<server.flag[monthly_missions.mission.type].exists>:
+        - stop
+    - if !<[player].is_truthy> || <[player].object_type> != Player:
+        - stop
+    - ratelimit 1s <[player]>
+    - adjust <queue> linked_player:<[player]>
+    - if <server.has_flag[monthly_missions.mission.goal]>:
+        - if <[player].inventory.contains_item[<server.flag[monthly_missions.mission.goal].values.parse[get[material]]>]>:
+            - foreach <server.flag[monthly_missions.mission.goal].keys> as:n:
+                - if <server.flag[monthly_missions.mission.goal.<[n]>.completed]||false>:
+                    - foreach next
+                - define item <server.flag[monthly_missions.mission.goal.<[n]>.material]>
+                - if !<[player].inventory.contains_item[<[item]>]>:
+                    - foreach next
+                - define has <[player].inventory.list_contents.filter[advanced_matches[<[item]>]].parse[quantity].sum>
+                - define requirement <server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement]>
+                - define remaining <[requirement].sub[<server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>]>
+                - if <[remaining]> >= <[has]>:
+                    - define take <[has]>
+                - else:
+                    - define take <[remaining]>
+                - take item:<[item]> from:<[player].inventory> quantity:<[take]>
+                - flag server monthly_missions.mission.goal.<[n]>.quantity.completed.<[player].uuid>:+:<[take]>
+                - if <[remaining]> <= <[has]>:
+                    - run monthly_missions_complete_mission_objective def:<[n]>
+                    - stop
+                - else:
+                    - if !<[auto]>:
+                        - narrate "<&2>Turned in <&a><[take]> <&2><[item]>, <&a><[remaining].sub[<[take]>]> <&2>items are remaining."
+                    - else:
+                        - playsound sound:ENTITY_EXPERIENCE_ORB_PICKUP <[player]>
+                    - run monthly_missions_mission_inventory_gui_update
+
+monthly_missions_complete_mission_objective:
+    type: task
+    debug: false
+    definitions: n
+    script:
+    - if !<[n].is_truthy> || !<server.flag[monthly_missions.mission.type].exists>:
+        - stop
+    - define online <server.online_players>
+    - flag server monthly_missions.mission.goal.<[n]>.completed
+    - flag server monthly_missions.mission.goal.<[n]>.quantity.completed.server:<server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement].sub[<server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].exclude[server].values.sum||0>]>
+    - define contributers <server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].keys||<list[]>>
+    - define requirement <server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement]>
+    - foreach <yaml[towny_missions].list_keys[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards]> as:r:
+        - define type <yaml[towny_missions].read[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.type].to_lowercase>
+        - define total <yaml[towny_missions].read[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.total]>
+        - foreach <[contributers].exclude[server]> as:c:
+            - define player <[c].as_player>
+            - define amount <server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed.<[c]>]>
+            - define percent <[amount].div[<[requirement]>]>
+            - if <[type]> == money:
+                - money give players:<[player]> quantity:<[total].mul[<[percent]>]>
+            - else if <[type]> == exp:
+                - give xp to:<[player]> quantity:<[total].mul[<[percent]>]>
+    - define complete:<list[]>
+    - define incomplete:<list[]>
+    - foreach <server.flag[monthly_missions.mission.goal].keys> as:n2:
+        - if <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum.exists> && <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.requirement]> == <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum>:
+            - define complete:|:<[n2]>
+        - else:
+            - define incomplete:|:<[n2]>
+    - if !<[incomplete].is_empty>:
+        - narrate targets:<[online]> "<&2>A Monthly Mission Objective was completed:"
+        - narrate targets:<[online]> "<&2> <&gt> <&m>Gather <&a><&m><server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement]> <&m><server.flag[monthly_missions.mission.goal.<[n]>.material].to_titlecase><&nl>"
+        - narrate targets:<[online]> "<&2>You still have <&a><[incomplete].size> <&2>more mission<tern[<[incomplete].size.equals[1]>].pass[].fail[s]> to complete."
+        - run monthly_missions_mission_inventory_gui_update
+    - else:
+        - run monthly_missions_completes_mission
+
+monthly_missions_completes_mission:
+    type: task
+    debug: false
+    script:
+    - if !<server.flag[monthly_missions.mission.type].exists>:
+        - stop
+    - define mission <server.flag[monthly_missions.mission.type]>
+    - define money 0
+    - define online <server.online_players>
+    - announce "<&2>The monthly mission has been completed. A new mission will start in <server.flag_expiration[monthly_missions.cooldown].from_now.formatted_words>"
+    - flag server monthly_missions.mission:!
+    - flag server monthly_missions.mission.completed
+    - run monthly_missions_mission_inventory_gui_update
+
+monthly_missions_mission_ends:
+    type: task
+    debug: false
+    script:
+    - if !<server.flag[monthly_missions.mission.type].exists>:
+        - stop
+    - define online <server.online_players>
+    - narrate targets:<[online]> "<&2>The monthly mission has ended; Because you did not complete all objectives, you will not receive all rewards."
+    - foreach <server.flag[monthly_missions.mission.goal].keys> as:n:
+        - define contributers <server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].keys||<list[]>>
+        - define requirement <server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement]>
+        - foreach <yaml[towny_missions].list_keys[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards]||<list[]>> as:r:
+            - define type <yaml[towny_missions].read[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.type].to_lowercase>
+            - define total <yaml[towny_missions].read[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards.<[r]>.total]>
+            - foreach <[contributers].exclude[server]||<list[]>> as:c:
+                - define player <[c].as_player>
+                - define amount <server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed.<[c]>]>
+                - define percent <[amount].div[<[requirement]>]>
+                - if <[type]> == money:
+                    - money give players:<[player]> quantity:<[total].mul[<[percent]>].round_to[2]>
+                    - narrate targets:<[player]> "<&2>You have been rewarded $<[total].mul[<[percent]>].round_to[2]> for your objectives."
+                - else if <[type]> == exp:
+                    - give xp to:<[player]> quantity:<[total].mul[<[percent]>]>
+    - flag server monthly_missions.mission:!
+    - run monthly_missions_mission_inventory_gui_update
+
+monthly_missions_mission_inventory_gui_update:
+    type: task
+    debug: false
+    script:
+    - define players <server.online_players.filter[open_inventory.script.name.equals[monthly_missions_mission_inventory_gui_town]]>
+    - if !<[players].is_empty>:
+        - if !<server.has_flag[monthly_missions.mission.type]>:
+            - foreach <[players]> as:p:
+                - adjust <queue> linked_player:<[p]>
+                - inventory close
+            - stop
+        - define inventory <inventory[monthly_missions_mission_inventory_gui_town]>
+        - foreach <[players]> as:p:
+            - adjust <queue> linked_player:<[p]>
+            - if <[p].open_inventory.exists>:
+                - inventory swap d:<[p].open_inventory> o:<inventory[monthly_missions_mission_inventory_gui_town]>
+
+monthly_missions_mission_inventory_gui_town:
     type: inventory
     inventory: chest
-    size: 45
+    size: 54
     gui: true
     debug: false
-    title: <&l><&b>Monthly Mission
-    procedural items:
-    - define mission <item[paper]>
-    - define txt <proc[colorize].context[<yaml[monthly_missions].read[strings.mission.<yaml[monthly_missions].read[current.type]>.<yaml[monthly_missions].read[current.item]>].replace[<&pc>current<&pc>].with[<yaml[monthly_missions].read[overall.amount].format_number>].replace[<&pc>requirement<&pc>].with[<yaml[monthly_missions].read[current.requirement].format_number>]>]>
-    - define mission "<[mission].with[lore=<list[<[txt].to_titlecase>]>;display=<&e><yaml[monthly_missions].read[current.requirement].format_number> <yaml[monthly_missions].read[current.item].to_titlecase>]>"
-    - define items:|:<[mission]>
-    - define lb <yaml[monthly_missions].list_keys[player].sort[monthly_mission_test].parse[as_player]||<list[]>>
-    - foreach <[lb].get[1].to[7]||<list[]>>:
-        - define p <[value]>
-        - define head <item[player_head].with[skull_skin=<[p].flag[skin.skull]>]>
-        - if <[head].equals[null].not>:
-            - define head <[head].with[display=<&e><[p].name>]>
-            - define lore "<list[<&e>Contribution: <yaml[monthly_missions].read[player.<[p].uuid>.amount]>|<&e>Town: <[p].town.name||None>|<&e>Nation: <[p].nation.name||None>]>"
-            - define head <[head].with[lore=<[lore]>]>
-            - define items:|:<[head]>
-    - determine <[items]>
+    title: <element[Towny Missions - Monthly].color_gradient[from=#2121dc;to=#1898dc]>
     definitions:
-        ui: <item[light_gray_stained_glass_pane].with[display=<&sp>]>
-    slots:
-        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
-        - [ui] [ui] [ui] [ui] [] [ui] [ui] [ui] [ui]
-        - [ui] [] [] [] [] [] [] [] [ui]
-        - [ui] [ui] [ui] [ui] [] [ui] [ui] [ui] [ui]
-        - [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui] [ui]
-
-monthly_mission_test:
-    type: procedure
-    definitions: value1|value2
-    debug: false
-    script:
-    - define value1 <yaml[monthly_missions].read[player.<[value1]>.amount]>
-    - define value2 <yaml[monthly_missions].read[player.<[value2]>.amount]>
-    - if <[value1]> < <[value2]>:
-        - determine 1
-    - if <[value1]> > <[value2]>:
-        - determine -1
-    - if <[value1]> == <[value2]>:
-        - determine 0
-
-contribute_monthly_mission:
-    type: task
-    debug: false
-    definitions: player|type
-    script:
-    - if <[player].uuid||null> == null:
-        - if <player||null> == null:
-            - stop
-        - else:
-            - define player <player>
-    - define type2 <yaml[monthly_missions].read[current.type]>
-    - if <[type]> != <[type2]>:
-        - if <[type]> == turn_in:
-            - narrate "<&c>This is not a turn in mission." targets:<[player]>
+        ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
+    procedural items:
+    - if !<server.flag[monthly_missions.mission.type].exists>:
         - stop
-    - define item <yaml[monthly_missions].read[current.item]>
-    - define amount <[player].inventory.list_contents.filter[script||true].filter[material.name.equals[<[item]>]].parse[quantity].sum||0>
-    - if <[type]> == break_block:
-        - define amount 1
-    - if <[amount]> == 0:
-        - narrate "<&c>You have nothing to contribute." targets:<[player]>
-        - stop
-    - define requirement <yaml[monthly_missions].read[current.requirement]>
-    - define remaining <[requirement].sub[<[amount]>]>
-    - if <[remaining].is_less_than_or_equal_to[0]>:
-        - if <[type]> == turn_in:
-            - take from:<[player].inventory> item:<[item]> quantity:<[amount].sub[<[remaining]>]>
     - else:
-        - yaml id:monthly_missions set player.<[player].uuid>.amount:+:<[amount]>
-        - yaml id:monthly_missions set overall.amount:+:<[amount]>
-        - if <[type]> == turn_in:
-            - take from:<[player].inventory> item:<[item]> quantity:<[amount]>
-            - narrate <proc[colorize].context[<yaml[monthly_missions].read[strings.mission.<[type]>.<[item]>].replace[<&pc>current<&pc>].with[<yaml[monthly_missions].read[overall.amount].format_number>].replace[<&pc>requirement<&pc>].with[<[requirement]>]>]>
-    - inject monthly_missions_startup path:save
-
-start_monthly_mission:
-    type: task
-    debug: false
-    definitions: override
-    script:
-    - define type1 <yaml[monthly_missions].list_keys[monthly].random>
-    - define type2 <yaml[monthly_missions].list_keys[monthly.<[type1]>].random>
-    - define min <yaml[monthly_missions].read[monthly.<[type1]>.<[type2]>.min]>
-    - define max <yaml[monthly_missions].read[monthly.<[type1]>.<[type2]>.max]>
-    - define requirement <util.random.int[<[min]>].to[<[max]>]>
-    - yaml id:monthly_missions set current.month:<util.time_now.month>
-    - yaml id:monthly_missions set current.type:<[type1]>
-    - yaml id:monthly_missions set current.item:<[type2]>
-    - yaml id:monthly_missions set current.requirement:<[requirement]>
-    - define message <yaml[monthly_missions].read[strings.messages.start].include[<yaml[monthly_missions].read[strings.mission.<[type1]>.<[type2]>].replace[<&pc>requirement<&pc>].with[<[requirement]>].replace[<&pc>current<&pc>].with[0]>].parse[replace[<&pc>overall_reward<&pc>].with[<server.economy.format[<yaml[monthly_missions].read[monthly.<[type1]>.<[type2]>.reward.money]>]>]].parse_tag[<proc[colorize].context[<[parse_value]>]>]>
-    - announce <[message].separated_by[<&nl>]>
-    - yaml id:monthly_missions set overall.amount:0
-    - inject monthly_missions_startup path:save
+        - define lore:<list[]>
+        - repeat 6 as:n:
+            - if <server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement].exists>:
+                - define reward <yaml[towny_missions].read[pool.<server.flag[monthly_missions.mission.type]>.goals.<[n]>.rewards]>
+                - foreach <[reward]> key:k as:v:
+                    - if <[v].get[type]> == MONEY:
+                        - define money:<[v].get[TOTAL]>
+                - define requirement <server.flag[monthly_missions.mission.goal.<[n]>.quantity.requirement]>
+                - define "lore:<&2>Requirement<&co> <&a><[requirement]>"
+                - define "lore:|:<&2>Current<&co> <&a><server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].values.sum||0>"
+                - define "lore:|:<&2>Reward<&co> <&a>$<[money]>"
+                - define items:|:<server.flag[monthly_missions.mission.goal.<[n]>.material].as_item.with[lore=<[lore]>]>
+                - define players:<server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed].exclude[server].keys.get[1].to[8].sort_by_value[map.values].if_null[null]>
+                - if <[players]> != null:
+                    - repeat 8:
+                        - if <[players].get[<[value]>].as_player.skull_item.exists>:
+                            - define p <[players].get[<[value]>]>
+                            - define player <[p].as_player>
+                            - define amount <server.flag[monthly_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
+                            - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
+                            - define "lore:<&2>Contribution<&co> <&a><[amount]>"
+                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>].round_to[2]>"
+                            - define item <[item].with[lore=<[lore]>]>
+                        - else:
+                            - define item <[ui].parsed>
+                        - define items:|:<[item]>
+                - else:
+                    - define items:|:<[ui].parsed.repeat_as_list[8]>
+            - else:
+                - define items:|:<[ui].parsed.repeat_as_list[9]>
+        - determine <[items]>
+    slots:
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []
+    - [] [] [] [] [] [] [] [] []

@@ -228,9 +228,14 @@ towny_missions_mission_inventory_gui_update:
     script:
     - define players <[government].residents.filter[open_inventory.script.name.equals[towny_missions_mission_inventory_gui]]>
     - if !<[players].is_empty>:
-        - adjust <queue> linked_player:<[players].first>
+        - if !<[government].has_flag[towny_missions.mission.type]>:
+            - foreach <[players]> as:p:
+                - adjust <queue> linked_player:<[p]>
+                - inventory close
+            - stop
         - define inventory <inventory[towny_missions_mission_inventory_gui]>
         - foreach <[players]> as:p:
+            - adjust <queue> linked_player:<[p]>
             - if <[p].open_inventory.exists>:
                 - inventory swap d:<[p].open_inventory> o:<inventory[towny_missions_mission_inventory_gui]>
 
@@ -268,7 +273,7 @@ towny_missions_mission_inventory_gui:
     inventory: chest
     size: 45
     gui: true
-    debug: false
+    debug: true
     title: <element[Towny Missions - Overview].color_gradient[from=#2121dc;to=#1898dc]>
     procedural items:
     - if !<player.has_town>:
@@ -309,9 +314,23 @@ towny_missions_mission_inventory_gui:
         - define ntime <[nation].flag_expiration[towny_missions.mission.type].from_now.in_seconds>
         - define "lore2:|:<&2>Time Left: <&a><[ntime].sub[<[ntime].mod[60]>].as_duration.formatted_words>"
         - define lore2:|:<&sp>
-        - define "lore:|:<&2><&l>Right Click to Contribute."
-        - define "lore:|:<&2><&l>Left Click to See Contributors."
+        - define "lore2:|:<&2><&l>Right Click to Contribute."
+        - define "lore2:|:<&2><&l>Left Click to See Contributors."
         - define items:|:<item[towny_missions_gui_item_nation_mission].with[lore=<[lore2]>]>
+    - if !<server.has_flag[monthly_missions.mission.type]>:
+        - define items:|:<item[monthly_missions_gui_item_no_mission]>
+    - else:
+        - foreach <server.flag[monthly_missions.mission.goal].keys> as:n2:
+            - if <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum.exists> && <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.requirement]> == <server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum>:
+                - define "lore3:|:<&2> <&gt> <&m>Gather <&a><&m><server.flag[monthly_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><&m><server.flag[monthly_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><&m><server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum>"
+            - else:
+                - define "lore3:|:<&2> <&gt> Gather <&a><server.flag[monthly_missions.mission.goal.<[n2]>.quantity.requirement]> <&2><server.flag[monthly_missions.mission.goal.<[n2]>.material].to_titlecase><&co> <&a><server.flag[monthly_missions.mission.goal.<[n2]>.quantity.completed].values.sum||0>"
+        - define ntime <server.flag_expiration[monthly_missions.mission.type].from_now.in_seconds>
+        - define "lore3:|:<&2>Time Left: <&a><[ntime].sub[<[ntime].mod[60]>].as_duration.formatted_words>"
+        - define lore3:|:<&sp>
+        - define "lore3:|:<&2><&l>Right Click to Contribute."
+        - define "lore3:|:<&2><&l>Left Click to See Contributors."
+        - define items:|:<item[monthly_missions_gui_item_mission].with[lore=<[lore3]>]>
     - determine <[items]>
     definitions:
         ui: <item[gray_stained_glass_pane].with[display=<&sp>]>
@@ -435,6 +454,24 @@ towny_missions_gui_item_no_coalition:
     material: bookshelf
     display name: <&l><&2>Coalition Mission<&co> <&c><&l>COMING SOON!
 
+monthly_missions_gui_item_no_mission:
+    type: item
+    material: oak_log
+    display name: <&l><&2>Monthly Mission<&co> <&a><&l>Not Available
+
+monthly_missions_gui_item_mission:
+    type: item
+    material: oak_log
+    display name: <&l><&2>Monthly Mission<&co> <&a><&l>In Progress
+    data:
+        tasks:
+            RIGHT|SHIFT_RIGHT:
+                script: monthly_missions_player_contributes
+                definitions:
+                    player: <player>
+            LEFT|SHIFT_LEFT:
+                inventory: monthly_missions_mission_inventory_gui_town
+
 towny_missions_mission_inventory_gui_builder:
     type: task
     debug: false
@@ -465,7 +502,7 @@ towny_missions_mission_inventory_gui_builder:
                             - define amount <[government].flag[towny_missions.mission.goal.<[n]>.quantity.completed.<[p]>]>
                             - define item <[player].skull_item.with[display_name=<&2><[player].name>]>
                             - define "lore:<&2>Contribution<&co> <&a><[amount]>"
-                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>]>"
+                            - define "lore:|:<&2>Earnings<&co> <&a>$<[money].mul[<[amount].div[<[requirement]>]>].round_to[2]>"
                             - define item <[item].with[lore=<[lore]>]>
                         - else:
                             - define item <[ui].parsed>

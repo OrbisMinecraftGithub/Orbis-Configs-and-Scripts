@@ -709,7 +709,7 @@ pool:
       3:
         definition: 'GATHER'
         goal: 500000
-        material: 'IRON'
+        material: 'IRON_INGOT'
         rewards:
           1:
             type: MONEY
@@ -737,7 +737,7 @@ pool:
       1:
         definition: 'GATHER'
         goal: 400000
-        material: 'IRON'
+        material: 'IRON_INGOT'
         rewards:
           1:
             type: MONEY
@@ -748,7 +748,7 @@ pool:
       2:
         definition: 'GATHER'
         goal: 200000
-        material: 'GOLD'
+        material: 'GOLD_INGOT'
         #Goals have rewards. These rewards are distributed on completion of the mission. There are many types
         #of goal rewards.
         #  - MONEY <- Deposits money to the players account
