@@ -15,5 +15,5 @@ discord_events:
                     - ~discordmessage id:orbis channel:<context.channel> "That server does not exist."
                     - stop
                 - define tag <[args].remove[1].space_separated>
-                - ~bungeetag server:<[server]> <[tag]> save:entry
+                - ~bungeetag server:<[server]> <[tag].parsed> save:entry
                 - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
