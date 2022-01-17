@@ -12,7 +12,7 @@ discord_events:
             - if <[cmd]> == parse:
                 - define server <[args].get[1].if_null[null]>
                 - if <bungee.list_servers.contains[<[server]>].not||true>:
-                    - discordmessage id:orbis channel:<context.channel> "That server does not exist."
+                    - ~discordmessage id:orbis channel:<context.channel> "That server does not exist."
                     - stop
-                - bungeetag server:<[server]> "<[args].remove[1].space_separated>" save:entry
-                - discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
+                - ~bungeetag server:<[server]> <[args].remove[1].space_separated> save:entry
+                - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
