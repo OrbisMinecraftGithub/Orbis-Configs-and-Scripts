@@ -122,6 +122,9 @@ fixes_events:
             - determine cancelled
         - if <context.projectile.entity_type||null> == ender_pearl:
             - determine <yaml[config].read[enderpearl.damage_when_teleported]>
+        on player teleports:
+        - if <player.gamemode.to_lowercase> == survival && !<player.has_flag[towny_flight]>:
+            - adjust <player> can_fly:false
         on entity teleports:
         - if <player||null> != null:
             - if <player.has_flag[going_home]>:
