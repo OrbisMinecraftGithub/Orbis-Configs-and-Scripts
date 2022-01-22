@@ -21,7 +21,7 @@ discord_events:
                     - define time_taken <server.current_time_millis.sub[<[time_now]>]>
                     - define result <entry[entry].result>
                 - else:
-                    - if <server.object_is_valid[<[tag].parsed>]>:
+                    - if <[tag].parsed.exists>:
                         - define time_now <server.current_time_millis>
                         - define result <[tag].parsed>
                         - define time_taken <server.current_time_millis.sub[<[time_now]>]>
