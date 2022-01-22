@@ -5,8 +5,8 @@ discord_events:
         on server start:
         - discordconnect id:orbis tokenfile:discord.txt
         on discord message received:
-        - if <context.message.starts_with[!]> && <context.message.author.roles[<context.group>].parse[id].contains[923373203924058164]> && !<context.message.author.is_bot>:
-            - define message <context.message.substring[2]>
+        - if <context.message.text.starts_with[!]> && <context.message.author.roles[<context.group>].parse[id].contains[923373203924058164]> && !<context.message.author.is_bot>:
+            - define message <context.message.text.substring[2]>
             - define cmd <[message].split[<&sp>].get[1].to_lowercase>
             - define args <[message].split[<&sp>].exclude[<[cmd]>]>
             - if <[cmd]> == parse:
