@@ -12,8 +12,7 @@ discord_events:
                     - ~discordmessage id:orbis channel:<context.channel> "TODO"
                     - stop
                 - if <bungee.list_servers.contains[<[server]>].not||true>:
-                    - ~discordmessage id:orbis channel:<context.channel> "That server does not exist."
-                    - stop
+                    - define server relay
                 - define tag <context.new_message.text.substring[2].split[<&sp>].exclude[<context.new_message.text.substring[2].split[<&sp>].get[1].to_lowercase>].remove[1].space_separated.parsed>
                 - ~bungeetag server:<[server]> <[tag].parsed> save:entry
                 - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
