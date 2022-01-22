@@ -19,5 +19,8 @@ discord_events:
                     - ~bungeetag server:<[server]> <[tag].parsed.if_null[null]> save:entry
                     - define result <entry[entry].result>
                 - else:
-                    - define result <[tag].parsed.if_null[null]>
+                    - if <server.object_is_valid[<[tag].parsed>]>:
+                        - define result <[tag].parsed>
+                    - else:
+                        - define result null
                 - ~discordmessage id:orbis channel:<context.channel> "<[result]>"
