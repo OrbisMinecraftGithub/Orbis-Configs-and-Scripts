@@ -14,6 +14,6 @@ discord_events:
                 - if <context.new_message.replied_to.exists>:
                     - define replied_to.message <context.new_message.replied_to>
                     - define replied_to.author <context.new_message.replied_to>
-                - define tag <context.new_message.text.substring[2].split[<&sp>].exclude[<context.new_message.text.substring[2].split[<&sp>].get[1].to_lowercase>].remove[1].space_separated>
+                - define tag <context.new_message.text.substring[2].split[<&sp>].exclude[<context.new_message.text.substring[2].split[<&sp>].get[1].to_lowercase>].remove[1].space_separated.parsed>
                 - ~bungeetag server:<[server]> <[tag].parsed> save:entry
                 - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
