@@ -10,10 +10,10 @@ discord_events:
             - define cmd <[message].split[<&sp>].get[1].to_lowercase>
             - define args <[message].split[<&sp>].exclude[<[cmd]>]>
             - if <[cmd]> == parse:
-                - define server <[args].get[1].if_null[relay]>
+                - define server <[args].get[1].if_null[<bungee.server>]>
                 - define tag <[args].remove[1].space_separated>
                 - if <bungee.list_servers.contains[<[server]>].not||true>:
-                    - define server relay
+                    - define server <bungee.server>
                     - define tag <[args].space_separated>
                 - if <[server]> != <bungee.server>:
                     - define time_now <server.current_time_millis>
