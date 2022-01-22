@@ -16,7 +16,7 @@ discord_events:
                     - define server relay
                     - define tag <[args].space_separated>
                 - if <[server]> != <bungee.server>:
-                    - ~bungeetag server:<[server]> <[tag].parsed.if_null[null]> save:entry
+                    - ~bungeetag server:<[server]> <tern[<server.object_is_valid[<[tag].parsed>]>].pass[<[tag].parsed>].fail[null]> save:entry
                     - define result <entry[entry].result>
                 - else:
                     - if <server.object_is_valid[<[tag].parsed>]>:
