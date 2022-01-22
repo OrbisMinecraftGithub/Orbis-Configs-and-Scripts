@@ -16,11 +16,18 @@ discord_events:
                     - define server relay
                     - define tag <[args].space_separated>
                 - if <[server]> != <bungee.server>:
+                    - define time_now <server.current_time_millis>
                     - ~bungeetag server:<[server]> <tern[<server.object_is_valid[<[tag].parsed>]>].pass[<[tag].parsed>].fail[null]> save:entry
+                    - define time_taken <server.current_time_millis.sub[<[time_now]>]>
                     - define result <entry[entry].result>
                 - else:
                     - if <server.object_is_valid[<[tag].parsed>]>:
+                        - define time_now <server.current_time_millis>
                         - define result <[tag].parsed>
+                        - define time_taken <server.current_time_millis.sub[<[time_now]>]>
                     - else:
                         - define result null
-                - ~discordmessage id:orbis channel:<context.channel> "<[result]>"
+                - if <[result]> == null:
+                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=This tag is invalid]>"
+                - else:
+                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>]>"
