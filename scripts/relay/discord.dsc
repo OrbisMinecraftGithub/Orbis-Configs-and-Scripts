@@ -15,7 +15,5 @@ discord_events:
                 - if <bungee.list_servers.contains[<[server]>].not||true>:
                     - define server relay
                     - define tag <[args].space_separated>
-                - if <[tag].parsed.exists>:
-                    - define tag <[tag].parsed>
                 - ~bungeetag server:<[server]> <[tag].parsed.if_null[null]> save:entry
                 - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
