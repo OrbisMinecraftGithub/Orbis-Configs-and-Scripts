@@ -10,10 +10,14 @@ discord_events:
             - define cmd <[message].split[<&sp>].get[1].to_lowercase>
             - define args <[message].split[<&sp>].exclude[<[cmd]>]>
             - if <[cmd]> == parse:
-                - define server <[args].get[1].if_null[null]>
+                - define server <[args].get[1].if_null[relay]>
                 - define tag <[args].remove[1].space_separated>
                 - if <bungee.list_servers.contains[<[server]>].not||true>:
                     - define server relay
                     - define tag <[args].space_separated>
-                - ~bungeetag server:<[server]> <[tag].parsed.if_null[null]> save:entry
-                - ~discordmessage id:orbis channel:<context.channel> "<entry[entry].result>"
+                - if <[server]> != <bungee.server>:
+                    - ~bungeetag server:<[server]> <[tag].parsed.if_null[null]> save:entry
+                    - define result <entry[entry].result>
+                - else:
+                    - define result <[tag].parsed.if_null[null]>
+                - ~discordmessage id:orbis channel:<context.channel> "<[result]>"
