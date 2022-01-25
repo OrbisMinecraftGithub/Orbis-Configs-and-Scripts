@@ -27,7 +27,7 @@ flag_handlers:
             - if <player.has_flag[damage_zero]>:
                 - determine 0.0
         # on crackshot weapon damages entity ignorecancelled:true:
-        on player damages player bukkit_priority:monitor ignore_cancelled:true:
+        on player damages player bukkit_priority:monitor ignorecancelled:true:
         - if <context.entity.has_flag[no_pvp_damage]> || <context.damager.has_flag[no_pvp_damage]>:
             - determine cancelled
         on entity damages entity bukkit_priority:monitor ignorecancelled:true:
