@@ -5,4 +5,4 @@ Spectator_only:
     after player joins:
       - adjust <player> gamemode:spectator
     on player changes gamemode:
-      - determine cancelled
+      - determine cancelled if:<context.gamemode.starts_with[spec].not>
