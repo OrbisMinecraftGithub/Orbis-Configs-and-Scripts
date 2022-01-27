@@ -15,7 +15,7 @@ auto_restart_events:
     - repeat 11:
         - title "title:<&c>Restart Imminent" "subtitle:Server restarting in <[value].sub[10].mul[-1].add[1]>." targets:<server.online_players>
         - wait 1s
-    - execute as_server restart
+    - execute as_server stop
     events:
         on system time 06:55:
         - inject auto_restart_events path:restart
