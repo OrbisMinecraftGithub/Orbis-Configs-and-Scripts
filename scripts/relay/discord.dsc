@@ -9,6 +9,16 @@ discord_events:
             - define message <context.new_message.text.substring[2]>
             - define cmd <[message].split[<&sp>].get[1].to_lowercase>
             - define args <[message].split[<&sp>].exclude[<[cmd]>]>
+            - if <[cmd]> == ex:
+                - define server <[args].get[1].if_null[<bungee.server>]>
+                - define command <[args].remove[1].space_separated>
+                - if <bungee.list_servers.contains[<[server]>].not||true>:
+                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=You must specify a server.]>"
+                    - stop
+                - bungee <[server]>:
+                    - execute as_server "<[command]>"
+                - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=Command executed successfully.]>"
+                - stop
             - if <[cmd]> == parse:
                 - define server <[args].get[1].if_null[<bungee.server>]>
                 - define tag <[args].remove[1].space_separated>
