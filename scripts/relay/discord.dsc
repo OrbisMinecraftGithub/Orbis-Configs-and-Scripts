@@ -16,7 +16,7 @@ discord_events:
                     - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=You must specify a server.]>"
                     - stop
                 - bungee <[server]>:
-                    - execute as_server "<[command]>"
+                    - execute as_server "ex <[command]>"
                 - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=Command executed successfully.]>"
                 - stop
             - if <[cmd]> == parse:
