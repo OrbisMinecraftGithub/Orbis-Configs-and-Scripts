@@ -35,6 +35,7 @@ discord_events:
                     - define result <[tag].parsed||null>
                     - define time_taken <server.current_time_millis.sub[<[time_now]>]>
                 - if <[result]> == null:
-                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=This tag is invalid<&co><&nl><[result]>]>"
+                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=This tag is invalid.]>"
                 - else:
-                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result].as_element>]>"
+                    - define result <[result].as_element>
+                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>]>"
