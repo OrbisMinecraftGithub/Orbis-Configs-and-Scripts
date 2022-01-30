@@ -37,5 +37,7 @@ discord_events:
                 - if <[result]> == null:
                     - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=This tag is invalid.]>"
                 - else:
-                    - narrate <[result].object_type>
-                    - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>]>"
+                    - if <[result].object_type> == List:
+                        - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result].separated_by[|]>]>"
+                    - else:
+                        - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>]>"
