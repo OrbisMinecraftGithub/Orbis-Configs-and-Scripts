@@ -37,5 +37,5 @@ discord_events:
                 - if <[result]> == null:
                     - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=This tag is invalid.]>"
                 - else:
-                    - define result <[result].as_element>
+                    - narrate "title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>"
                     - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;footer=Time<&co> <[time_taken]> ms;description=<[result]>]>"
