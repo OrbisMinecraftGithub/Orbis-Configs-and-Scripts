@@ -17,7 +17,7 @@ discord_events:
                     - stop
                 - bungee <[server]>:
                     - execute as_server "ex <[command]>"
-                - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=Command executed successfully.]>"
+                - ~discordmessage id:orbis channel:<context.channel> "<discord_embed[title=<[server]>;description=Command `<[command]>` executed successfully.]>"
                 - stop
             - if <[cmd]> == parse:
                 - define server <[args].get[1].if_null[<bungee.server>]>
