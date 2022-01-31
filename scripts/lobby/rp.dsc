@@ -7,4 +7,5 @@ resourcepack_events:
         - while <server.match_offline_player[<context.name>].is_online.not>:
             - wait 1t
         - adjust <queue> linked_player:<server.match_offline_player[<context.name>]>
-        - resourcepack hash:<server.flag[resourcepack.hash]> url:<server.flag[resourcepack.url]> prompt:<server.flag[resourcepack.prompt].parsed> targets:<player>
+        # - resourcepack hash:<server.flag[resourcepack.hash]> url:<server.flag[resourcepack.url]> prompt:<server.flag[resourcepack.prompt].parsed> targets:<player>
+        - adjust <player> resource_pack:<server.flag[resourcepack.url]>
