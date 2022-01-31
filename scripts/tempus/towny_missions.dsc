@@ -79,7 +79,6 @@ towny_missions_events:
                 - wait 1t
                 - run towny_missions_player_contributes def:<player.nation>|<player>|true
 
-
 towny_missions_give_mission:
     type: task
     debug: false
