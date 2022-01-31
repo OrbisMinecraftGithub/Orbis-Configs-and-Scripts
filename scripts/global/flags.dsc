@@ -46,7 +46,7 @@ no_slash_op:
     type: world
     debug: false
     events:
-        on command:
-        - if <context.command> == op && <context.source_type> != SERVER:
+        on op command:
+        - if <context.source_type> != SERVER:
             - narrate no
             - determine passively cancelled
